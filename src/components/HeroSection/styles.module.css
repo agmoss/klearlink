@@ -1,64 +1,123 @@
-.hero {
-  background: linear-gradient(
-    135deg,
-    var(--primary-color) 40%,
-    var(--secondary-color)
-  );
-  color: #fff;
-  padding: 100px 0;
-  text-align: center;
+/* HeroSection.module.css */
+.heroSection {
   display: flex;
-  flex-direction: column;
+  justify-content: center;
   align-items: center;
+
+  min-height: 90vh; /* Makes the hero section taller */
+  padding: 20px 0;
+}
+
+.container {
+  width: 90%;
+  max-width: 1200px;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  gap: 20px; /* Adds spacing between content and image */
+  flex-wrap: wrap; /* Allows items to wrap on smaller viewports */
+}
+
+.content {
+  max-width: 50%;
+  flex: 1;
+}
+
+.title {
+  font-size: 3rem;
+  font-weight: bold;
+  margin-bottom: 1rem;
+}
+
+.subtitle {
+  font-size: 1.2rem;
+
+  margin-bottom: 2rem;
+}
+
+.buttonGroup {
+  display: flex;
+  gap: 10px; /* Adds spacing between the buttons */
+}
+
+.ctaButton,
+.secondaryButton {
+  padding: 12px 24px;
+  border: none;
+  border-radius: 4px;
+  font-size: 1rem;
+  cursor: pointer;
+  transition: background-color 0.3s ease;
+}
+
+.ctaButton {
+  background-color: #5562e8;
+  color: white;
+}
+
+.ctaButton:hover {
+  background-color: #3e49c0;
+}
+
+.secondaryButton {
+  background-color: #e0e0e0;
+  color: #333;
+}
+
+.secondaryButton:hover {
+  background-color: #b3b3b3;
+}
+
+.imageContainer {
+  max-width: 45%;
+  flex: 1;
+  display: flex;
   justify-content: center;
 }
 
-.heroContent {
-  max-width: 800px;
+.placeholderImage {
+  width: 100%;
+  height: auto;
+  border-radius: 8px;
 }
 
-.hero h1 {
-  font-size: 3rem;
-  margin: 0;
-}
-
-.hero p {
-  font-size: 1.5rem;
-  margin: 20px 0;
-}
-
-.ctaButtons {
-  margin-top: 20px;
-}
-
-.heroTitle {
-  font-size: 3rem;
-  font-weight: 700;
-  text-transform: uppercase;
-  margin-bottom: 1rem;
-  animation: fadeIn 1s ease-out;
-}
-
-.heroSubtitle {
-  font-size: 1.3rem;
-  font-weight: 300;
-  margin-bottom: 2rem;
-  animation: fadeIn 1.5s ease-out;
-}
-
-.ctaButtons .button:hover {
-  background: var(--secondary-color);
-  color: white;
-  box-shadow: 0 12px 30px rgba(0, 0, 0, 0.3);
-}
-
-@keyframes fadeIn {
-  0% {
-    opacity: 0;
-    transform: translateY(-10px);
+/* Media Queries for Responsive Design */
+@media (max-width: 768px) {
+  .container {
+    flex-direction: column;
+    align-items: center;
+    text-align: center;
   }
-  100% {
-    opacity: 1;
-    transform: translateY(0);
+
+  .content {
+    max-width: 100%;
+  }
+
+  .imageContainer {
+    max-width: 100%;
+    margin-top: 20px;
+  }
+
+  .title {
+    font-size: 2.5rem;
+  }
+
+  .subtitle {
+    font-size: 1.1rem;
+  }
+
+  .buttonGroup {
+    flex-direction: column;
+    gap: 15px;
+  }
+}
+
+@media (max-width: 480px) {
+  .title {
+    font-size: 2rem;
+  }
+
+  .subtitle {
+    font-size: 1rem;
   }
 }

@@ -7,35 +7,40 @@ import styles from './styles.module.css';
 import useDocusaurusContext from '@docusaurus/useDocusaurusContext';
 import useBaseUrl from '@docusaurus/useBaseUrl';
 
-const HeroSection: React.FC = () => {
+const HeroSection = () => {
   const { siteConfig } = useDocusaurusContext();
   return (
-    <header className={clsx('hero hero--primary', styles.hero)}>
-      <div className="container">
-        <div className="row">
-          <div className="col col--8 col--offset-2">
-            <h1 className={clsx('hero__title', styles.heroTitle)}>
-              {siteConfig.tagline}
-            </h1>
-            <p className={clsx('hero__subtitle', styles.heroSubtitle)}>
-              Real-time profiling and alternative credit insights, so you lend
-              with confidence.
-            </p>
-            <div className={clsx('button-group', styles.ctaButtons)}>
-              <Link
-                className="button button--primary button--lg"
-                to="mailto:info@clearlinc.io"
-              >
-                Learn More Now
-              </Link>
-              <Link
-                className="button button--secondary button--lg"
-                to={useBaseUrl('#how-it-works')}
-              >
-                How It Works
-              </Link>
-            </div>
+    <header className={clsx('hero hero--primary', styles.heroSection)}>
+      <div className={clsx('container', styles.container)}>
+        <div className={styles.content}>
+          <h1 className={clsx('hero__title', styles.title)}>
+            {siteConfig.tagline}
+          </h1>
+          <p className={clsx('hero__subtitle', styles.subtitle)}>
+            Real-time profiling and alternative credit insights, so you lend
+            with confidence.
+          </p>
+          <div className={styles.buttonGroup}>
+            <Link
+              className="button button--primary button--lg"
+              to="mailto:info@clearlinc.io"
+            >
+              Learn More Now
+            </Link>
+            <Link
+              className="button button--secondary button--lg"
+              to={useBaseUrl('/docs')}
+            >
+              How It Works
+            </Link>
           </div>
+        </div>
+        <div className={styles.imageContainer}>
+          <img
+            src="https://via.placeholder.com/500x300" // Placeholder image
+            alt="Financial Data Visualization"
+            className={styles.placeholderImage}
+          />
         </div>
       </div>
     </header>

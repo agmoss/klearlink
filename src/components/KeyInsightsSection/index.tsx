@@ -4,6 +4,23 @@ import React from 'react';
 import clsx from 'clsx';
 import styles from './styles.module.css';
 
+type InsightItem = {
+  text: string;
+};
+
+const FeatureList: InsightItem[] = [
+  { text: 'Application Date & Time' },
+  { text: 'Origination Date & Time' },
+  { text: 'Credit Amount' },
+  { text: 'Payment Compliance & Non-Compliance' },
+  { text: 'Linked Institutions' },
+  { text: 'Customer Indicators' },
+];
+
+const Insight = ({ text }: InsightItem) => {
+  return <li className="section__list-item">{text}</li>;
+};
+
 const KeyInsightsSection: React.FC = () => (
   <section className={clsx('section', styles.keyInsights)}>
     <div className="container">
@@ -15,14 +32,9 @@ const KeyInsightsSection: React.FC = () => (
       <div className="row">
         <div className="col col--12">
           <ul className={clsx('list--unstyled', styles.insightsList)}>
-            <li className="section__list-item">Application Date & Time</li>
-            <li className="section__list-item">Origination Date & Time</li>
-            <li className="section__list-item">Credit Amount</li>
-            <li className="section__list-item">
-              Payment Compliance & Non-Compliance
-            </li>
-            <li className="section__list-item">Linked Institutions</li>
-            <li className="section__list-item">Customer Indicators</li>
+            {FeatureList.map((insight, idx) => (
+              <Insight key={idx} {...insight} />
+            ))}
           </ul>
         </div>
       </div>

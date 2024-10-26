@@ -5,18 +5,20 @@
     var(--secondary-color)
   );
   color: #fff;
-  padding: 60px 0;
+  padding: 100px 0; /* Increased padding for the whole section */
   text-align: center;
 }
 
 .ctaBanner h2 {
-  font-size: 2rem;
-  margin-bottom: 20px;
+  font-size: 2.5rem; /* Slightly increased font size for emphasis */
+  margin-bottom: 40px; /* More space between the title and the button */
   color: #fff;
+  line-height: 1.5; /* Increased line height for better readability */
 }
 
 .ctaBanner .button {
-  margin: 10px;
+  margin: 20px; /* Added more margin around the button */
+  padding: 15px 40px; /* Larger button padding for more emphasis */
   color: white;
 }
 
@@ -32,6 +34,7 @@
   font-size: 1.2rem;
   font-weight: 700;
   transition: all 0.3s ease;
+  margin-top: 30px; /* Additional margin above the button */
 }
 
 .cta-button:hover {

@@ -5,6 +5,53 @@ import Link from '@docusaurus/Link';
 import clsx from 'clsx';
 import styles from './styles.module.css';
 
+type ProductItem = {
+  title: string;
+  description: string;
+  link: string;
+};
+
+const FeatureList: ProductItem[] = [
+  {
+    title: 'ClearSync',
+    description:
+      'A low-overhead, encrypted, no-code ETL solution that integrates Clearlinc into your existing credit data effortlessly.',
+    link: '/clearsync',
+  },
+  {
+    title: 'ClearProfile',
+    description:
+      'Profile applicants with ease—see loan status, loan stacking, and institution visibility.',
+    link: '/clearprofile',
+  },
+  {
+    title: 'ClearWatch',
+    description:
+      'Get real-time notifications and monitor borrower activity across lenders for improved decision-making.',
+    link: '/clearwatch',
+  },
+];
+
+function ProductCard({ title, description, link }: ProductItem) {
+  return (
+    <div className={clsx('col col--4', styles.productCard)}>
+      <div className="card shadow--md">
+        <div className="card__header">
+          <h3 className="section__subtitle">{title}</h3>
+        </div>
+        <div className="card__body">
+          <p>{description}</p>
+        </div>
+        <div className="card__footer">
+          <Link className="button button--secondary button--block" to={link}>
+            See Details
+          </Link>
+        </div>
+      </div>
+    </div>
+  );
+}
+
 const ProductSuiteSection: React.FC = () => (
   <section className={clsx('section-alt', styles.productSuite)}>
     <div className="container">
@@ -14,69 +61,9 @@ const ProductSuiteSection: React.FC = () => (
         </div>
       </div>
       <div className="row">
-        <div className={clsx('col col--4', styles.productCard)}>
-          <div className="card shadow--md">
-            <div className="card__header">
-              <h3 className="section__subtitle">ClearSync</h3>
-            </div>
-            <div className="card__body">
-              <p>
-                A low-overhead, encrypted, no-code ETL solution that integrates
-                Clearlinc into your existing credit data effortlessly.
-              </p>
-            </div>
-            <div className="card__footer">
-              <Link
-                className="button button--secondary button--block"
-                to="/clearsync"
-              >
-                See Details
-              </Link>
-            </div>
-          </div>
-        </div>
-        <div className={clsx('col col--4', styles.productCard)}>
-          <div className="card shadow--md">
-            <div className="card__header">
-              <h3 className="section__subtitle">ClearProfile</h3>
-            </div>
-            <div className="card__body">
-              <p>
-                Profile applicants with ease—see loan status, loan stacking, and
-                institution visibility.
-              </p>
-            </div>
-            <div className="card__footer">
-              <Link
-                className="button button--secondary button--block"
-                to="/clearprofile"
-              >
-                See Details
-              </Link>
-            </div>
-          </div>
-        </div>
-        <div className={clsx('col col--4', styles.productCard)}>
-          <div className="card shadow--md">
-            <div className="card__header">
-              <h3 className="section__subtitle">ClearWatch</h3>
-            </div>
-            <div className="card__body">
-              <p>
-                Get real-time notifications and monitor borrower activity across
-                lenders for improved decision-making.
-              </p>
-            </div>
-            <div className="card__footer">
-              <Link
-                className="button button--secondary button--block"
-                to="/clearwatch"
-              >
-                See Details
-              </Link>
-            </div>
-          </div>
-        </div>
+        {FeatureList.map((product, idx) => (
+          <ProductCard key={idx} {...product} />
+        ))}
       </div>
     </div>
   </section>

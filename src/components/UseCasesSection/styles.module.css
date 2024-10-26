@@ -1,28 +1,46 @@
 .useCases {
-  padding: 80px 0;
+  padding: 100px 0; /* Increased padding around the entire section */
 }
 
 .useCases h2 {
   text-align: center;
   font-size: 2.5rem;
-  margin-bottom: 40px;
+  margin-bottom: 50px; /* Increased margin below the main section title */
+}
+
+.caseItem {
+  padding: 30px; /* Increased padding inside each use case item */
+  margin-bottom: 40px; /* Additional space between rows of items */
+}
+
+.section__subtitle {
+  margin-bottom: 20px; /* Increased spacing between title and description */
+}
+
+.section__description {
+  line-height: 1.8; /* Increased line height for better readability */
 }
 
 .caseGrid {
   display: grid;
   grid-template-columns: repeat(2, 1fr);
-  gap: 30px;
+  gap: 50px; /* Increased the gap between grid items */
 }
 
 .caseGrid div {
   background: #fff;
-  padding: 20px;
+  padding: 30px; /* Added more padding inside each grid item */
   border-radius: 8px;
-  box-shadow: 0 2px 8px rgba(0, 0, 0, 0.1);
+  box-shadow: 0 4px 12px rgba(0, 0, 0, 0.1); /* Slightly increased shadow for more depth */
   text-align: center;
 }
 
 .caseGrid h3 {
-  font-size: 1.4rem;
-  margin-bottom: 10px;
+  font-size: 1.5rem;
+  margin-bottom: 15px; /* Slightly increased space below each item title */
+}
+
+.button--lg {
+  margin-top: 60px; /* Added more space above the button */
+  padding: 15px 40px; /* Slightly larger button padding for emphasis */
 }

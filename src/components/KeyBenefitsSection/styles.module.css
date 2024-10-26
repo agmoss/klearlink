@@ -1,28 +1,31 @@
 .keyBenefits {
-  padding: 80px 0;
-  text-align: center;
+  padding: 60px 0; /* Increased padding around the whole section */
 }
 
-.keyBenefits h2 {
-  font-size: 2.5rem;
-  margin-bottom: 30px;
+.benefitIconContainer {
+  display: flex;
+  justify-content: center;
+  margin-bottom: 20px; /* Increased margin below the icon */
 }
 
-.benefitsGrid {
-  display: grid;
-  grid-template-columns: repeat(2, 1fr);
-  gap: 40px;
-  margin-top: 30px;
+.benefitItem {
+  margin-bottom: 40px; /* Increased spacing between each benefit item */
+  padding: 20px; /* Optional: Add padding inside each item for more breathing room */
 }
 
-.benefitsGrid div {
-  padding: 20px;
-  background: #fff;
-  border-radius: 8px;
-  box-shadow: 0 2px 8px rgba(0, 0, 0, 0.1);
+.section__title {
+  margin-bottom: 50px; /* More space below the main section title */
 }
 
-.benefitsGrid h3 {
-  font-size: 1.5rem;
-  margin-bottom: 10px;
+.section__subtitle {
+  margin-bottom: 15px; /* Space between title and description */
+}
+
+.section__description {
+  line-height: 1.7; /* Increased line height for better readability */
+}
+
+.container {
+  max-width: 1200px; /* You can optionally increase the container width if needed */
+  padding: 0 40px; /* More padding on the sides for the container */
 }
