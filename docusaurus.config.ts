@@ -54,7 +54,6 @@ const config: Config = {
   ],
 
   themeConfig: {
-    // Replace with your project's social card
     image: 'img/docusaurus-social-card.jpg',
     navbar: {
       title: 'Clearlinc',
@@ -88,11 +87,11 @@ const config: Config = {
           items: [
             {
               label: 'Privacy Policy',
-              href: '/',
+              href: '/privacy-policy',
             },
             {
               label: 'Terms of Service',
-              href: '/',
+              href: '/terms-of-service',
             },
           ],
         },
@@ -101,11 +100,11 @@ const config: Config = {
           items: [
             {
               label: 'Email',
-              to: '/',
+              href: '/contact-us',
             },
             {
               label: 'Phone',
-              href: '/',
+              href: '/contact-us',
             },
           ],
         },

@@ -4,6 +4,7 @@ import React from 'react';
 import Link from '@docusaurus/Link';
 import clsx from 'clsx';
 import styles from './styles.module.css';
+import useBaseUrl from '@docusaurus/useBaseUrl';
 
 type ProductItem = {
   title: string;
@@ -16,19 +17,19 @@ const FeatureList: ProductItem[] = [
     title: 'ClearSync',
     description:
       'A low-overhead, encrypted, no-code ETL solution that integrates Clearlinc into your existing credit data effortlessly.',
-    link: '/clearsync',
+    link: '/docs/products/clearsync',
   },
   {
     title: 'ClearProfile',
     description:
       'Profile applicants with ease—see loan status, loan stacking, and institution visibility.',
-    link: '/clearprofile',
+    link: '/docs/products/clearprofile',
   },
   {
     title: 'ClearWatch',
     description:
       'Get real-time notifications and monitor borrower activity across lenders for improved decision-making.',
-    link: '/clearwatch',
+    link: '/docs/products/clearwatch',
   },
 ];
 
@@ -43,7 +44,10 @@ function ProductCard({ title, description, link }: ProductItem) {
           <p>{description}</p>
         </div>
         <div className="card__footer">
-          <Link className="button button--secondary button--block" to={link}>
+          <Link
+            className="button button--secondary button--block"
+            to={useBaseUrl(link)}
+          >
             See Details
           </Link>
         </div>

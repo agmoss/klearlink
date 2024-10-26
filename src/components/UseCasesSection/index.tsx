@@ -4,6 +4,7 @@ import React from 'react';
 import Link from '@docusaurus/Link';
 import clsx from 'clsx';
 import styles from './styles.module.css';
+import useBaseUrl from '@docusaurus/useBaseUrl';
 
 type UseCaseItem = {
   title: string;
@@ -57,7 +58,10 @@ const UseCasesSection: React.FC = () => (
       </div>
       <div className="row">
         <div className="col col--12 text--center">
-          <Link className="button button--primary button--lg" to="/use-cases">
+          <Link
+            className="button button--primary button--lg"
+            to={useBaseUrl('docs/use-cases')}
+          >
             Discover More Use Cases
           </Link>
         </div>

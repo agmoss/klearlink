@@ -18,7 +18,9 @@ const FeatureList: InsightItem[] = [
 ];
 
 const Insight = ({ text }: InsightItem) => {
-  return <li className="section__list-item">{text}</li>;
+  return (
+    <li className={clsx('section__list-item', styles.insightItem)}>{text}</li>
+  );
 };
 
 const KeyInsightsSection: React.FC = () => (
@@ -27,6 +29,10 @@ const KeyInsightsSection: React.FC = () => (
       <div className="row">
         <div className="col col--12 text--center">
           <h2 className="section__title">Key Insights Provided by Clearlinc</h2>
+          <p className={styles.subtitle}>
+            Discover essential insights for smarter lending and better
+            decisions.
+          </p>
         </div>
       </div>
       <div className="row">

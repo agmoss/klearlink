@@ -4,6 +4,7 @@ import React from 'react';
 import Link from '@docusaurus/Link';
 import clsx from 'clsx';
 import styles from './styles.module.css';
+import useBaseUrl from '@docusaurus/useBaseUrl';
 
 type StepItem = {
   title: string;
@@ -49,7 +50,7 @@ const HowItWorksSection: React.FC = () => (
           </ol>
           <Link
             className="button button--primary button--lg"
-            to="mailto:info@clearlinc.io"
+            to={useBaseUrl('/docs')}
           >
             Learn More
           </Link>

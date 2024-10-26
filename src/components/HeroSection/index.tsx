@@ -23,9 +23,9 @@ const HeroSection = () => {
           <div className={styles.buttonGroup}>
             <Link
               className="button button--primary button--lg"
-              to="mailto:info@clearlinc.io"
+              to={useBaseUrl('/contact-us')}
             >
-              Learn More Now
+              Contact Us
             </Link>
             <Link
               className="button button--secondary button--lg"

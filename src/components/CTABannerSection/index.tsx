@@ -4,6 +4,7 @@ import React from 'react';
 import Link from '@docusaurus/Link';
 import clsx from 'clsx';
 import styles from './styles.module.css';
+import useBaseUrl from '@docusaurus/useBaseUrl';
 
 const CTABannerSection: React.FC = () => (
   <section className={clsx('section', styles.ctaBanner)}>
@@ -16,7 +17,7 @@ const CTABannerSection: React.FC = () => (
           </h2>
           <Link
             className="button button--primary button--lg"
-            to="mailto:info@clearlinc.io"
+            to={useBaseUrl('contact-us')}
           >
             Get More Info
           </Link>
