@@ -27,6 +27,8 @@ html[data-theme='dark'] {
   --ifm-color-primary-light: #29d5b0;
   --ifm-color-primary-lighter: #32d8b4;
   --ifm-color-primary-lightest: #4fddbf;
+  --primary-color: #25c2a0;
+  --secondary-color: #f57c00;
   --ifm-background-color: #363636;
   --alt-background-color: #252525;
   --footer-background-color: #0d1b2a;
