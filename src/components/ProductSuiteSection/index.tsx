@@ -6,7 +6,7 @@ import clsx from 'clsx';
 import styles from './styles.module.css';
 
 const ProductSuiteSection: React.FC = () => (
-  <section className={clsx('section', styles.productSuite)}>
+  <section className={clsx('section-alt', styles.productSuite)}>
     <div className="container">
       <div className="row">
         <div className="col col--12 text--center">

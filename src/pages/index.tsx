@@ -8,7 +8,6 @@ import ProductSuiteSection from '../components/ProductSuiteSection';
 import KeyInsightsSection from '../components/KeyInsightsSection';
 import UseCasesSection from '../components/UseCasesSection';
 import CTABannerSection from '../components/CTABannerSection';
-import FooterSection from '../components/FooterSection';
 
 const Home: React.FC = () => {
   return (
@@ -24,7 +23,6 @@ const Home: React.FC = () => {
       <KeyInsightsSection />
       <UseCasesSection />
       <CTABannerSection />
-      <FooterSection />
     </Layout>
   );
 };

@@ -99,32 +99,28 @@ const config: Config = {
           ],
         },
         {
-          title: 'Community',
+          title: 'Policy',
           items: [
             {
-              label: 'Stack Overflow',
-              href: 'https://stackoverflow.com/questions/tagged/docusaurus',
+              label: 'Privacy Policy',
+              href: '/',
             },
             {
-              label: 'Discord',
-              href: 'https://discordapp.com/invite/docusaurus',
-            },
-            {
-              label: 'Twitter',
-              href: 'https://twitter.com/docusaurus',
+              label: 'Terms of Service',
+              href: '/',
             },
           ],
         },
         {
-          title: 'More',
+          title: 'Contact',
           items: [
             {
-              label: 'Blog',
-              to: '/blog',
+              label: 'Email',
+              to: '/',
             },
             {
-              label: 'GitHub',
-              href: 'https://github.com/facebook/docusaurus',
+              label: 'Phone',
+              href: '/',
             },
           ],
         },

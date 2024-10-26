@@ -6,7 +6,7 @@ import clsx from 'clsx';
 import styles from './styles.module.css';
 
 const UseCasesSection: React.FC = () => (
-  <section className={clsx('section', styles.useCases)}>
+  <section className={clsx('section-alt', styles.useCases)}>
     <div className="container">
       <div className="row">
         <div className="col col--12 text--center">

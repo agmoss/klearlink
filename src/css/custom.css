@@ -1,11 +1,7 @@
-/**
- * Any CSS included here will be global. The classic template
- * bundles Infima by default. Infima is a CSS framework designed to
- * work well for content-centric websites.
- */
-
-/* You can override the default Infima variables here. */
+/* Base Styles */
 :root {
+  --ifm-font-family-base: 'Inter', sans-serif;
+  --ifm-font-family-monospace: 'Fira Code', monospace;
   --ifm-color-primary: #2e8555;
   --ifm-color-primary-dark: #29784c;
   --ifm-color-primary-darker: #277148;
@@ -13,12 +9,15 @@
   --ifm-color-primary-light: #33925d;
   --ifm-color-primary-lighter: #359962;
   --ifm-color-primary-lightest: #3cad6e;
-  --ifm-code-font-size: 95%;
-  --docusaurus-highlighted-code-line-bg: rgba(0, 0, 0, 0.1);
+  --primary-color: #2e8555;
+  --secondary-color: #f57c00;
+  --ifm-background-color: #e4e4e4;
+  --alt-background-color: #fafafa;
+  --footer-background-color: #0d1b2a;
+  --text-color: #333333;
 }
 
-/* For readability concerns, you should choose a lighter palette in dark mode. */
-[data-theme='dark'] {
+html[data-theme='dark'] {
   --ifm-color-primary: #25c2a0;
   --ifm-color-primary-dark: #21af90;
   --ifm-color-primary-darker: #1fa588;
@@ -26,14 +25,91 @@
   --ifm-color-primary-light: #29d5b0;
   --ifm-color-primary-lighter: #32d8b4;
   --ifm-color-primary-lightest: #4fddbf;
-  --docusaurus-highlighted-code-line-bg: rgba(0, 0, 0, 0.3);
+  --ifm-background-color: #363636;
+  --alt-background-color: #252525;
+  --footer-background-color: #0d1b2a;
+  --text-color: #fafafa;
 }
 
-/* Overriding root Infima variables */
-[data-theme='dark'] {
-  --ifm-color-primary: #4e89e8;
+/* Body and Text */
+body {
+  color: var(--text-color);
+  line-height: 1.7;
 }
-/* Styling one class specially in dark mode */
-[data-theme='dark'] .purple-text {
-  color: plum;
+
+/* Header */
+.header {
+  background-color: var(--primary-color);
+  color: white;
+  padding: 1rem;
+  box-shadow: 0 4px 20px rgba(0, 0, 0, 0.1);
+}
+
+.navbar__title {
+  font-size: 1.8rem;
+  font-weight: 600;
+}
+
+/* Sections */
+.section {
+  padding: 4rem 2rem;
+  text-align: center;
+}
+
+.section-alt {
+  background-color: var(--alt-background-color);
+  padding: 4rem 2rem;
+  text-align: center;
+}
+
+.section__title {
+  font-size: 2.2rem;
+  font-weight: 600;
+  margin-bottom: 2rem;
+  color: var(--primary-color);
+}
+
+.section__content {
+  max-width: 800px;
+  margin: 0 auto;
+  font-size: 1.1rem;
+}
+
+/* Cards */
+.card {
+  border-radius: 12px;
+  box-shadow: 0 4px 16px rgba(0, 0, 0, 0.1);
+  padding: 2rem;
+  transition: transform 0.3s ease;
+}
+
+.card:hover {
+  transform: translateY(-10px);
+}
+
+.card__title {
+  font-size: 1.5rem;
+  font-weight: 600;
+  color: var(--secondary-color);
+  margin-bottom: 1rem;
+}
+
+/* Responsive */
+@media (max-width: 768px) {
+  .hero__title {
+    font-size: 2.5rem;
+  }
+
+  .hero__subtitle {
+    font-size: 1.1rem;
+  }
+
+  .key-benefits {
+    flex-direction: column;
+    align-items: center;
+  }
+
+  .key-benefit {
+    width: 80%;
+  }
 }

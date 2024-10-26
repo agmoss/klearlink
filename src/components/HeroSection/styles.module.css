@@ -1,5 +1,9 @@
 .hero {
-  background: linear-gradient(to bottom right, #0070f3, #0056a4);
+  background: linear-gradient(
+    135deg,
+    var(--primary-color) 40%,
+    var(--secondary-color)
+  );
   color: #fff;
   padding: 100px 0;
   text-align: center;
@@ -27,6 +31,34 @@
   margin-top: 20px;
 }
 
-.ctaButtons .button {
-  margin: 10px;
+.heroTitle {
+  font-size: 3rem;
+  font-weight: 700;
+  text-transform: uppercase;
+  margin-bottom: 1rem;
+  animation: fadeIn 1s ease-out;
+}
+
+.heroSubtitle {
+  font-size: 1.3rem;
+  font-weight: 300;
+  margin-bottom: 2rem;
+  animation: fadeIn 1.5s ease-out;
+}
+
+.ctaButtons .button:hover {
+  background: var(--secondary-color);
+  color: white;
+  box-shadow: 0 12px 30px rgba(0, 0, 0, 0.3);
+}
+
+@keyframes fadeIn {
+  0% {
+    opacity: 0;
+    transform: translateY(-10px);
+  }
+  100% {
+    opacity: 1;
+    transform: translateY(0);
+  }
 }

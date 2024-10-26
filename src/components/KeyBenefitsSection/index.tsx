@@ -5,7 +5,7 @@ import clsx from 'clsx';
 import styles from './styles.module.css';
 
 const KeyBenefitsSection: React.FC = () => (
-  <section className={clsx('section', styles.keyBenefits)}>
+  <section className={clsx('section-alt', styles.keyBenefits)}>
     <div className="container">
       <div className="row">
         <div className="col col--12 text--center">
