@@ -1,0 +1,22 @@
+.problemSolution {
+  background-color: #fff;
+  padding: 80px 0;
+}
+
+.problemContainer {
+  display: flex;
+  flex-direction: column;
+  gap: 20px;
+}
+
+.problemSolution h2 {
+  font-size: 2.5rem;
+  margin-bottom: 30px;
+  text-align: center;
+}
+
+.problemStatement p,
+.solutionOverview p {
+  font-size: 1.1rem;
+  margin: 10px 0;
+}

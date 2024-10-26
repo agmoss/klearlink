@@ -1,0 +1,15 @@
+.ctaBanner {
+  background: linear-gradient(to bottom right, #0070f3, #0056a4);
+  color: #fff;
+  padding: 60px 0;
+  text-align: center;
+}
+
+.ctaBanner h2 {
+  font-size: 2rem;
+  margin-bottom: 20px;
+}
+
+.ctaBanner .button {
+  margin: 10px;
+}

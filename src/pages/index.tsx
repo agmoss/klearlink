@@ -1,43 +1,32 @@
-import clsx from 'clsx';
-import Link from '@docusaurus/Link';
-import useDocusaurusContext from '@docusaurus/useDocusaurusContext';
+import React from 'react';
 import Layout from '@theme/Layout';
-import HomepageFeatures from '@site/src/components/HomepageFeatures';
-import Heading from '@theme/Heading';
+import HeroSection from '../components/HeroSection';
+import ProblemSolutionSection from '../components/ProblemSolutionSection';
+import KeyBenefitsSection from '../components/KeyBenefitsSection';
+import HowItWorksSection from '../components/HowItWorksSection';
+import ProductSuiteSection from '../components/ProductSuiteSection';
+import KeyInsightsSection from '../components/KeyInsightsSection';
+import UseCasesSection from '../components/UseCasesSection';
+import CTABannerSection from '../components/CTABannerSection';
+import FooterSection from '../components/FooterSection';
 
-import styles from './index.module.css';
-
-function HomepageHeader() {
-  const {siteConfig} = useDocusaurusContext();
-  return (
-    <header className={clsx('hero hero--primary', styles.heroBanner)}>
-      <div className="container">
-        <Heading as="h1" className="hero__title">
-          {siteConfig.title}
-        </Heading>
-        <p className="hero__subtitle">{siteConfig.tagline}</p>
-        <div className={styles.buttons}>
-          <Link
-            className="button button--secondary button--lg"
-            to="/docs/intro">
-            Docusaurus Tutorial - 5min ⏱️
-          </Link>
-        </div>
-      </div>
-    </header>
-  );
-}
-
-export default function Home(): JSX.Element {
-  const {siteConfig} = useDocusaurusContext();
+const Home: React.FC = () => {
   return (
     <Layout
-      title={`Hello from ${siteConfig.title}`}
-      description="Description will go into a meta tag in <head />">
-      <HomepageHeader />
-      <main>
-        <HomepageFeatures />
-      </main>
+      title="Clearlinc.io"
+      description="Instant Credit Profiling for Smarter Lending Decisions"
+    >
+      <HeroSection />
+      <ProblemSolutionSection />
+      <KeyBenefitsSection />
+      <HowItWorksSection />
+      <ProductSuiteSection />
+      <KeyInsightsSection />
+      <UseCasesSection />
+      <CTABannerSection />
+      <FooterSection />
     </Layout>
   );
-}
+};
+
+export default Home;

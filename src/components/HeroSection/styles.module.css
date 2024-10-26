@@ -1,0 +1,32 @@
+.hero {
+  background: linear-gradient(to bottom right, #0070f3, #0056a4);
+  color: #fff;
+  padding: 100px 0;
+  text-align: center;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+}
+
+.heroContent {
+  max-width: 800px;
+}
+
+.hero h1 {
+  font-size: 3rem;
+  margin: 0;
+}
+
+.hero p {
+  font-size: 1.5rem;
+  margin: 20px 0;
+}
+
+.ctaButtons {
+  margin-top: 20px;
+}
+
+.ctaButtons .button {
+  margin: 10px;
+}
