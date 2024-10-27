@@ -13,22 +13,14 @@
   --ifm-color-primary-lightest: #3cad6e;
   --ifm-background-color: #e4e4e4;
   --alt-background-color: #fafafa;
-  --footer-background-color: #0d1b2a;
-  --text-color: #333333;
+  --ifm-footer-background-color: #303846;
+  --ifm-hero-text-color: white;
+  overflow-x: hidden;
 }
 
 html[data-theme='dark'] {
-  --ifm-color-primary: #25c2a0;
-  --ifm-color-primary-dark: #21af90;
-  --ifm-color-primary-darker: #1fa588;
-  --ifm-color-primary-darkest: #1a8870;
-  --ifm-color-primary-light: #29d5b0;
-  --ifm-color-primary-lighter: #32d8b4;
-  --ifm-color-primary-lightest: #4fddbf;
-  --ifm-background-color: #363636;
-  --alt-background-color: #252525;
-  --footer-background-color: #0d1b2a;
-  --text-color: #fafafa;
+  --ifm-background-color: #181818;
+  --alt-background-color: #353535;
 }
 
 /* Body and Text */
@@ -44,7 +36,12 @@ body {
   padding: 1rem;
 }
 
-/* Sections*/
+/* Hero */
+.hero--primary {
+  color: white !important;
+}
+
+/* Sections */
 .section {
   padding: 4rem 2rem;
   text-align: center;
@@ -57,24 +54,38 @@ body {
   color: var(--ifm-color-primary);
 }
 
+[data-theme='dark'] .section__title {
+  color: white;
+}
+
 .section__content {
   max-width: 800px;
   margin: 0 auto;
   font-size: 1.1rem;
-}
-
-.section__subtitle {
-  margin-bottom: 20px; /* Increased spacing between title and description */
-}
-
-.section__description {
-  line-height: 1.8; /* Increased line height for better readability */
+  line-height: 1.8;
   text-align: left;
 }
 
-/* End Section */
+.section__subtitle {
+  margin-bottom: 20px;
+}
+
+.section__description {
+  text-align: left;
+}
 
 /* Cards */
+.card {
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+  height: 100%;
+  padding: 2rem;
+  border-radius: 12px;
+  box-shadow: 0 4px 16px rgba(0, 0, 0, 0.1);
+  transition: transform 0.3s ease;
+  gap: 30px;
+}
 
 .card:hover {
   transform: translateY(-10px);
@@ -86,29 +97,18 @@ body {
   margin-bottom: 1rem;
 }
 
-.card {
-  display: flex;
-  flex-direction: column;
-  justify-content: space-between;
-  height: 100%;
-  padding: 0;
-  border-radius: 12px;
-  box-shadow: 0 4px 16px rgba(0, 0, 0, 0.1);
-  padding: 2rem;
-  transition: transform 0.3s ease;
-}
-
-.card__header {
+.card__header,
+.card__footer {
   text-align: center;
 }
+
 .card__body {
   text-align: left;
 }
-.card__footer {
-  padding: 15px; /* Adjust this padding as needed */
-}
 
-/* End Cards */
+.col {
+  margin-top: 30px;
+}
 
 /* Responsive */
 @media (max-width: 768px) {
@@ -130,8 +130,7 @@ body {
   }
 }
 
-/* Background */
-
+/* Backgrounds */
 .darkBackground {
   background-color: var(--alt-background-color);
 }
@@ -140,50 +139,42 @@ body {
   background-color: var(--ifm-background-color);
 }
 
-/* End Background */
-
-/* Container */
-
-.container.paddingAll {
-  padding: 40px;
-}
-
-.container.paddingBottom {
-  padding-bottom: 80px;
-}
-
-.container.paddingLeft {
-  padding-left: 40px;
-}
-
-.container.paddingRight {
-  padding-right: 40px;
-}
-
-.container.paddingTop {
-  padding-top: 80px;
-}
-
-@media only screen and (max-width: 768px) {
-  .container.paddingBottom {
-    padding-bottom: 40px;
+/* Containers */
+.container {
+  &.paddingAll {
+    padding: 40px;
+  }
+  &.paddingBottom {
+    padding-bottom: 80px;
+  }
+  &.paddingLeft {
+    padding-left: 40px;
+  }
+  &.paddingRight {
+    padding-right: 40px;
+  }
+  &.paddingTop {
+    padding-top: 80px;
   }
 
-  .container.paddingTop {
-    padding-top: 20px;
+  @media (max-width: 768px) {
+    &.paddingBottom {
+      padding-bottom: 40px;
+    }
+    &.paddingTop {
+      padding-top: 20px;
+    }
   }
 }
 
-/* End Container */
-
+/* Icons */
 .icon {
   font-size: 2rem;
   color: var(--ifm-color-primary);
   margin-bottom: 10px;
 }
 
-/* Button  */
-
+/* Buttons */
 .mainButton,
 .secondaryButton {
   padding: 12px 24px;
@@ -196,27 +187,17 @@ body {
 
 .mainButton {
   background-color: var(--ifm-color-primary-darkest);
-  color: white;
 }
 
-.mainButton:hover {
+.mainButton:hover,
+.secondaryButton:hover {
   background-color: var(--ifm-color-primary-lightest);
 }
 
-.secondaryButton {
-  background-color: var(--ifm-background-color);
-}
-
-.secondaryButton:hover {
-  background-color: var(--alt-background-color);
-}
-
-/* End Button  */
-
+/* Headings */
 .h2 {
   text-align: center;
-  font-size: 2.5rem;
   font-size: 2.8rem;
-  margin-bottom: 50px; /* Increased margin below the main section title */
+  margin-bottom: 50px;
   font-weight: 600;
 }

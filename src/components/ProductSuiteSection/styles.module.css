@@ -3,18 +3,3 @@
 .productSuite {
   padding: 80px 0;
 }
-
-.productCards {
-  display: flex;
-  justify-content: center;
-  gap: 30px;
-  flex-wrap: wrap;
-}
-
-.productCard {
-  display: flex;
-  flex-direction: column;
-  justify-content: stretch;
-  text-align: center;
-  flex: 1 1 0%;
-}

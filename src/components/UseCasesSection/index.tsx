@@ -36,7 +36,7 @@ const FeatureList: UseCaseItem[] = [
 
 function UseCase({ title, description }: UseCaseItem) {
   return (
-    <div className={clsx('col col--3', styles.caseItem)}>
+    <div className={clsx('col col--3')}>
       <h3 className="section__subtitle">{title}</h3>
       <p className="section__description">{description}</p>
     </div>
