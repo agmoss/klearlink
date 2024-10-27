@@ -2,6 +2,8 @@
 sidebar_position: 1
 ---
 
+# API
+
 ### Endpoints
 
 ### 1. Submit a lending instance
@@ -36,7 +38,7 @@ sidebar_position: 1
 - `201 Created`: Lending instance successfully created.
 
 :::info
-The use of the Data ETL interface will automatically populate new loan records from your system into Clearlinc, effectively eliminating the need to submit your records via API.
+The use of the Clearsync interface will automatically populate new loan records from your system into Clearlinc, effectively eliminating the need to submit your records via API.
 
 :::
 
@@ -74,7 +76,7 @@ The use of the Data ETL interface will automatically populate new loan records f
 - `200 Ok`: Lending instance successfully updated.
 
 :::info
-The use of the Data ETL interface will automatically update your existing loan records in Clearlinc, effectively eliminating the need to update your records via API.
+The use of the Clearsync interface will automatically update your existing loan records in Clearlinc, effectively eliminating the need to update your records via API.
 
 :::
 
@@ -165,7 +167,7 @@ Here we see an inter-organizational match indicating that your applicant is non-
 :::
 
 :::info
-For real-time updates on consumer matches, use the webhook interface
+For real-time updates on consumer matches, use the Clearwatch interface
 
 :::
 

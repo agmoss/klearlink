@@ -6,7 +6,7 @@ sidebar_position: 1
 
 ## Abstract
 
-Clearprofile by Clearlinc is an API product for the controlled dissemination of cross-party lending statuses to consumers. Integration with the API allows lenders to understand their applicants' prior payment performance on loans sourced by other lenders.
+Clearprofile Clearlinc is an API product for the controlled dissemination of cross-party lending statuses to consumers. Integration with the API allows lenders to understand their applicants' prior payment performance on loans sourced by other lenders.
 
 With Clearlinc, a lender inputs three things on each loan:
 
@@ -22,7 +22,7 @@ in return, the lender is provided with a **consumer match** record
 
 ### Loan facts
 
-Loan facts are a union of the subset of a [Loan](https://schema.org/LoanOrCredit) and a [Person](https://schema.org/LoanOrCredit) **\[TODO: Elaborate on this\]**. All fields of loan facts are optional, and lenders can pick and choose what data fields to provide based on their preferences and use cases. \[TODO: Pick this approach or go with prescriptive approach\]
+Loan facts are a union of the subset of a [Loan](https://schema.org/LoanOrCredit) and a [Person](https://schema.org/Person). All fields of loan facts are optional, and lenders can pick and choose what data fields to provide based on their preferences and use cases.
 
 Clearlinc will only ever return the exact loan facts submitted. The system allows for the determination of inter-organizational consumer matches. It does not allow for any possibility of inter-organizational data dissemination, viewership, or enrichment. Further, consumer matches do not contain any identifiable information about the lending institution.
 
@@ -30,15 +30,18 @@ Providing more loan fact fields will increase the likelihood of a match being fo
 
 Examples of loan fact fields:
 
-- Amount: Credit Limit extended
-- Credit Type: the loan type. for the purposes of the pilot will default to payday
-- Application Date: the date the consumer last applied for the credit
-- Application Time: the time the consumer last applied for the credit
-- Originated Date: date the credit was approved and funds advanced
-- Originated Time: time of day the credit was extended
-- Payment Due Date:
-- Payment Amount Due
-- Credit State (credit state status - see below)
+- **Amount**: Credit Limit extended
+- **Credit Type**: The loan type (for the purposes of the pilot will default to payday)
+- **Application Date**: The date the consumer last applied for the credit
+- **Application Time**: The time the consumer last applied for the credit
+- **Originated Date**: Date the credit was approved and funds advanced
+- **Originated Time**: Time of day the credit was extended
+- **Payment Due Date**: The date on which the loan is due
+- **Payment Amount Due**: Amount due on the Payment Due Date
+- **Address**: Consumers address
+- **Date of Birth**: Consumer date of birth
+- **Email**: Consumer email address
+- **Phone Number**: Consumer phone number
 
 ---
 
