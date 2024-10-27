@@ -45,7 +45,7 @@ function ProductCard({ title, description, link }: ProductItem) {
         </div>
         <div className="card__footer">
           <Link
-            className="button button--secondary button--block"
+            className="button button--secondary button--block secondaryButton"
             to={useBaseUrl(link)}
           >
             See Details
@@ -57,20 +57,18 @@ function ProductCard({ title, description, link }: ProductItem) {
 }
 
 const ProductSuiteSection: React.FC = () => (
-  <section className={clsx('section-alt', styles.productSuite)}>
-    <div className="container">
-      <div className="row">
-        <div className="col col--12 text--center">
-          <h2 className="section__title">Clearlinc Product Suite</h2>
-        </div>
-      </div>
-      <div className="row">
-        {FeatureList.map((product, idx) => (
-          <ProductCard key={idx} {...product} />
-        ))}
+  <div className={styles.productSuite}>
+    <div className="row">
+      <div className="col col--12 text--center">
+        <h2 className="section__title">Clearlinc Product Suite</h2>
       </div>
     </div>
-  </section>
+    <div className="row">
+      {FeatureList.map((product, idx) => (
+        <ProductCard key={idx} {...product} />
+      ))}
+    </div>
+  </div>
 );
 
 export default ProductSuiteSection;

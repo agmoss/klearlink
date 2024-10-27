@@ -5,8 +5,8 @@ import clsx from 'clsx';
 import styles from './styles.module.css';
 
 const ProblemSolutionSection: React.FC = () => (
-  <section className={clsx('section', styles.problemSolution)}>
-    <div className="container">
+  <div className={styles.problemSolution}>
+    <div>
       <div className="row">
         <div className="col col--12 text--center">
           <h2 className="section__title">Don’t Be Left in the Dark</h2>
@@ -15,8 +15,12 @@ const ProblemSolutionSection: React.FC = () => (
       <div className="row">
         <div className="col col--12">
           <div className={clsx('card', styles.problemContainer)}>
+            <div className="card__header">
+              <h3 className="section__subtitle">
+                {'Lenders struggle with incomplete, outdated borrower data.'}
+              </h3>
+            </div>
             <div className={clsx('card__body', styles.problemStatement)}>
-              <p>Lenders struggle with incomplete, outdated borrower data.</p>
               <p>
                 Missing or outdated insights into debt accumulation, number of
                 linked accounts, and recent credit behavior, leading to
@@ -35,7 +39,7 @@ const ProblemSolutionSection: React.FC = () => (
         </div>
       </div>
     </div>
-  </section>
+  </div>
 );
 
 export default ProblemSolutionSection;

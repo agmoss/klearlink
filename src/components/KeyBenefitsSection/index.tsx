@@ -4,10 +4,18 @@ import React from 'react';
 import clsx from 'clsx';
 import styles from './styles.module.css';
 
+import {
+  FaPiggyBank,
+  FaBuilding,
+  FaCalculator,
+  FaChartLine,
+} from 'react-icons/fa';
+import { IconType } from 'react-icons';
+
 type BenefitItem = {
   title: string;
   description: string;
-  imageUrl: string; // New property for the image URL
+  Icon: IconType; // New property for the image URL
 };
 
 const FeatureList: BenefitItem[] = [
@@ -15,34 +23,34 @@ const FeatureList: BenefitItem[] = [
     title: 'Institution Awareness',
     description:
       'Know what institutions your applicant has linked within the last 60 days.',
-    imageUrl: 'https://via.placeholder.com/50', // Placeholder image URL
+    Icon: FaBuilding, // Placeholder image URL
   },
   {
     title: 'Fraud Prevention',
     description:
       "Prevent fraud by understanding the applicant's recent credit behavior.",
-    imageUrl: 'https://via.placeholder.com/50',
+    Icon: FaPiggyBank,
   },
   {
     title: 'Debt-to-Income Precision',
     description: 'Get an accurate debt-to-income ratio using real-time data.',
-    imageUrl: 'https://via.placeholder.com/50',
+    Icon: FaCalculator,
   },
   {
     title: 'Performance Monitoring',
     description:
       'Track your borrower’s credit profile over time to enhance lifetime value and minimize risk.',
-    imageUrl: 'https://via.placeholder.com/50',
+    Icon: FaChartLine,
   },
 ];
 
-const Benefit = ({ title, description, imageUrl }: BenefitItem) => {
+const Benefit = ({ title, description, Icon }: BenefitItem) => {
   return (
     <div className={clsx('col col--3', styles.benefitItem)}>
       <div className="text--center">
-        <img src={imageUrl} alt={title} className={styles.benefitIcon} />
+        <Icon className={'icon'} />
       </div>
-      <div className="text--center padding-horiz--md">
+      <div className="padding-horiz--md">
         <h3 className="section__subtitle">{title}</h3>
         <p className="section__description">{description}</p>
       </div>
@@ -51,20 +59,18 @@ const Benefit = ({ title, description, imageUrl }: BenefitItem) => {
 };
 
 const KeyBenefitsSection: React.FC = () => (
-  <section className={clsx('section-alt', styles.keyBenefits)}>
-    <div className="container">
-      <div className="row">
-        <div className="col col--12 text--center">
-          <h2 className="section__title">The Benefits Are Clear</h2>
-        </div>
-      </div>
-      <div className="row">
-        {FeatureList.map((feature, idx) => (
-          <Benefit key={idx} {...feature} />
-        ))}
+  <div className={styles.keyBenefits}>
+    <div className="row">
+      <div className="col col--12 text--center">
+        <h2 className="section__title">The Benefits Are Clear</h2>
       </div>
     </div>
-  </section>
+    <div className="row">
+      {FeatureList.map((feature, idx) => (
+        <Benefit key={idx} {...feature} />
+      ))}
+    </div>
+  </div>
 );
 
 export default KeyBenefitsSection;

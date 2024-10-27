@@ -38,26 +38,24 @@ const Feature = ({ title, description }: StepItem) => {
 };
 
 const HowItWorksSection: React.FC = () => (
-  <section id="how-it-works" className={clsx('section', styles.howItWorks)}>
-    <div className="container">
-      <div className="row">
-        <div className="col col--12 text--center">
-          <h2 className="section__title">How It Works</h2>
-          <ol className={clsx('list--unstyled', styles.steps)}>
-            {FeatureList.map((feature, idx) => (
-              <Feature key={idx} {...feature} />
-            ))}
-          </ol>
-          <Link
-            className="button button--primary button--lg"
-            to={useBaseUrl('/docs')}
-          >
-            Learn More
-          </Link>
-        </div>
+  <div id="how-it-works" className={styles.howItWorks}>
+    <div className="row">
+      <div className="col col--12 text--center">
+        <h2 className="section__title">How It Works</h2>
+        <ol className={clsx('list--unstyled', styles.steps)}>
+          {FeatureList.map((feature, idx) => (
+            <Feature key={idx} {...feature} />
+          ))}
+        </ol>
+        <Link
+          className="button button--primary button--lg mainButton"
+          to={useBaseUrl('/docs')}
+        >
+          Learn More
+        </Link>
       </div>
     </div>
-  </section>
+  </div>
 );
 
 export default HowItWorksSection;

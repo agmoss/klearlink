@@ -44,30 +44,28 @@ function UseCase({ title, description }: UseCaseItem) {
 }
 
 const UseCasesSection: React.FC = () => (
-  <section className={clsx('section-alt', styles.useCases)}>
-    <div className="container">
-      <div className="row">
-        <div className="col col--12 text--center">
-          <h2 className="section__title">Use Cases</h2>
-        </div>
-      </div>
-      <div className="row">
-        {FeatureList.map((useCase, idx) => (
-          <UseCase key={idx} {...useCase} />
-        ))}
-      </div>
-      <div className="row">
-        <div className="col col--12 text--center">
-          <Link
-            className="button button--primary button--lg"
-            to={useBaseUrl('docs/use-cases')}
-          >
-            Discover More Use Cases
-          </Link>
-        </div>
+  <div className={styles.useCases}>
+    <div className="row">
+      <div className="col col--12 text--center">
+        <h2 className="section__title">Use Cases</h2>
       </div>
     </div>
-  </section>
+    <div className="row">
+      {FeatureList.map((useCase, idx) => (
+        <UseCase key={idx} {...useCase} />
+      ))}
+    </div>
+    <div className="row">
+      <div className="col col--12 text--center">
+        <Link
+          className="button button--primary button--lg mainButton"
+          to={useBaseUrl('docs/use-cases')}
+        >
+          Discover More Use Cases
+        </Link>
+      </div>
+    </div>
+  </div>
 );
 
 export default UseCasesSection;

@@ -4,7 +4,6 @@
   align-items: center;
   justify-content: center;
   padding: 80px 20px;
-  background-color: var(--secondary-color);
   overflow: hidden;
 }
 
@@ -20,7 +19,7 @@
 .heading {
   font-size: 3rem;
   font-weight: bold;
-  color: var(--primary-color);
+  color: var(--ifm-color-primary);
   margin-bottom: 20px;
 }
 
@@ -45,17 +44,11 @@
 .subHeading {
   font-size: 1.5rem;
   font-weight: 600;
-  color: var(--primary-color);
+  color: var(--ifm-color-primary);
   margin: 10px 0;
 }
 
 .text {
   font-size: 1.2rem;
   color: var(--accent-color);
-}
-
-.icon {
-  font-size: 2rem;
-  color: var(--primary-color);
-  margin-bottom: 10px;
 }

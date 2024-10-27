@@ -11,8 +11,6 @@
   --ifm-color-primary-light: #33925d;
   --ifm-color-primary-lighter: #359962;
   --ifm-color-primary-lightest: #3cad6e;
-  --primary-color: #2e8555;
-  --secondary-color: #f57c00;
   --ifm-background-color: #e4e4e4;
   --alt-background-color: #fafafa;
   --footer-background-color: #0d1b2a;
@@ -27,8 +25,6 @@ html[data-theme='dark'] {
   --ifm-color-primary-light: #29d5b0;
   --ifm-color-primary-lighter: #32d8b4;
   --ifm-color-primary-lightest: #4fddbf;
-  --primary-color: #25c2a0;
-  --secondary-color: #f57c00;
   --ifm-background-color: #363636;
   --alt-background-color: #252525;
   --footer-background-color: #0d1b2a;
@@ -43,25 +39,13 @@ body {
 
 /* Header */
 .header {
-  background-color: var(--primary-color);
+  background-color: var(--ifm-color-primary);
   color: white;
   padding: 1rem;
-  box-shadow: 0 4px 20px rgba(0, 0, 0, 0.1);
 }
 
-.navbar__title {
-  font-size: 1.8rem;
-  font-weight: 600;
-}
-
-/* Sections */
+/* Sections*/
 .section {
-  padding: 4rem 2rem;
-  text-align: center;
-}
-
-.section-alt {
-  background-color: var(--alt-background-color);
   padding: 4rem 2rem;
   text-align: center;
 }
@@ -70,7 +54,7 @@ body {
   font-size: 2.2rem;
   font-weight: 600;
   margin-bottom: 2rem;
-  color: var(--primary-color);
+  color: var(--ifm-color-primary);
 }
 
 .section__content {
@@ -79,13 +63,18 @@ body {
   font-size: 1.1rem;
 }
 
-/* Cards */
-.card {
-  border-radius: 12px;
-  box-shadow: 0 4px 16px rgba(0, 0, 0, 0.1);
-  padding: 2rem;
-  transition: transform 0.3s ease;
+.section__subtitle {
+  margin-bottom: 20px; /* Increased spacing between title and description */
 }
+
+.section__description {
+  line-height: 1.8; /* Increased line height for better readability */
+  text-align: left;
+}
+
+/* End Section */
+
+/* Cards */
 
 .card:hover {
   transform: translateY(-10px);
@@ -94,9 +83,32 @@ body {
 .card__title {
   font-size: 1.5rem;
   font-weight: 600;
-  color: var(--secondary-color);
   margin-bottom: 1rem;
 }
+
+.card {
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+  height: 100%;
+  padding: 0;
+  border-radius: 12px;
+  box-shadow: 0 4px 16px rgba(0, 0, 0, 0.1);
+  padding: 2rem;
+  transition: transform 0.3s ease;
+}
+
+.card__header {
+  text-align: center;
+}
+.card__body {
+  text-align: left;
+}
+.card__footer {
+  padding: 15px; /* Adjust this padding as needed */
+}
+
+/* End Cards */
 
 /* Responsive */
 @media (max-width: 768px) {
@@ -116,4 +128,95 @@ body {
   .key-benefit {
     width: 80%;
   }
+}
+
+/* Background */
+
+.darkBackground {
+  background-color: var(--alt-background-color);
+}
+
+.lightBackground {
+  background-color: var(--ifm-background-color);
+}
+
+/* End Background */
+
+/* Container */
+
+.container.paddingAll {
+  padding: 40px;
+}
+
+.container.paddingBottom {
+  padding-bottom: 80px;
+}
+
+.container.paddingLeft {
+  padding-left: 40px;
+}
+
+.container.paddingRight {
+  padding-right: 40px;
+}
+
+.container.paddingTop {
+  padding-top: 80px;
+}
+
+@media only screen and (max-width: 768px) {
+  .container.paddingBottom {
+    padding-bottom: 40px;
+  }
+
+  .container.paddingTop {
+    padding-top: 20px;
+  }
+}
+
+/* End Container */
+
+.icon {
+  font-size: 2rem;
+  color: var(--ifm-color-primary);
+  margin-bottom: 10px;
+}
+
+/* Button  */
+
+.mainButton,
+.secondaryButton {
+  padding: 12px 24px;
+  border: none;
+  border-radius: 4px;
+  font-size: 1rem;
+  cursor: pointer;
+  transition: background-color 0.3s ease;
+}
+
+.mainButton {
+  background-color: var(--ifm-color-primary-darkest);
+  color: white;
+}
+
+.mainButton:hover {
+  background-color: var(--ifm-color-primary-lightest);
+}
+
+.secondaryButton {
+  background-color: var(--ifm-background-color);
+}
+
+.secondaryButton:hover {
+  background-color: var(--alt-background-color);
+}
+
+/* End Button  */
+
+.h2 {
+  text-align: center;
+  font-size: 2.5rem;
+  font-size: 2.8rem;
+  margin-bottom: 50px; /* Increased margin below the main section title */
+  font-weight: 600;
 }

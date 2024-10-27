@@ -8,6 +8,7 @@ import ProductSuiteSection from '../components/ProductSuiteSection';
 import KeyInsightsSection from '../components/KeyInsightsSection';
 import UseCasesSection from '../components/UseCasesSection';
 import CTABannerSection from '../components/CTABannerSection';
+import Container from '../core/Container';
 
 const Home: React.FC = () => {
   return (
@@ -16,13 +17,27 @@ const Home: React.FC = () => {
       description="Instant Credit Profiling for Smarter Lending Decisions"
     >
       <HeroSection />
-      <ProblemSolutionSection />
-      <KeyBenefitsSection />
-      <HowItWorksSection />
-      <ProductSuiteSection />
-      <KeyInsightsSection />
-      <UseCasesSection />
-      <CTABannerSection />
+      <div className="homePage mainContainer">
+        <Container className="section" background="dark">
+          <ProblemSolutionSection />
+        </Container>
+        <Container className="section" background="light">
+          <KeyBenefitsSection />
+        </Container>
+        <Container className="section" background="dark">
+          <HowItWorksSection />
+        </Container>
+        <Container className="section" background="light">
+          <ProductSuiteSection />
+        </Container>
+        <Container className="section" background="dark">
+          <KeyInsightsSection />
+        </Container>
+        <Container className="section" background="light">
+          <UseCasesSection />
+        </Container>
+        <CTABannerSection />
+      </div>
     </Layout>
   );
 };

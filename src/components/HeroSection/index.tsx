@@ -6,6 +6,11 @@ import clsx from 'clsx';
 import styles from './styles.module.css';
 import useDocusaurusContext from '@docusaurus/useDocusaurusContext';
 import useBaseUrl from '@docusaurus/useBaseUrl';
+import Image from '../../core/Image';
+
+const FeatureList: Image = {
+  Svg: require('@site/static/img/img-white.svg').default,
+};
 
 const HeroSection = () => {
   const { siteConfig } = useDocusaurusContext();
@@ -22,13 +27,13 @@ const HeroSection = () => {
           </p>
           <div className={styles.buttonGroup}>
             <Link
-              className="button button--primary button--lg"
+              className="button button--primary button--lg mainButton"
               to={useBaseUrl('/contact-us')}
             >
               Contact Us
             </Link>
             <Link
-              className="button button--secondary button--lg"
+              className="button button--secondary button--lg secondaryButton"
               to={useBaseUrl('/docs')}
             >
               How It Works
@@ -36,11 +41,7 @@ const HeroSection = () => {
           </div>
         </div>
         <div className={styles.imageContainer}>
-          <img
-            src="https://via.placeholder.com/500x300" // Placeholder image
-            alt="Financial Data Visualization"
-            className={styles.placeholderImage}
-          />
+          <FeatureList.Svg className={styles.placeholderImage} role="img" />
         </div>
       </div>
     </header>

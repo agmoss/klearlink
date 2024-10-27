@@ -57,9 +57,10 @@ const config: Config = {
     image: 'img/social-card.webp',
     navbar: {
       title: 'Clearlinc',
+      style: 'primary',
       logo: {
         alt: 'logo',
-        src: 'img/logo.svg',
+        src: 'img/img-white.svg',
       },
       items: [
         {
@@ -109,6 +110,9 @@ const config: Config = {
           ],
         },
       ],
+      logo: {
+        src: 'img/img.svg',
+      },
       copyright: `Copyright © ${new Date().getFullYear()} Clearlinc, Inc.`,
     },
     prism: {

@@ -2,29 +2,25 @@
 
 import React from 'react';
 import Link from '@docusaurus/Link';
-import clsx from 'clsx';
 import styles from './styles.module.css';
 import useBaseUrl from '@docusaurus/useBaseUrl';
 
 const CTABannerSection: React.FC = () => (
-  <section className={clsx('section', styles.ctaBanner)}>
-    <div className="container">
-      <div className="row">
-        <div className="col col--12 text--center">
-          <h2 className="section__title">
-            Curious to Enhance Your Credit Profiling? We’d Love to Hear from
-            You.
-          </h2>
-          <Link
-            className="button button--primary button--lg"
-            to={useBaseUrl('contact-us')}
-          >
-            Get More Info
-          </Link>
-        </div>
+  <div className={styles.ctaBanner}>
+    <div className="row">
+      <div className="col col--12 text--center">
+        <h2 className="section__title">
+          Curious to Enhance Your Credit Profiling? We’d Love to Hear from You.
+        </h2>
+        <Link
+          className="button button--primary button--lg mainButton"
+          to={useBaseUrl('contact-us')}
+        >
+          Get More Info
+        </Link>
       </div>
     </div>
-  </section>
+  </div>
 );
 
 export default CTABannerSection;

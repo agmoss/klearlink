@@ -4,7 +4,6 @@
   display: flex;
   justify-content: center;
   align-items: center;
-
   min-height: 90vh; /* Makes the hero section taller */
   padding: 20px 0;
 }
@@ -32,41 +31,12 @@
 
 .subtitle {
   font-size: 1.2rem;
-
   margin-bottom: 2rem;
 }
 
 .buttonGroup {
   display: flex;
   gap: 10px; /* Adds spacing between the buttons */
-}
-
-.ctaButton,
-.secondaryButton {
-  padding: 12px 24px;
-  border: none;
-  border-radius: 4px;
-  font-size: 1rem;
-  cursor: pointer;
-  transition: background-color 0.3s ease;
-}
-
-.ctaButton {
-  background-color: #5562e8;
-  color: white;
-}
-
-.ctaButton:hover {
-  background-color: #3e49c0;
-}
-
-.secondaryButton {
-  background-color: #e0e0e0;
-  color: #333;
-}
-
-.secondaryButton:hover {
-  background-color: #b3b3b3;
 }
 
 .imageContainer {

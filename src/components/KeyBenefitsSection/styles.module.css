@@ -4,30 +4,7 @@
   padding: 60px 0; /* Increased padding around the whole section */
 }
 
-.benefitIconContainer {
-  display: flex;
-  justify-content: center;
-  margin-bottom: 20px; /* Increased margin below the icon */
-}
-
 .benefitItem {
   margin-bottom: 40px; /* Increased spacing between each benefit item */
   padding: 20px; /* Optional: Add padding inside each item for more breathing room */
-}
-
-.section__title {
-  margin-bottom: 50px; /* More space below the main section title */
-}
-
-.section__subtitle {
-  margin-bottom: 15px; /* Space between title and description */
-}
-
-.section__description {
-  line-height: 1.7; /* Increased line height for better readability */
-}
-
-.container {
-  max-width: 1200px; /* You can optionally increase the container width if needed */
-  padding: 0 40px; /* More padding on the sides for the container */
 }
