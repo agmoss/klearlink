@@ -4,24 +4,29 @@
 :root {
   --ifm-font-family-base: 'Inter', sans-serif;
   --ifm-font-family-monospace: 'Fira Code', monospace;
-  --ifm-color-primary: #2e8555;
-  --ifm-color-primary-dark: #29784c;
-  --ifm-color-primary-darker: #277148;
-  --ifm-color-primary-darkest: #205d3b;
-  --ifm-color-primary-light: #33925d;
-  --ifm-color-primary-lighter: #359962;
-  --ifm-color-primary-lightest: #3cad6e;
-  --ifm-background-color: #e4e4e4;
-  --alt-background-color: #fafafa;
-  --ifm-footer-background-color: #303846;
-  --ifm-hero-text-color: white;
+  --ifm-color-primary: #000;
+  --ifm-background-color: #000;
+  --alt-background-color: #000;
+  --ifm-footer-background-color: #000;
+  --ifm-hero-text-color: #000;
+  --ifm-font-color-base: #fff;
+  --ifm-font-color-base-inverse: #fff;
   overflow-x: hidden;
 }
 
 html[data-theme='dark'] {
-  --ifm-background-color: #181818;
-  --alt-background-color: #353535;
+  --ifm-font-family-base: 'Inter', sans-serif;
+  --ifm-font-family-monospace: 'Fira Code', monospace;
+  --ifm-color-primary: #000;
+  --ifm-background-color: #000;
+  --alt-background-color: #000;
+  --ifm-footer-background-color: #000;
+  --ifm-hero-text-color: #000;
+  --ifm-font-color-secondary: #ffd944;
+  --ifm-color-secondary: #ffd944;
+  overflow-x: hidden;
 }
+
 
 /* Body and Text */
 body {
@@ -29,17 +34,6 @@ body {
   line-height: 1.7;
 }
 
-/* Header */
-.header {
-  background-color: var(--ifm-color-primary);
-  color: white;
-  padding: 1rem;
-}
-
-/* Hero */
-.hero--primary {
-  color: white !important;
-}
 
 /* Sections */
 .section {
@@ -51,11 +45,7 @@ body {
   font-size: 2.2rem;
   font-weight: 600;
   margin-bottom: 2rem;
-  color: var(--ifm-color-primary);
-}
-
-[data-theme='dark'] .section__title {
-  color: white;
+  color: var(--ifm-font-color-secondary);
 }
 
 .section__content {
