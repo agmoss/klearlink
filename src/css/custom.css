@@ -5,12 +5,12 @@
   --ifm-font-family-base: 'Inter', sans-serif;
   --ifm-font-family-monospace: 'Fira Code', monospace;
   --ifm-color-primary: #000;
-  --ifm-background-color: var(--ifm-color-primary);
-  --alt-background-color: var(--ifm-color-primary);
-  --ifm-hero-text-color: var(--ifm-color-primary);
+  --ifm-background-color: #000;
+  --alt-background-color: #000;
+  --ifm-hero-text-color: #000;
   --ifm-font-color-base: #fff;
   --ifm-font-color-base-inverse: #fff;
-  --ifm-footer-background-color: var(--ifm-color-primary);
+  --ifm-footer-background-color: #000;
   overflow-x: hidden;
 }
 
@@ -18,18 +18,18 @@ html[data-theme='dark'] {
   --ifm-font-family-base: 'Inter', sans-serif;
   --ifm-font-family-monospace: 'Fira Code', monospace;
   --ifm-color-primary: #000;
-  --ifm-background-color: var(--ifm-color-primary);
-  --alt-background-color: var(--ifm-color-primary);
-  --ifm-hero-text-color: var(--ifm-color-primary);
+  --ifm-background-color: #000;
+  --alt-background-color: #000;
+  --ifm-hero-text-color: #000;
   --ifm-font-color-secondary: #ffd944;
   --ifm-color-secondary: #ffd944;
   overflow-x: hidden;
-  --ifm-footer-background-color: var(--ifm-color-primary);
+  --ifm-footer-background-color: #000;
 }
 
 /* Body and Text */
 body {
-  color: var(--text-color);
+  color: #fff;
   line-height: 1.7;
 }
 
@@ -121,11 +121,11 @@ body {
 
 /* Backgrounds */
 .darkBackground {
-  background-color: var(--alt-background-color);
+  background-color: #000;
 }
 
 .lightBackground {
-  background-color: var(--ifm-background-color);
+  background-color: #000;
 }
 
 /* Containers */
@@ -171,20 +171,20 @@ body {
   border-radius: 4px;
   font-size: 1rem;
   cursor: pointer;
-  color: var(--ifm-color-primary);
+  color: #000;
   transition: background-color 0.3s ease;
 }
 
 .mainButton,
 .secondaryButton {
-  color: var(--ifm-color-primary);
+  color: #000;
   background-color: #ffd944;
 }
 
 .mainButton:hover,
 .secondaryButton:hover {
   color: #ffd944;
-  background-color: var(--ifm-color-primary);
+  background-color: #000;
 }
 
 /* Headings */
