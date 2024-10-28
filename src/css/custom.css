@@ -171,16 +171,19 @@ body {
   border-radius: 4px;
   font-size: 1rem;
   cursor: pointer;
+  color: var(--ifm-color-primary);
   transition: background-color 0.3s ease;
 }
 
 .mainButton,
 .secondaryButton {
+  color: var(--ifm-color-primary);
   background-color: var(--ifm-color-secondary);
 }
 
 .mainButton:hover,
 .secondaryButton:hover {
+  color: var(--ifm-color-secondary);
   background-color: var(--ifm-color-primary);
 }
 
