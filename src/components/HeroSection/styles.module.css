@@ -31,6 +31,7 @@
   top: -400px;
   max-width: 1400px;
   margin: auto;
+  z-index: -1;
 }
 
 .placeholderImage {
