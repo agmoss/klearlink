@@ -15,7 +15,7 @@ const FeatureList: Image = {
 const HeroSection = () => {
   const { siteConfig } = useDocusaurusContext();
   return (
-    <header className={clsx('hero hero--primary', styles.heroSection)}>
+    <header className={clsx('hero hero--primary', styles.homeContainer)}>
       <div className={clsx('container', styles.container)}>
         <div className={styles.content}>
           <h1 className={clsx('hero__title', styles.title)}>

@@ -3,8 +3,8 @@
 .ctaBanner {
   background: linear-gradient(
     135deg,
-    var(--ifm-color-primary-darkest) 40%,
-    var(--ifm-color-primary-lightest)
+    var(--ifm-color-primary) 40%,
+    var(--ifm-color-primary)
   );
   padding: 200px 0; /* Increased padding for the whole section */
   text-align: center;

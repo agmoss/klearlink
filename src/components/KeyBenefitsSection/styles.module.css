@@ -1,9 +1,5 @@
 /* styles.module.css */
 
-.keyBenefits {
-  padding: 60px 0; /* Increased padding around the whole section */
-}
-
 .benefitItem {
   margin-bottom: 40px; /* Increased spacing between each benefit item */
   padding: 20px; /* Optional: Add padding inside each item for more breathing room */

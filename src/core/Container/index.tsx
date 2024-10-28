@@ -1,5 +1,6 @@
 import classNames from 'classnames';
 import * as React from 'react';
+import styles from './styles.module.css';
 
 interface ContainerProps {
   background?: 'dark' | 'highlight' | 'light';
@@ -29,7 +30,7 @@ const Container: React.FC<ContainerProps> = ({
 
   return (
     <section className={containerClasses}>
-      <div className="container">{children}</div>
+      <div className={classNames('container', styles.cntr)}>{children}</div>
     </section>
   );
 };

@@ -1,11 +1,11 @@
 /* styles.module.css */
 
-.heroSection {
-  display: flex;
-  justify-content: center;
-  align-items: center;
-  min-height: 90vh; /* Makes the hero section taller */
-  padding: 20px 0;
+.homeContainer {
+  text-align: left;
+  overflow: hidden;
+  position: relative;
+  background-color: var(--main-bg-color);
+  min-height: 50vh;
 }
 
 .container {
@@ -29,21 +29,19 @@
   margin-bottom: 1rem;
 }
 
-.subtitle {
-  font-size: 1.2rem;
-  margin-bottom: 2rem;
-}
-
 .buttonGroup {
   display: flex;
   gap: 10px; /* Adds spacing between the buttons */
 }
 
 .imageContainer {
-  max-width: 45%;
-  flex: 1;
-  display: flex;
-  justify-content: center;
+  position: absolute;
+  opacity: 0.09;
+  left: 0;
+  right: 0;
+  top: -400px;
+  max-width: 1400px;
+  margin: auto;
 }
 
 .placeholderImage {

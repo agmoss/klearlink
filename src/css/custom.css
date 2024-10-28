@@ -5,12 +5,12 @@
   --ifm-font-family-base: 'Inter', sans-serif;
   --ifm-font-family-monospace: 'Fira Code', monospace;
   --ifm-color-primary: #000;
-  --ifm-background-color: #000;
-  --alt-background-color: #000;
-  --ifm-footer-background-color: #000;
-  --ifm-hero-text-color: #000;
+  --ifm-background-color: var(--ifm-color-primary);
+  --alt-background-color: var(--ifm-color-primary);
+  --ifm-hero-text-color: var(--ifm-color-primary);
   --ifm-font-color-base: #fff;
   --ifm-font-color-base-inverse: #fff;
+  --ifm-footer-background-color: var(--ifm-color-primary);
   overflow-x: hidden;
 }
 
@@ -18,22 +18,20 @@ html[data-theme='dark'] {
   --ifm-font-family-base: 'Inter', sans-serif;
   --ifm-font-family-monospace: 'Fira Code', monospace;
   --ifm-color-primary: #000;
-  --ifm-background-color: #000;
-  --alt-background-color: #000;
-  --ifm-footer-background-color: #000;
-  --ifm-hero-text-color: #000;
+  --ifm-background-color: var(--ifm-color-primary);
+  --alt-background-color: var(--ifm-color-primary);
+  --ifm-hero-text-color: var(--ifm-color-primary);
   --ifm-font-color-secondary: #ffd944;
   --ifm-color-secondary: #ffd944;
   overflow-x: hidden;
+  --ifm-footer-background-color: var(--ifm-color-primary);
 }
-
 
 /* Body and Text */
 body {
   color: var(--text-color);
   line-height: 1.7;
 }
-
 
 /* Sections */
 .section {
@@ -57,7 +55,8 @@ body {
 }
 
 .section__subtitle {
-  margin-bottom: 20px;
+  font-size: 1.2rem;
+  margin-bottom: 40px;
 }
 
 .section__description {
@@ -160,7 +159,7 @@ body {
 /* Icons */
 .icon {
   font-size: 2rem;
-  color: var(--ifm-color-primary);
+  color: var(--ifm-color-secondary);
   margin-bottom: 10px;
 }
 
@@ -175,13 +174,14 @@ body {
   transition: background-color 0.3s ease;
 }
 
-.mainButton {
-  background-color: var(--ifm-color-primary-darkest);
+.mainButton,
+.secondaryButton {
+  background-color: var(--ifm-color-secondary);
 }
 
 .mainButton:hover,
 .secondaryButton:hover {
-  background-color: var(--ifm-color-primary-lightest);
+  background-color: var(--ifm-color-primary);
 }
 
 /* Headings */

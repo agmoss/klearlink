@@ -57,7 +57,7 @@ function ProductCard({ title, description, link }: ProductItem) {
 }
 
 const ProductSuiteSection: React.FC = () => (
-  <div className={styles.productSuite}>
+  <div>
     <div className="row">
       <div className="col col--12 text--center">
         <h2 className="section__title">Clearlinc Product Suite</h2>
