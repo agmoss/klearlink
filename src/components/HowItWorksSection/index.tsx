@@ -38,10 +38,10 @@ const Feature = ({ title, description }: StepItem) => {
 };
 
 const HowItWorksSection: React.FC = () => (
-  <div id="how-it-works" className={styles.howItWorks}>
+  <div id="how-it-works">
     <div className="row">
       <div className="col col--12 text--center">
-        <h2 className="section__title">How It Works</h2>
+        <h2 className="section__title h2">How It Works</h2>
         <ol className={clsx('list--unstyled', styles.steps)}>
           {FeatureList.map((feature, idx) => (
             <Feature key={idx} {...feature} />

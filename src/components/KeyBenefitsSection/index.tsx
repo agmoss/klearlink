@@ -15,7 +15,7 @@ import { IconType } from 'react-icons';
 type BenefitItem = {
   title: string;
   description: string;
-  Icon: IconType; // New property for the image URL
+  Icon: IconType;
 };
 
 const FeatureList: BenefitItem[] = [
@@ -23,7 +23,7 @@ const FeatureList: BenefitItem[] = [
     title: 'Institution Awareness',
     description:
       'Know what institutions your applicant has linked within the last 60 days.',
-    Icon: FaBuilding, // Placeholder image URL
+    Icon: FaBuilding,
   },
   {
     title: 'Fraud Prevention',
@@ -59,7 +59,7 @@ const Benefit = ({ title, description, Icon }: BenefitItem) => {
 };
 
 const KeyBenefitsSection: React.FC = () => (
-  <div className={styles.keyBenefits}>
+  <div>
     <div className="row">
       <div className="col col--12 text--center">
         <h2 className="section__title">The Benefits Are Clear</h2>

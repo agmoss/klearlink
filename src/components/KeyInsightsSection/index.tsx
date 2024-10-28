@@ -3,6 +3,7 @@
 import React from 'react';
 import clsx from 'clsx';
 import styles from './styles.module.css';
+import { FaCheckCircle } from 'react-icons/fa';
 
 type InsightItem = {
   text: string;
@@ -17,18 +18,23 @@ const FeatureList: InsightItem[] = [
   { text: 'Customer Indicators' },
 ];
 
-const Insight = ({ text }: InsightItem) => {
+const Insight: React.FC<InsightItem> = ({ text }) => {
   return (
-    <li className={clsx('section__list-item', styles.insightItem)}>{text}</li>
+    <li className={clsx('section__list-item', styles.insightItem)}>
+      <FaCheckCircle className={styles.icon} />
+      {text}
+    </li>
   );
 };
 
 const KeyInsightsSection: React.FC = () => (
-  <div className={styles.keyInsights}>
+  <div className={clsx('container')}>
     <div className="row">
       <div className="col col--12 text--center">
-        <h2 className="section__title">Key Insights Provided by Clearlinc</h2>
-        <p className={styles.subtitle}>
+        <h2 className={clsx('section__title')}>
+          Key Insights Provided by Clearlinc
+        </h2>
+        <p className={'section__subtitle'}>
           Discover essential insights for smarter lending and better decisions.
         </p>
       </div>

@@ -4,41 +4,33 @@
 :root {
   --ifm-font-family-base: 'Inter', sans-serif;
   --ifm-font-family-monospace: 'Fira Code', monospace;
-  --ifm-color-primary: #2e8555;
-  --ifm-color-primary-dark: #29784c;
-  --ifm-color-primary-darker: #277148;
-  --ifm-color-primary-darkest: #205d3b;
-  --ifm-color-primary-light: #33925d;
-  --ifm-color-primary-lighter: #359962;
-  --ifm-color-primary-lightest: #3cad6e;
-  --ifm-background-color: #e4e4e4;
-  --alt-background-color: #fafafa;
-  --ifm-footer-background-color: #303846;
-  --ifm-hero-text-color: white;
+  --ifm-color-primary: #000;
+  --ifm-background-color: var(--ifm-color-primary);
+  --alt-background-color: var(--ifm-color-primary);
+  --ifm-hero-text-color: var(--ifm-color-primary);
+  --ifm-font-color-base: #fff;
+  --ifm-font-color-base-inverse: #fff;
+  --ifm-footer-background-color: var(--ifm-color-primary);
   overflow-x: hidden;
 }
 
 html[data-theme='dark'] {
-  --ifm-background-color: #181818;
-  --alt-background-color: #353535;
+  --ifm-font-family-base: 'Inter', sans-serif;
+  --ifm-font-family-monospace: 'Fira Code', monospace;
+  --ifm-color-primary: #000;
+  --ifm-background-color: var(--ifm-color-primary);
+  --alt-background-color: var(--ifm-color-primary);
+  --ifm-hero-text-color: var(--ifm-color-primary);
+  --ifm-font-color-secondary: #ffd944;
+  --ifm-color-secondary: #ffd944;
+  overflow-x: hidden;
+  --ifm-footer-background-color: var(--ifm-color-primary);
 }
 
 /* Body and Text */
 body {
   color: var(--text-color);
   line-height: 1.7;
-}
-
-/* Header */
-.header {
-  background-color: var(--ifm-color-primary);
-  color: white;
-  padding: 1rem;
-}
-
-/* Hero */
-.hero--primary {
-  color: white !important;
 }
 
 /* Sections */
@@ -51,11 +43,7 @@ body {
   font-size: 2.2rem;
   font-weight: 600;
   margin-bottom: 2rem;
-  color: var(--ifm-color-primary);
-}
-
-[data-theme='dark'] .section__title {
-  color: white;
+  color: var(--ifm-font-color-secondary);
 }
 
 .section__content {
@@ -67,7 +55,8 @@ body {
 }
 
 .section__subtitle {
-  margin-bottom: 20px;
+  font-size: 1.2rem;
+  margin-bottom: 40px;
 }
 
 .section__description {
@@ -170,7 +159,7 @@ body {
 /* Icons */
 .icon {
   font-size: 2rem;
-  color: var(--ifm-color-primary);
+  color: var(--ifm-color-secondary);
   margin-bottom: 10px;
 }
 
@@ -182,16 +171,20 @@ body {
   border-radius: 4px;
   font-size: 1rem;
   cursor: pointer;
+  color: var(--ifm-color-primary);
   transition: background-color 0.3s ease;
 }
 
-.mainButton {
-  background-color: var(--ifm-color-primary-darkest);
+.mainButton,
+.secondaryButton {
+  color: var(--ifm-color-primary);
+  background-color: var(--ifm-color-secondary);
 }
 
 .mainButton:hover,
 .secondaryButton:hover {
-  background-color: var(--ifm-color-primary-lightest);
+  color: var(--ifm-color-secondary);
+  background-color: var(--ifm-color-primary);
 }
 
 /* Headings */
