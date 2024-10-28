@@ -43,7 +43,7 @@ body {
   font-size: 2.2rem;
   font-weight: 600;
   margin-bottom: 2rem;
-  color: var(--ifm-font-color-secondary);
+  color: #ffd944;
 }
 
 .section__content {
@@ -159,7 +159,7 @@ body {
 /* Icons */
 .icon {
   font-size: 2rem;
-  color: var(--ifm-color-secondary);
+  color: #ffd944;
   margin-bottom: 10px;
 }
 
@@ -178,12 +178,12 @@ body {
 .mainButton,
 .secondaryButton {
   color: var(--ifm-color-primary);
-  background-color: var(--ifm-color-secondary);
+  background-color: #ffd944;
 }
 
 .mainButton:hover,
 .secondaryButton:hover {
-  color: var(--ifm-color-secondary);
+  color: #ffd944;
   background-color: var(--ifm-color-primary);
 }
 
