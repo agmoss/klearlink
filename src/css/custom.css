@@ -11,7 +11,7 @@
   --ifm-font-color-base: #fff;
   --ifm-font-color-base-inverse: #fff;
   --ifm-footer-background-color: #000;
-  --ifm-card-background-color: #000
+  --ifm-card-background-color: #000;
   overflow-x: hidden;
 }
 
@@ -173,19 +173,31 @@ body {
   font-size: 1rem;
   cursor: pointer;
   color: #000;
-  transition: background-color 0.3s ease;
 }
 
 .mainButton,
 .secondaryButton {
   color: #000;
   background-color: #ffd944;
+  border: 2px solid #ffd944;
 }
 
 .mainButton:hover,
 .secondaryButton:hover {
   color: #ffd944;
   background-color: #000;
+  border: 2px solid #ffd944;
+}
+
+.outlinedButton {
+  border: 2px solid #000;
+  color: #000;
+  background-color: #ffd944;
+}
+
+.outlinedButton:hover {
+  background-color: #000;
+  color: #ffd944;
 }
 
 /* Headings */
@@ -194,4 +206,10 @@ body {
   font-size: 2.8rem;
   margin-bottom: 50px;
   font-weight: 600;
+}
+
+.hero__title {
+  font-size: 3rem;
+  font-weight: bold;
+  margin-bottom: 1rem;
 }

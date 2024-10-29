@@ -9,7 +9,7 @@ import useBaseUrl from '@docusaurus/useBaseUrl';
 import Image from '../../core/Image';
 
 const FeatureList: Image = {
-  Svg: require('@site/static/img/img-white.svg').default,
+  Svg: require('@site/static/img/img.svg').default,
 };
 
 const HeroSection = () => {
@@ -18,9 +18,7 @@ const HeroSection = () => {
     <header className={clsx('hero hero--primary', styles.homeContainer)}>
       <div className={clsx('container', styles.container)}>
         <div className={styles.content}>
-          <h1 className={clsx('hero__title', styles.title)}>
-            {siteConfig.tagline}
-          </h1>
+          <h1 className={clsx('hero__title')}>{siteConfig.tagline}</h1>
           <p className={clsx('hero__subtitle', styles.subtitle)}>
             Real-time profiling and alternative credit insights, so you lend
             with confidence.
@@ -33,7 +31,7 @@ const HeroSection = () => {
               Contact Us
             </Link>
             <Link
-              className="button button--secondary button--lg secondaryButton"
+              className="button button--primary button--lg secondaryButton"
               to={useBaseUrl('/docs')}
             >
               How It Works
@@ -41,7 +39,7 @@ const HeroSection = () => {
           </div>
         </div>
         <div className={styles.imageContainer}>
-          <FeatureList.Svg className={styles.placeholderImage} role="img" />
+          <FeatureList.Svg className={styles.logoBackground} role="img" />
         </div>
       </div>
     </header>

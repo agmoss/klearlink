@@ -3,8 +3,8 @@
 .homeContainer {
   text-align: left;
   overflow: hidden;
+  position: relative;
   background-color: var(--main-bg-color);
-  min-height: 50vh;
 }
 
 .content {
@@ -12,20 +12,14 @@
   flex: 1;
 }
 
-.title {
-  font-size: 3rem;
-  font-weight: bold;
-  margin-bottom: 1rem;
-}
-
 .buttonGroup {
   display: flex;
-  gap: 10px; /* Adds spacing between the buttons */
+  gap: 10px;
 }
 
 .imageContainer {
   position: absolute;
-  opacity: 0.07;
+  opacity: 0.09;
   left: 0;
   right: 0;
   top: -400px;
@@ -34,7 +28,7 @@
   z-index: -1;
 }
 
-.placeholderImage {
+.logoBackground {
   width: 100%;
   height: auto;
   border-radius: 8px;
@@ -55,14 +49,6 @@
   .imageContainer {
     max-width: 100%;
     margin-top: 20px;
-  }
-
-  .title {
-    font-size: 2.5rem;
-  }
-
-  .subtitle {
-    font-size: 1.1rem;
   }
 
   .buttonGroup {

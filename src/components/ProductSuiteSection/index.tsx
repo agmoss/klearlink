@@ -3,7 +3,6 @@
 import React from 'react';
 import Link from '@docusaurus/Link';
 import clsx from 'clsx';
-import styles from './styles.module.css';
 import useBaseUrl from '@docusaurus/useBaseUrl';
 
 type ProductItem = {

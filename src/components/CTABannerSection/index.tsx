@@ -13,7 +13,7 @@ const CTABannerSection: React.FC = () => (
           Curious to Enhance Your Credit Profiling? We’d Love to Hear from You.
         </h2>
         <Link
-          className="button button--primary button--lg mainButton"
+          className="button button--primary button--lg outlinedButton"
           to={useBaseUrl('contact-us')}
         >
           Get More Info

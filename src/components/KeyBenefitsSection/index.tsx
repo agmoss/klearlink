@@ -2,7 +2,6 @@
 
 import React from 'react';
 import clsx from 'clsx';
-import styles from './styles.module.css';
 
 import {
   FaPiggyBank,
@@ -46,7 +45,7 @@ const FeatureList: BenefitItem[] = [
 
 const Benefit = ({ title, description, Icon }: BenefitItem) => {
   return (
-    <div className={clsx('col col--3', styles.benefitItem)}>
+    <div className={clsx('col col--3')}>
       <div className="text--center">
         <Icon className={'icon'} />
       </div>

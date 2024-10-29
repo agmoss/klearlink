@@ -21,7 +21,7 @@ const FeatureList: InsightItem[] = [
 const Insight: React.FC<InsightItem> = ({ text }) => {
   return (
     <li className={clsx('section__list-item', styles.insightItem)}>
-      <FaCheckCircle className={styles.icon} />
+      <FaCheckCircle className={clsx('icon', styles.icon)} />
       {text}
     </li>
   );

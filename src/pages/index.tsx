@@ -9,6 +9,7 @@ import KeyInsightsSection from '../components/KeyInsightsSection';
 import UseCasesSection from '../components/UseCasesSection';
 import CTABannerSection from '../components/CTABannerSection';
 import Container from '../core/Container';
+import { motion } from 'framer-motion';
 
 const Home: React.FC = () => {
   return (
@@ -16,28 +17,34 @@ const Home: React.FC = () => {
       title="Clearlinc.io"
       description="Instant Credit Profiling for Smarter Lending Decisions"
     >
-      <HeroSection />
-      <div className="homePage mainContainer">
-        <Container className="section" background="dark">
-          <ProblemSolutionSection />
-        </Container>
-        <Container className="section" background="light">
-          <KeyBenefitsSection />
-        </Container>
-        <Container className="section" background="dark">
-          <HowItWorksSection />
-        </Container>
-        <Container className="section" background="light">
-          <ProductSuiteSection />
-        </Container>
-        <Container className="section" background="dark">
-          <KeyInsightsSection />
-        </Container>
-        <Container className="section" background="light">
-          <UseCasesSection />
-        </Container>
-        <CTABannerSection />
-      </div>
+      <motion.div
+        initial={{ opacity: 0, y: 50 }}
+        animate={{ opacity: 1, y: 0 }}
+        transition={{ duration: 0.5 }}
+      >
+        <HeroSection />
+        <div className="homePage mainContainer">
+          <Container className="section" background="dark">
+            <ProblemSolutionSection />
+          </Container>
+          <Container className="section" background="light">
+            <KeyBenefitsSection />
+          </Container>
+          <Container className="section" background="dark">
+            <HowItWorksSection />
+          </Container>
+          <Container className="section" background="light">
+            <ProductSuiteSection />
+          </Container>
+          <Container className="section" background="dark">
+            <KeyInsightsSection />
+          </Container>
+          <Container className="section" background="light">
+            <UseCasesSection />
+          </Container>
+          <CTABannerSection />
+        </div>
+      </motion.div>
     </Layout>
   );
 };
