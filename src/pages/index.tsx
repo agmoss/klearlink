@@ -10,6 +10,7 @@ import UseCasesSection from '../components/UseCasesSection';
 import CTABannerSection from '../components/CTABannerSection';
 import Container from '../core/Container';
 import { motion } from 'framer-motion';
+import SlantedArea from '../core/SlantedArea/SlantedArea';
 
 const Home: React.FC = () => {
   return (
@@ -33,9 +34,9 @@ const Home: React.FC = () => {
           <Container className="section" background="dark">
             <HowItWorksSection />
           </Container>
-          <Container className="section" background="light">
+          <SlantedArea title="Clearlinc Product Suite">
             <ProductSuiteSection />
-          </Container>
+          </SlantedArea>
           <Container className="section" background="dark">
             <KeyInsightsSection />
           </Container>

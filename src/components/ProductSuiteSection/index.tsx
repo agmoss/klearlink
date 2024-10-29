@@ -58,11 +58,6 @@ function ProductCard({ title, description, link }: ProductItem) {
 const ProductSuiteSection: React.FC = () => (
   <div>
     <div className="row">
-      <div className="col col--12 text--center">
-        <h2 className="section__title">Clearlinc Product Suite</h2>
-      </div>
-    </div>
-    <div className="row">
       {FeatureList.map((product, idx) => (
         <ProductCard key={idx} {...product} />
       ))}
