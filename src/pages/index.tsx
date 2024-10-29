@@ -28,7 +28,7 @@ const Home: React.FC = () => {
           <Container className="section" background="dark">
             <ProblemSolutionSection />
           </Container>
-          <Container className="section" background="light">
+          <Container className="section" background="dark">
             <KeyBenefitsSection />
           </Container>
           <Container className="section" background="dark">
@@ -40,7 +40,7 @@ const Home: React.FC = () => {
           <Container className="section" background="dark">
             <KeyInsightsSection />
           </Container>
-          <Container className="section" background="light">
+          <Container className="section" background="dark">
             <UseCasesSection />
           </Container>
           <CTABannerSection />

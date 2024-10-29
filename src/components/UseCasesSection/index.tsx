@@ -3,7 +3,6 @@
 import React from 'react';
 import Link from '@docusaurus/Link';
 import clsx from 'clsx';
-import styles from './styles.module.css';
 import useBaseUrl from '@docusaurus/useBaseUrl';
 
 type UseCaseItem = {
@@ -44,7 +43,7 @@ function UseCase({ title, description }: UseCaseItem) {
 }
 
 const UseCasesSection: React.FC = () => (
-  <div className={styles.useCases}>
+  <div className={'useCases'}>
     <div className="row">
       <div className="col col--12 text--center">
         <h2 className="section__title">Use Cases</h2>

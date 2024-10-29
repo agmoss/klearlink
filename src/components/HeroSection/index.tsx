@@ -15,15 +15,15 @@ const FeatureList: Image = {
 const HeroSection = () => {
   const { siteConfig } = useDocusaurusContext();
   return (
-    <header className={clsx('hero hero--primary', styles.homeContainer)}>
-      <div className={clsx('container', styles.container)}>
-        <div className={styles.content}>
+    <header className={clsx('hero hero--primary homeContainer')}>
+      <div className={clsx('container')}>
+        <div className={'heroContent'}>
           <h1 className={clsx('hero__title')}>{siteConfig.tagline}</h1>
-          <p className={clsx('hero__subtitle', styles.subtitle)}>
+          <p className={clsx('hero__subtitle')}>
             Real-time profiling and alternative credit insights, so you lend
             with confidence.
           </p>
-          <div className={styles.buttonGroup}>
+          <div className={'buttonGroup'}>
             <Link
               className="button button--primary button--lg mainButton"
               to={useBaseUrl('/contact-us')}
@@ -38,8 +38,8 @@ const HeroSection = () => {
             </Link>
           </div>
         </div>
-        <div className={styles.imageContainer}>
-          <FeatureList.Svg className={styles.logoBackground} role="img" />
+        <div className={'heroImageContainer'}>
+          <FeatureList.Svg className={'logoBackground'} role="img" />
         </div>
       </div>
     </header>

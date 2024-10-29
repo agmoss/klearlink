@@ -2,7 +2,6 @@
 
 import React from 'react';
 import clsx from 'clsx';
-import styles from './styles.module.css';
 import { FaCheckCircle } from 'react-icons/fa';
 
 type InsightItem = {
@@ -20,8 +19,8 @@ const FeatureList: InsightItem[] = [
 
 const Insight: React.FC<InsightItem> = ({ text }) => {
   return (
-    <li className={clsx('section__list-item', styles.insightItem)}>
-      <FaCheckCircle className={clsx('icon', styles.icon)} />
+    <li className={clsx('section__list-item', 'insightItem')}>
+      <FaCheckCircle className={clsx('icon', 'keyInsightsIcon')} />
       {text}
     </li>
   );
@@ -41,7 +40,7 @@ const KeyInsightsSection: React.FC = () => (
     </div>
     <div className="row">
       <div className="col col--12">
-        <ul className={clsx('list--unstyled', styles.insightsList)}>
+        <ul className={clsx('list--unstyled', 'insightsList')}>
           {FeatureList.map((insight, idx) => (
             <Insight key={idx} {...insight} />
           ))}

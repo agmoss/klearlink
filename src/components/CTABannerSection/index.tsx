@@ -2,11 +2,10 @@
 
 import React from 'react';
 import Link from '@docusaurus/Link';
-import styles from './styles.module.css';
 import useBaseUrl from '@docusaurus/useBaseUrl';
 
 const CTABannerSection: React.FC = () => (
-  <div className={styles.ctaBanner}>
+  <div className={'ctaBanner'}>
     <div className="row">
       <div className="col col--12 text--center">
         <h2 className="section__title">
