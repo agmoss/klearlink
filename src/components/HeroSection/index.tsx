@@ -25,13 +25,13 @@ const HeroSection = () => {
           </p>
           <div className={styles.buttonGroup}>
             <Link
-              className="button button--primary button--lg mainButton"
+              className="mainButton button button--primary button--lg"
               to={useBaseUrl('/contact-us')}
             >
               Contact Us
             </Link>
             <Link
-              className="button button--primary button--lg secondaryButton"
+              className="secondaryButton button button--primary button--lg"
               to={useBaseUrl('/docs')}
             >
               How It Works
