@@ -3,23 +3,20 @@
 import React from 'react';
 import Link from '@docusaurus/Link';
 import useBaseUrl from '@docusaurus/useBaseUrl';
+import CtaBanner from '@site/src/core/CtaBanner/CtaBanner';
 
 const CTABannerSection: React.FC = () => (
-  <div className={'ctaBanner'}>
-    <div className="row">
-      <div className="col col--12 text--center">
-        <h2 className="section__title">
-          Curious to Enhance Your Credit Profiling? We’d Love to Hear from You.
-        </h2>
-        <Link
-          className="button button--primary button--lg outlinedButton"
-          to={useBaseUrl('contact-us')}
-        >
-          Get More Info
-        </Link>
-      </div>
-    </div>
-  </div>
+  <CtaBanner
+    title="Curious to Enhance Your Credit Profiling? We’d Love to Hear from You."
+    link={
+      <Link
+        className="button button--primary button--lg outlinedButton"
+        to={useBaseUrl('contact-us')}
+      >
+        Get More Info
+      </Link>
+    }
+  />
 );
 
 export default CTABannerSection;

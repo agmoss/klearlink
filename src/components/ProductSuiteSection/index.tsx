@@ -2,7 +2,6 @@
 
 import React from 'react';
 import Link from '@docusaurus/Link';
-import clsx from 'clsx';
 import useBaseUrl from '@docusaurus/useBaseUrl';
 
 type ProductItem = {
@@ -34,7 +33,7 @@ const FeatureList: ProductItem[] = [
 
 function ProductCard({ title, description, link }: ProductItem) {
   return (
-    <div className={clsx('col col--4')}>
+    <div className="col col--4">
       <div className="card shadow--md">
         <div className="card__header">
           <h3 className="section__subtitle">{title}</h3>

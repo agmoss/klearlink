@@ -1,1 +1,7 @@
 /* styles.module.css */
+
+.icon {
+  font-size: 2rem;
+  color: #ffd944;
+  margin-bottom: 10px;
+}

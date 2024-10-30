@@ -2,7 +2,6 @@
 
 import React from 'react';
 import Link from '@docusaurus/Link';
-import clsx from 'clsx';
 import useBaseUrl from '@docusaurus/useBaseUrl';
 
 type UseCaseItem = {
@@ -35,7 +34,7 @@ const FeatureList: UseCaseItem[] = [
 
 function UseCase({ title, description }: UseCaseItem) {
   return (
-    <div className={clsx('col col--3')}>
+    <div className="col col--3">
       <h3 className="section__subtitle">{title}</h3>
       <p className="section__description">{description}</p>
     </div>
@@ -43,7 +42,7 @@ function UseCase({ title, description }: UseCaseItem) {
 }
 
 const UseCasesSection: React.FC = () => (
-  <div className={'useCases'}>
+  <div className="useCases">
     <div className="row">
       <div className="col col--12 text--center">
         <h2 className="section__title">Use Cases</h2>

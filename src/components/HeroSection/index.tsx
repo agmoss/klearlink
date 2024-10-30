@@ -3,7 +3,6 @@
 import React from 'react';
 import Link from '@docusaurus/Link';
 import clsx from 'clsx';
-import styles from './styles.module.css';
 import useDocusaurusContext from '@docusaurus/useDocusaurusContext';
 import useBaseUrl from '@docusaurus/useBaseUrl';
 import Image from '../../core/Image';
@@ -15,11 +14,11 @@ const FeatureList: Image = {
 const HeroSection = () => {
   const { siteConfig } = useDocusaurusContext();
   return (
-    <header className={clsx('hero hero--primary homeContainer')}>
-      <div className={clsx('container')}>
-        <div className={'heroContent'}>
-          <h1 className={clsx('hero__title')}>{siteConfig.tagline}</h1>
-          <p className={clsx('hero__subtitle')}>
+    <header className={clsx('hero hero--primary')}>
+      <div className="container">
+        <div className="heroContent">
+          <h1 className="hero__title">{siteConfig.tagline}</h1>
+          <p className="hero__subtitle">
             Real-time profiling and alternative credit insights, so you lend
             with confidence.
           </p>
@@ -38,8 +37,8 @@ const HeroSection = () => {
             </Link>
           </div>
         </div>
-        <div className={'heroImageContainer'}>
-          <FeatureList.Svg className={'logoBackground'} role="img" />
+        <div className="heroImageContainer">
+          <FeatureList.Svg className="logoBackground" role="img" />
         </div>
       </div>
     </header>

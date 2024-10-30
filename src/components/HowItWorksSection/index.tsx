@@ -30,7 +30,7 @@ const FeatureList: StepItem[] = [
 ];
 const Feature = ({ title, description }: StepItem) => {
   return (
-    <li className={clsx(styles.stepItem)}>
+    <li className={styles.stepItem}>
       <h3 className="section__subtitle">{title}</h3>
       <p className="section__description">{description}</p>
     </li>

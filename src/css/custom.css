@@ -12,6 +12,9 @@
   --ifm-font-color-base-inverse: #fff;
   --ifm-footer-background-color: #000;
   --ifm-card-background-color: #000;
+  --ifm-menu-color-active: #ffd944;
+  --ifm-breadcrumb-color-active: #ffd944;
+  --ifm-link-color: #ffd944;
   overflow-x: hidden;
 }
 
@@ -138,13 +141,6 @@ body {
   }
 }
 
-/* Icons */
-.icon {
-  font-size: 2rem;
-  color: #ffd944;
-  margin-bottom: 10px;
-}
-
 /* Buttons */
 .mainButton,
 .secondaryButton {
@@ -217,42 +213,6 @@ body {
   max-width: var(--ifm-container-width-xl);
   margin: 0 auto;
   padding: 2rem 1rem;
-}
-
-/* CTABannerSection */
-.ctaBanner h2 {
-  color: #000;
-  margin-bottom: 6rem;
-  z-index: 10;
-}
-
-.ctaBanner {
-  position: relative;
-  background-color: #ffd944;
-  padding: 2rem 1rem;
-  padding: 200px 0;
-  text-align: center;
-  z-index: 1;
-  overflow: hidden;
-}
-
-.ctaBanner::before {
-  content: '';
-  position: absolute;
-  top: 0;
-  left: 0;
-  width: 100%;
-  height: 100%;
-  background-image: url('/img/img-white.svg');
-  background-size: cover;
-  background-position: center;
-  opacity: 0.09;
-  z-index: -1;
-}
-
-.ctaBanner .row {
-  position: relative;
-  z-index: 1;
 }
 
 /* HeroSection */
@@ -334,33 +294,6 @@ body {
   }
 }
 
-/* KeyInsightsSection */
-
-.insightsList {
-  list-style-type: none;
-  padding: 0;
-  display: flex;
-  flex-direction: column;
-  align-items: center;
-  gap: 20px;
-}
-
-.insightItem {
-  font-size: 1.1rem;
-  margin-bottom: 0.75rem;
-  display: flex;
-  align-items: center;
-  max-width: 500px;
-  width: 100%;
-}
-
-.keyInsightsIcon {
-  margin-right: 0.5rem;
-  font-size: 1.2rem;
-}
-
-/* Use Cases */
-
-.useCases {
-  padding: 100px 0; /* Increased padding around the entire section */
+.table-of-contents__link--active {
+  color: #ffd944;
 }
