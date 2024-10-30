@@ -113,54 +113,21 @@ body {
   background-color: #ffd944;
 }
 
-/* Containers */
-.container {
-  &.paddingAll {
-    padding: 40px;
-  }
-  &.paddingBottom {
-    padding-bottom: 80px;
-  }
-  &.paddingLeft {
-    padding-left: 40px;
-  }
-  &.paddingRight {
-    padding-right: 40px;
-  }
-  &.paddingTop {
-    padding-top: 80px;
-  }
 
-  @media (max-width: 768px) {
-    &.paddingBottom {
-      padding-bottom: 40px;
-    }
-    &.paddingTop {
-      padding-top: 20px;
-    }
-  }
-}
 
 /* Buttons */
-.mainButton,
-.secondaryButton {
+.mainButton {
   padding: 12px 24px;
   border: none;
   border-radius: 4px;
   font-size: 1rem;
   cursor: pointer;
   color: #000;
-}
-
-.mainButton,
-.secondaryButton {
-  color: #000;
   background-color: #ffd944;
-  border: 2px solid #ffd944;
+  border: 2px solid #ffd944
 }
 
-.mainButton:hover,
-.secondaryButton:hover {
+.mainButton:hover{
   color: #ffd944;
   background-color: #000;
   border: 2px solid #ffd944;

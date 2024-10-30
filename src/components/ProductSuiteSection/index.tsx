@@ -43,7 +43,7 @@ function ProductCard({ title, description, link }: ProductItem) {
         </div>
         <div className="card__footer">
           <Link
-            className="button button--secondary button--block secondaryButton"
+            className="button button--secondary button--block mainButton"
             to={useBaseUrl(link)}
           >
             See Details
