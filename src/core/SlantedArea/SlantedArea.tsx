@@ -2,6 +2,7 @@
 import React from 'react';
 import clsx from 'clsx';
 import classNames from 'classnames';
+import styles from './styles.module.css';
 
 interface SlantedAreaProps {
   background?: 'dark' | 'highlight' | 'light';
@@ -32,14 +33,14 @@ const SlantedArea: React.FC<SlantedAreaProps> = ({
   });
 
   return (
-    <div className={clsx('slantedContainer', containerClasses)}>
-      <div className={'slantedContent'}>
+    <div className={clsx(styles.slantedContainer, containerClasses)}>
+      <div className={styles.slantedContent}>
         <div className="row">
           <div className="col col--12 text--center">
             <h2 className="section__title">{title}</h2>
           </div>
         </div>
-        <div className={'mainSlantedContent'}>{children}</div>
+        <div className={styles.mainSlantedContent}>{children}</div>
       </div>
     </div>
   );

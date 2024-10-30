@@ -24,7 +24,7 @@ const Home: React.FC = () => {
         transition={{ duration: 0.5 }}
       >
         <HeroSection />
-        <div className="homePage mainContainer">
+        <div>
           <Container className="section" background="dark">
             <ProblemSolutionSection />
           </Container>

@@ -6,6 +6,7 @@ import clsx from 'clsx';
 import useDocusaurusContext from '@docusaurus/useDocusaurusContext';
 import useBaseUrl from '@docusaurus/useBaseUrl';
 import Image from '../../core/Image';
+import styles from './styles.module.css';
 
 const FeatureList: Image = {
   Svg: require('@site/static/img/img.svg').default,
@@ -16,13 +17,13 @@ const HeroSection = () => {
   return (
     <header className={clsx('hero hero--primary')}>
       <div className="container">
-        <div className="heroContent">
+        <div className={styles.heroContent}>
           <h1 className="hero__title">{siteConfig.tagline}</h1>
           <p className="hero__subtitle">
             Real-time profiling and alternative credit insights, so you lend
             with confidence.
           </p>
-          <div className={'buttonGroup'}>
+          <div className={styles.buttonGroup}>
             <Link
               className="button button--primary button--lg mainButton"
               to={useBaseUrl('/contact-us')}
@@ -37,8 +38,8 @@ const HeroSection = () => {
             </Link>
           </div>
         </div>
-        <div className="heroImageContainer">
-          <FeatureList.Svg className="logoBackground" role="img" />
+        <div className={styles.heroImageContainer}>
+          <FeatureList.Svg className={styles.logoBackground} role="img" />
         </div>
       </div>
     </header>
