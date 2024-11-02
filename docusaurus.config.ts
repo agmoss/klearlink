@@ -54,6 +54,11 @@ const config: Config = {
   ],
 
   themeConfig: {
+    colorMode: {
+      defaultMode: 'dark',
+      disableSwitch: true,
+      respectPrefersColorScheme: false,
+    },
     image: 'img/logo.png',
     navbar: {
       title: 'Clearlinc',
@@ -112,8 +117,8 @@ const config: Config = {
       copyright: `Copyright © ${new Date().getFullYear()} Clearlinc, Inc.`,
     },
     prism: {
-      theme: prismThemes.github,
-      darkTheme: prismThemes.dracula,
+      theme: prismThemes.oneDark,
+      darkTheme: prismThemes.oneDark,
     },
   } satisfies Preset.ThemeConfig,
 };
