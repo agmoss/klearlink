@@ -7,36 +7,15 @@
 
 .buttonGroup {
   display: flex;
-  gap: 10px;
-}
-
-.heroImageContainer {
-  position: absolute;
-  opacity: 0.09;
-  left: 0;
-  right: 0;
-  top: -400px;
-  max-width: 1400px;
-  margin: auto;
-  z-index: -1;
-}
-
-.logoBackground {
-  width: 100%;
-  height: auto;
-  border-radius: 8px;
+  gap: 1rem;
 }
 
 @media (max-width: 768px) {
   .heroContent {
     max-width: 100%;
   }
-  .heroImageContainer {
-    max-width: 100%;
-    margin-top: 20px;
-  }
   .buttonGroup {
     flex-direction: column;
-    gap: 15px;
+    gap: 1.5rem;
   }
 }

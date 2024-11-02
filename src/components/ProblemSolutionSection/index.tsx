@@ -34,13 +34,6 @@ const ProblemSolutionSection: React.FC = () => (
           </div>
         </div>
       </div>
-      <div className={clsx('col col--6', styles.problemSolutionImageContainer)}>
-        <img
-          src="/img/600.png"
-          alt="Placeholder"
-          className={styles.problemSolutionImageChild}
-        />
-      </div>
     </div>
   </div>
 );

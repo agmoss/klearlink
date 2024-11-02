@@ -5,12 +5,7 @@ import Link from '@docusaurus/Link';
 import clsx from 'clsx';
 import useDocusaurusContext from '@docusaurus/useDocusaurusContext';
 import useBaseUrl from '@docusaurus/useBaseUrl';
-import Image from '../../core/Image';
 import styles from './styles.module.css';
-
-const FeatureList: Image = {
-  Svg: require('@site/static/img/img.svg').default,
-};
 
 const HeroSection = () => {
   const { siteConfig } = useDocusaurusContext();
@@ -37,9 +32,6 @@ const HeroSection = () => {
               How It Works
             </Link>
           </div>
-        </div>
-        <div className={styles.heroImageContainer}>
-          <FeatureList.Svg className={styles.logoBackground} role="img" />
         </div>
       </div>
     </header>

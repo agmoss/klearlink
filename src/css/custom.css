@@ -113,8 +113,6 @@ body {
   background-color: #ffd944;
 }
 
-
-
 /* Buttons */
 .mainButton {
   padding: 12px 24px;
@@ -124,10 +122,10 @@ body {
   cursor: pointer;
   color: #000;
   background-color: #ffd944;
-  border: 2px solid #ffd944
+  border: 2px solid #ffd944;
 }
 
-.mainButton:hover{
+.mainButton:hover {
   color: #ffd944;
   background-color: #000;
   border: 2px solid #ffd944;
@@ -173,6 +171,11 @@ body {
   background-color: var(--main-bg-color);
 }
 /* Media Queries for Responsive Design */
+
+/* .container {
+  position: relative;
+  z-index: 1;
+} */
 
 @media (max-width: 768px) {
   .hero__title {

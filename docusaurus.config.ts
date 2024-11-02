@@ -109,9 +109,6 @@ const config: Config = {
           ],
         },
       ],
-      logo: {
-        src: 'img/img.svg',
-      },
       copyright: `Copyright © ${new Date().getFullYear()} Clearlinc, Inc.`,
     },
     prism: {
