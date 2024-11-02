@@ -45,12 +45,14 @@ const FeatureList: BenefitItem[] = [
 const Benefit = ({ title, description, Icon }: BenefitItem) => {
   return (
     <div className="col col--3">
-      <div className="text--center">
-        <Icon className={styles.icon} />
-      </div>
-      <div className="padding-horiz--md">
-        <h3 className="section__subtitle">{title}</h3>
-        <p className="section__description">{description}</p>
+      <div className="blank-card">
+        <div className="text--center">
+          <Icon className={styles.icon} />
+        </div>
+        <div className="padding-horiz--md">
+          <h3 className="section__subtitle">{title}</h3>
+          <p className="section__description">{description}</p>
+        </div>
       </div>
     </div>
   );

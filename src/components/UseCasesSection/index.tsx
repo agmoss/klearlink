@@ -35,9 +35,15 @@ const FeatureList: UseCaseItem[] = [
 
 function UseCase({ title, description }: UseCaseItem) {
   return (
-    <div className="col col--3">
-      <h3 className="section__subtitle">{title}</h3>
-      <p className="section__description">{description}</p>
+    <div className="col col--6 margin-bottom--lg">
+      <div className="card">
+        <div className="card__header">
+          <h3 className="section__subtitle">{title}</h3>
+        </div>
+        <div className="card__body">
+          <p className="">{description}</p>
+        </div>
+      </div>
     </div>
   );
 }
@@ -49,7 +55,7 @@ const UseCasesSection: React.FC = () => (
         <h2 className="section__title">Use Cases</h2>
       </div>
     </div>
-    <div className="row">
+    <div className="row margin-horiz--md">
       {FeatureList.map((useCase, idx) => (
         <UseCase key={idx} {...useCase} />
       ))}

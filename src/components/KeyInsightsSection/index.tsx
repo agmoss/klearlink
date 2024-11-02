@@ -28,22 +28,23 @@ const Insight: React.FC<InsightItem> = ({ text }) => {
 };
 
 const KeyInsightsSection: React.FC = () => (
-  <div className="container">
-    <div className="row">
-      <div className="col col--12 text--center">
-        <h2 className="section__title">Key Insights Provided by Clearlinc</h2>
-        <p className="section__subtitle">
-          Discover essential insights for smarter lending and better decisions.
-        </p>
-      </div>
-    </div>
-    <div className="row">
-      <div className="col col--12">
-        <ul className={clsx('list--unstyled', styles.insightsList)}>
-          {FeatureList.map((insight, idx) => (
-            <Insight key={idx} {...insight} />
-          ))}
-        </ul>
+  <div className="row">
+    <div className="col col--7 text--center">
+      <div className="card">
+        <div className="card__header">
+          <h2 className="section__title">Key Insights Provided by Clearlinc</h2>
+          <p className="section__subtitle">
+            Discover essential insights for smarter lending and better
+            decisions.
+          </p>
+        </div>
+        <div className="card__body">
+          <ul className={clsx('list--unstyled', styles.insightsList)}>
+            {FeatureList.map((insight, idx) => (
+              <Insight key={idx} {...insight} />
+            ))}
+          </ul>
+        </div>
       </div>
     </div>
   </div>

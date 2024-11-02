@@ -54,13 +54,13 @@ const config: Config = {
   ],
 
   themeConfig: {
-    image: 'img/social-card.webp',
+    image: 'img/logo.png',
     navbar: {
       title: 'Clearlinc',
       style: 'primary',
       logo: {
         alt: 'logo',
-        src: 'img/img-white.svg',
+        src: 'img/logo.png',
       },
       items: [
         {

@@ -5,3 +5,7 @@
   color: #ffd944;
   margin-bottom: 0.75rem;
 }
+
+.p {
+  max-width: 600px;
+}
