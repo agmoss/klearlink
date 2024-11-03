@@ -6,7 +6,6 @@ import KeyBenefitsSection from '../components/KeyBenefitsSection';
 import HowItWorksSection from '../components/HowItWorksSection';
 import ProductSuiteSection from '../components/ProductSuiteSection';
 import KeyInsightsSection from '../components/KeyInsightsSection';
-import UseCasesSection from '../components/UseCasesSection';
 import CTABannerSection from '../components/CTABannerSection';
 import Container from '../core/Container';
 import { motion } from 'framer-motion';
@@ -44,9 +43,6 @@ const Home: React.FC = () => {
           </SlantedArea>
           <Container className="section" background="dark">
             <KeyInsightsSection />
-          </Container>
-          <Container className="section" background="dark">
-            <UseCasesSection />
           </Container>
           <CTABannerSection />
         </div>

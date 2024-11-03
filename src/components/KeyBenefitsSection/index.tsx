@@ -24,20 +24,21 @@ const FeatureList: BenefitItem[] = [
     Icon: FaBuilding,
   },
   {
-    title: 'Fraud Prevention',
+    title: 'Fraud Stacking Prevention',
     description:
       "Prevent fraud by understanding the applicant's recent credit behavior.",
     Icon: FaPiggyBank,
   },
   {
     title: 'Debt-to-Income Precision',
-    description: 'Get an accurate debt-to-income ratio using real-time data.',
+    description:
+      'Calculate accurate debt ratios using real-time credit data on the consumer.',
     Icon: FaCalculator,
   },
   {
     title: 'Performance Monitoring',
     description:
-      'Track your borrower’s credit profile over time to enhance lifetime value and minimize risk.',
+      "Track your consumer's credit profile over time to enhance lifetime value and minimize risk.",
     Icon: FaChartLine,
   },
 ];
@@ -51,7 +52,7 @@ const Benefit = ({ title, description, Icon }: BenefitItem) => {
         </div>
         <div className="padding-horiz--md">
           <h3 className="section__subtitle">{title}</h3>
-          <p className="section__description">{description}</p>
+          <p className="section__description_center">{description}</p>
         </div>
       </div>
     </div>

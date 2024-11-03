@@ -7,7 +7,8 @@ import CtaBanner from '@site/src/core/CtaBanner/CtaBanner';
 
 const CTABannerSection: React.FC = () => (
   <CtaBanner
-    title="Curious to Enhance Your Credit Profiling? We’d Love to Hear from You."
+    title="Curious to Enhance Your Credit Profiling?"
+    title2="We’d Love to Hear from You."
     link={
       <Link
         className="button button--primary button--lg outlinedButton"

@@ -20,19 +20,19 @@ const FeatureList: StepItem[] = [
   {
     title: 'Instant Profiling',
     description:
-      'Receive an applicant match and collect real-time credit profile data on your applicant.',
+      'Receive a positive match and collect real-time credit profile data on your consumer.',
   },
   {
     title: 'Informed Decision-Making',
     description:
-      'Use the data to inform your decision tree, increasing your ability to make accurate credit decisions for each applicant.',
+      'Injest the data and utilize in your decision tree, improving the data you have on your consumer and increasing your decisioning capabilities through the lifecycle of each consumer.',
   },
 ];
 const Feature = ({ title, description }: StepItem) => {
   return (
     <li className={styles.stepItem}>
       <h3 className="section__subtitle">{title}</h3>
-      <p className="section__description">{description}</p>
+      <p className="section__description_center">{description}</p>
     </li>
   );
 };

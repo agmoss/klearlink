@@ -1,6 +1,5 @@
 .ctaBanner h2 {
   color: #000;
-  margin-bottom: 6rem;
 }
 
 .ctaBanner {
@@ -8,4 +7,8 @@
   padding: 10rem 0;
   text-align: center;
   overflow: hidden;
+}
+
+.ctaBanner a {
+  margin-top: 3rem;
 }

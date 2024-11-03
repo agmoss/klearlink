@@ -3,6 +3,8 @@
 import React from 'react';
 import Link from '@docusaurus/Link';
 import useBaseUrl from '@docusaurus/useBaseUrl';
+import styles from './styles.module.css';
+import { clsx } from 'clsx';
 
 type ProductItem = {
   title: string;
@@ -14,7 +16,7 @@ const FeatureList: ProductItem[] = [
   {
     title: 'ClearSync',
     description:
-      'A low-overhead, encrypted, no-code ETL solution that integrates Clearlinc into your existing credit data effortlessly.',
+      'A low-overhead, encrypted, no-code solution utilizing ETL or APIs that integrate Clearlinc into your existing credit data effortlessly.',
     link: '/docs/products/clearsync',
   },
   {
@@ -34,9 +36,13 @@ const FeatureList: ProductItem[] = [
 function ProductCard({ title, description, link }: ProductItem) {
   return (
     <div className="col col--4">
-      <div className="card">
+      <div className={clsx('card', styles.largerCardPadding)}>
         <div className="card__header">
-          <h3 className="section__subtitle">{title}</h3>
+          <h3
+            className={clsx('section__subtitle', styles.largerSectionSubtitle)}
+          >
+            {title}
+          </h3>
         </div>
         <div className="card__body">
           <p>{description}</p>
