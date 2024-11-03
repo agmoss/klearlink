@@ -17,6 +17,7 @@
   --ifm-link-color: #ffd944;
   --ifm-footer-link-color: #fff;
   --ifm-footer-link-hover-color: #ffd944;
+  --ifm-code-background: #ffd944;
   overflow-x: hidden;
 }
 
@@ -29,8 +30,23 @@ html[data-theme='dark'] {
   --ifm-hero-text-color: #000;
   --ifm-font-color-secondary: #ffd944;
   --ifm-color-secondary: #ffd944;
-  overflow-x: hidden;
+  --ifm-alert-background-color: #ffd944;
   --ifm-footer-background-color: #000;
+  overflow-x: hidden;
+}
+
+.alert {
+  background-color: #ffd944;
+  color: #000;
+  border: #000;
+}
+
+.alert--info {
+  --ifm-alert-foreground-color: #000;
+}
+
+code {
+  color: #ffd944;
 }
 
 .table-of-contents__link:hover,
