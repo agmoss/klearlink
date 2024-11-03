@@ -22,13 +22,13 @@ const FeatureList: ProductItem[] = [
   {
     title: 'ClearProfile',
     description:
-      'Profile applicants with ease—see loan status, loan stacking, and institution visibility.',
+      'Profile consumers with ease—see loan status, loan stacking, and institution visibility.',
     link: '/docs/products/clearprofile',
   },
   {
     title: 'ClearWatch',
     description:
-      'Get real-time notifications and monitor borrower activity across lenders for improved decision-making.',
+      'Get real-time notifications and monitor consumer activity across lenders for improved decision-making.',
     link: '/docs/products/clearwatch',
   },
 ];

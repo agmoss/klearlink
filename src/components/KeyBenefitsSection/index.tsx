@@ -20,13 +20,13 @@ const FeatureList: BenefitItem[] = [
   {
     title: 'Institution Awareness',
     description:
-      'Know what institutions your applicant has linked within the last 60 days.',
+      'Know what institutions your consumer has linked within the last 60 days.',
     Icon: FaBuilding,
   },
   {
     title: 'Fraud Stacking Prevention',
     description:
-      "Prevent fraud by understanding the applicant's recent credit behavior.",
+      "Prevent fraud by understanding the consumers's recent credit behavior.",
     Icon: FaPiggyBank,
   },
   {

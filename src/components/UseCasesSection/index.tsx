@@ -14,22 +14,22 @@ const FeatureList: UseCaseItem[] = [
   {
     title: 'Positive Payment Compliance',
     description:
-      'See when applicants maintain strong payment records with other lenders or are in a non-compliant state.',
+      'See when consumers maintain strong payment records with other lenders or are in a non-compliant state.',
   },
   {
     title: 'Bank Account Visibility',
     description:
-      'Gain insight into additional bank accounts the applicant has utilized in the last 60 days, allowing you to prompt for more accurate transactional data.',
+      'Gain insight into additional bank accounts the consumer has utilized in the last 60 days, allowing you to prompt for more accurate transactional data.',
   },
   {
     title: 'Debt-to-Income Accuracy',
     description:
-      'Decline high-risk applicants with reliable DTI figures based on real-time data.',
+      'Decline high-risk consumers with reliable DTI figures based on real-time data.',
   },
   {
     title: 'Matched Monitoring',
     description:
-      'Stay informed when applicants have new loan obligations elsewhere or are compliant/non-compliant on those obligations.',
+      'Stay informed when consumers have new loan obligations elsewhere or are compliant/non-compliant on those obligations.',
   },
 ];
 
