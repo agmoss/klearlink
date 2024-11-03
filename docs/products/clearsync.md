@@ -5,7 +5,7 @@ sidebar_position: 2
 # ClearSync
 
 :::info
-Prior Reading: [ClearProfile](/doc/clearprofile-ktMMeNnrgz)
+Prior Reading: [ClearProfile](./clearprofile.md)
 
 :::
 

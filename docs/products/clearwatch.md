@@ -5,7 +5,7 @@ sidebar_position: 3
 # ClearWatch
 
 :::info
-Prior Reading: Clearprofile
+Prior Reading: [ClearProfile](./clearprofile.md)
 
 :::
 
