@@ -4,26 +4,71 @@ sidebar_position: 3
 
 # Use Cases
 
-When you get a lending application, you likely have a picture of their chosen linked bank account via an aggregator (flinks, plaid, etc.) and perhaps a picture of their credit profile via a TU or Equifax pull. While these are highly useful for underwriting, they possess several flaws.
+### **Positive Payment Compliance:**
 
-### You only see the bank accounts your applicant has exposed to you
+**Problem:** Lenders have limited tools to view positive (or negative) payment compliance with other lenders at the time of the first credit decision and as borrowing cycles continue.
 
-When your applicant onboards your platform, they select the institution and subsequent accounts they possess for underwriting to you. Would it not be nice to know what other institutions and accounts this applicant has submitted to other lenders? Applicants with many accounts at multiple institutions (or the absence of) may be an important underwriting data point for you. With Clearlinc, you get a superset of the applicants' linked accounts, not just the account they have linked with you.
+**Use Case Description:**
 
-With an understanding of the entirety of your applicant's bank accounts and current loan obligations,you can do the following:
+- new customer applies for the first time online for a payday loan
+- the credit score is poor, as expected, at 430. Significant delinquencies on old types of credit that are 12-24 months old. No credit has been reported on the bureau since prior defaults.
+- A Clearlinc match is found.
+- The matched customer has two active payday loans.
+  - Both Payday loans have 100% positive payment compliance since inception 3 and 6 months ago 1
 
-- Calculate the applicant's DTI, amongst other statistics
-  - Determining the Debt-to-income ratio of the applicant's linked account is likely not the debt-to-income ratio of the applicant. With Clearlinc, you get a complete picture of the applicants' financial health, across all accounts the applicant has linked with other lenders.
-- Determine where your potential loan resides within the applicants' loan stack.
-  - Loan stacking is a problem if you are a lender to which the applicant will not pay back. With Clearlinc, you get a complete picture of where your potential loan resides amongst the applicants' other loans.
-- TODO: Make a chart to illustrate this
+**Outcome:** The lender knows that they are payday loan #3 in the credit stack and that the customer is a strong performer on other payday loans despite poor credit history.
 
-### You only see the credit profile as it is reported
+---
 
-Credit reporting takes time. Further, many lenders and loan products do not report to credit bureaus. Even if you have a credit report, you do not know if your applicant has taken out a loan at another lender in the past 5 minutes, 5 hours, or 5 days. With Clearlinc, you get access to this knowledge in your underwriting. You also know the loan performance of your applicant against loans that are not reported to bureaus.
+### **Debt-To-Income Accuracy:**
 
-With an understanding of the applicants' recent credit history, you can do the following:
+**Problem:** Current aggregation data provides a limited view of customer's debt obligations over the last 60 days.
 
-- Identify credit risks before they are reflected on the applicants' credit profile
-- Identify compliance on loans before they are reported to the applicants' credit profile
-- Identify compliance or non-compliance on loans that are not reported to credit bureaus
+**Use Case Description:**
+
+- The customer obtained his first payday loan in July from XYZ Cash Ltd.
+- at the time of decisioning, he has one other payday loan, confirmed via Clearlinc match data
+  - the customer has two payday loan cycles with XYZ and is late in both cycles
+- obtains his 3rd payday loan with XYZ in late August
+- XYZ performs match data pull from Clearlinc on 3rd payday loan application
+  - data match confirms a 2x increase in debt-to-income ratio with four other active payday loans
+  - Two payday loans obtained in the last 48 hours
+  - Two recent loans are non-compliant
+- Customer declares bankruptcy in the next 14 days
+
+**Outcome:** XYZ declines the application due to the recent DTI increase and non-compliance, eliminating chargeoff risk by not issuing a loan to the customer.
+
+---
+
+### **Bank Accounts:**
+
+**Problem:** Customers are regularly managing multiple financial obligations across numerous bank accounts at the same time, with no visibility or tools for lenders to identify these situations and thereby prompt better decisioning.
+
+**Profile:**
+
+- customer applies digitally for the first payday loan with Quick Cash Fast Inc.
+- customer successfully links the account with Scotiabank
+- application match data is obtained via Clearlinc
+  - data returns two other active payday loans
+  - Two other institutions linked in the last 60 days
+- Quick Cash utilizes the data obtained from Clearlinc to prompt users to link two other accounts.
+
+  \
+  **Outcome:** Quick Cash Fast Inc. now has significantly more transactional data to make customer decisions, approve and manage compliance, and increase customer lifetime value.
+
+---
+
+### **Matched Monitoring:**
+
+**Problem:** Lenders lack clear ongoing indicators of whether borrowers obtain other credit post-origination and how they are performing on those credit obligations.
+
+**Profile:**
+
+- The customer applies for and obtains the first payday loan with Speedy Dough Inc.
+- Speedy Dough Inc. chooses to obtain ongoing monitoring from Clearlinc on new customers.
+- One week later, Speedy Dough Inc. was notified that the borrower obtained a new payday loan with EZ-Monee.
+- While the customer is compliant with Speedy Dough's payday loan, Speedy Dough is notified that the borrower is non-compliant with their newly obtained loan with EZ-Monee.
+
+**Outcome:**
+
+Speedy Dough Inc. can ingest monitoring data and borrower payment performance from other lenders to determine whether the credit is to be extended on the new payday cycle.

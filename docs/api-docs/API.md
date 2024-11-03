@@ -6,106 +6,136 @@ sidebar_position: 1
 
 ### Endpoints
 
-### 1. Submit a lending instance
+### 1. Submit a consumer credit record
 
-**Endpoint**: `/lending-instance/{id}`
+**Endpoint**: `/consumer-credit/{id}`
 
 **Method**: `PUT`
 
 **Path Parameters**:
 
-- `id (string)`: The ID of the lending instance. This is a unique identifier that you provide for future reference of the lending instance and subsequent matches
+- `id (string)`: The ID of the consumer credit record. This is a unique identifier that you provide for future reference of the consumer credit record and subsequent matches.
 
-**Description**: Create a new user in the system.
+**Description**: Create a new consumer credit record in the system.
 
 **Request Body**:
 
 ```json
 {
-  "loan_facts": {
+  "consumer_facts": {
     "first_name": "John",
     "last_name": "Doe",
     "date_of_birth": "10/10/2010",
-    "address": "101 1ST. S.W. Calgary AB"
+    "address": "101 1ST. S.W. Calgary AB",
+    "phone_number": "+11234567890",
+    "consumer_state": "applied",
+    "bankrupt/insolvent": false,
+    "institution_names": ["TD", "RBC"]
   },
-  "credit_state": "applied",
-  "consumer_state": "indeterminate"
+  "credit_facts": {
+    "amount": 1000,
+    "credit_type": "PDL",
+    "application_datetime": "2024-09-23 21:47:12.023476",
+    "credit_state": "applied"
+  }
 }
 ```
 
 **Response**:
 
-- `201 Created`: Lending instance successfully created.
+- `201 Created`: consumer credit record successfully created.
 
 :::info
-The use of the Clearsync interface will automatically populate new loan records from your system into Clearlinc, effectively eliminating the need to submit your records via API.
+The Clearsync Data ETL interface automatically populates new consumer credit records from your system into Clearlinc, effectively eliminating the need to submit your records via API.
 
 :::
 
 ---
 
-### 2. Update a lending instance
+### 2. Update a consumer credit record
 
-**Endpoint**: `/lending-instance/{id}`
+**Endpoint**: `/consumer-credit/{id}`
 
 **Method**: `POST`
 
 **Path Parameters**:
 
-- `id (string)`: The ID of the lending instance to which the original lending instance record corresponds to
+- `id (string)`: The ID of the consumer credit record to which the original consumer credit record record corresponds to
 
-**Description**: Update the loan_facts, loan_lifecycle, or consumer_state of a previously submitted lending-instance.
+**Description**: Update the consumer_facts and or credit_facts of a previously submitted consumer credit record
 
 **Request Body**:
 
 ```json
 {
-  "loan_facts": {
+  "consumer_facts": {
     "first_name": "John",
     "last_name": "Doe",
-    "date_of_birth": "10/10/2001",
-    "address": "101 1ST. S.W. Calgary AB"
+    "date_of_birth": "10/10/2010",
+    "address": "101 1ST. S.W. Calgary AB",
+    "phone_number": "+11234567890",
+    "consumer_state": "applied",
+    "bankrupt/insolvent": false,
+    "institution_names": ["TD", "RBC"]
   },
-  "credit_state": "applied",
-  "consumer_state": "indeterminate"
+  "credit_facts": {
+    "amount": 1000,
+    "credit_type": "PDL",
+    "application_datetime": "2024-09-23 21:47:12.023476",
+    "originated_datetime": "2024-09-24 15:43:12.023476",
+    "payment_due_date": "2024-09-30 15:43:12.023476",
+    "payment_amount_due": 1000,
+    "credit_state": "originated"
+  }
 }
 ```
 
 **Response**:
 
-- `200 Ok`: Lending instance successfully updated.
+- `200 Ok`: consumer credit record successfully updated.
 
 :::info
-The use of the Clearsync interface will automatically update your existing loan records in Clearlinc, effectively eliminating the need to update your records via API.
+The Clearsync Data ETL interface will automatically update your existing consumer credit records in Clearlinc, effectively eliminating the need to update them via API.
 
 :::
 
 ---
 
-### 3. View a submitted lending instance
+### 3. View a submitted consumer credit record
 
-**Endpoint**: `/lending-instance/{id}`
+**Endpoint**: `/consumer-credit/{id}`
 
 **Method**: `GET`
 
 **Path Parameters**:
 
-- `id (string)` : The ID of the lending instance to which the original lending instance record corresponds to
+- `id (string)` : The ID of the consumer credit record to which the original consumer credit record record corresponds to
 
-**Description**: View the data associated with a submitted lending-instance
+**Description**: View the data associated with a submitted consumer credit record
 
 **Response**:
 
 ```json
 {
-  "loan_facts": {
+  "consumer_facts": {
     "first_name": "John",
     "last_name": "Doe",
-    "date_of_birth": "10/10/2001",
-    "address": "101 1ST. S.W. Calgary AB"
+    "date_of_birth": "10/10/2010",
+    "address": "101 1ST. S.W. Calgary AB",
+    "phone_number": "+11234567890",
+    "consumer_state": "applied",
+    "bankrupt/insolvent": false,
+    "institution_names": ["TD", "RBC"]
   },
-  "credit_state": "applied",
-  "consumer_state": "indeterminate",
+  "credit_facts": {
+    "amount": 1000,
+    "credit_type": "PDL",
+    "application_datetime": "2024-09-23 21:47:12.023476",
+    "originated_datetime": "2024-09-24 15:43:12.023476",
+    "payment_due_date": "2024-09-30 15:43:12.023476",
+    "payment_amount_due": 1000,
+    "credit_state": "originated"
+  },
   "created_at": "datetime",
   "updated_at": "datetime",
   "processed": true
@@ -116,58 +146,76 @@ The use of the Clearsync interface will automatically update your existing loan 
 
 ### 4. View Consumer Match
 
-**Endpoint**: `/lending-instance/{id}/lending-match`
+**Endpoint**: `/consumer-credit/{id}/consumer-match`
 
 **Method**: `GET`
 
 **Path Parameters**:
 
-- `id (string)`: The ID of the lending instance to which the original lending instance record corresponds to
+- `id (string)`: The ID of the consumer credit record to which the original consumer credit record record corresponds to
 
-**Description**: View the results of inter-organizational consumer match results on your previously submitted lending-instance
+**Description**: View the results of inter-organizational consumer match results on your previously submitted consumer-credit
 
-- `404 not found`: No consumer match has been found for the lending instance
+- `404 not found`: No consumer match has been found for the consumer credit record
 
 - `201 Ok`: Consumer match identified
 
 ```json
 {
-  "loan_facts": {
+  "consumer_facts": {
     "first_name": "John",
     "last_name": "Doe",
-    "date_of_birth": "10/10/2001",
-    "address": "101 1ST. S.W. Calgary AB"
+    "date_of_birth": "10/10/2010",
+    "address": "101 1ST. S.W. Calgary AB",
+    "phone_number": "+11234567890",
+    "consumer_state": "applied",
+    "bankrupt/insolvent": false,
+    "institution_names": ["TD", "RBC"]
   },
-  "credit_state": "applied",
-  "consumer_state": "indeterminate",
+  "credit_facts": {
+    "amount": 1000,
+    "credit_type": "PDL",
+    "application_datetime": "2024-09-23 21:47:12.023476",
+    "originated_datetime": "2024-09-24 15:43:12.023476",
+    "payment_due_date": "2024-09-30 15:43:12.023476",
+    "payment_amount_due": 1000,
+    "credit_state": "originated"
+  },
   "created_at": "datetime",
   "updated_at": "datetime",
   "processed": true,
-  "lending_match": [
+  "consumer_match": [
     {
       "matched_on": {
         "first_name": true,
         "last_name": true,
-        "date_of_birth": false,
-        "address": false
+        "date_of_birth": true,
+        "address": true,
+        "phone_number": false
       },
-      "date_matched": "datetime",
-      "loan_lifecycle": "non-compliant",
-      "consumer_state": "bankrupt/insolvent",
-      "created_at": "datetime",
-      "updated_at": "datetime"
+      "credit_facts": {
+        "amount": 1200,
+        "credit_type": "PDL",
+        "application_datetime": "2024-09-23 11:47:12.023476",
+        "originated_datetime": "2024-09-24 12:43:12.023476",
+        "payment_due_date": "2024-09-30 07:43:12.023476",
+        "payment_amount_due": 1200,
+        "credit_state": "non-compliant"
+      }
     }
   ]
 }
 ```
 
 :::info
-Here we see an inter-organizational match indicating that your applicant is non-compliant on a loan originated by another organization. You do not see what organization the non-compliant loan originated from, nor do you obtain any additional information on the organization. The information you see within the loan facts are the submitted loan facts. You will not see any loan facts that other organizations submitted.
+Here, we see an inter-organizational match indicating that your applicant is non-compliant on a loan originated by another organization.
+
+You do not see what organization the non-compliant loan originated from, nor do you obtain any additional information on the organization, nor do you see any consumer_facts or credit_facts that you do not already have.
 
 :::
 
 :::info
-For real-time updates on consumer matches, use the Clearwatch interface
+For real-time updates on consumer matches, use the Clearwatch interface.
 
 :::
 

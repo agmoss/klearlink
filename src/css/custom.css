@@ -18,6 +18,8 @@
   --ifm-footer-link-color: #fff;
   --ifm-footer-link-hover-color: #ffd944;
   --ifm-code-background: #ffd944;
+  --ifm-link-hover-color: #ffd944;
+  --ifm-pagination-nav-color-hover: #ffd944;
   overflow-x: hidden;
 }
 
@@ -47,6 +49,15 @@ html[data-theme='dark'] {
 
 code {
   color: #ffd944;
+  background-color: #000;
+}
+
+.cardContainer_node_modules-\@docusaurus-theme-classic-lib-theme-DocCard-styles-module {
+  --ifm-link-color: #ffd944;
+  --ifm-color-emphasis-800: #ffd944;
+  height: auto !important;
+  border: 1px solid #ffd944 !important;
+  --ifm-link-hover-color: #fff !important;
 }
 
 .table-of-contents__link:hover,
