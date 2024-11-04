@@ -1,9 +1,11 @@
+// src/core/Container.tsx
+
 import classNames from 'classnames';
 import * as React from 'react';
 import styles from './styles.module.css';
+import clsx from 'clsx';
 
 interface ContainerProps {
-  background?: 'dark' | 'highlight' | 'light';
   children: React.ReactNode;
   className?: string;
   id?: string;
@@ -11,25 +13,9 @@ interface ContainerProps {
   wrapper?: boolean;
 }
 
-const Container: React.FC<ContainerProps> = ({
-  background,
-  children,
-  className,
-  padding = [],
-}) => {
-  const containerClasses = classNames('section', className, {
-    darkBackground: background === 'dark',
-    highlightBackground: background === 'highlight',
-    lightBackground: background === 'light',
-    paddingAll: padding.includes('all'),
-    paddingBottom: padding.includes('bottom'),
-    paddingLeft: padding.includes('left'),
-    paddingRight: padding.includes('right'),
-    paddingTop: padding.includes('top'),
-  });
-
+const Container: React.FC<ContainerProps> = ({ children, className }) => {
   return (
-    <section className={containerClasses}>
+    <section className={clsx(className, 'section')}>
       <div className={classNames('container', styles.cntr)}>{children}</div>
     </section>
   );

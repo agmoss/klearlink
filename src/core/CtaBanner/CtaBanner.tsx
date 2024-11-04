@@ -1,4 +1,4 @@
-// src/components/CTABannerSection.tsx
+// src/core/CTABanner.tsx
 
 import React from 'react';
 

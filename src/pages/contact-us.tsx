@@ -7,7 +7,7 @@ import Image from '../core/Image';
 import Container from '../core/Container';
 
 const AssetImage: Image = {
-  Svg: require('@site/static/img/3.svg').default,
+  Svg: require('@site/static/img/2.svg').default,
 };
 
 const ContactUs: React.FC = () => {
@@ -16,9 +16,9 @@ const ContactUs: React.FC = () => {
       title="Clearlinc.io"
       description="Instant Credit Profiling for Smarter Lending Decisions"
     >
-      <Container className={clsx('section', styles.main)} background="dark">
+      <Container>
         <div className="row">
-          <div className="col col--6">
+          <div className="col col--5">
             <div className="card">
               <div className="">
                 <h2 className="section__title">Contact Us</h2>
@@ -29,19 +29,34 @@ const ContactUs: React.FC = () => {
                 </h3>
               </div>
               <div>
-                <FaEnvelope className={styles.icon} />
-                <h2 className={styles.subHeading}>Email Us</h2>
-                <p className={styles.text}>michael@clearlinc.io</p>
-              </div>
-              <div>
-                <FaPhoneAlt className={styles.icon} />
-                <h2 className={styles.subHeading}>Call Us</h2>
-                <p className={styles.text}>+1 (123) 456-7890</p>
+                <div className="row">
+                  <div className="col col--6">
+                    <div className="blank-card">
+                      <div className="text--center">
+                        <FaEnvelope className={styles.icon} />
+                        <h2 className={styles.subHeading}>Email Us</h2>
+                        <p className={styles.text}>michael@clearlinc.io</p>
+                      </div>
+                    </div>
+                  </div>
+
+                  <div className="col col--6">
+                    <div className="blank-card">
+                      <div className="text--center">
+                        <div>
+                          <FaPhoneAlt className={styles.icon} />
+                          <h2 className={styles.subHeading}>Call Us</h2>
+                          <p className={styles.text}>+1 (123) 456-7890</p>
+                        </div>
+                      </div>
+                    </div>
+                  </div>
+                </div>
               </div>
             </div>
           </div>
           <div
-            className={clsx('col col--6', styles.problemSolutionImageContainer)}
+            className={clsx('col col--7', styles.problemSolutionImageContainer)}
           >
             <AssetImage.Svg className={styles.logoBackground} role="img" />
           </div>

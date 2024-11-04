@@ -1,4 +1,4 @@
-// src/components/HeroSection.tsx
+// src/core/Image.tsx
 
 import React from 'react';
 

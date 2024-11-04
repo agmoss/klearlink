@@ -70,7 +70,6 @@ code {
 
 /* Body and Text */
 body {
-  color: #fff;
   line-height: 1.7;
 }
 
@@ -99,10 +98,6 @@ body {
 .section__subtitle {
   font-size: 1.2rem;
   margin-bottom: 2rem;
-}
-
-.section__description {
-  text-align: left;
 }
 
 .section__description_center {
@@ -136,32 +131,12 @@ body {
   transform: translateY(-10px);
 }
 
-.card__title {
-  font-size: 1.5rem;
-  font-weight: 600;
-  margin-bottom: 1rem;
-}
-
-.card__header,
-.card__footer {
-  text-align: center;
-}
-
 .card__body {
   text-align: left;
 }
 
 .col {
   margin-top: 30px;
-}
-
-/* Backgrounds */
-.darkBackground {
-  background-color: #000;
-}
-
-.lightBackground {
-  background-color: #ffd944;
 }
 
 /* Buttons */
@@ -201,26 +176,6 @@ body {
   font-weight: 600;
 }
 
-.hero__title {
-  font-size: 3rem;
-  font-weight: bold;
-  margin-bottom: 1rem;
-}
-
-/* HeroSection */
-.hero__title {
-  font-size: 3rem;
-  font-weight: bold;
-  margin-bottom: 1rem;
-}
-
-/* HeroSection */
-.hero {
-  text-align: left;
-  overflow: hidden;
-  position: relative;
-  background-color: var(--main-bg-color);
-}
 /* Media Queries for Responsive Design */
 
 @media (max-width: 768px) {

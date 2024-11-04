@@ -29,19 +29,19 @@ const Home: React.FC = () => {
       >
         <HeroSection />
         <div>
-          <Container className="section" background="dark">
+          <Container>
             <ProblemSolutionSection />
           </Container>
-          <Container className="section" background="dark">
+          <Container>
             <KeyBenefitsSection />
           </Container>
-          <Container className="section" background="dark">
+          <Container>
             <HowItWorksSection />
           </Container>
           <SlantedArea title="Clearlinc Product Suite">
             <ProductSuiteSection />
           </SlantedArea>
-          <Container className="section" background="dark">
+          <Container>
             <KeyInsightsSection />
           </Container>
           <CTABannerSection />

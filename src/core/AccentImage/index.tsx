@@ -1,3 +1,5 @@
+// src/core/AccentImage.tsx
+
 import React from 'react';
 import styles from './styles.module.css'; // Create this CSS module
 
