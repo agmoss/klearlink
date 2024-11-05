@@ -5,7 +5,7 @@ import type * as Preset from '@docusaurus/preset-classic';
 const config: Config = {
   title: 'Clearlinc',
   tagline: 'Know Your Borrowers. Instantly.',
-  favicon: 'img/favicon.ico',
+  favicon: 'img/favicon.svg',
   url: 'https://clearlinc.io',
   baseUrl: '/',
   organizationName: 'clearlinc',
