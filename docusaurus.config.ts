@@ -66,7 +66,6 @@ const config: Config = {
     footer: {
       links: [
         {
-          title: 'Docs',
           items: [
             {
               label: 'Docs',
@@ -88,14 +87,9 @@ const config: Config = {
         //   ],
         // },
         {
-          title: 'Contact',
           items: [
             {
-              label: 'Email',
-              href: '/contact-us',
-            },
-            {
-              label: 'Phone',
+              label: 'Contact',
               href: '/contact-us',
             },
           ],

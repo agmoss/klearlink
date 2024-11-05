@@ -1,7 +1,7 @@
 import React from 'react';
 import clsx from 'clsx';
 import styles from './contact-us.module.css';
-import { FaEnvelope, FaPhoneAlt } from 'react-icons/fa';
+import { FaEnvelope } from 'react-icons/fa';
 import Layout from '@theme/Layout';
 import Image from '../core/Image';
 import Container from '../core/Container';
@@ -19,37 +19,16 @@ const ContactUs: React.FC = () => {
       <Container>
         <div className="row">
           <div className="col col--5">
-            <div className="card">
-              <div className="">
+            <div className="nohover card">
+              <div className="card__header">
                 <h2 className="section__title">Contact Us</h2>
-                <h3 className="section__subtitle">
-                  {
-                    'Have questions or need assistance? We’re here to help. Reach out to our team, and we’ll get back to you as soon as possible.'
-                  }
-                </h3>
               </div>
               <div>
-                <div className="row">
-                  <div className="col col--6">
-                    <div className="blank-card">
-                      <div className="text--center">
-                        <FaEnvelope className={styles.icon} />
-                        <h2 className={styles.subHeading}>Email Us</h2>
-                        <p className={styles.text}>michael@clearlinc.io</p>
-                      </div>
-                    </div>
-                  </div>
-
-                  <div className="col col--6">
-                    <div className="blank-card">
-                      <div className="text--center">
-                        <div>
-                          <FaPhoneAlt className={styles.icon} />
-                          <h2 className={styles.subHeading}>Call Us</h2>
-                          <p className={styles.text}>+1 (123) 456-7890</p>
-                        </div>
-                      </div>
-                    </div>
+                <div className="card__body">
+                  <div className="text--center">
+                    <FaEnvelope className={styles.icon} />
+                    <h2 className={styles.subHeading}>Email Us</h2>
+                    <p className={styles.text}>michael@clearlinc.io</p>
                   </div>
                 </div>
               </div>
@@ -58,7 +37,9 @@ const ContactUs: React.FC = () => {
           <div
             className={clsx('col col--7', styles.problemSolutionImageContainer)}
           >
-            <AssetImage.Svg className={styles.logoBackground} role="img" />
+            <div className="card">
+              <AssetImage.Svg className={styles.logoBackground} role="img" />
+            </div>
           </div>
         </div>
       </Container>

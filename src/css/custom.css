@@ -127,6 +127,11 @@ body {
   gap: 30px;
 }
 
+.nohover {
+  transition: none !important;
+  transform: translateY(0px) !important;
+}
+
 .card:hover {
   transform: translateY(-10px);
 }
