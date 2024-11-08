@@ -13,21 +13,7 @@ Prior Reading: [ClearProfile](./clearprofile.md)
 
 Integration with the Clearwatch webhook interface allows for real-time notifications when another organization submits a consumer credit record that either matches one of your consumer credit records (creating a consumer match) or causes the update or removal of a previous consumer match.
 
-```mermaidjs
-graph TD
-    subgraph YourOrg_System
-        YourOrg_Webhook(Webhook endpoint on YourOrg API)
-    end
-
-    subgraph Clearlinc_System
-        Matcher[Check for consumer data match]
-        Webhook_Trigger[Trigger webhook to YourOrg if a match is found later]
-    end
-
-    Matcher -->|Match found later/match changed| Webhook_Trigger
-    Webhook_Trigger -->|Webhook| YourOrg_Webhook
-
-```
+![clearwatch](../../static/img/clearwatch.png)
 
 ---
 

@@ -52,12 +52,13 @@ code {
   background-color: #000;
 }
 
-.cardContainer_node_modules-\@docusaurus-theme-classic-lib-theme-DocCard-styles-module {
-  --ifm-link-color: #ffd944;
-  --ifm-color-emphasis-800: #ffd944;
+article .cardContainer_fWXF {
   height: auto !important;
-  border: 1px solid #ffd944 !important;
   --ifm-link-hover-color: #fff !important;
+}
+
+article .cardContainer_fWXF:hover {
+  border: 1px solid #ffd944;
 }
 
 .table-of-contents__link:hover,

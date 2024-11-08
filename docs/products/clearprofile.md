@@ -59,15 +59,7 @@ Credit Fact fields are:
 
 An application/loan has the following lifecycle. As time progresses, your institution learns information about the borrowers' performance on the loan, as represented by the following states:
 
-```mermaidjs
-
-graph TD
-    A[application] --> B[originated]
-    A --> C[declined]
-    B --> F[compliant]
-    B --> G[non-compliant]
-
-```
+![clearprofile](../../static/img/clearprofile.png)
 
 - **application** - The consumer has applied for credit at your organization
 - **originated** - Your organization has extended credit to the consumer
@@ -93,8 +85,6 @@ A Consumer Match is the result of the Clearlinc process. Clearlinc will return t
 - **Added debt-to-income calculation enhancements** - This data allows lenders to calculate the consumer's borrowing ratio of debt to income if credit is still outstanding.
 - **Credit stacking or fraud stacking determinations** - If the consumer has obtained multiple forms of credit in the last 30 days, this could be a further signal of risk, and even fraud risk, beyond traditional borrowing ratios.
 - **Institution utilization** - allows lenders to determine the institutions the consumer has linked or authorized for debit purposes in the last 60 days.
-
-  \
 
 #### Decisioning
 
@@ -136,23 +126,7 @@ ClearProfile requires participating organizations to update the credit state of 
 
 The Clearlinc system operates as illustrated
 
-```mermaidjs
-graph TD
-    subgraph YourOrganization_System
-        YourOrganization(YourOrganization provides consumer credit record)
-
-    end
-
-    subgraph Clearlinc_System
-        API[Clearlinc processes credit_facts and consumer_facts]
-        Matcher[Check for consumer match]
-    end
-
-    YourOrganization -->|POST Request or Data ETL| API
-    API --> Matcher
-    Matcher -->|Match found/ not found| YourOrganization_System
-
-```
+![clearsync_api](../../static/img/clearsync_api.png)
 
 ---
 
@@ -164,5 +138,3 @@ For more detailed information on the API, Clearsync, and Clearwatch, check out t
 - Clearwatch
 
 :::
-
-\
