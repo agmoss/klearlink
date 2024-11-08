@@ -26,7 +26,7 @@ const ProblemSolutionSection: React.FC = () => (
             className={clsx('card__body', 'section__description', styles.text)}
           >
             <p>
-              Clearlinc delivers encrypted real-time credit data real-time
+              Clearlinc delivers encrypted real-time
               credit data every 30 minutes or less, equipping lenders with
               accurate, actionable insights into your consumer's credit behavior
               within the last 60 days.
