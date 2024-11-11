@@ -2,7 +2,6 @@
 
 .accentImage {
   position: absolute;
-  opacity: 0.5;
   pointer-events: none;
   z-index: 1;
 }

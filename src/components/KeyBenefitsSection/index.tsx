@@ -2,72 +2,36 @@
 
 import React from 'react';
 import styles from './styles.module.css';
-import {
-  FaPiggyBank,
-  FaBuilding,
-  FaCalculator,
-  FaChartLine,
-} from 'react-icons/fa';
-import { IconType } from 'react-icons';
 
-type BenefitItem = {
-  title: string;
-  description: string;
-  Icon: IconType;
-};
+import config, { BenefitItem } from '../../../clearlinc.config';
 
-const FeatureList: BenefitItem[] = [
-  {
-    title: 'Institution Awareness',
-    description:
-      'Know what institutions your consumer has linked within the last 60 days.',
-    Icon: FaBuilding,
-  },
-  {
-    title: 'Fraud Stacking Prevention',
-    description:
-      "Prevent fraud by understanding the consumers's recent credit behavior.",
-    Icon: FaPiggyBank,
-  },
-  {
-    title: 'Debt-to-Income Precision',
-    description:
-      'Calculate accurate debt ratios using real-time credit data on the consumer.',
-    Icon: FaCalculator,
-  },
-  {
-    title: 'Performance Monitoring',
-    description:
-      "Track your consumer's credit profile over time to enhance lifetime value and minimize risk.",
-    Icon: FaChartLine,
-  },
-];
-
-const Benefit = ({ title, description, Icon }: BenefitItem) => {
-  return (
-    <div className="col col--3">
-      <div className="blank-card">
-        <div className="text--center">
-          <Icon className={styles.icon} />
-        </div>
-        <div className="padding-horiz--md">
-          <h3 className="section__subtitle">{title}</h3>
-          <p className="section__description_center">{description}</p>
-        </div>
+const Benefit: React.FC<BenefitItem> = ({
+  title,
+  description: subTitle,
+  Icon,
+}) => (
+  <div className="col col--3">
+    <div className="blank-card">
+      <div className="text--center">
+        <Icon className={styles.icon} />
+      </div>
+      <div className="padding-horiz--md">
+        <h3 className="section__subtitle">{title}</h3>
+        <p className="section__description_center">{subTitle}</p>
       </div>
     </div>
-  );
-};
+  </div>
+);
 
 const KeyBenefitsSection: React.FC = () => (
   <div>
     <div className="row">
       <div className="col col--12 text--center">
-        <h2 className="section__title">The Benefits Are Clear</h2>
+        <h2 className="section__title">{config.keyBenefits.title}</h2>
       </div>
     </div>
     <div className="row">
-      {FeatureList.map((feature, idx) => (
+      {config.keyBenefits.items.map((feature, idx) => (
         <Benefit key={idx} {...feature} />
       ))}
     </div>

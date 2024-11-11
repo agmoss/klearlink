@@ -4,11 +4,12 @@ import React from 'react';
 import Link from '@docusaurus/Link';
 import useBaseUrl from '@docusaurus/useBaseUrl';
 import CtaBanner from '@site/src/core/CtaBanner/CtaBanner';
+import config from '../../../clearlinc.config';
 
 const CTABannerSection: React.FC = () => (
   <CtaBanner
-    title="Curious to Enhance Your Credit Profiling?"
-    title2="We’d Love to Hear from You."
+    title={config.cta.title}
+    title2={config.cta.subTitle}
     link={
       <Link
         className="button button--primary button--lg outlinedButton"
