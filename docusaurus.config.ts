@@ -73,19 +73,14 @@ const config: Config = {
             },
           ],
         },
-        // {
-        //   title: 'Policy',
-        //   items: [
-        //     {
-        //       label: 'Privacy Policy',
-        //       href: '/privacy-policy',
-        //     },
-        //     {
-        //       label: 'Terms of Service',
-        //       href: '/terms-of-service',
-        //     },
-        //   ],
-        // },
+        {
+          items: [
+            {
+              label: 'Privacy Policy',
+              to: '/privacy-policy',
+            },
+          ],
+        },
         {
           items: [
             {
