@@ -2,6 +2,8 @@
 sidebar_position: 3
 ---
 
+import Clearwatch from '/img/clearwatch.png';
+
 # ClearWatch
 
 :::info
@@ -13,7 +15,11 @@ Prior Reading: [ClearProfile](./clearprofile.md)
 
 Integration with the Clearwatch webhook interface allows for real-time notifications when another organization submits a consumer credit record that either matches one of your consumer credit records (creating a consumer match) or causes the update or removal of a previous consumer match.
 
-![clearwatch](../../static/img/clearwatch.png)
+
+<p align="center">
+    <img src={Clearwatch} alt="API" style={{maxWidth: 600}} />
+</p>
+
 
 ---
 

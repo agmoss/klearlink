@@ -2,6 +2,9 @@
 sidebar_position: 1
 ---
 
+import Clearprofile from '/img/clearprofile.png';
+import API from '/img/clearsync_api.png';
+
 # ClearProfile
 
 ## Abstract
@@ -59,7 +62,10 @@ Credit Fact fields are:
 
 An application/loan has the following lifecycle. As time progresses, your institution learns information about the borrowers' performance on the loan, as represented by the following states:
 
-![clearprofile](../../static/img/clearprofile.png)
+<p align="center">
+    <img src={Clearprofile} alt="API" style={{maxWidth: 600}} />
+</p>
+
 
 - **application** - The consumer has applied for credit at your organization
 - **originated** - Your organization has extended credit to the consumer
@@ -126,7 +132,9 @@ ClearProfile requires participating organizations to update the credit state of 
 
 The Clearlinc system operates as illustrated
 
-![clearsync_api](../../static/img/clearsync_api.png)
+<p align="center">
+    <img src={API} alt="API" style={{maxWidth: 600}} />
+</p>
 
 ---
 
