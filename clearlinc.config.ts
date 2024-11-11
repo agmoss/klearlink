@@ -67,7 +67,7 @@ const config: Config = {
   hero: {
     title: 'Instant Alternative Credit Profiling Data for Smarter Decisioning',
     subTitle:
-      'Know your borrowers in real-time with alternative credit data and insights, so you can lend with confidence',
+      'Know your borrowers in real-time with alternative credit data and insights, so you can lend with confidence.',
   },
   problemStatement: {
     title:
@@ -102,7 +102,7 @@ const config: Config = {
       {
         title: 'Performance Monitoring',
         description:
-          'Track your borrower’s credit profile over time to enhance lifetime value and minimize risk.',
+          'Track your borrower’s credit profile over time to enhance lifetime value and minimize default risk.',
         Icon: FaChartLine,
       },
     ],

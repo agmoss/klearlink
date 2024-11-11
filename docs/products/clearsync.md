@@ -7,7 +7,6 @@ import API from '/img/clearsync_api.png';
 
 # ClearSync
 
-
 :::info
 Prior Reading: [ClearProfile](./clearprofile.md)
 

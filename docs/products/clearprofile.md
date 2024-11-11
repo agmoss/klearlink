@@ -66,7 +66,6 @@ An application/loan has the following lifecycle. As time progresses, your instit
     <img src={Clearprofile} alt="API" style={{maxWidth: 600}} />
 </p>
 
-
 - **application** - The consumer has applied for credit at your organization
 - **originated** - Your organization has extended credit to the consumer
   - **compliant** - all credit reported to Clearlinc has been paid as agreed in the last 60 days
