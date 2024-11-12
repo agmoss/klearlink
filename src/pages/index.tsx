@@ -21,7 +21,7 @@ const Home: React.FC = () => {
       <AccentImage position={{ top: '5%', left: '35%' }} src="/img/3.svg" />
       <AccentImage position={{ top: '220%', left: '-50%' }} src="/img/4.svg" />
       <AccentImage position={{ top: '200%', left: '50%' }} src="/img/4.svg" />
-      <AccentImage position={{ top: '410%', left: '35%' }} src="/img/5.svg" />
+      <AccentImage position={{ top: '400%', left: '35%' }} src="/img/5.svg" />
       <motion.div
         initial={{ opacity: 0, y: 50 }}
         animate={{ opacity: 1, y: 0 }}

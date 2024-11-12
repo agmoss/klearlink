@@ -70,8 +70,7 @@ const config: Config = {
       'Know your borrowers in real-time with alternative credit data and insights, so you can lend with confidence.',
   },
   problemStatement: {
-    title:
-      'What You Don’t See is Costing You.',
+    title: 'What You Don’t See is Costing You.',
     subTitle: 'Don’t Be Left in the Dark Issuing Credit.',
     problemStatement:
       'Traditional credit data provides lagging data in a world of instant credit.  Bank account data only gives a partial view of a borrower, who typically manages two or more bank accounts.  Stop decisioning on incomplete, outdated borrower data.',

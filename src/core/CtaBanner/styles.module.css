@@ -9,6 +9,8 @@
   padding: 10rem 0;
   text-align: center;
   overflow: hidden;
+  z-index: 10;
+  position: relative;
 }
 
 .ctaBanner a {
