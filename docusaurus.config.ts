@@ -90,7 +90,7 @@ const config: Config = {
           ],
         },
       ],
-      copyright: `Copyright © ${new Date().getFullYear()} Clearlinc, Inc.`,
+      copyright: `Copyright © ${new Date().getFullYear()} Clearlinc Data Technologies, Inc.`,
     },
     prism: {
       theme: prismThemes.oneDark,

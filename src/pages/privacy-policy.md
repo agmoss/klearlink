@@ -90,8 +90,6 @@ For questions or requests regarding this Privacy Policy or your personal informa
 
 ClearLinc.io
 
-\[Company Address\]
-
 Email: contact@clearlinc.io
 
 For further information on data protection in Canada, you may contact the Office of the Privacy Commissioner of Canada, and for California residents, the California Attorney General’s Office.

@@ -140,8 +140,8 @@ The Clearlinc system operates as illustrated
 :::info
 For more detailed information on the API, Clearsync, and Clearwatch, check out the following links:
 
-- API Docs
-- Clearsync
-- Clearwatch
+- [API Docs](../api-docs/API.md)
+- [Clearsync](./clearsync.md)
+- [Clearwatch](./clearwatch.md)
 
 :::

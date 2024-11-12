@@ -186,10 +186,13 @@ body {
 
 @media (max-width: 768px) {
   .hero__title {
-    font-size: 2.5rem;
+    font-size: 2rem;
   }
   .hero__subtitle {
     font-size: 1.1rem;
+  }
+  .section__title {
+    font-size: 2rem;
   }
   .section__description {
     text-align: center;

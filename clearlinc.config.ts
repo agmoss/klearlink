@@ -71,8 +71,8 @@ const config: Config = {
   },
   problemStatement: {
     title:
-      'What You Don’t See is Costing You. Don’t Be Left in the Dark Issuing Credit.',
-    subTitle: 'Stop decisioning on incomplete, outdated customer data.',
+      'What You Don’t See is Costing You.',
+    subTitle: 'Don’t Be Left in the Dark Issuing Credit.',
     problemStatement:
       'Traditional credit data provides lagging data in a world of instant credit.  Bank account data only gives a partial view of a borrower, who typically manages two or more bank accounts.  Stop decisioning on incomplete, outdated borrower data.',
     solutionOverview:
