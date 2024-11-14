@@ -63,7 +63,7 @@ Credit Fact fields are:
 An application/loan has the following lifecycle. As time progresses, your institution learns information about the borrowers' performance on the loan, as represented by the following states:
 
 <p align="center">
-    <img src={Clearprofile} alt="API" style={{maxWidth: 600}} />
+    <img src={Clearprofile} alt="API" style={{maxWidth: 600, width: '100%', height:'auto'}}/>
 </p>
 
 - **application** - The consumer has applied for credit at your organization
@@ -132,7 +132,7 @@ ClearProfile requires participating organizations to update the credit state of 
 The Clearlinc system operates as illustrated
 
 <p align="center">
-    <img src={API} alt="API" style={{maxWidth: 600}} />
+    <img src={API} alt="API" style={{maxWidth: 600, width: '100%', height:'auto'}} />
 </p>
 
 ---

@@ -28,7 +28,7 @@ Integration with the API is a flexible and configurable way to submit your consu
 The API for consumer credit record submission and consumer match consumption is a standard REST API.
 
 <p align="center">
-    <img src={API} alt="API" style={{maxWidth: 600}} />
+    <img src={API} alt="API" style={{maxWidth: 600, width: '100%', height:'auto'}} />
 </p>
 
 :::info
@@ -41,7 +41,7 @@ The API is detailed in the API Docs
 Integration with the Data ETL interface is an alternative to using APIs to provide consumer credit records. Data ETL offers a convenient and low-overhead solution to supply Clearlinc with your organization's data, so you can benefit from getting the consumer matches without having to set up code and systems to supply the consumer credit records.
 
 <p align="center">
-    <img src={ETL} alt="ETL" style={{maxWidth: 600}} />
+    <img src={ETL} alt="ETL" style={{maxWidth: 600, width: '100%', height:'auto'}} />
 </p>
 
 With Data ETL, Clearlinc sets up an ETL pipeline connected to the source of your consumer data. The pipeline extracts and transforms your data into the required consumer credit record and populates it into the Clearlinc database. From there, you can use API Steps 3 and 4 and/or Clearwatch to get your consumer matches.
