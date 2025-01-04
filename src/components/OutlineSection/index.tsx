@@ -1,4 +1,4 @@
-// src/components/KeyBenefitsSection.tsx
+// src/components/OutlineSection.tsx
 
 import React from 'react';
 
@@ -18,19 +18,19 @@ const Benefit: React.FC<IconItem> = ({ title, description, Icon }) => (
   </div>
 );
 
-const KeyBenefitsSection: React.FC = () => (
-  <div>
+const OutlineSection: React.FC = () => (
+  <div id="outline">
     <div className="row">
       <div className="col col--12 text--center">
-        <h2 className="section__title">{config.keyBenefitsSection.title}</h2>
+        <h2 className="section__title">{config.outlineSection.title}</h2>
       </div>
     </div>
     <div className="row">
-      {config.keyBenefitsSection.items.map((feature, idx) => (
+      {config.outlineSection.items.map((feature, idx) => (
         <Benefit key={idx} {...feature} />
       ))}
     </div>
   </div>
 );
 
-export default KeyBenefitsSection;
+export default OutlineSection;

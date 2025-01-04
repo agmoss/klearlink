@@ -8,7 +8,7 @@ import config, { Title } from '../../../clearlinc.config';
 
 const Insight: React.FC<Title> = ({ title }) => (
   <li className={clsx('section__list-item', styles.insightItem)}>
-    <FaCheckCircle className={styles.icon} />
+    <FaCheckCircle className="icon__small" />
     {title}
   </li>
 );

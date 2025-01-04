@@ -1,9 +1,8 @@
 import React from 'react';
 import clsx from 'clsx';
-import styles from './styles.module.css';
 import config from '../../../clearlinc.config';
 
-const ProblemSolutionSection: React.FC = () => (
+const ProblemStatementSection: React.FC = () => (
   <div>
     <div className="row">
       <div className="col col--6">
@@ -16,14 +15,10 @@ const ProblemSolutionSection: React.FC = () => (
               {config.problemStatementSection.subTitle}
             </h3>
           </div>
-          <div
-            className={clsx('card__body', 'section__description', styles.text)}
-          >
+          <div className={clsx('card__body', 'section__content')}>
             <p>{config.problemStatementSection.problem}</p>
           </div>
-          <div
-            className={clsx('card__body', 'section__description', styles.text)}
-          >
+          <div className={clsx('card__body', 'section__content')}>
             <p>{config.problemStatementSection.solution}</p>
           </div>
         </div>
@@ -32,4 +27,4 @@ const ProblemSolutionSection: React.FC = () => (
   </div>
 );
 
-export default ProblemSolutionSection;
+export default ProblemStatementSection;

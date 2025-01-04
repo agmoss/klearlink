@@ -4,7 +4,14 @@ import {
   FaBuilding,
   FaCalculator,
   FaChartLine,
+  FaLayerGroup,
+  FaStackOverflow,
+  FaPercentage,
+  FaShoppingCart,
+  FaBriefcase,
+  FaMoneyCheck,
 } from 'react-icons/fa';
+import { FaPerson } from 'react-icons/fa6';
 
 export type Title = {
   title: string;
@@ -98,18 +105,18 @@ const config: Config = {
       {
         title: 'Buy-Now-Pay-Later',
         description: 'Access your customer’s buy-now-pay-later credit data.',
-        Icon: FaBuilding,
+        Icon: FaShoppingCart,
       },
       {
         title: 'Short-Term High Cost Credit',
         description:
           'Access payday loan credit data to understand 30-60 day obligations.',
-        Icon: FaBuilding,
+        Icon: FaMoneyCheck,
       },
       {
         title: 'Earned Wage Access',
         description: 'V3',
-        Icon: FaBuilding,
+        Icon: FaBriefcase,
       },
     ],
   },
@@ -145,19 +152,19 @@ const config: Config = {
         title: 'Reduce Credit Stacking',
         description:
           'Know exactly how much credit your customer has accumulated in the last 60 days, and reduce your portfolio risk from credit stacking.',
-        Icon: FaBuilding,
+        Icon: FaLayerGroup,
       },
       {
         title: 'Prevent Fraud Stacking',
         description:
           'By seeing the velocity of credit acquired in the last 60 days, you can improve your portfolio performance by preventing fraud stacking.',
-        Icon: FaPiggyBank,
+        Icon: FaStackOverflow,
       },
       {
         title: 'Identify New Customers',
         description:
           'With visibility into short-term credit usage and performance, unlock credit to a new segment of credit invisible or traditional “thin file” customers.',
-        Icon: FaCalculator,
+        Icon: FaPerson,
       },
       {
         title: 'Portfolio Optimization',
@@ -169,13 +176,13 @@ const config: Config = {
         title: 'Debt-to-Income Precision',
         description:
           'Get an accurate debt-to-income ratio using real-time data.',
-        Icon: FaChartLine,
+        Icon: FaPercentage,
       },
       {
         title: 'Institutional Awareness',
         description:
           'Know what institutions your applicant has linked within the last 60 days.',
-        Icon: FaChartLine,
+        Icon: FaBuilding,
       },
     ],
   },

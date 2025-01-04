@@ -31,7 +31,7 @@ const ProductCard: React.FC<LinkItem> = ({ title, description, link }) => (
 );
 
 const ProductSuiteSection: React.FC = () => (
-  <div>
+  <div id="productsuite">
     <div className="row">
       {config.productSuiteSection.items.map((product, idx) => (
         <ProductCard key={idx} {...product} />

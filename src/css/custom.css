@@ -1,6 +1,6 @@
 /* src/css/custom.css */
 
-/* Base Styles */
+/* =================== Base Styles =================== */
 :root {
   --ifm-font-family-base: 'Inter', sans-serif;
   --ifm-font-family-monospace: 'Fira Code', monospace;
@@ -37,6 +37,17 @@ html[data-theme='dark'] {
   overflow-x: hidden;
 }
 
+/* =================== General Elements =================== */
+body {
+  line-height: 1.7;
+}
+
+code {
+  color: #ffd944;
+  background-color: #000;
+}
+
+/* Alerts */
 .alert {
   background-color: #ffd944;
   color: #000;
@@ -47,43 +58,35 @@ html[data-theme='dark'] {
   --ifm-alert-foreground-color: #000;
 }
 
-code {
-  color: #ffd944;
-  background-color: #000;
+/* =================== Layout =================== */
+.container {
+  position: relative;
+  z-index: 10;
 }
 
-article .cardContainer_fWXF {
-  height: auto !important;
-  --ifm-link-hover-color: #fff !important;
+.col {
+  margin-top: 30px;
 }
 
-article .cardContainer_fWXF:hover {
-  border: 1px solid #ffd944;
+.row-alt {
+  justify-content: center;
 }
 
-.table-of-contents__link:hover,
-.table-of-contents__link:hover code,
-.table-of-contents__link--active,
-.table-of-contents__link--active code {
-  color: #ffd944;
-  text-decoration: none;
+.col-alt {
+  display: flex;
+  justify-content: center;
 }
 
-/* Body and Text */
-body {
-  line-height: 1.7;
-}
-
-/* Sections */
+/* =================== Sections =================== */
 .section {
   padding: 4rem 2rem;
-  text-align: center;
 }
 
 .section__title {
   font-size: 2.8rem;
   font-weight: 600;
   margin-bottom: 2rem;
+  text-align: center;
   color: #ffd944;
 }
 
@@ -92,22 +95,55 @@ body {
   margin: 0 auto;
   font-size: 1.1rem;
   line-height: 1.8;
-  text-align: left;
+}
+
+.section__subtitle {
+  font-size: 1.2rem;
+  margin-bottom: 2rem;
+  text-align: center;
 }
 
 .hero__subtitle,
-.section__subtitle {
+.section__subtitle__alt {
   font-size: 1.2rem;
   margin-bottom: 2rem;
 }
 
-.section__description_center {
-  text-align: center;
+/* =================== Cards =================== */
+.card,
+.card-alt {
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+  height: 100%;
+  border-radius: 12px;
+  transition: transform 0.3s ease;
+  gap: 30px;
 }
 
-.container {
-  position: relative;
-  z-index: 10;
+.card {
+  padding: 0rem;
+}
+
+.bs_bottom {
+  box-shadow:
+    rgba(255, 217, 68, 0.4) 0px 5px,
+    rgba(255, 217, 68, 0.3) 0px 10px,
+    rgba(255, 217, 68, 0.2) 0px 15px,
+    rgba(255, 217, 68, 0.1) 0px 20px,
+    rgba(255, 217, 68, 0.05) 0px 25px;
+}
+
+.card-alt {
+  border: 1px solid #ffd944;
+}
+
+.cardContainer_fWXF {
+  height: auto !important;
+}
+
+.cardContainer_fWXF:hover {
+  border: 1px solid #ffd944;
 }
 
 .blank-card {
@@ -115,43 +151,20 @@ body {
   padding: 0.1rem;
 }
 
-/* Cards */
-.card {
-  display: flex;
-  flex-direction: column;
-  justify-content: space-between;
-  height: 100%;
-  padding: 0rem;
-  border-radius: 12px;
-  box-shadow: 0 4px 16px rgba(0, 0, 0, 0.1);
-  transition: transform 0.3s ease;
-  gap: 30px;
-}
-
-.nohover {
-  transition: none !important;
-  transform: translateY(0px) !important;
-}
-
-.card:hover {
-  transform: translateY(-10px);
-}
-
 .card__body {
   text-align: left;
 }
 
-.col {
-  margin-top: 30px;
+/* =================== Buttons =================== */
+.mainButton,
+.outlinedButton {
+  padding: 12px 24px;
+  font-size: 1rem;
+  border-radius: 4px;
+  cursor: pointer;
 }
 
-/* Buttons */
 .mainButton {
-  padding: 12px 24px;
-  border: none;
-  border-radius: 4px;
-  font-size: 1rem;
-  cursor: pointer;
   color: #000;
   background-color: #ffd944;
   border: 2px solid #ffd944;
@@ -160,7 +173,6 @@ body {
 .mainButton:hover {
   color: #ffd944;
   background-color: #000;
-  border: 2px solid #ffd944;
 }
 
 .outlinedButton {
@@ -170,11 +182,11 @@ body {
 }
 
 .outlinedButton:hover {
-  background-color: #000;
   color: #ffd944;
+  background-color: #000;
 }
 
-/* Headings */
+/* =================== Headings =================== */
 .h2 {
   text-align: center;
   font-size: 2.8rem;
@@ -182,26 +194,39 @@ body {
   font-weight: 600;
 }
 
-/* Media Queries for Responsive Design */
+/* =================== Table of Contents =================== */
+.table-of-contents__link:hover,
+.table-of-contents__link:hover code,
+.table-of-contents__link--active,
+.table-of-contents__link--active code {
+  color: #ffd944;
+  text-decoration: none;
+}
 
+/* =================== Media Queries =================== */
 @media (max-width: 768px) {
   .hero__title {
     font-size: 2rem;
   }
+
   .hero__subtitle {
     font-size: 1.1rem;
   }
+
   .section__title {
     font-size: 2rem;
   }
-  .section__description {
-    text-align: center;
+
+  .section_description {
+    text-align: left;
   }
+
   .container {
     flex-direction: column;
     align-items: center;
     text-align: center;
   }
+
   .buttonGroup {
     flex-direction: column;
     gap: 15px;
@@ -218,6 +243,15 @@ body {
   }
 }
 
-.table-of-contents__link--active {
+/* =================== Icons =================== */
+.icon {
+  font-size: 2rem;
   color: #ffd944;
+  margin-bottom: 0.75rem;
+}
+
+.icon__small {
+  font-size: 1.2rem;
+  color: #ffd944;
+  margin-right: 0.75rem;
 }

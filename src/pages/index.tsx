@@ -1,7 +1,8 @@
 import React from 'react';
 import Layout from '@theme/Layout';
 import HeroSection from '../components/HeroSection';
-import ProblemSolutionSection from '../components/ProblemSolutionSection';
+import ProblemStatementSection from '../components/ProblemStatementSection';
+import OutlineSection from '../components/OutlineSection';
 import KeyBenefitsSection from '../components/KeyBenefitsSection';
 import HowItWorksSection from '../components/HowItWorksSection';
 import ProductSuiteSection from '../components/ProductSuiteSection';
@@ -11,6 +12,7 @@ import Container from '../core/Container';
 import { motion } from 'framer-motion';
 import SlantedArea from '../core/SlantedArea/SlantedArea';
 import AccentImage from '../core/AccentImage'; // Create a reusable component for accent images
+import DifferenceSection from '../components/DifferenceSection';
 
 const Home: React.FC = () => {
   return (
@@ -21,7 +23,7 @@ const Home: React.FC = () => {
       <AccentImage position={{ top: '5%', left: '35%' }} src="/img/3.svg" />
       <AccentImage position={{ top: '220%', left: '-50%' }} src="/img/4.svg" />
       <AccentImage position={{ top: '200%', left: '50%' }} src="/img/4.svg" />
-      <AccentImage position={{ top: '400%', left: '35%' }} src="/img/5.svg" />
+      <AccentImage position={{ top: '640%', left: '35%' }} src="/img/5.svg" />
       <motion.div
         initial={{ opacity: 0, y: 50 }}
         animate={{ opacity: 1, y: 0 }}
@@ -30,7 +32,13 @@ const Home: React.FC = () => {
         <HeroSection />
         <div>
           <Container>
-            <ProblemSolutionSection />
+            <ProblemStatementSection />
+          </Container>
+          <Container>
+            <OutlineSection />
+          </Container>
+          <Container>
+            <DifferenceSection />
           </Container>
           <Container>
             <KeyBenefitsSection />

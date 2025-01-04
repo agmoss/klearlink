@@ -26,7 +26,7 @@ const ContactUs: React.FC = () => {
               <div>
                 <div className="card__body">
                   <div className="text--center">
-                    <FaEnvelope className={styles.icon} />
+                    <FaEnvelope className="icon" />
                     <h2 className={styles.subHeading}>Email Us</h2>
                     <p className={styles.text}>michael@clearlinc.io</p>
                   </div>
