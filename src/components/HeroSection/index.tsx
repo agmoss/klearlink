@@ -11,8 +11,8 @@ const HeroSection = () => (
   <header className={clsx('hero hero--primary')}>
     <div className="container">
       <div className={styles.heroContent}>
-        <h1 className="hero__title">{config.hero.title}</h1>
-        <p className="hero__subtitle">{config.hero.subTitle}</p>
+        <h1 className="hero__title">{config.heroSection.title}</h1>
+        <p className="hero__subtitle">{config.heroSection.subTitle}</p>
         <div className={styles.buttonGroup}>
           <Link
             className="button button--primary button--lg mainButton"

@@ -9,20 +9,22 @@ const ProblemSolutionSection: React.FC = () => (
       <div className="col col--6">
         <div className="card">
           <div className="card__header">
-            <h2 className="section__title">{config.problemStatement.title}</h2>
+            <h2 className="section__title">
+              {config.problemStatementSection.title}
+            </h2>
             <h3 className="section__subtitle">
-              {config.problemStatement.subTitle}
+              {config.problemStatementSection.subTitle}
             </h3>
           </div>
           <div
             className={clsx('card__body', 'section__description', styles.text)}
           >
-            <p>{config.problemStatement.problemStatement}</p>
+            <p>{config.problemStatementSection.problem}</p>
           </div>
           <div
             className={clsx('card__body', 'section__description', styles.text)}
           >
-            <p>{config.problemStatement.solutionOverview}</p>
+            <p>{config.problemStatementSection.solution}</p>
           </div>
         </div>
       </div>

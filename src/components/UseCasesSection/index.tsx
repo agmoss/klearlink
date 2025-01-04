@@ -23,11 +23,11 @@ const UseCasesSection: React.FC = () => (
   <div className={styles.useCases}>
     <div className="row">
       <div className="col col--12 text--center">
-        <h2 className="section__title">{config.useCases.title}</h2>
+        <h2 className="section__title">{config.useCasesSection.title}</h2>
       </div>
     </div>
     <div className="row margin-horiz--md">
-      {config.useCases.items.map((useCase, idx) => (
+      {config.useCasesSection.items.map((useCase, idx) => (
         <UseCase key={idx} {...useCase} />
       ))}
     </div>
@@ -37,7 +37,7 @@ const UseCasesSection: React.FC = () => (
           className="button button--primary button--lg mainButton"
           to={useBaseUrl('docs/use-cases')}
         >
-          {config.useCases.subTitle}
+          {config.useCasesSection.subTitle}
         </Link>
       </div>
     </div>

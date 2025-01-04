@@ -27,11 +27,11 @@ const KeyBenefitsSection: React.FC = () => (
   <div>
     <div className="row">
       <div className="col col--12 text--center">
-        <h2 className="section__title">{config.keyBenefits.title}</h2>
+        <h2 className="section__title">{config.keyBenefitsSection.title}</h2>
       </div>
     </div>
     <div className="row">
-      {config.keyBenefits.items.map((feature, idx) => (
+      {config.keyBenefitsSection.items.map((feature, idx) => (
         <Benefit key={idx} {...feature} />
       ))}
     </div>

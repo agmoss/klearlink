@@ -8,8 +8,8 @@ import config from '../../../clearlinc.config';
 
 const CTABannerSection: React.FC = () => (
   <CtaBanner
-    title={config.cta.title}
-    title2={config.cta.subTitle}
+    title={config.ctaSection.title}
+    title2={config.ctaSection.subTitle}
     link={
       <Link
         className="button button--primary button--lg outlinedButton"

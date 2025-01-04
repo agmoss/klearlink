@@ -18,12 +18,14 @@ const KeyInsightsSection: React.FC = () => (
     <div className="col col--7 text--center">
       <div className="card">
         <div className="card__header">
-          <h2 className="section__title">{config.keyInsights.title}</h2>
-          <h3 className="section__subtitle">{config.keyInsights.subTitle}</h3>
+          <h2 className="section__title">{config.keyInsightsSection.title}</h2>
+          <h3 className="section__subtitle">
+            {config.keyInsightsSection.subTitle}
+          </h3>
         </div>
         <div className="card__body">
           <ul className={clsx('list--unstyled', styles.insightsList)}>
-            {config.keyInsights.items.map((insight, idx) => (
+            {config.keyInsightsSection.items.map((insight, idx) => (
               <Insight key={idx} {...insight} />
             ))}
           </ul>
