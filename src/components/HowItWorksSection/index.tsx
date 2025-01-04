@@ -5,9 +5,9 @@ import Link from '@docusaurus/Link';
 import clsx from 'clsx';
 import styles from './styles.module.css';
 import useBaseUrl from '@docusaurus/useBaseUrl';
-import config, { Item } from '../../../clearlinc.config';
+import config, { BasicItem } from '../../../clearlinc.config';
 
-const Feature: React.FC<Item> = ({ title, description }) => (
+const Feature: React.FC<BasicItem> = ({ title, description }) => (
   <li className={styles.stepItem}>
     <h3 className="section__subtitle">{title}</h3>
     <p className="section__description_center">{description}</p>

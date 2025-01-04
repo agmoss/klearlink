@@ -4,9 +4,9 @@ import React from 'react';
 import Link from '@docusaurus/Link';
 import useBaseUrl from '@docusaurus/useBaseUrl';
 import styles from './styles.module.css';
-import config, { Item } from '../../../clearlinc.config';
+import config, { BasicItem } from '../../../clearlinc.config';
 
-const UseCase = ({ title, description }: Item) => (
+const UseCase = ({ title, description }: BasicItem) => (
   <div className="col col--6 margin-bottom--lg">
     <div className="card">
       <div className="card__header">

@@ -4,9 +4,9 @@ import React from 'react';
 import clsx from 'clsx';
 import { FaCheckCircle } from 'react-icons/fa';
 import styles from './styles.module.css';
-import config, { InsightItem } from '../../../clearlinc.config';
+import config, { Title } from '../../../clearlinc.config';
 
-const Insight: React.FC<InsightItem> = ({ title }) => (
+const Insight: React.FC<Title> = ({ title }) => (
   <li className={clsx('section__list-item', styles.insightItem)}>
     <FaCheckCircle className={styles.icon} />
     {title}

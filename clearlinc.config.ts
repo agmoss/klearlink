@@ -6,7 +6,7 @@ import {
   FaChartLine,
 } from 'react-icons/fa';
 
-type Title = {
+export type Title = {
   title: string;
 };
 
@@ -14,15 +14,15 @@ type TitleWithSubTitle = Title & {
   subTitle: string;
 };
 
-type BasicItem = Title & {
+export type BasicItem = Title & {
   description: string;
 };
 
-type IconItem = BasicItem & {
+export type IconItem = BasicItem & {
   Icon: IconType;
 };
 
-type LinkItem = BasicItem & {
+export type LinkItem = BasicItem & {
   link: string;
 };
 

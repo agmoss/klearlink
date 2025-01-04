@@ -5,9 +5,9 @@ import Link from '@docusaurus/Link';
 import useBaseUrl from '@docusaurus/useBaseUrl';
 import styles from './styles.module.css';
 import { clsx } from 'clsx';
-import config, { ProductItem } from '../../../clearlinc.config';
+import config, { LinkItem } from '../../../clearlinc.config';
 
-const ProductCard: React.FC<ProductItem> = ({ title, description, link }) => (
+const ProductCard: React.FC<LinkItem> = ({ title, description, link }) => (
   <div className="col col--4">
     <div className={clsx('card', styles.largerCardPadding)}>
       <div className="card__header">

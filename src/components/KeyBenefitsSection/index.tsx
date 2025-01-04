@@ -3,13 +3,9 @@
 import React from 'react';
 import styles from './styles.module.css';
 
-import config, { BenefitItem } from '../../../clearlinc.config';
+import config, { IconItem } from '../../../clearlinc.config';
 
-const Benefit: React.FC<BenefitItem> = ({
-  title,
-  description: subTitle,
-  Icon,
-}) => (
+const Benefit: React.FC<IconItem> = ({ title, description, Icon }) => (
   <div className="col col--3">
     <div className="blank-card">
       <div className="text--center">
@@ -17,7 +13,7 @@ const Benefit: React.FC<BenefitItem> = ({
       </div>
       <div className="padding-horiz--md">
         <h3 className="section__subtitle">{title}</h3>
-        <p className="section__description_center">{subTitle}</p>
+        <p className="section__description_center">{description}</p>
       </div>
     </div>
   </div>
