@@ -18,17 +18,15 @@ const Feature: React.FC<BasicItem> = ({ title, description }) => (
 
 const DifferenceSection: React.FC = () => (
   <div id="difference">
-    <div className="row">
-      <div className="card card-alt">
-        <div className="col col--12 text">
-          <h2 className="section__title h2">
-            {config.differenceSection.title}
-          </h2>
-        </div>
-        <div className="row">
-          {config.differenceSection.items.map((feature, idx) => (
-            <Feature key={idx} {...feature} />
-          ))}
+    <div className="row row-alt">
+      <div className="col col--12 text--center">
+        <h2 className="section__title h2">{config.differenceSection.title}</h2>
+      </div>
+      <div className="row row-alt">
+        <div className="col col--8">
+          {config.differenceSection.items.map((feature, idx) => {
+            return <Feature {...feature} key={idx} />;
+          })}
         </div>
       </div>
     </div>

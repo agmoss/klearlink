@@ -115,7 +115,7 @@ const config: Config = {
       },
       {
         title: 'Earned Wage Access',
-        description: 'V3',
+        description: 'Available in V3',
         Icon: FaBriefcase,
       },
     ],

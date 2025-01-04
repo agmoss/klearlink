@@ -13,10 +13,10 @@ const Feature: React.FC<BasicItem & { idx: number }> = ({
   <div className="col col--12">
     <div className="card-alt">
       <div className="card__header">
-        <div className="icon__small">{idx + 1}</div>
-        <h3 className="section__subtitle__alt">{title}</h3>
+        <div className="icon">{idx + 1}</div>
       </div>
       <div className="card__body">
+        <h3 className="section__subtitle__alt">{title}</h3>
         <p>{description}</p>
       </div>
     </div>

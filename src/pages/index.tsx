@@ -23,7 +23,7 @@ const Home: React.FC = () => {
       <AccentImage position={{ top: '5%', left: '35%' }} src="/img/3.svg" />
       <AccentImage position={{ top: '220%', left: '-50%' }} src="/img/4.svg" />
       <AccentImage position={{ top: '200%', left: '50%' }} src="/img/4.svg" />
-      <AccentImage position={{ top: '640%', left: '35%' }} src="/img/5.svg" />
+      <AccentImage position={{ top: '660%', left: '35%' }} src="/img/5.svg" />
       <motion.div
         initial={{ opacity: 0, y: 50 }}
         animate={{ opacity: 1, y: 0 }}
@@ -34,9 +34,9 @@ const Home: React.FC = () => {
           <Container>
             <ProblemStatementSection />
           </Container>
-          <Container>
+          <SlantedArea title="All Short-Term Credit in One Solution">
             <OutlineSection />
-          </Container>
+          </SlantedArea>
           <Container>
             <DifferenceSection />
           </Container>

@@ -9,7 +9,7 @@ import config, { LinkItem } from '../../../clearlinc.config';
 
 const ProductCard: React.FC<LinkItem> = ({ title, description, link }) => (
   <div className="col col--4">
-    <div className={clsx('card', styles.largerCardPadding)}>
+    <div className="card largerCardPadding">
       <div className="card__header">
         <h3 className={clsx('section__subtitle', styles.largerSectionSubtitle)}>
           {title}

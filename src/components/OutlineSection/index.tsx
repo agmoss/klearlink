@@ -6,7 +6,7 @@ import config, { IconItem } from '../../../clearlinc.config';
 
 const Benefit: React.FC<IconItem> = ({ title, description, Icon }) => (
   <div className="col col--4">
-    <div className="card blank-card">
+    <div className="card largerCardPadding">
       <div className="text--center">
         <Icon className="icon" />
       </div>
@@ -20,11 +20,6 @@ const Benefit: React.FC<IconItem> = ({ title, description, Icon }) => (
 
 const OutlineSection: React.FC = () => (
   <div id="outline">
-    <div className="row">
-      <div className="col col--12 text--center">
-        <h2 className="section__title">{config.outlineSection.title}</h2>
-      </div>
-    </div>
     <div className="row">
       {config.outlineSection.items.map((feature, idx) => (
         <Benefit key={idx} {...feature} />

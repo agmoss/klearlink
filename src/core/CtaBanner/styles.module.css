@@ -6,13 +6,9 @@
 
 .ctaBanner {
   background-color: #ffd944;
-  padding: 10rem 0;
+  padding: 3rem 0;
   text-align: center;
   overflow: hidden;
   z-index: 10;
   position: relative;
-}
-
-.ctaBanner a {
-  margin-top: 3rem;
 }
