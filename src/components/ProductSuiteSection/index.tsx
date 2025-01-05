@@ -3,38 +3,35 @@
 import React from 'react';
 import Link from '@docusaurus/Link';
 import useBaseUrl from '@docusaurus/useBaseUrl';
-import styles from './styles.module.css';
-import { clsx } from 'clsx';
 import config, { LinkItem } from '../../../clearlinc.config';
+import Card, { CardBody, CardFooter, CardHeader } from '@site/src/core/Card';
 
 const ProductCard: React.FC<LinkItem> = ({ title, description, link }) => (
-  <div className="col col--4">
-    <div className="card largerCardPadding">
-      <div className="card__header">
-        <h3 className={clsx('section__subtitle', styles.largerSectionSubtitle)}>
-          {title}
-        </h3>
-      </div>
-      <div className="card__body">
-        <p>{description}</p>
-      </div>
-      <div className="card__footer">
-        <Link
-          className="button button--secondary button--block mainButton"
-          to={useBaseUrl(link)}
-        >
-          See Details
-        </Link>
-      </div>
-    </div>
-  </div>
+  <Card padding={true}>
+    <CardHeader>
+      <h3 className="section__subtitle larger">{title}</h3>
+    </CardHeader>
+    <CardBody>
+      <p>{description}</p>
+    </CardBody>
+    <CardFooter>
+      <Link
+        className="button button--secondary button--block main"
+        to={useBaseUrl(link)}
+      >
+        See Details
+      </Link>
+    </CardFooter>
+  </Card>
 );
 
 const ProductSuiteSection: React.FC = () => (
-  <div id="productsuite">
+  <div id="product-suite">
     <div className="row">
       {config.productSuiteSection.items.map((product, idx) => (
-        <ProductCard key={idx} {...product} />
+        <div key={idx} className="col col--4">
+          <ProductCard {...product} />
+        </div>
       ))}
     </div>
   </div>

@@ -4,6 +4,7 @@ import React from 'react';
 import Link from '@docusaurus/Link';
 import useBaseUrl from '@docusaurus/useBaseUrl';
 import config, { BasicItem } from '../../../clearlinc.config';
+import Card, { CardBody, CardHeader } from '@site/src/core/Card';
 
 const Feature: React.FC<BasicItem & { idx: number }> = ({
   title,
@@ -11,28 +12,28 @@ const Feature: React.FC<BasicItem & { idx: number }> = ({
   idx,
 }) => (
   <div className="col col--12">
-    <div className="card-alt">
-      <div className="card__header">
+    <Card alt={true}>
+      <CardHeader>
         <div className="icon">{idx + 1}</div>
-      </div>
-      <div className="card__body">
-        <h3 className="section__subtitle__alt">{title}</h3>
+      </CardHeader>
+      <CardBody>
+        <h3 className="section__subtitle alt">{title}</h3>
         <p>{description}</p>
-      </div>
-    </div>
+      </CardBody>
+    </Card>
   </div>
 );
 
 const HowItWorksSection: React.FC = () => (
   <div id="how-it-works">
-    <div className="card">
-      <div className="row row-alt">
+    <Card>
+      <div className="row alt">
         <div className="col col--12 text--center">
           <h2 className="section__title h2">
             {config.howItWorksSection.title}
           </h2>
         </div>
-        <div className="row row-alt">
+        <div className="row alt">
           <div className="col col--8">
             {config.howItWorksSection.items.map((feature, idx) => {
               return <Feature {...feature} idx={idx} key={idx} />;
@@ -40,7 +41,7 @@ const HowItWorksSection: React.FC = () => (
           </div>
           <div className="col col--12 text--center">
             <Link
-              className="button button--primary button--lg mainButton"
+              className="button button--primary button--lg main"
               to={useBaseUrl('/docs')}
             >
               Learn More
@@ -48,7 +49,7 @@ const HowItWorksSection: React.FC = () => (
           </div>
         </div>
       </div>
-    </div>
+    </Card>
   </div>
 );
 

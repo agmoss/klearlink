@@ -14,8 +14,8 @@ const CTABanner: React.FC<CTABannerProps> = ({ title, title2, link }) => (
   <div className={styles.ctaBanner}>
     <div className="row">
       <div className="col col--12 text--center">
-        <h4 className="section__title__alt">{title}</h4>
-        <h4 className="section__title__alt">{title2}</h4>
+        <h4 className="section__title alt">{title}</h4>
+        <h4 className="section__title alt">{title2}</h4>
         {link}
       </div>
     </div>

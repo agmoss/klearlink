@@ -12,7 +12,7 @@ const CTABannerSection: React.FC = () => (
     title2={config.ctaSection.subTitle}
     link={
       <Link
-        className="button button--primary button--lg outlinedButton"
+        className="button button--primary button--lg outlined"
         to={useBaseUrl('contact-us')}
       >
         Get More Info

@@ -1,27 +1,25 @@
 import React from 'react';
-import clsx from 'clsx';
 import config from '../../../clearlinc.config';
+import Card, { CardBody, CardHeader } from '@site/src/core/Card';
 
 const ProblemStatementSection: React.FC = () => (
-  <div>
+  <div id="problem-statement">
     <div className="row">
       <div className="col col--6">
-        <div className="card">
-          <div className="card__header">
+        <Card>
+          <CardHeader>
             <h2 className="section__title">
               {config.problemStatementSection.title}
             </h2>
             <h3 className="section__subtitle">
               {config.problemStatementSection.subTitle}
             </h3>
-          </div>
-          <div className={clsx('card__body', 'section__content')}>
+          </CardHeader>
+          <CardBody className="section__content">
             <p>{config.problemStatementSection.problem}</p>
-          </div>
-          <div className={clsx('card__body', 'section__content')}>
             <p>{config.problemStatementSection.solution}</p>
-          </div>
-        </div>
+          </CardBody>
+        </Card>
       </div>
     </div>
   </div>

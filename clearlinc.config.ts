@@ -1,8 +1,6 @@
 import type { IconType } from 'react-icons';
 import {
-  FaPiggyBank,
   FaBuilding,
-  FaCalculator,
   FaChartLine,
   FaLayerGroup,
   FaStackOverflow,

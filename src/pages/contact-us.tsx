@@ -7,6 +7,7 @@ import Image from '../core/Image';
 import Container from '../core/Container';
 
 const AssetImage: Image = {
+  // eslint-disable-next-line @typescript-eslint/no-require-imports
   Svg: require('@site/static/img/2.svg').default,
 };
 

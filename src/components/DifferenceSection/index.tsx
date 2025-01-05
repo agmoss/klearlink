@@ -2,31 +2,32 @@
 
 import React from 'react';
 import config, { BasicItem } from '../../../clearlinc.config';
+import Card, { CardHeader } from '@site/src/core/Card';
 
-const Feature: React.FC<BasicItem> = ({ title, description }) => (
-  <div className="col col--12">
-    <div className="blank-card">
-      <div className="card__header">
-        <h3 className="section__subtitle__alt">{title}</h3>
-      </div>
-      <div className="card__body">
-        <p>{description}</p>
-      </div>
+const DifferenceCard: React.FC<BasicItem> = ({ title, description }) => (
+  <Card blank={true}>
+    <CardHeader>
+      <h3 className="section__subtitle alt">{title}</h3>
+    </CardHeader>
+    <div className="card__body">
+      <p>{description}</p>
     </div>
-  </div>
+  </Card>
 );
 
 const DifferenceSection: React.FC = () => (
   <div id="difference">
-    <div className="row row-alt">
+    <div className="row alt">
       <div className="col col--12 text--center">
         <h2 className="section__title h2">{config.differenceSection.title}</h2>
       </div>
-      <div className="row row-alt">
+      <div className="row alt">
         <div className="col col--8">
-          {config.differenceSection.items.map((feature, idx) => {
-            return <Feature {...feature} key={idx} />;
-          })}
+          {config.differenceSection.items.map((feature, idx) => (
+            <div key={idx} className="col col--12">
+              <DifferenceCard {...feature} />
+            </div>
+          ))}
         </div>
       </div>
     </div>

@@ -68,12 +68,7 @@ code {
   margin-top: 30px;
 }
 
-.row-alt {
-  justify-content: center;
-}
-
-.col-alt {
-  display: flex;
+.row.alt {
   justify-content: center;
 }
 
@@ -90,7 +85,7 @@ code {
   color: #ffd944;
 }
 
-.section__title__alt {
+.section__title.alt {
   font-size: 2rem;
   font-weight: 600;
   margin-bottom: 2rem;
@@ -112,14 +107,18 @@ code {
 }
 
 .hero__subtitle,
-.section__subtitle__alt {
+.section__subtitle.alt {
   font-size: 1.2rem;
   margin-bottom: 2rem;
 }
 
+.section__subtitle.larger {
+  font-size: 1.7rem;
+}
+
 /* =================== Cards =================== */
 .card,
-.card-alt {
+.card.alt {
   display: flex;
   flex-direction: column;
   justify-content: space-between;
@@ -133,16 +132,7 @@ code {
   padding: 0rem;
 }
 
-.bs_bottom {
-  box-shadow:
-    rgba(255, 217, 68, 0.4) 0px 5px,
-    rgba(255, 217, 68, 0.3) 0px 10px,
-    rgba(255, 217, 68, 0.2) 0px 15px,
-    rgba(255, 217, 68, 0.1) 0px 20px,
-    rgba(255, 217, 68, 0.05) 0px 25px;
-}
-
-.card-alt {
+.card.alt {
   border: 1px solid rgba(255, 217, 68, 0.4);
 }
 
@@ -154,7 +144,7 @@ code {
   border: 1px solid #ffd944;
 }
 
-.blank-card {
+.card.blank {
   border-radius: 12px;
   padding: 0.1rem;
 }
@@ -163,37 +153,37 @@ code {
   text-align: left;
 }
 
-.largerCardPadding {
+.card.padding {
   padding: 2rem;
 }
 
 /* =================== Buttons =================== */
-.mainButton,
-.outlinedButton {
+.button.main,
+.button.outlined {
   padding: 12px 24px;
   font-size: 1rem;
   border-radius: 4px;
   cursor: pointer;
 }
 
-.mainButton {
+.button.main {
   color: #000;
   background-color: #ffd944;
   border: 2px solid #ffd944;
 }
 
-.mainButton:hover {
+.button.main:hover {
   color: #ffd944;
   background-color: #000;
 }
 
-.outlinedButton {
+.button.outlined {
   border: 2px solid #000;
   color: #000;
   background-color: #ffd944;
 }
 
-.outlinedButton:hover {
+.button.outlined:hover {
   color: #ffd944;
   background-color: #000;
 }
@@ -229,7 +219,7 @@ code {
     font-size: 2rem;
   }
 
-  .section__title__alt {
+  .section__title.alt {
     font-size: 1.3rem;
   }
 
