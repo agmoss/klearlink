@@ -3,7 +3,7 @@
 import React from 'react';
 import config from '../../../clearlinc.config';
 
-import CardLeft, { CardRight } from '@site/src/core/Card/CardLR';
+import CardLR from '@site/src/core/Card/CardLR';
 
 const isEven = (num: number): boolean => num % 2 === 0;
 
@@ -18,9 +18,9 @@ const DifferenceSection: React.FC = () => (
           {config.differenceSection.items.map((feature, idx) => (
             <div key={idx} className="col col--12">
               {isEven(idx) ? (
-                <CardLeft {...feature} />
+                <CardLR {...feature} side="left" />
               ) : (
-                <CardRight {...feature} />
+                <CardLR {...feature} side="right" />
               )}
             </div>
           ))}

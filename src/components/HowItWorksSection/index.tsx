@@ -9,8 +9,7 @@ import Code from '@site/src/core/Code';
 
 const ExampleOne: React.FC<{}> = () => (
   <Code>
-    {`
-import clearlinc
+    {`import clearlinc
 ‍
 api_key = "12345"
 client = clearlinc.client(api_key)
@@ -35,16 +34,13 @@ consumer_info = {
 }
 
 consumer_match = client.submit_consumer_credit(consumer_info)
-
 `}
   </Code>
 );
 
 const ExampleTwo: React.FC<{}> = () => (
   <Code>
-    {`
-
-print(consumer_match)
+    {`print(consumer_match)
 
 >>>
 {
@@ -91,15 +87,13 @@ print(consumer_match)
     }
   ]
 }
-
 `}
   </Code>
 );
 
 const ExampleThree: React.FC<{}> = () => (
   <Code>
-    {`
-non_compliant_found = any(
+    {`non_compliant_found = any(
     match.get("credit_facts", {}).get("credit_state") == "non-compliant"
     for match in consumer_match.get("consumer_match", [])
 )
@@ -108,22 +102,19 @@ if non_compliant_found:
     print("My applicant has a non compliant loan!")
 else:
     print("My applicant is in compliance on their loans!")   
-
 `}
   </Code>
 );
 
 const ExampleFour: React.FC<{}> = () => (
   <Code>
-    {`
-@your_api_server.route("/clearlinc-webhook-callback", methods=["POST"])
+    {`@your_api_server.route("/clearlinc-webhook-callback", methods=["POST"])
 def clearlinc-webhook() -> tuple[Response, int]:
     data = request.get_json()
 
     print(f"User with id of {data.id} has new clearlinc data!")
 
     return ("", 200)
-
 `}
   </Code>
 );
