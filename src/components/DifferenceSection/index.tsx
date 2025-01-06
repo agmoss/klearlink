@@ -1,19 +1,11 @@
 // src/components/DifferenceSection.tsx
 
 import React from 'react';
-import config, { BasicItem } from '../../../clearlinc.config';
-import Card, { CardHeader } from '@site/src/core/Card';
+import config from '../../../clearlinc.config';
 
-const DifferenceCard: React.FC<BasicItem> = ({ title, description }) => (
-  <Card blank={true}>
-    <CardHeader>
-      <h3 className="section__subtitle alt">{title}</h3>
-    </CardHeader>
-    <div className="card__body">
-      <p>{description}</p>
-    </div>
-  </Card>
-);
+import CardLeft, { CardRight } from '@site/src/core/Card/CardLR';
+
+const isEven = (num: number): boolean => num % 2 === 0;
 
 const DifferenceSection: React.FC = () => (
   <div id="difference">
@@ -25,7 +17,11 @@ const DifferenceSection: React.FC = () => (
         <div className="col col--8">
           {config.differenceSection.items.map((feature, idx) => (
             <div key={idx} className="col col--12">
-              <DifferenceCard {...feature} />
+              {isEven(idx) ? (
+                <CardLeft {...feature} />
+              ) : (
+                <CardRight {...feature} />
+              )}
             </div>
           ))}
         </div>

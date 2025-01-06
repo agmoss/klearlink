@@ -8,8 +8,9 @@ import {
   FaShoppingCart,
   FaBriefcase,
   FaMoneyCheck,
+  FaDatabase,
 } from 'react-icons/fa';
-import { FaPerson } from 'react-icons/fa6';
+import { FaComputer, FaMobileScreen, FaPerson } from 'react-icons/fa6';
 
 export type Title = {
   title: string;
@@ -47,7 +48,7 @@ type KeyBenefitsSection = Title & {
 };
 
 type DifferenceSection = Title & {
-  items: BasicItem[];
+  items: IconItem[];
 };
 
 type HowItWorksSection = Title & {
@@ -123,21 +124,25 @@ const config: Config = {
     items: [
       {
         title: 'Real-Time Data Access',
+        Icon: FaDatabase,
         description:
           'Our API architecture enables creditors and collectors to report, update and amend accounts every 30 minutes, allowing us to maintain the most accurate view of your customer’s short-term credit obligations and performance',
       },
       {
         title: 'Built for Today’s Fintech Products',
+        Icon: FaMobileScreen,
         description:
           'Clearsync uses a format to accurately capture the details today’s fintech products, including BNPL that feature early payments and payment adjustments.',
       },
       {
         title: 'Developer-friendly integration',
+        Icon: FaComputer,
         description:
           'Clear documentation to support a smooth integration for our providers, onboarding in days not months, and reducing time-to-value for creditors and collectors.',
       },
       {
         title: 'Scalable cloud-native infrastructure',
+        Icon: FaChartLine,
         description:
           'Our platform is designed to move as fast as your business needs, delivering credit information with sub-second response times, and the highest levels of compliance, and data protection.',
       },
