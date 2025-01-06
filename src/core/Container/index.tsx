@@ -1,7 +1,7 @@
 // src/core/Container.tsx
 
 import classNames from 'classnames';
-import * as React from 'react';
+import React from 'react';
 import styles from './styles.module.css';
 import clsx from 'clsx';
 

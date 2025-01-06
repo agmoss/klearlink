@@ -20,7 +20,7 @@ const Home: React.FC = () => {
       title="Clearlinc.io"
       description="Instant Credit Profiling for Smarter Lending Decisions"
     >
-      <AccentImage position={{ top: '5%', left: '35%' }} src="/img/3.svg" />
+      <AccentImage position={{ top: '-40%', left: '35%' }} src="/img/3.svg" />
       <AccentImage position={{ top: '250%', left: '-50%' }} src="/img/4.svg" />
       <AccentImage position={{ top: '220%', left: '50%' }} src="/img/4.svg" />
       <AccentImage position={{ top: '840%', left: '35%' }} src="/img/5.svg" />

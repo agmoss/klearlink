@@ -1,6 +1,7 @@
 import React from 'react';
 import config from '../../../clearlinc.config';
 import Card, { CardBody, CardHeader } from '@site/src/core/Card';
+import CreditRadarChart from '@site/src/core/Chart';
 
 const ProblemStatementSection: React.FC = () => (
   <div id="problem-statement">
@@ -20,6 +21,9 @@ const ProblemStatementSection: React.FC = () => (
             <p>{config.problemStatementSection.solution}</p>
           </CardBody>
         </Card>
+      </div>
+      <div className="col col--6">
+        <CreditRadarChart />
       </div>
     </div>
   </div>
