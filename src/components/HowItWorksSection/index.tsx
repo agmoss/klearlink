@@ -18,12 +18,7 @@ consumer_info = {
   "consumer_facts": {
     "first_name": "John",
     "last_name": "Doe",
-    "date_of_birth": "10/10/2010",
-    "address": "101 1ST. S.W. Calgary AB",
-    "phone_number": "+11234567890",
-    "consumer_state": "applied",
-    "bankrupt/insolvent": false,
-    "institution_names": ["TD", "RBC"]
+    [...]
   },
   "credit_facts": {
     "amount": 1000,
@@ -44,28 +39,6 @@ const ExampleTwo: React.FC<{}> = () => (
 
 >>>
 {
-  "consumer_facts": {
-    "first_name": "John",
-    "last_name": "Doe",
-    "date_of_birth": "10/10/2010",
-    "address": "101 1ST. S.W. Calgary AB",
-    "phone_number": "+11234567890",
-    "consumer_state": "applied",
-    "bankrupt/insolvent": false,
-    "institution_names": ["TD", "RBC"]
-  },
-  "credit_facts": {
-    "amount": 1000,
-    "credit_type": "PDL",
-    "application_datetime": "2024-09-23 21:47:12.023476",
-    "originated_datetime": "2024-09-24 15:43:12.023476",
-    "payment_due_date": "2024-09-30 15:43:12.023476",
-    "payment_amount_due": 1000,
-    "credit_state": "originated"
-  },
-  "created_at": "datetime",
-  "updated_at": "datetime",
-  "processed": true,
   "consumer_match": [
     {
       "matched_on": {
@@ -78,11 +51,9 @@ const ExampleTwo: React.FC<{}> = () => (
       "credit_facts": {
         "amount": 1200,
         "credit_type": "PDL",
-        "application_datetime": "2024-09-23 11:47:12.023476",
-        "originated_datetime": "2024-09-24 12:43:12.023476",
-        "payment_due_date": "2024-09-30 07:43:12.023476",
         "payment_amount_due": 1200,
-        "credit_state": "non-compliant"
+        "credit_state": "non-compliant",
+        [...]
       }
     }
   ]

@@ -1,63 +1,135 @@
 import React from 'react';
-import { ResponsiveRadar } from '@nivo/radar';
+import { RadarSliceTooltipProps, ResponsiveRadar } from '@nivo/radar';
 
-const data = [
+interface DataPoint {
+  insight: string;
+  'Credit Bureau': number;
+  'Account Aggregation': number;
+  Clearlinc: number;
+}
+
+const data: DataPoint[] = [
   {
-    taste: 'Active Accounts',
+    insight: 'Active Accounts',
     'Credit Bureau': 80,
     'Account Aggregation': 100,
     Clearlinc: 120,
   },
   {
-    taste: 'Debt/Income',
+    insight: 'Debt/Income',
     'Credit Bureau': 80,
     'Account Aggregation': 100,
     Clearlinc: 120,
   },
   {
-    taste: 'Thin File Credit',
+    insight: 'Thin File Credit',
     'Credit Bureau': 80,
     'Account Aggregation': 100,
     Clearlinc: 120,
   },
   {
-    taste: 'Short Term Credit',
+    insight: 'Short Term Credit',
     'Credit Bureau': 30,
     'Account Aggregation': 50,
     Clearlinc: 120,
   },
   {
-    taste: 'Loan Stacking',
+    insight: 'Loan Stacking',
     'Credit Bureau': 60,
     'Account Aggregation': 80,
     Clearlinc: 120,
   },
   {
-    taste: 'BNPL Credit',
+    insight: 'BNPL Credit',
     'Credit Bureau': 50,
     'Account Aggregation': 80,
     Clearlinc: 120,
   },
   {
-    taste: 'PDL Credit',
+    insight: 'PDL Credit',
     'Credit Bureau': 50,
     'Account Aggregation': 80,
     Clearlinc: 120,
   },
   {
-    taste: 'Card Credit',
+    insight: 'Card Credit',
     'Credit Bureau': 120,
     'Account Aggregation': 80,
     Clearlinc: 50,
   },
   {
-    taste: 'Asset-Backed Credit',
+    insight: 'Asset-Backed Credit',
     'Credit Bureau': 120,
     'Account Aggregation': 100,
     Clearlinc: 80,
   },
 ];
-const CreditRadarChart = () => (
+
+const CustomSliceTooltip: React.FC<RadarSliceTooltipProps> = ({
+  data,
+  index,
+}) => {
+  const fixedOrder = ['Clearlinc', 'Credit Bureau', 'Account Aggregation'];
+
+  const sortedValues = [...data].sort((a, b) => b.value - a.value);
+  const valueToLabel: Record<number, string> = {};
+
+  sortedValues.forEach((datum, rank) => {
+    valueToLabel[datum.value] =
+      rank === 0 ? 'Great' : rank === 1 ? 'Good' : 'Bad';
+  });
+
+  const getValueLabel = (value: number): string => valueToLabel[value];
+
+  const orderedData = fixedOrder.map((key) =>
+    data.find((item) => item.id === key),
+  );
+
+  return (
+    <div
+      style={{
+        padding: '10px',
+        background: 'black',
+        borderRadius: '5px',
+        boxShadow: '0 2px 5px rgba(0,0,0,0.2)',
+      }}
+    >
+      <div
+        style={{
+          marginBottom: '8px',
+          fontWeight: 'bold',
+          textAlign: 'left',
+        }}
+      >{`${index} Insight`}</div>
+      <div
+        style={{
+          display: 'grid',
+          gridTemplateColumns: 'auto 1fr',
+          gap: '8px',
+          alignItems: 'center',
+        }}
+      >
+        {orderedData.map(({ id, value, color }) => (
+          <React.Fragment key={id}>
+            <div
+              style={{
+                width: '12px',
+                height: '12px',
+                borderRadius: '50%',
+                backgroundColor: color,
+              }}
+            ></div>
+            <div>
+              <strong>{id}</strong>: {getValueLabel(value)}
+            </div>
+          </React.Fragment>
+        ))}
+      </div>
+    </div>
+  );
+};
+
+const CreditRadarChart: React.FC<{}> = () => (
   <div
     style={{
       height: 500,
@@ -65,6 +137,7 @@ const CreditRadarChart = () => (
     }}
   >
     <ResponsiveRadar
+      sliceTooltip={CustomSliceTooltip}
       theme={{
         background: '#000000',
         axis: {
@@ -95,16 +168,28 @@ const CreditRadarChart = () => (
             },
           },
         },
+        tooltip: {
+          wrapper: {},
+          container: {
+            background: '#f6f5f4',
+            color: '#000000',
+            fontSize: 17,
+          },
+          basic: {},
+          chip: {},
+          table: {},
+          tableCell: {},
+          tableCellValue: {},
+        },
       }}
       maxValue={150}
-      data={data}
+      data={data as unknown as Record<string, unknown>[]}
       keys={['Credit Bureau', 'Account Aggregation', 'Clearlinc']}
-      indexBy="taste"
-      valueFormat=">-.2f"
+      indexBy="insight"
       margin={{ top: 80, right: 150, bottom: 0, left: 150 }}
       borderColor={{ from: 'color' }}
       gridLabelOffset={20}
-      isInteractive={false}
+      isInteractive={true}
       fillOpacity={0.5}
       enableDots={false}
       borderWidth={7}
