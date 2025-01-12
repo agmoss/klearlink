@@ -63,6 +63,22 @@ type UseCasesSection = TitleWithSubTitle & {
 
 type CtaSection = TitleWithSubTitle;
 
+export type AboutUsSection = {
+  companyOverview: {
+    headline: string;
+    content: string;
+  };
+  teamSection: {
+    headline: string;
+    members: {
+      name: string;
+      role: string;
+      image: string;
+      bio: string;
+    }[];
+  };
+};
+
 export type Config = {
   heroSection: HeroSection;
   problemStatementSection: KeyInsightsSection;
@@ -74,6 +90,7 @@ export type Config = {
   keyInsightsSection: KeyInsightsSection;
   useCasesSection: UseCasesSection;
   ctaSection: CtaSection;
+  aboutUsSection: AboutUsSection;
 };
 
 const config: Config = {
@@ -277,6 +294,31 @@ const config: Config = {
   ctaSection: {
     title: 'Curious to Enhance Your Credit Profiling?',
     subTitle: 'We’d Love to Hear from You.',
+  },
+  aboutUsSection: {
+    companyOverview: {
+      headline:
+        'Clearlinc exists to enable financial inclusion by helping consumers build an alternative credit profile.',
+      content:
+        "So we created an instant method of assembling short-term and alternative credit data to empower businesses with the tools to make smarter, faster, and more informed decisions. In a world where instant credit access is the norm, understanding customers' credit behavior should be just as seamless. Our platform provides real-time credit insights designed to drive innovation, reduce fraud, and promote responsible borrowing across industries. By leveraging advanced analytics and cutting-edge technology, we help you make accurate decisions that fuel growth while minimizing risk. Clearlinc is your partner in building trust, transparency, and efficiency in credit management—because better decisions today lead to a stronger, more sustainable tomorrow.",
+    },
+    teamSection: {
+      headline: 'Meet the Team',
+      members: [
+        {
+          name: 'Michael Wendland',
+          role: 'Co-Founder & CEO',
+          image: 'https://placehold.co/300x300',
+          bio: 'A business leader and entrepreneur with over 18+ years of experience in the financial services industry, including consumer finance, mortgage lending, and credit cards. Michael founded Refresh Financial in 2010, servicing over 125,000 Canadians and recognized as one of the fastest-growing technology companies in North America until its sale in 2021.',
+        },
+        {
+          name: 'Andrew Moss',
+          role: 'Co-Founder & CTO',
+          image: '/img/andrew.jpg',
+          bio: 'Andrew is an accomplished tech professional holding senior leadership positions in fintech and software development brands such as Neo Financial and Vivid Theory. Andrew has successfully scaled startups from idea to exit, delivering impactful results and driving innovation.',
+        },
+      ],
+    },
   },
 };
 

@@ -20,7 +20,7 @@ export const CardLR: React.FC<CardLRProps> = ({
   <Card className={clsx('margin-vert--lg', 'padding--md', 'shadow--md')}>
     <div className={clsx('row')}>
       {side === 'left' && (
-        <div className={clsx('col', 'col--4', styles.imageContainer)}>
+        <div className={clsx('col', 'col--4', 'center', styles.imageContainer)}>
           <Icon size={100} />
         </div>
       )}
@@ -33,7 +33,7 @@ export const CardLR: React.FC<CardLRProps> = ({
         </CardBody>
       </div>
       {side === 'right' && (
-        <div className={clsx('col', 'col--4', styles.imageContainer)}>
+        <div className={clsx('col', 'col--4', 'center', styles.imageContainer)}>
           <Icon size={100} />
         </div>
       )}

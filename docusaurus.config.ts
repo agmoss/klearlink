@@ -30,7 +30,7 @@ const config: Config = {
           showReadingTime: false,
           blogTitle: 'Use Cases',
           blogDescription: 'Clearlinc Use Cases',
-          sortPosts: 'ascending',
+          sortPosts: 'descending',
           showLastUpdateTime: false,
           showLastUpdateAuthor: false,
           onUntruncatedBlogPosts: 'ignore',

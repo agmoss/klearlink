@@ -7,7 +7,7 @@ import config, { BasicItem } from '../../../clearlinc.config';
 import Card, { CardHeader } from '@site/src/core/Card';
 import Code from '@site/src/core/Code';
 
-const ExampleOne: React.FC<{}> = () => (
+const ExampleOne: React.FC = () => (
   <Code>
     {`import clearlinc
 ‍
@@ -33,7 +33,7 @@ consumer_match = client.submit_consumer_credit(consumer_info)
   </Code>
 );
 
-const ExampleTwo: React.FC<{}> = () => (
+const ExampleTwo: React.FC = () => (
   <Code>
     {`print(consumer_match)
 >>>
@@ -61,7 +61,7 @@ const ExampleTwo: React.FC<{}> = () => (
   </Code>
 );
 
-const ExampleThree: React.FC<{}> = () => (
+const ExampleThree: React.FC = () => (
   <Code>
     {`non_compliant_found = any(
     match.get("credit_facts", {}).get("credit_state") == "non-compliant"
@@ -76,7 +76,7 @@ else:
   </Code>
 );
 
-const ExampleFour: React.FC<{}> = () => (
+const ExampleFour: React.FC = () => (
   <Code>
     {`@your_api_server.route("/clearlinc-webhook-callback", methods=["POST"])
 def clearlinc-webhook() -> tuple[Response, int]:

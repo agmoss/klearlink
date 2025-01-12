@@ -1,9 +1,3 @@
-.imageContainer {
-  display: flex;
-  justify-content: center;
-  align-items: center;
-}
-
 @media (max-width: 968px) {
   .imageContainer {
     display: none;

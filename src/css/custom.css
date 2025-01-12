@@ -34,6 +34,8 @@ html[data-theme='dark'] {
   --ifm-color-secondary: #ffd944;
   --ifm-alert-background-color: #ffd944;
   --ifm-footer-background-color: #000;
+  --ifm-hover-overlay: grey;
+  --ifm-tabs-color-active-border: #ffd944;
   overflow-x: hidden;
 }
 
@@ -52,6 +54,30 @@ html[data-theme='dark'] {
 
 ul.sidebarItemList_Yudw li:first-child {
   display: none;
+}
+
+article:first-of-type a {
+  font-size: 1em;
+}
+
+article > header > h2 > a {
+  font-size: 0.5em;
+}
+
+a.sidebarItemLink_mo7H.sidebarItemLinkActive_I1ZP {
+  color: #ffd944 !important;
+}
+
+.tabs__item {
+  color: #fff;
+}
+
+.tabs__item--active {
+  color: #ffd944;
+}
+
+.admonitionIcon_Rf37 svg {
+  fill: #000 !important;
 }
 
 /* =================== General Elements =================== */
@@ -113,6 +139,12 @@ code {
 
 .row.alt {
   justify-content: center;
+}
+
+.center {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
 }
 
 /* =================== Sections =================== */
@@ -318,10 +350,19 @@ code {
   gap: 1.5rem;
 }
 
-article:first-of-type a {
-  font-size: 1em;
+/* =================== About Us =================== */
+
+.about-img-container {
+  width: 300px;
+  height: 300px;
+  overflow: hidden;
+  display: flex;
 }
 
-article > header > h2 > a {
-  font-size: 0.5em;
+.about-img {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  flex-shrink: 0;
+  border-radius: 8px;
 }
