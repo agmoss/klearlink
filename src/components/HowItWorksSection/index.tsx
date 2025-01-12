@@ -18,7 +18,7 @@ consumer_info = {
   "consumer_facts": {
     "first_name": "John",
     "last_name": "Doe",
-    [...]
+    [...others]
   },
   "credit_facts": {
     "amount": 1000,
@@ -36,7 +36,6 @@ consumer_match = client.submit_consumer_credit(consumer_info)
 const ExampleTwo: React.FC<{}> = () => (
   <Code>
     {`print(consumer_match)
-
 >>>
 {
   "consumer_match": [
@@ -103,8 +102,9 @@ const Feature: React.FC<BasicItem & { idx: number }> = ({
       <div className="col col--6">
         <Card>
           <CardHeader>
-            <div className="icon">{idx + 1}</div>
-            <h3 className="section__subtitle alt">{title}</h3>
+            <h3 className="section__subtitle alt text--bold text--secondary">
+              {title}
+            </h3>
             <p>{description}</p>
           </CardHeader>
         </Card>
@@ -133,7 +133,7 @@ const HowItWorksSection: React.FC = () => (
               return <Feature {...feature} idx={idx} key={idx} />;
             })}
           </div>
-          <div className="col col--12 text--center">
+          <div id="solutions" className="col col--12 text--center">
             <Link
               className="button button--primary button--lg main"
               to={useBaseUrl('/docs')}

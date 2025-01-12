@@ -6,7 +6,6 @@ import {
   FaStackOverflow,
   FaPercentage,
   FaShoppingCart,
-  FaBriefcase,
   FaMoneyCheck,
   FaDatabase,
 } from 'react-icons/fa';
@@ -33,11 +32,6 @@ export type LinkItem = BasicItem & {
 };
 
 type HeroSection = TitleWithSubTitle;
-
-type ProblemStatementSection = TitleWithSubTitle & {
-  problem: string;
-  solution: string;
-};
 
 type OutlineSection = TitleWithSubTitle & {
   items: IconItem[];
@@ -71,7 +65,7 @@ type CtaSection = TitleWithSubTitle;
 
 export type Config = {
   heroSection: HeroSection;
-  problemStatementSection: ProblemStatementSection;
+  problemStatementSection: KeyInsightsSection;
   outlineSection: OutlineSection;
   keyBenefitsSection: KeyBenefitsSection;
   differenceSection: DifferenceSection;
@@ -91,10 +85,20 @@ const config: Config = {
   problemStatementSection: {
     title: 'What You Don’t See is Costing You.',
     subTitle: 'Don’t Be Left in the Dark Issuing Credit.',
-    problem:
-      'Traditional credit data provides stale, incomplete and misleading data in a world of instant credit.  Bank account data provides a partial view of a borrower who typically manages two or more bank accounts.',
-    solution:
-      'Clearlinc delivers encrypted alternative credit data, empowering lenders with fresh insights into a borrower’s real-time credit activity.',
+    items: [
+      {
+        title:
+          'Traditional credit data provides stale, incomplete and misleading data in a world of instant credit.',
+      },
+      {
+        title:
+          'Bank account data provides a partial view of a borrower who typically manages two or more bank accounts.',
+      },
+      {
+        title:
+          'Clearlinc delivers encrypted alternative credit data, empowering lenders with fresh insights into a borrower’s real-time credit activity.',
+      },
+    ],
   },
   outlineSection: {
     title: 'All Short-Term Credit in One Solution',
@@ -111,11 +115,6 @@ const config: Config = {
         description:
           'Access payday loan credit data to understand 30-60 day obligations.',
         Icon: FaMoneyCheck,
-      },
-      {
-        title: 'Earned Wage Access',
-        description: 'Available in V3',
-        Icon: FaBriefcase,
       },
     ],
   },

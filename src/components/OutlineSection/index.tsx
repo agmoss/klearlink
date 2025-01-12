@@ -20,11 +20,15 @@ const OutlineCard: React.FC<IconItem> = ({ title, description, Icon }) => (
 const OutlineSection: React.FC = () => (
   <div id="outline">
     <div className="row">
-      {config.outlineSection.items.map((feature, idx) => (
-        <div key={idx} className="col col--4">
-          <OutlineCard {...feature} />
+      <div className="col col--8 col--offset-2">
+        <div className="row">
+          {config.outlineSection.items.map((feature, idx) => (
+            <div key={idx} className="col col--6">
+              <OutlineCard {...feature} />
+            </div>
+          ))}
         </div>
-      ))}
+      </div>
     </div>
   </div>
 );

@@ -37,6 +37,23 @@ html[data-theme='dark'] {
   overflow-x: hidden;
 }
 
+/* =================== Blog =================== */
+.yearGroupHeading_rMGB {
+  display: none;
+}
+
+.sidebarItemTitle_pO2u {
+  display: none;
+}
+
+.container_mt6G > time {
+  display: none;
+}
+
+ul.sidebarItemList_Yudw li:first-child {
+  display: none;
+}
+
 /* =================== General Elements =================== */
 body {
   line-height: 1.7;
@@ -62,6 +79,32 @@ code {
 .container {
   position: relative;
   z-index: 10;
+}
+
+.container.paddingAll {
+  padding: 100px;
+}
+
+.container.paddingBottom {
+  padding-bottom: 80px;
+}
+
+.container.paddingLeft {
+  padding-left: 40px;
+}
+
+.container.paddingRight {
+  padding-right: 40px;
+}
+
+.container.paddingTop {
+  padding-top: 80px;
+}
+
+@media (max-width: 768px) {
+  .container.paddingAll {
+    padding: 50px;
+  }
 }
 
 .col {
@@ -264,4 +307,21 @@ code {
   font-size: 1.2rem;
   color: #ffd944;
   margin-right: 0.75rem;
+}
+
+/* =================== List =================== */
+.insightsList {
+  list-style-type: none;
+  padding: 0;
+  display: flex;
+  flex-direction: column;
+  gap: 1.5rem;
+}
+
+article:first-of-type a {
+  font-size: 1em;
+}
+
+article > header > h2 > a {
+  font-size: 0.5em;
 }

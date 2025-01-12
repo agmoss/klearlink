@@ -23,7 +23,7 @@ const Home: React.FC = () => {
       <AccentImage position={{ top: '-40%', left: '35%' }} src="/img/3.svg" />
       <AccentImage position={{ top: '250%', left: '-50%' }} src="/img/4.svg" />
       <AccentImage position={{ top: '220%', left: '50%' }} src="/img/4.svg" />
-      <AccentImage position={{ top: '840%', left: '35%' }} src="/img/5.svg" />
+      <AccentImage position={{ top: '760%', left: '35%' }} src="/img/5.svg" />
       <motion.div
         initial={{ opacity: 0, y: 50 }}
         animate={{ opacity: 1, y: 0 }}
@@ -31,25 +31,25 @@ const Home: React.FC = () => {
       >
         <HeroSection />
         <div>
-          <Container>
+          <Container padding={['all']}>
             <ProblemStatementSection />
           </Container>
           <SlantedArea title="All Short-Term Credit in One Solution">
             <OutlineSection />
           </SlantedArea>
-          <Container>
+          <Container padding={['all']}>
             <DifferenceSection />
           </Container>
-          <Container>
+          <Container padding={['all']}>
             <KeyBenefitsSection />
           </Container>
-          <Container>
+          <Container padding={['all']}>
             <HowItWorksSection />
           </Container>
           <SlantedArea title="Clearlinc Product Suite">
             <ProductSuiteSection />
           </SlantedArea>
-          <Container>
+          <Container padding={['all']}>
             <KeyInsightsSection />
           </Container>
           <CTABannerSection />

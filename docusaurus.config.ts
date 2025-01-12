@@ -24,14 +24,16 @@ const config: Config = {
           sidebarPath: './sidebars.ts',
         },
         blog: {
-          showReadingTime: true,
-          feedOptions: {
-            type: ['rss', 'atom'],
-            xslt: true,
-          },
-          onInlineTags: 'warn',
-          onInlineAuthors: 'warn',
-          onUntruncatedBlogPosts: 'warn',
+          id: 'use-cases',
+          path: './use-cases',
+          routeBasePath: 'use-cases',
+          showReadingTime: false,
+          blogTitle: 'Use Cases',
+          blogDescription: 'Clearlinc Use Cases',
+          sortPosts: 'ascending',
+          showLastUpdateTime: false,
+          showLastUpdateAuthor: false,
+          onUntruncatedBlogPosts: 'ignore',
         },
         theme: {
           customCss: './src/css/custom.css',
@@ -56,6 +58,26 @@ const config: Config = {
       },
       items: [
         {
+          to: '/#solutions',
+          label: 'Solutions',
+          position: 'left',
+        },
+        {
+          to: '/use-cases',
+          label: 'Use Cases',
+          position: 'left',
+        },
+        {
+          to: '/about-us',
+          label: 'About Us',
+          position: 'left',
+        },
+        {
+          to: '/contact-us',
+          label: 'Contact Us',
+          position: 'left',
+        },
+        {
           type: 'docSidebar',
           sidebarId: 'tutorialSidebar',
           position: 'right',
@@ -68,8 +90,8 @@ const config: Config = {
         {
           items: [
             {
-              label: 'Docs',
-              to: '/docs',
+              label: 'Terms of Service',
+              to: '/terms-of-service',
             },
           ],
         },
@@ -78,14 +100,6 @@ const config: Config = {
             {
               label: 'Privacy Policy',
               to: '/privacy-policy',
-            },
-          ],
-        },
-        {
-          items: [
-            {
-              label: 'Contact',
-              href: '/contact-us',
             },
           ],
         },

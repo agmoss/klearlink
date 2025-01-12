@@ -76,7 +76,7 @@ const CustomSliceTooltip: React.FC<RadarSliceTooltipProps> = ({
 
   sortedValues.forEach((datum, rank) => {
     valueToLabel[datum.value] =
-      rank === 0 ? 'Great' : rank === 1 ? 'Good' : 'Bad';
+      rank === 0 ? 'Great' : rank === 1 ? 'Good' : 'Lacking';
   });
 
   const getValueLabel = (value: number): string => valueToLabel[value];
@@ -129,7 +129,7 @@ const CustomSliceTooltip: React.FC<RadarSliceTooltipProps> = ({
   );
 };
 
-const CreditRadarChart: React.FC<{}> = () => (
+const CreditRadarChart: React.FC = () => (
   <div
     style={{
       height: 500,

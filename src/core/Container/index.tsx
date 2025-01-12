@@ -2,7 +2,6 @@
 
 import classNames from 'classnames';
 import React from 'react';
-import styles from './styles.module.css';
 import clsx from 'clsx';
 
 interface ContainerProps {
@@ -13,10 +12,22 @@ interface ContainerProps {
   wrapper?: boolean;
 }
 
-const Container: React.FC<ContainerProps> = ({ children, className }) => {
+const Container: React.FC<ContainerProps> = ({
+  children,
+  className,
+  padding,
+}) => {
+  const containerClasses = classNames('container', className, {
+    paddingAll: padding.indexOf('all') >= 0,
+    paddingBottom: padding.indexOf('bottom') >= 0,
+    paddingLeft: padding.indexOf('left') >= 0,
+    paddingRight: padding.indexOf('right') >= 0,
+    paddingTop: padding.indexOf('top') >= 0,
+  });
+
   return (
     <section className={clsx(className, 'section')}>
-      <div className={classNames('container', styles.cntr)}>{children}</div>
+      <div className={classNames(containerClasses)}>{children}</div>
     </section>
   );
 };
