@@ -94,7 +94,7 @@ const Feature: React.FC<BasicItem & { idx: number }> = ({
 }) => {
   const ToRender = CodeExamples[idx];
   return (
-    <div className="row">
+    <div className="row padding--md">
       <div className="col col--6">
         <Card>
           <CardHeader>

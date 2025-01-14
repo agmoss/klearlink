@@ -79,6 +79,12 @@ export type AboutUsSection = {
   };
 };
 
+export type DocsSection = {
+  heroSection: HeroSection;
+  whyChoose: BasicItem[];
+  howItWorks: BasicItem[];
+};
+
 export type Config = {
   heroSection: HeroSection;
   problemStatementSection: KeyInsightsSection;
@@ -91,6 +97,7 @@ export type Config = {
   useCasesSection: UseCasesSection;
   ctaSection: CtaSection;
   aboutUsSection: AboutUsSection;
+  docsSection: DocsSection;
 };
 
 const config: Config = {
@@ -319,6 +326,46 @@ const config: Config = {
         },
       ],
     },
+  },
+  docsSection: {
+    heroSection: {
+      title: 'Seamless. Real-time. Alternative Credit Data. One Simple API.',
+      subTitle:
+        'Dive into the Clearlinc developer-first API—engineered for speed, scalability, and seamless integration—so you can launch in days, not months.',
+    },
+    whyChoose: [
+      {
+        title: 'Real-Time Insights',
+        description:
+          'Harness current alternative credit data to make smarter decisions instantly.',
+      },
+      {
+        title: 'Effortless Integration',
+        description:
+          'Our API is designed with developers in mind, making onboarding intuitive and straightforward.',
+      },
+      {
+        title: 'Built to Scale',
+        description:
+          'Whether you’re a startup or an enterprise, our infrastructure grows with you.',
+      },
+    ],
+    howItWorks: [
+      {
+        title: 'Request Access',
+        description: 'Fill out a quick form to get your API key.',
+      },
+      {
+        title: 'Explore Our Docs',
+        description:
+          'Access detailed documentation, sample code, and integration guides.',
+      },
+      {
+        title: 'Start Building',
+        description:
+          'Connect to our API and begin leveraging real-time credit insights.',
+      },
+    ],
   },
 };
 

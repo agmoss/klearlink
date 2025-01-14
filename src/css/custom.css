@@ -69,17 +69,16 @@ a.sidebarItemLink_mo7H.sidebarItemLinkActive_I1ZP {
   fill: #000 !important;
 }
 
-/* =================== General Elements =================== */
-body {
-  line-height: 1.7;
+/* =================== Docs =================== */
+
+.cardContainer_fWXF {
+  height: auto !important;
 }
 
-code {
-  color: #ffd944;
-  background-color: #000;
+.cardContainer_fWXF:hover {
+  border: 1px solid #ffd944;
 }
 
-/* Alerts */
 .alert {
   background-color: #ffd944;
   color: #000;
@@ -88,6 +87,24 @@ code {
 
 .alert--info {
   --ifm-alert-foreground-color: #000;
+}
+
+.table-of-contents__link:hover,
+.table-of-contents__link:hover code,
+.table-of-contents__link--active,
+.table-of-contents__link--active code {
+  color: #ffd944;
+  text-decoration: none;
+}
+
+/* =================== General Elements =================== */
+body {
+  line-height: 1.7;
+}
+
+code {
+  color: #ffd944;
+  background-color: #000;
 }
 
 /* =================== Layout =================== */
@@ -120,6 +137,7 @@ code {
   display: flex;
   flex-direction: column;
   align-items: center;
+  justify-content: center;
 }
 
 /* =================== Sections =================== */
@@ -179,14 +197,6 @@ code {
   border: 1px solid rgba(255, 217, 68, 0.4);
 }
 
-.cardContainer_fWXF {
-  height: auto !important;
-}
-
-.cardContainer_fWXF:hover {
-  border: 1px solid #ffd944;
-}
-
 /* =================== Buttons =================== */
 .button.main,
 .button.outlined {
@@ -216,15 +226,6 @@ code {
 .button.outlined:hover {
   color: #ffd944;
   background-color: #000;
-}
-
-/* =================== Table of Contents =================== */
-.table-of-contents__link:hover,
-.table-of-contents__link:hover code,
-.table-of-contents__link--active,
-.table-of-contents__link--active code {
-  color: #ffd944;
-  text-decoration: none;
 }
 
 /* =================== Media Queries =================== */
@@ -305,14 +306,52 @@ code {
 }
 
 .about-img {
-  width: 100%;
-  height: auto;
   object-fit: cover;
   flex-shrink: 0;
   border-radius: 8px;
+  width: 100%;
+  height: auto;
 }
+
+/* =================== Image =================== */
 
 .responsive-image {
   width: 100%;
   height: auto;
+}
+
+.inline {
+  display: inline;
+  margin-right: 10px;
+}
+
+/* =================== Inputs =================== */
+.input-material {
+  background-color: #fff;
+  border: 1px solid #ccc;
+  border-radius: 4px;
+  padding: 12px 15px;
+  width: 100%;
+  font-size: 16px;
+  margin-bottom: 20px;
+  transition: all 0.3s ease;
+}
+
+.input-material:focus {
+  border-color: #ffd944;
+  outline: none;
+  box-shadow: 0 0 5px rgba(179, 181, 63, 0.5);
+}
+
+.input-material::placeholder {
+  color: #aaa;
+}
+
+.form-label {
+  margin-bottom: 8px;
+  font-weight: bold;
+}
+
+.form-check-label {
+  font-size: 14px;
 }
