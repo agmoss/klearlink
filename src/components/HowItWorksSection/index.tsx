@@ -130,7 +130,7 @@ const HowItWorksSection: React.FC = () => (
         >
           <Link
             className="button button--primary button--lg main"
-            to={useBaseUrl('/docs')}
+            to={useBaseUrl('/products')}
           >
             Learn More
           </Link>

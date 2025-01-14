@@ -8,7 +8,7 @@ import Quickstart from '/img/quickstart.png';
 
 Welcome to the [Clearlinc.io](http://Clearlinc.io) documentation site! This site is designed to help you understand our products, explore the technical details, and discover how [Clearlinc.io](http://Clearlinc.io) can empower your lending business. Below, you'll find a high-level overview of each section in our documentation.
 
-Take a look at our [Products](./category/products) section for detailed information on how each facet of Clearlinc works! Our [API Docs](./api-docs/API) are provided for a detailed view the [Clearprofile](./products/clearprofile.md) API requests and responses.
+Take a look at our [Products](./category/products) section for detailed information on how each facet of Clearlinc works!
 
 ---
 
