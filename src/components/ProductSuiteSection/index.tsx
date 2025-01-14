@@ -7,7 +7,7 @@ import config, { LinkItem } from '../../../clearlinc.config';
 import Card, { CardBody, CardFooter, CardHeader } from '@site/src/core/Card';
 
 const ProductCard: React.FC<LinkItem> = ({ title, description, link }) => (
-  <Card padding={true}>
+  <Card alt>
     <CardHeader>
       <h3 className="section__subtitle larger">{title}</h3>
     </CardHeader>
@@ -28,8 +28,13 @@ const ProductCard: React.FC<LinkItem> = ({ title, description, link }) => (
 const ProductSuiteSection: React.FC = () => (
   <div id="product-suite">
     <div className="row">
+      <div className="col col--12 text--center">
+        <h2 className="section__title">{config.productSuiteSection.title}</h2>
+      </div>
+    </div>
+    <div className="row">
       {config.productSuiteSection.items.map((product, idx) => (
-        <div key={idx} className="col col--4">
+        <div key={idx} className="col col--4 padding--md">
           <ProductCard {...product} />
         </div>
       ))}

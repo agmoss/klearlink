@@ -2,40 +2,29 @@
 
 /* =================== Base Styles =================== */
 :root {
-  --ifm-font-family-base: 'Inter', sans-serif;
-  --ifm-font-family-monospace: 'Fira Code', monospace;
-  --ifm-color-primary: #000;
-  --ifm-background-color: #000;
-  --alt-background-color: #000;
-  --ifm-hero-text-color: #000;
-  --ifm-font-color-base: #fff;
-  --ifm-font-color-base-inverse: #fff;
-  --ifm-footer-background-color: #000;
-  --ifm-card-background-color: #000;
-  --ifm-menu-color-active: #ffd944;
+  --ifm-alert-background-color: #ffd944;
+  --ifm-background-color: #000 !important;
   --ifm-breadcrumb-color-active: #ffd944;
-  --ifm-link-color: #ffd944;
+  --ifm-card-background-color: #000;
+  --ifm-code-background: #ffd944;
+  --ifm-color-primary: #000;
+  --ifm-color-secondary: #ffd944;
+  --ifm-footer-background-color: #000;
   --ifm-footer-link-color: #fff;
   --ifm-footer-link-hover-color: #ffd944;
-  --ifm-code-background: #ffd944;
-  --ifm-link-hover-color: #ffd944;
-  --ifm-pagination-nav-color-hover: #ffd944;
-  overflow-x: hidden;
-}
-
-html[data-theme='dark'] {
+  --ifm-font-color-base: #fff;
+  --ifm-font-color-base-inverse: #fff;
+  --ifm-font-color-secondary: #ffd944;
   --ifm-font-family-base: 'Inter', sans-serif;
   --ifm-font-family-monospace: 'Fira Code', monospace;
-  --ifm-color-primary: #000;
-  --ifm-background-color: #000;
-  --alt-background-color: #000;
   --ifm-hero-text-color: #000;
-  --ifm-font-color-secondary: #ffd944;
-  --ifm-color-secondary: #ffd944;
-  --ifm-alert-background-color: #ffd944;
-  --ifm-footer-background-color: #000;
   --ifm-hover-overlay: grey;
+  --ifm-link-color: #ffd944;
+  --ifm-link-hover-color: #ffd944;
+  --ifm-menu-color-active: #ffd944;
+  --ifm-pagination-nav-color-hover: #ffd944;
   --ifm-tabs-color-active-border: #ffd944;
+  --ifm-code-font-size: 95%;
   overflow-x: hidden;
 }
 
@@ -102,39 +91,25 @@ code {
 }
 
 /* =================== Layout =================== */
+
+.padding-vert--xl {
+  padding-top: 10rem !important;
+  padding-bottom: 10rem !important;
+}
+
+.padding-vert--lg {
+  padding-top: 5rem !important;
+  padding-bottom: 5rem !important;
+}
+
+.padding-vert--md {
+  padding-top: 1rem !important;
+  padding-bottom: 1rem !important;
+}
+
 .container {
   position: relative;
   z-index: 10;
-}
-
-.container.paddingAll {
-  padding: 100px;
-}
-
-.container.paddingBottom {
-  padding-bottom: 80px;
-}
-
-.container.paddingLeft {
-  padding-left: 40px;
-}
-
-.container.paddingRight {
-  padding-right: 40px;
-}
-
-.container.paddingTop {
-  padding-top: 80px;
-}
-
-@media (max-width: 768px) {
-  .container.paddingAll {
-    padding: 50px;
-  }
-}
-
-.col {
-  margin-top: 30px;
 }
 
 .row.alt {
@@ -148,13 +123,6 @@ code {
 }
 
 /* =================== Sections =================== */
-.section {
-  padding: 4rem 2rem;
-}
-
-.hero {
-  margin-bottom: 2rem;
-}
 
 .section__title {
   font-size: 2.8rem;
@@ -207,10 +175,6 @@ code {
   gap: 30px;
 }
 
-.card {
-  padding: 0rem;
-}
-
 .card.alt {
   border: 1px solid rgba(255, 217, 68, 0.4);
 }
@@ -221,19 +185,6 @@ code {
 
 .cardContainer_fWXF:hover {
   border: 1px solid #ffd944;
-}
-
-.card.blank {
-  border-radius: 12px;
-  padding: 0.1rem;
-}
-
-.card__body {
-  text-align: left;
-}
-
-.card.padding {
-  padding: 2rem;
 }
 
 /* =================== Buttons =================== */
@@ -267,14 +218,6 @@ code {
   background-color: #000;
 }
 
-/* =================== Headings =================== */
-.h2 {
-  text-align: center;
-  font-size: 2.8rem;
-  margin-bottom: 50px;
-  font-weight: 600;
-}
-
 /* =================== Table of Contents =================== */
 .table-of-contents__link:hover,
 .table-of-contents__link:hover code,
@@ -306,15 +249,18 @@ code {
     text-align: left;
   }
 
-  .container {
-    flex-direction: column;
-    align-items: center;
-    text-align: center;
-  }
-
   .buttonGroup {
     flex-direction: column;
     gap: 15px;
+  }
+
+  .padding-vert--xl {
+    padding-top: 6rem !important;
+    padding-bottom: 6rem !important;
+  }
+
+  .dont-render-small {
+    display: none;
   }
 }
 
@@ -353,16 +299,20 @@ code {
 /* =================== About Us =================== */
 
 .about-img-container {
-  width: 300px;
-  height: 300px;
+  height: 400px;
   overflow: hidden;
   display: flex;
 }
 
 .about-img {
   width: 100%;
-  height: 100%;
+  height: auto;
   object-fit: cover;
   flex-shrink: 0;
   border-radius: 8px;
+}
+
+.responsive-image {
+  width: 100%;
+  height: auto;
 }

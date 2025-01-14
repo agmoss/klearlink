@@ -8,7 +8,12 @@ import { darcula } from 'react-syntax-highlighter/dist/esm/styles/prism';
 type CodeProps = Pick<SyntaxHighlighterProps, 'children'>;
 
 const Code: React.FC<CodeProps> = ({ children }) => (
-  <SyntaxHighlighter language="python" style={darcula}>
+  <SyntaxHighlighter
+    language="python"
+    style={darcula}
+    showInlineLineNumbers={true}
+    showLineNumbers={true}
+  >
     {children}
   </SyntaxHighlighter>
 );

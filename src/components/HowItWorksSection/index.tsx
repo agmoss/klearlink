@@ -28,8 +28,7 @@ consumer_info = {
   }
 }
 
-consumer_match = client.submit_consumer_credit(consumer_info)
-`}
+consumer_match = client.submit_consumer_credit(consumer_info)`}
   </Code>
 );
 
@@ -56,8 +55,7 @@ const ExampleTwo: React.FC = () => (
       }
     }
   ]
-}
-`}
+}`}
   </Code>
 );
 
@@ -71,8 +69,7 @@ const ExampleThree: React.FC = () => (
 if non_compliant_found: 
     print("My applicant has a non compliant loan!")
 else:
-    print("My applicant is in compliance on their loans!")   
-`}
+    print("My applicant is in compliance on their loans!")   `}
   </Code>
 );
 
@@ -84,8 +81,7 @@ def clearlinc-webhook() -> tuple[Response, int]:
 
     print(f"User with id of {data.id} has new clearlinc data!")
 
-    return ("", 200)
-`}
+    return ("", 200)`}
   </Code>
 );
 
@@ -109,10 +105,8 @@ const Feature: React.FC<BasicItem & { idx: number }> = ({
           </CardHeader>
         </Card>
       </div>
-      <div className="col col--6">
-        <Card>
-          <ToRender />
-        </Card>
+      <div className="col col--6 dont-render-small">
+        <ToRender />
       </div>
     </div>
   );
@@ -120,30 +114,29 @@ const Feature: React.FC<BasicItem & { idx: number }> = ({
 
 const HowItWorksSection: React.FC = () => (
   <div id="how-it-works">
-    <Card>
+    <div className="row">
+      <div className="col col--12 text--center">
+        <h2 className="section__title h2">{config.howItWorksSection.title}</h2>
+      </div>
       <div className="row">
-        <div className="col col--12 text--center">
-          <h2 className="section__title h2">
-            {config.howItWorksSection.title}
-          </h2>
+        <div className="col col--12">
+          {config.howItWorksSection.items.map((feature, idx) => {
+            return <Feature {...feature} idx={idx} key={idx} />;
+          })}
         </div>
-        <div className="row">
-          <div className="col col--12">
-            {config.howItWorksSection.items.map((feature, idx) => {
-              return <Feature {...feature} idx={idx} key={idx} />;
-            })}
-          </div>
-          <div id="solutions" className="col col--12 text--center">
-            <Link
-              className="button button--primary button--lg main"
-              to={useBaseUrl('/docs')}
-            >
-              Learn More
-            </Link>
-          </div>
+        <div
+          id="solutions"
+          className="col col--12 text--center padding-vert--md"
+        >
+          <Link
+            className="button button--primary button--lg main"
+            to={useBaseUrl('/docs')}
+          >
+            Learn More
+          </Link>
         </div>
       </div>
-    </Card>
+    </div>
   </div>
 );
 

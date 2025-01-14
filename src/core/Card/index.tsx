@@ -6,25 +6,14 @@ interface CardProps {
   children: React.ReactNode;
   className?: string;
   id?: string;
-  padding?: boolean;
   alt?: boolean;
-  blank?: boolean;
 }
 
 type CardComponentProps = Pick<CardProps, 'children' | 'className' | 'id'>;
 
-const Card: React.FC<CardProps> = ({
-  children,
-  className,
-  id,
-  padding,
-  alt,
-  blank,
-}) => {
+const Card: React.FC<CardProps> = ({ children, className, id, alt }) => {
   const containerClasses = clsx('card', className, {
-    padding,
     alt,
-    blank,
   });
 
   return (

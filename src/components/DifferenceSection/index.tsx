@@ -16,7 +16,7 @@ const DifferenceSection: React.FC = () => (
       <div className="row alt">
         <div className="col col--8">
           {config.differenceSection.items.map((feature, idx) => (
-            <div key={idx} className="col col--12">
+            <div key={idx} className="col col--12 padding--md">
               {isEven(idx) ? (
                 <CardLR {...feature} side="left" />
               ) : (

@@ -12,7 +12,7 @@ const AboutUs: React.FC = () => {
       <AccentImage position={{ top: '-40%', left: '35%' }} src="/img/5.svg" />
       <main>
         <HeroSection />
-        <Container padding={['top']}>
+        <Container className="padding-vert--xl">
           <div className="row">
             <div className="col col--8 col--offset-2">
               <Card>
@@ -28,7 +28,7 @@ const AboutUs: React.FC = () => {
             </div>
           </div>
         </Container>
-        <Container padding={['bottom']}>
+        <Container className="padding-vert--md">
           <div className="row">
             <div className="col col--12">
               <h2 className="text--center text--bold text--secondary">
@@ -44,14 +44,17 @@ const AboutUs: React.FC = () => {
                     <div className="col col--6" key={index}>
                       <div className="text--center">
                         <Card>
-                          <CardHeader className="center">
+                          <div className="card__image">
                             <div className="about-img-container">
                               <img
                                 src={member.image}
-                                alt={member.name}
+                                alt="Image alt text"
                                 className="about-img"
+                                title="Logo Title Text 1"
                               />
                             </div>
+                          </div>
+                          <CardHeader className="center">
                             <h3 style={{ margin: '1rem 0 0.5rem' }}>
                               {member.name}
                             </h3>

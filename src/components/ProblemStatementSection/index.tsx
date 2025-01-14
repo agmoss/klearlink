@@ -28,14 +28,18 @@ const ProblemStatementSection: React.FC = () => (
           <CardBody className="section__content">
             <ul className={clsx('list--unstyled insightsList')}>
               {config.problemStatementSection.items.map((insight, idx) => (
-                <Insight key={idx} {...insight} />
+                <div key={idx} className="padding--md">
+                  <Insight {...insight} />
+                </div>
               ))}
             </ul>
           </CardBody>
         </Card>
       </div>
       <div className="col col--6">
-        <CreditRadarChart />
+        <Card className="dont-render-small">
+          <CreditRadarChart />
+        </Card>
       </div>
     </div>
   </div>

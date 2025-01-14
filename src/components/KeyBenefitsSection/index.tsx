@@ -3,17 +3,21 @@
 import React from 'react';
 
 import config, { IconItem } from '../../../clearlinc.config';
-import Card from '@site/src/core/Card';
+import Card, { CardBody, CardHeader } from '@site/src/core/Card';
 
 const BenefitCard: React.FC<IconItem> = ({ title, description, Icon }) => (
-  <Card blank={true}>
-    <div className="text--center">
-      <Icon className="icon" />
-    </div>
-    <div className="padding-horiz--md">
-      <h3 className="section__subtitle">{title}</h3>
-      <p className="section__description">{description}</p>
-    </div>
+  <Card>
+    <CardHeader>
+      <div className="text--center">
+        <Icon className="icon" />
+      </div>
+    </CardHeader>
+    <CardBody>
+      <div className="padding-horiz--md">
+        <h3 className="section__subtitle">{title}</h3>
+        <p className="section__description">{description}</p>
+      </div>
+    </CardBody>
   </Card>
 );
 
@@ -26,7 +30,7 @@ const KeyBenefitsSection: React.FC = () => (
     </div>
     <div className="row">
       {config.keyBenefitsSection.items.map((feature, idx) => (
-        <div key={idx} className="col col--4">
+        <div key={idx} className="col col--4 padding--md">
           <BenefitCard {...feature} />
         </div>
       ))}

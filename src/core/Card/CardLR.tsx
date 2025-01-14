@@ -1,6 +1,5 @@
 import React from 'react';
 import clsx from 'clsx';
-import styles from './styles.module.css';
 import Card, { CardBody, CardHeader } from '@site/src/core/Card';
 import { IconType } from 'react-icons';
 
@@ -20,7 +19,7 @@ export const CardLR: React.FC<CardLRProps> = ({
   <Card className={clsx('margin-vert--lg', 'padding--md', 'shadow--md')}>
     <div className={clsx('row')}>
       {side === 'left' && (
-        <div className={clsx('col', 'col--4', 'center', styles.imageContainer)}>
+        <div className={clsx('col', 'col--4', 'center', 'dont-render-small')}>
           <Icon size={100} />
         </div>
       )}
@@ -33,7 +32,7 @@ export const CardLR: React.FC<CardLRProps> = ({
         </CardBody>
       </div>
       {side === 'right' && (
-        <div className={clsx('col', 'col--4', 'center', styles.imageContainer)}>
+        <div className={clsx('col', 'col--4', 'center', 'dont-render-small')}>
           <Icon size={100} />
         </div>
       )}

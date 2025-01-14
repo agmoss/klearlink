@@ -10,7 +10,6 @@ import KeyInsightsSection from '../components/KeyInsightsSection';
 import CTABannerSection from '../components/CTABannerSection';
 import Container from '../core/Container';
 import { motion } from 'framer-motion';
-import SlantedArea from '../core/SlantedArea/SlantedArea';
 import AccentImage from '../core/AccentImage'; // Create a reusable component for accent images
 import DifferenceSection from '../components/DifferenceSection';
 
@@ -22,8 +21,13 @@ const Home: React.FC = () => {
     >
       <AccentImage position={{ top: '-40%', left: '35%' }} src="/img/3.svg" />
       <AccentImage position={{ top: '250%', left: '-50%' }} src="/img/4.svg" />
-      <AccentImage position={{ top: '220%', left: '50%' }} src="/img/4.svg" />
+      <AccentImage position={{ top: '190%', left: '50%' }} src="/img/4.svg" />
+      <AccentImage position={{ top: '530%', left: '-50%' }} src="/img/4.svg" />
+      <AccentImage position={{ top: '420%', left: '50%' }} src="/img/4.svg" />
+      <AccentImage position={{ top: '660%', left: '-35%' }} src="/img/5.svg" />
       <AccentImage position={{ top: '760%', left: '35%' }} src="/img/5.svg" />
+      <AccentImage position={{ top: '860%', left: '1%' }} src="/img/5.svg" />
+      <AccentImage position={{ top: '960%', left: '35%' }} src="/img/5.svg" />
       <motion.div
         initial={{ opacity: 0, y: 50 }}
         animate={{ opacity: 1, y: 0 }}
@@ -31,25 +35,25 @@ const Home: React.FC = () => {
       >
         <HeroSection />
         <div>
-          <Container padding={['all']}>
+          <Container className="padding-vert--xl">
             <ProblemStatementSection />
           </Container>
-          <SlantedArea title="All Short-Term Credit in One Solution">
+          <Container className="padding-vert--xl">
             <OutlineSection />
-          </SlantedArea>
-          <Container padding={['all']}>
+          </Container>
+          <Container className="padding-vert--xl">
             <DifferenceSection />
           </Container>
-          <Container padding={['all']}>
+          <Container className="padding-vert--xl">
             <KeyBenefitsSection />
           </Container>
-          <Container padding={['all']}>
+          <Container className="padding-vert--xl">
             <HowItWorksSection />
           </Container>
-          <SlantedArea title="Clearlinc Product Suite">
+          <Container className="padding-vert--xl">
             <ProductSuiteSection />
-          </SlantedArea>
-          <Container padding={['all']}>
+          </Container>
+          <Container className="padding-vert--xl">
             <KeyInsightsSection />
           </Container>
           <CTABannerSection />
