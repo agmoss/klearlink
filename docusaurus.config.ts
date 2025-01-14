@@ -21,7 +21,10 @@ const config: Config = {
       'classic',
       {
         docs: {
+          id: 'default',
           sidebarPath: './sidebars.ts',
+          path: './api-docs',
+          routeBasePath: 'api-docs',
         },
         blog: {
           id: 'use-cases',
@@ -41,7 +44,17 @@ const config: Config = {
       } satisfies Preset.Options,
     ],
   ],
-
+  plugins: [
+    [
+      '@docusaurus/plugin-content-docs',
+      {
+        id: 'products',
+        path: './products',
+        routeBasePath: 'products',
+        sidebarPath: './sidebars.ts',
+      },
+    ],
+  ],
   themeConfig: {
     colorMode: {
       defaultMode: 'light',

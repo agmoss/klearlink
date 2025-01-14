@@ -18,9 +18,10 @@
   --ifm-font-family-base: 'Inter', sans-serif;
   --ifm-font-family-monospace: 'Fira Code', monospace;
   --ifm-hero-text-color: #000;
-  --ifm-hover-overlay: grey;
+  --ifm-hover-overlay: rgb(131, 131, 131);
   --ifm-link-color: #ffd944;
   --ifm-link-hover-color: #ffd944;
+  --ifm-menu-color: #fff;
   --ifm-menu-color-active: #ffd944;
   --ifm-pagination-nav-color-hover: #ffd944;
   --ifm-tabs-color-active-border: #ffd944;

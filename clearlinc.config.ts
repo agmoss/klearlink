@@ -244,19 +244,19 @@ const config: Config = {
         title: 'ClearSync',
         description:
           'A low-overhead, encrypted, no-code ETL solution that integrates Clearlinc into your existing credit data effortlessly.',
-        link: '/docs/products/clearsync',
+        link: '/products/products/clearsync',
       },
       {
         title: 'ClearProfile',
         description:
           'Profile applicants with ease—see loan status, loan stacking, and institution visibility.',
-        link: '/docs/products/clearprofile',
+        link: '/products/products/clearprofile',
       },
       {
         title: 'ClearWatch',
         description:
           'Get real-time notifications and monitor borrower activity across lenders for improved decision-making.',
-        link: '/docs/products/clearwatch',
+        link: '/products/products/clearwatch',
       },
     ],
   },

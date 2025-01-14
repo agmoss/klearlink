@@ -19,7 +19,7 @@ const Documentation: React.FC = () => {
         <Container className="padding--lg">
           <DocumentationHowItWorksSection />
         </Container>
-        <Container className="padding--lg">
+        <Container className="padding--xl">
           <DocsForm />
         </Container>
       </main>
