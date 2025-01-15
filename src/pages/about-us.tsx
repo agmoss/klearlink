@@ -3,7 +3,7 @@ import Layout from '@theme/Layout';
 import Container from '../core/Container';
 import HeroSection from '../components/HeroSection/about-us';
 import AccentImage from '../core/AccentImage';
-import CompanyOverview from '../components/CompanyOverview';
+import CompanyOverviewSection from '../components/CompanyOverviewSection';
 import TeamSection from '../components/TeamSection';
 
 const AboutUs: React.FC = () => {
@@ -13,7 +13,7 @@ const AboutUs: React.FC = () => {
       <main>
         <HeroSection />
         <Container className="padding-vert--xl">
-          <CompanyOverview />
+          <CompanyOverviewSection />
         </Container>
         <Container className="padding-vert--md">
           <TeamSection />

@@ -3,6 +3,7 @@
 import React from 'react';
 import styles from './styles.module.css';
 import Link from '@docusaurus/Link';
+import useBaseUrl from '@docusaurus/useBaseUrl';
 
 const HeroSection = () => (
   <header className="hero hero--primary">
@@ -17,7 +18,10 @@ const HeroSection = () => (
           months.
         </p>
         <div className={styles.buttonGroup}>
-          <Link className="button button--primary button--lg main">
+          <Link
+            className="button button--primary button--lg main"
+            to={useBaseUrl('/documentation/#docsform')}
+          >
             Request Documentation
           </Link>
         </div>

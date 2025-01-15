@@ -21,7 +21,7 @@ const HeroSection = () => (
           </Link>
           <Link
             className="button button--primary button--lg main"
-            to={useBaseUrl('/products')}
+            to={useBaseUrl('/#solutions')}
           >
             How It Works
           </Link>

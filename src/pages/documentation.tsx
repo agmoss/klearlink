@@ -3,9 +3,10 @@ import Layout from '@theme/Layout';
 import Container from '../core/Container';
 import HeroSection from '../components/HeroSection/documentation';
 import AccentImage from '../core/AccentImage';
-import DocumentationWhyChooseSection from '../components/DocumentationWhyChoose';
-import DocumentationHowItWorksSection from '../components/DocumentationHowItWorks';
-import DocsForm from '../components/DocsForm';
+import DocumentationWhyChooseSection from '../components/DocumentationWhyChooseSection';
+import DocumentationHowItWorksSection from '../components/DocumentationHowItWorksSection';
+import DocsForm from '../components/DocsFormSection';
+import DocumentationReadySection from '../components/DocumentationReadySection';
 
 const Documentation: React.FC = () => {
   return (
@@ -18,6 +19,9 @@ const Documentation: React.FC = () => {
         </Container>
         <Container className="padding--lg">
           <DocumentationHowItWorksSection />
+        </Container>
+        <Container className="padding--lg">
+          <DocumentationReadySection />
         </Container>
         <Container className="padding--xl">
           <DocsForm />

@@ -251,11 +251,6 @@ code {
     text-align: left;
   }
 
-  .buttonGroup {
-    flex-direction: column;
-    gap: 15px;
-  }
-
   .padding-vert--xl {
     padding-top: 6rem !important;
     padding-bottom: 6rem !important;

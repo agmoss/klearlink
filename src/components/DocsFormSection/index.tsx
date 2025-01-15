@@ -92,8 +92,7 @@ const DocsForm: React.FC = () => {
                 </div>
               </div>
             </div>
-
-            <div className="row">
+            <div id="docsform" style={{ marginTop: '1rem' }} className="row">
               <div className="col text-center">
                 <button
                   type="submit"

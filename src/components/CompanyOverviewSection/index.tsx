@@ -1,11 +1,11 @@
-// src/components/CompanyOverview.tsx
+// src/components/CompanyOverviewSection.tsx
 
 import React from 'react';
 import config from '../../../clearlinc.config';
 
 import Card, { CardBody, CardHeader } from '@site/src/core/Card';
 
-const CompanyOverview: React.FC = () => (
+const CompanyOverviewSection: React.FC = () => (
   <div id="company-overview">
     <div className="row">
       <div className="col col--8 col--offset-2">
@@ -24,4 +24,4 @@ const CompanyOverview: React.FC = () => (
   </div>
 );
 
-export default CompanyOverview;
+export default CompanyOverviewSection;
