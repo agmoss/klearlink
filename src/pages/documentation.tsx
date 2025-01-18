@@ -5,8 +5,8 @@ import HeroSection from '../components/HeroSection/documentation';
 import AccentImage from '../core/AccentImage';
 import DocumentationWhyChooseSection from '../components/DocumentationWhyChooseSection';
 import DocumentationHowItWorksSection from '../components/DocumentationHowItWorksSection';
-import DocsForm from '../components/DocsFormSection';
 import DocumentationReadySection from '../components/DocumentationReadySection';
+import ContactForm from '../core/ContactForm';
 
 const Documentation: React.FC = () => {
   return (
@@ -24,7 +24,11 @@ const Documentation: React.FC = () => {
           <DocumentationReadySection />
         </Container>
         <Container className="padding--xl">
-          <DocsForm />
+          <div className="row">
+            <div className="col col--8 col--offset-2">
+              <ContactForm side="documentation" />
+            </div>
+          </div>
         </Container>
       </main>
     </Layout>

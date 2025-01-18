@@ -1,12 +1,12 @@
 import React from 'react';
 import clsx from 'clsx';
 
-interface CardProps {
+type CardProps = {
   children: React.ReactNode;
   className?: string;
   id?: string;
   alt?: boolean;
-}
+};
 
 type CardComponentProps = Pick<CardProps, 'children' | 'className' | 'id'>;
 

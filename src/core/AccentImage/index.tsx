@@ -4,10 +4,10 @@ import React from 'react';
 import styles from './styles.module.css'; // Create this CSS module
 import clsx from 'clsx';
 
-interface AccentImageProps {
+type AccentImageProps = {
   position: React.CSSProperties;
   src: string;
-}
+};
 
 const AccentImage: React.FC<AccentImageProps> = ({ position, src }) => (
   <img

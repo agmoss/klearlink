@@ -72,24 +72,6 @@ a.sidebarItemLink_mo7H.sidebarItemLinkActive_I1ZP {
 
 /* =================== Docs =================== */
 
-.cardContainer_fWXF {
-  height: auto !important;
-}
-
-.cardContainer_fWXF:hover {
-  border: 1px solid #ffd944;
-}
-
-.alert {
-  background-color: #ffd944;
-  color: #000;
-  border: #000;
-}
-
-.alert--info {
-  --ifm-alert-foreground-color: #000;
-}
-
 .table-of-contents__link:hover,
 .table-of-contents__link:hover code,
 .table-of-contents__link--active,
@@ -268,6 +250,10 @@ code {
 
   .hero__subtitle {
     font-size: 1rem;
+  }
+
+  .padding--xl {
+    padding: 2rem !important;
   }
 }
 

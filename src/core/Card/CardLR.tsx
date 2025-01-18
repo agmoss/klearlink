@@ -3,12 +3,12 @@ import clsx from 'clsx';
 import Card, { CardBody, CardHeader } from '@site/src/core/Card';
 import { IconType } from 'react-icons';
 
-interface CardLRProps {
+type CardLRProps = {
   Icon: IconType;
   title: string;
   description: string;
   side: 'left' | 'right';
-}
+};
 
 export const CardLR: React.FC<CardLRProps> = ({
   title,

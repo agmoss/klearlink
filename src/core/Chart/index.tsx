@@ -1,12 +1,12 @@
 import React from 'react';
 import { RadarSliceTooltipProps, ResponsiveRadar } from '@nivo/radar';
 
-interface DataPoint {
+type DataPoint = {
   insight: string;
   'Credit Bureau': number;
   'Account Aggregation': number;
   Klearlink: number;
-}
+};
 
 const data: DataPoint[] = [
   {

@@ -4,11 +4,11 @@ import React from 'react';
 
 import styles from './styles.module.css';
 
-interface CTABannerProps {
+type CTABannerProps = {
   title: string;
   title2: string;
   link: React.ReactNode;
-}
+};
 
 const CTABanner: React.FC<CTABannerProps> = ({ title, title2, link }) => (
   <div className={styles.ctaBanner}>
