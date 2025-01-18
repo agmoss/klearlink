@@ -20,12 +20,6 @@ const config: Config = {
     [
       'classic',
       {
-        docs: {
-          id: 'default',
-          sidebarPath: './sidebars.ts',
-          path: './api-docs',
-          routeBasePath: 'api-docs',
-        },
         blog: {
           id: 'use-cases',
           path: './use-cases',
@@ -52,6 +46,14 @@ const config: Config = {
         path: './products',
         routeBasePath: 'products',
         sidebarPath: './sidebars.ts',
+      },
+    ],
+    [
+      '@docusaurus/plugin-content-docs',
+      {
+        id: 'api',
+        path: './api',
+        routeBasePath: '23d3cq2w349',
       },
     ],
   ],

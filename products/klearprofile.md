@@ -5,7 +5,7 @@ sidebar_position: 1
 import Klearprofile from '/img/klearprofile.png';
 import API from '/img/klearsync_api.png';
 
-# KlearProfile
+# Klearprofile
 
 ## Abstract
 
