@@ -120,14 +120,14 @@ const config: Config = {
       },
       {
         title:
-          'Clearlinc delivers encrypted alternative credit data, empowering lenders with fresh insights into a borrower’s real-time credit activity.',
+          'Klearlink delivers encrypted alternative credit data, empowering lenders with fresh insights into a borrower’s real-time credit activity.',
       },
     ],
   },
   outlineSection: {
     title: 'All Short-Term Credit in One Solution',
     subTitle:
-      'Clearlinc compiles multiples types of short-term credit accessed by your customer, enabling you to gain real-time credit performance and insights to optimize your portfolio.',
+      'Klearlink compiles multiples types of short-term credit accessed by your customer, enabling you to gain real-time credit performance and insights to optimize your portfolio.',
     items: [
       {
         title: 'Buy-Now-Pay-Later',
@@ -143,7 +143,7 @@ const config: Config = {
     ],
   },
   differenceSection: {
-    title: 'The Clearlinc Difference',
+    title: 'The Klearlink Difference',
     items: [
       {
         title: 'Real-Time Data Access',
@@ -155,7 +155,7 @@ const config: Config = {
         title: 'Built for Today’s Fintech Products',
         Icon: FaMobileScreen,
         description:
-          'Clearsync uses a format to accurately capture the details today’s fintech products, including BNPL that feature early payments and payment adjustments.',
+          'Klearsync uses a format to accurately capture the details today’s fintech products, including BNPL that feature early payments and payment adjustments.',
       },
       {
         title: 'Developer-friendly integration',
@@ -172,7 +172,7 @@ const config: Config = {
     ],
   },
   keyBenefitsSection: {
-    title: 'The Benefits Are Clear',
+    title: 'The Benefits Are Klear',
     items: [
       {
         title: 'Reduce Credit Stacking',
@@ -218,7 +218,7 @@ const config: Config = {
       {
         title: 'Connect',
         description:
-          'Link your masked, securely connected data sources to Clearlinc with our developer-friendly API integration.',
+          'Link your masked, securely connected data sources to Klearlink with our developer-friendly API integration.',
       },
       {
         title: 'Collect Instant Profiles',
@@ -228,7 +228,7 @@ const config: Config = {
       {
         title: 'Augment Decisioning',
         description:
-          'Use Clearlinc data to inform your decisioning rules and modelling, improving risk-profiling and responsible approvals on your customers.',
+          'Use Klearlink data to inform your decisioning rules and modelling, improving risk-profiling and responsible approvals on your customers.',
       },
       {
         title: 'Optimize Performance',
@@ -238,30 +238,30 @@ const config: Config = {
     ],
   },
   productSuiteSection: {
-    title: 'Clearlinc Product Suite',
+    title: 'Klearlink Product Suite',
     items: [
       {
-        title: 'ClearSync',
+        title: 'KlearSync',
         description:
-          'A low-overhead, encrypted, no-code ETL solution that integrates Clearlinc into your existing credit data effortlessly.',
-        link: '/products/products/clearsync',
+          'A low-overhead, encrypted, no-code ETL solution that integrates Klearlink into your existing credit data effortlessly.',
+        link: '/products/products/klearsync',
       },
       {
-        title: 'ClearProfile',
+        title: 'KlearProfile',
         description:
           'Profile applicants with ease—see loan status, loan stacking, and institution visibility.',
-        link: '/products/products/clearprofile',
+        link: '/products/products/klearprofile',
       },
       {
-        title: 'ClearWatch',
+        title: 'KlearWatch',
         description:
           'Get real-time notifications and monitor borrower activity across lenders for improved decision-making.',
-        link: '/products/products/clearwatch',
+        link: '/products/products/klearwatch',
       },
     ],
   },
   keyInsightsSection: {
-    title: 'Key Insights Provided by Clearlinc',
+    title: 'Key Insights Provided by Klearlink',
     subTitle: 'Discover essential data and insights for smarter decisioning.',
     items: [
       { title: 'Application Date & Time' },
@@ -305,9 +305,9 @@ const config: Config = {
   aboutUsSection: {
     companyOverview: {
       headline:
-        'Clearlinc exists to enable financial inclusion by helping consumers build an alternative credit profile.',
+        'Klearlink exists to enable financial inclusion by helping consumers build an alternative credit profile.',
       content:
-        "So we created an instant method of assembling short-term and alternative credit data to empower businesses with the tools to make smarter, faster, and more informed decisions. In a world where instant credit access is the norm, understanding customers' credit behavior should be just as seamless. Our platform provides real-time credit insights designed to drive innovation, reduce fraud, and promote responsible borrowing across industries. By leveraging advanced analytics and cutting-edge technology, we help you make accurate decisions that fuel growth while minimizing risk. Clearlinc is your partner in building trust, transparency, and efficiency in credit management—because better decisions today lead to a stronger, more sustainable tomorrow.",
+        "So we created an instant method of assembling short-term and alternative credit data to empower businesses with the tools to make smarter, faster, and more informed decisions. In a world where instant credit access is the norm, understanding customers' credit behavior should be just as seamless. Our platform provides real-time credit insights designed to drive innovation, reduce fraud, and promote responsible borrowing across industries. By leveraging advanced analytics and cutting-edge technology, we help you make accurate decisions that fuel growth while minimizing risk. Klearlink is your partner in building trust, transparency, and efficiency in credit management—because better decisions today lead to a stronger, more sustainable tomorrow.",
     },
     teamSection: {
       headline: 'Meet the Team',
@@ -331,7 +331,7 @@ const config: Config = {
     heroSection: {
       title: 'Seamless. Real-time. Alternative Credit Data. One Simple API.',
       subTitle:
-        'Dive into the Clearlinc developer-first API—engineered for speed, scalability, and seamless integration—so you can launch in days, not months.',
+        'Dive into the Klearlink developer-first API—engineered for speed, scalability, and seamless integration—so you can launch in days, not months.',
     },
     whyChoose: [
       {

@@ -4,7 +4,7 @@ import React from 'react';
 import Link from '@docusaurus/Link';
 import useBaseUrl from '@docusaurus/useBaseUrl';
 import styles from './styles.module.css';
-import config from '../../../clearlinc.config';
+import config from '../../../klearlink.config';
 
 const HeroSection = () => (
   <header className="hero hero--primary">

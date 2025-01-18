@@ -3,16 +3,16 @@
 import React from 'react';
 import Link from '@docusaurus/Link';
 import useBaseUrl from '@docusaurus/useBaseUrl';
-import config, { BasicItem } from '../../../clearlinc.config';
 import Card, { CardHeader } from '@site/src/core/Card';
 import Code from '@site/src/core/Code';
+import config, { BasicItem } from '../../../klearlink.config';
 
 const ExampleOne: React.FC = () => (
   <Code>
-    {`import clearlinc
+    {`import klearlink
 ‍
 api_key = "12345"
-client = clearlinc.client(api_key)
+client = klearlink.client(api_key)
 
 consumer_info = {
   "consumer_facts": {
@@ -75,11 +75,11 @@ else:
 
 const ExampleFour: React.FC = () => (
   <Code>
-    {`@your_api_server.route("/clearlinc-webhook-callback", methods=["POST"])
-def clearlinc-webhook() -> tuple[Response, int]:
+    {`@your_api_server.route("/klearlink-webhook-callback", methods=["POST"])
+def klearlink-webhook() -> tuple[Response, int]:
     data = request.get_json()
 
-    print(f"User with id of {data.id} has new clearlinc data!")
+    print(f"User with id of {data.id} has new klearlink data!")
 
     return ("", 200)`}
   </Code>

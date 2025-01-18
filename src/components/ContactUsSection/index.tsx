@@ -23,7 +23,7 @@ const ContactUsSection: React.FC = () => (
             <div className="text--center">
               <FaEnvelope className="icon" />
               <h2>Email Us</h2>
-              <p>michael@clearlinc.io</p>
+              <p>michael@klearlink.io</p>
             </div>
           </CardBody>
         </Card>

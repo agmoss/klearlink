@@ -4,8 +4,8 @@ import React from 'react';
 import clsx from 'clsx';
 import { FaCheckCircle } from 'react-icons/fa';
 import styles from './styles.module.css';
-import config, { Title } from '../../../clearlinc.config';
 import Card, { CardBody, CardHeader } from '@site/src/core/Card';
+import config, { Title } from '../../../klearlink.config';
 
 const Insight: React.FC<Title> = ({ title }) => (
   <li className={clsx('section__list-item', styles.insightItem)}>

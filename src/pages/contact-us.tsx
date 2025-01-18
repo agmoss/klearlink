@@ -6,7 +6,7 @@ import ContactUsSection from '../components/ContactUsSection';
 const ContactUs: React.FC = () => {
   return (
     <Layout
-      title="Clearlinc.io"
+      title="Klearlink.io"
       description="Instant Credit Profiling for Smarter Lending Decisions"
     >
       <Container className="padding--xl">

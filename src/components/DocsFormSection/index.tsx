@@ -86,7 +86,7 @@ const DocsForm: React.FC = () => {
                     onChange={handleChange}
                   />
                   <label htmlFor="optIn" className="form-check-label">
-                    I agree to receive communications from Clearlinc Data
+                    I agree to receive communications from Klearlink Data
                     Technologies Inc.
                   </label>
                 </div>

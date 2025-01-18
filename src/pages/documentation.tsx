@@ -10,7 +10,7 @@ import DocumentationReadySection from '../components/DocumentationReadySection';
 
 const Documentation: React.FC = () => {
   return (
-    <Layout title="Documentation" description="Clearlinc.io Documentation">
+    <Layout title="Documentation" description="Klearlink.io Documentation">
       <AccentImage position={{ top: '-40%', left: '30%' }} src="/img/4.svg" />
       <main>
         <HeroSection />

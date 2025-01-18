@@ -2,8 +2,8 @@
 
 import React from 'react';
 
-import config, { IconItem } from '../../../clearlinc.config';
 import Card, { CardBody, CardHeader } from '@site/src/core/Card';
+import config, { IconItem } from '../../../klearlink.config';
 
 const BenefitCard: React.FC<IconItem> = ({ title, description, Icon }) => (
   <Card>

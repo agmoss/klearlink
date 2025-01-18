@@ -2,7 +2,7 @@
 
 import React from 'react';
 
-import config, { IconItem } from '../../../clearlinc.config';
+import config, { IconItem } from '../../../klearlink.config';
 import Card, { CardBody, CardHeader } from '@site/src/core/Card';
 
 const OutlineCard: React.FC<IconItem> = ({ title, description, Icon }) => (

@@ -1,5 +1,5 @@
 import React from 'react';
-import config, { BasicItem } from '../../../clearlinc.config';
+import config, { BasicItem } from '../../../klearlink.config';
 import Card, { CardBody, CardHeader } from '@site/src/core/Card';
 import clsx from 'clsx';
 
@@ -16,7 +16,7 @@ const DocumentationWhyChooseSection: React.FC = () => (
       <div className="col col-12">
         <Card>
           <CardHeader>
-            <h2 className="section__title">Why Choose Clearlinc?</h2>
+            <h2 className="section__title">Why Choose Klearlink?</h2>
           </CardHeader>
           <CardBody className="section__content">
             <ul className={clsx('list--unstyled insightsList')}>

@@ -1,7 +1,7 @@
 // src/components/DifferenceSection.tsx
 
 import React from 'react';
-import config from '../../../clearlinc.config';
+import config from '../../../klearlink.config';
 
 import CardLR from '@site/src/core/Card/CardLR';
 

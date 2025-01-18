@@ -13,7 +13,7 @@ const HeroSection = () => (
           Seamless. Real-time. Alternative Credit Data. One Simple API.
         </h1>
         <p className="hero__subtitle">
-          Dive into the Clearlinc developer-first API—engineered for speed,
+          Dive into the Klearlink developer-first API—engineered for speed,
           scalability, and seamless integration—so you can launch in days, not
           months.
         </p>
