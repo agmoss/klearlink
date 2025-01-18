@@ -4,7 +4,7 @@ import React from 'react';
 import Link from '@docusaurus/Link';
 import useBaseUrl from '@docusaurus/useBaseUrl';
 import styles from './styles.module.css';
-import config, { Item } from '../../../clearlinc.config';
+import config, { Item } from '../../../klearlink.config';
 
 const UseCase = ({ title, description }: Item) => (
   <div className="col col--6 margin-bottom--lg">

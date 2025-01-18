@@ -75,10 +75,10 @@ const config: Config = {
     problemStatement:
       'Traditional credit data provides lagging data in a world of instant credit.  Bank account data only gives a partial view of a borrower, who typically manages two or more bank accounts.  Stop decisioning on incomplete, outdated borrower data.',
     solutionOverview:
-      'Clearlinc delivers encrypted alternative credit data, empowering lenders with fresh insights into a borrower’s real-time credit activity.',
+      'Klearlink delivers encrypted alternative credit data, empowering lenders with fresh insights into a borrower’s real-time credit activity.',
   },
   keyBenefits: {
-    title: 'The Benefits Are Clear',
+    title: 'The Benefits Are Klear',
     items: [
       {
         title: 'Institution Awareness',
@@ -112,7 +112,7 @@ const config: Config = {
       {
         title: 'Connect & Collect',
         description:
-          'Your institution links masked, securely connected data sources to Clearlinc with minimal setup.',
+          'Your institution links masked, securely connected data sources to Klearlink with minimal setup.',
       },
       {
         title: 'Instant Profiling',
@@ -127,31 +127,31 @@ const config: Config = {
     ],
   },
   productSuite: {
-    title: 'Clearlinc Product Suite',
+    title: 'Klearlink Product Suite',
     items: [
       {
-        title: 'ClearSync',
+        title: 'KlearSync',
         description:
-          'A low-overhead, encrypted, no-code ETL solution that integrates Clearlinc into your existing credit data effortlessly.',
-        link: '/docs/products/clearsync',
+          'A low-overhead, encrypted, no-code ETL solution that integrates Klearlink into your existing credit data effortlessly.',
+        link: '/docs/products/klearsync',
       },
       {
-        title: 'ClearProfile',
+        title: 'KlearProfile',
         description:
           'Profile applicants with ease—see loan status, loan stacking, and institution visibility.',
-        link: '/docs/products/clearprofile',
+        link: '/docs/products/klearprofile',
       },
       {
-        title: 'ClearWatch',
+        title: 'KlearWatch',
         description:
           'Get real-time notifications and monitor borrower activity across lenders for improved decision-making.',
-        link: '/docs/products/clearwatch',
+        link: '/docs/products/klearwatch',
       },
     ],
   },
 
   keyInsights: {
-    title: 'Key Insights Provided by Clearlinc',
+    title: 'Key Insights Provided by Klearlink',
     subTitle: 'Discover essential data and insights for smarter decisioning.',
     items: [
       { title: 'Application Date & Time' },

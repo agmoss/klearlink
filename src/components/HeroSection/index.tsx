@@ -5,7 +5,7 @@ import Link from '@docusaurus/Link';
 import clsx from 'clsx';
 import useBaseUrl from '@docusaurus/useBaseUrl';
 import styles from './styles.module.css';
-import config from '../../../clearlinc.config';
+import config from '../../../klearlink.config';
 
 const HeroSection = () => (
   <header className={clsx('hero hero--primary')}>

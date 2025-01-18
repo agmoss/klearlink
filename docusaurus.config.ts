@@ -3,13 +3,13 @@ import type { Config } from '@docusaurus/types';
 import type * as Preset from '@docusaurus/preset-classic';
 
 const config: Config = {
-  title: 'Clearlinc',
+  title: 'Klearlink',
   tagline: 'Know Your Borrowers. Instantly.',
   favicon: 'img/favicon.svg',
-  url: 'https://clearlinc.io',
+  url: 'https://klearlink.io',
   baseUrl: '/',
-  organizationName: 'clearlinc',
-  projectName: 'clearlinc',
+  organizationName: 'klearlink',
+  projectName: 'klearlink',
   onBrokenLinks: 'throw',
   onBrokenMarkdownLinks: 'warn',
   i18n: {
@@ -46,9 +46,9 @@ const config: Config = {
       disableSwitch: true,
       respectPrefersColorScheme: false,
     },
-    image: 'img/logo.png',
+    image: 'img/logo_small.png',
     navbar: {
-      title: 'Clearlinc',
+      title: 'Klearlink',
       style: 'primary',
       logo: {
         alt: 'logo',
@@ -90,7 +90,7 @@ const config: Config = {
           ],
         },
       ],
-      copyright: `Copyright © ${new Date().getFullYear()} Clearlinc Data Technologies, Inc.`,
+      copyright: `Copyright © ${new Date().getFullYear()} Klearlink Data Technologies, Inc.`,
     },
     prism: {
       theme: prismThemes.oneDark,

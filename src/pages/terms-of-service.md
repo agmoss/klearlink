@@ -1,10 +1,10 @@
-# Terms of Service for Clearlinc.io
+# Terms of Service for Klearlink.io
 
 **Effective Date**: [Insert Effective Date]
 
 ## 1. Acceptance of Terms
 
-Welcome to Clearlinc.io. By accessing or using our website, you agree to be bound by these Terms of Service ("Terms"). If you do not agree to these Terms, you should not use our website.
+Welcome to Klearlink.io. By accessing or using our website, you agree to be bound by these Terms of Service ("Terms"). If you do not agree to these Terms, you should not use our website.
 
 ## 2. Changes to Terms
 
@@ -21,11 +21,11 @@ You agree to use the website in compliance with these Terms and all applicable l
 
 ## 4. Intellectual Property
 
-All content on the website, including text, graphics, logos, and images, is the property of Clearlinc.io or its content providers and is protected by intellectual property laws. You may not reproduce, modify, or distribute any part of the website without our written permission.
+All content on the website, including text, graphics, logos, and images, is the property of Klearlink.io or its content providers and is protected by intellectual property laws. You may not reproduce, modify, or distribute any part of the website without our written permission.
 
 ## 5. User Content
 
-If you submit or upload any content to the website, you grant Clearlinc.io a non-exclusive, royalty-free, worldwide license to use, modify, and display that content in connection with the operation of the website. You are responsible for ensuring that your content does not violate any third-party rights.
+If you submit or upload any content to the website, you grant Klearlink.io a non-exclusive, royalty-free, worldwide license to use, modify, and display that content in connection with the operation of the website. You are responsible for ensuring that your content does not violate any third-party rights.
 
 ## 6. Privacy
 
@@ -37,11 +37,11 @@ Our website may contain links to third-party websites or services. These links a
 
 ## 8. Disclaimer of Warranties
 
-The website is provided "as is" and "as available" without any warranties of any kind, express or implied. Clearlinc.io does not warrant that the website will be error-free or uninterrupted.
+The website is provided "as is" and "as available" without any warranties of any kind, express or implied. Klearlink.io does not warrant that the website will be error-free or uninterrupted.
 
 ## 9. Limitation of Liability
 
-To the fullest extent permitted by law, Clearlinc.io and its affiliates shall not be liable for any indirect, incidental, special, or consequential damages arising out of or related to your use of the website.
+To the fullest extent permitted by law, Klearlink.io and its affiliates shall not be liable for any indirect, incidental, special, or consequential damages arising out of or related to your use of the website.
 
 ## 10. Governing Law
 
@@ -49,7 +49,7 @@ These Terms shall be governed by and construed in accordance with the laws of [I
 
 ## 11. Termination
 
-We reserve the right to terminate or suspend your access to the website at any time, without notice, for conduct that violates these Terms or is otherwise harmful to Clearlinc.io or its users.
+We reserve the right to terminate or suspend your access to the website at any time, without notice, for conduct that violates these Terms or is otherwise harmful to Klearlink.io or its users.
 
 ## 12. Contact Us
 
@@ -60,4 +60,4 @@ If you have any questions about these Terms, please contact us at:
 
 ---
 
-Thank you for using Clearlinc.io.
+Thank you for using Klearlink.io.

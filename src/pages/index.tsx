@@ -15,7 +15,7 @@ import AccentImage from '../core/AccentImage'; // Create a reusable component fo
 const Home: React.FC = () => {
   return (
     <Layout
-      title="Clearlinc.io"
+      title="Klearlink.io"
       description="Instant Credit Profiling for Smarter Lending Decisions"
     >
       <AccentImage position={{ top: '5%', left: '35%' }} src="/img/3.svg" />
@@ -38,7 +38,7 @@ const Home: React.FC = () => {
           <Container>
             <HowItWorksSection />
           </Container>
-          <SlantedArea title="Clearlinc Product Suite">
+          <SlantedArea title="Klearlink Product Suite">
             <ProductSuiteSection />
           </SlantedArea>
           <Container>

@@ -46,7 +46,7 @@ sidebar_position: 1
 - `201 Created`: consumer credit record successfully created.
 
 :::info
-The Clearsync Data ETL interface automatically populates new consumer credit records from your system into Clearlinc, effectively eliminating the need to submit your records via API.
+The Klearsync Data ETL interface automatically populates new consumer credit records from your system into Klearlink, effectively eliminating the need to submit your records via API.
 
 :::
 
@@ -95,7 +95,7 @@ The Clearsync Data ETL interface automatically populates new consumer credit rec
 - `200 Ok`: consumer credit record successfully updated.
 
 :::info
-The Clearsync Data ETL interface will automatically update your existing consumer credit records in Clearlinc, effectively eliminating the need to update them via API.
+The Klearsync Data ETL interface will automatically update your existing consumer credit records in Klearlink, effectively eliminating the need to update them via API.
 
 :::
 
@@ -215,7 +215,7 @@ You do not see what organization the non-compliant loan originated from, nor do 
 :::
 
 :::info
-For real-time updates on consumer matches, use the Clearwatch interface.
+For real-time updates on consumer matches, use the Klearwatch interface.
 
 :::
 

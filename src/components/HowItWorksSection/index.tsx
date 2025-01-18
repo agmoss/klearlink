@@ -5,7 +5,7 @@ import Link from '@docusaurus/Link';
 import clsx from 'clsx';
 import styles from './styles.module.css';
 import useBaseUrl from '@docusaurus/useBaseUrl';
-import config, { Item } from '../../../clearlinc.config';
+import config, { Item } from '../../../klearlink.config';
 
 const Feature: React.FC<Item> = ({ title, description }) => (
   <li className={styles.stepItem}>

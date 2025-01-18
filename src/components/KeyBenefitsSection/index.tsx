@@ -3,7 +3,7 @@
 import React from 'react';
 import styles from './styles.module.css';
 
-import config, { BenefitItem } from '../../../clearlinc.config';
+import config, { BenefitItem } from '../../../klearlink.config';
 
 const Benefit: React.FC<BenefitItem> = ({
   title,

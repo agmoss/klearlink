@@ -13,7 +13,7 @@ const AssetImage: Image = {
 const ContactUs: React.FC = () => {
   return (
     <Layout
-      title="Clearlinc.io"
+      title="Klearlink.io"
       description="Instant Credit Profiling for Smarter Lending Decisions"
     >
       <Container>
@@ -28,7 +28,7 @@ const ContactUs: React.FC = () => {
                   <div className="text--center">
                     <FaEnvelope className={styles.icon} />
                     <h2 className={styles.subHeading}>Email Us</h2>
-                    <p className={styles.text}>michael@clearlinc.io</p>
+                    <p className={styles.text}>michael@klearlink.io</p>
                   </div>
                 </div>
               </div>

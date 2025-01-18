@@ -5,7 +5,7 @@ import Link from '@docusaurus/Link';
 import useBaseUrl from '@docusaurus/useBaseUrl';
 import styles from './styles.module.css';
 import { clsx } from 'clsx';
-import config, { ProductItem } from '../../../clearlinc.config';
+import config, { ProductItem } from '../../../klearlink.config';
 
 const ProductCard: React.FC<ProductItem> = ({ title, description, link }) => (
   <div className="col col--4">
