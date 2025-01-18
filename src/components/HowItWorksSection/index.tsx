@@ -5,7 +5,7 @@ import Link from '@docusaurus/Link';
 import useBaseUrl from '@docusaurus/useBaseUrl';
 import Card, { CardHeader } from '@site/src/core/Card';
 import Code from '@site/src/core/Code';
-import config, { BasicItem } from '../../../klearlink.config';
+import config, { BasicItem } from '@site/klearlink.config';
 
 const ExampleOne: React.FC = () => (
   <Code>

@@ -1,7 +1,7 @@
 // src/components/TeamSection.tsx
 
 import React from 'react';
-import config from '../../../klearlink.config';
+import config from '@site/klearlink.config';
 
 import Card, { CardBody, CardHeader } from '@site/src/core/Card';
 

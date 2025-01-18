@@ -5,7 +5,7 @@ import type * as Preset from '@docusaurus/preset-classic';
 const config: Config = {
   title: 'Klearlink',
   tagline: 'Know Your Borrowers. Instantly.',
-  favicon: 'img/favicon.svg',
+  favicon: 'img/logo_smallest.png',
   url: 'https://klearlink.io',
   baseUrl: '/',
   organizationName: 'klearlink',
@@ -61,13 +61,13 @@ const config: Config = {
       disableSwitch: true,
       respectPrefersColorScheme: false,
     },
-    image: 'img/logo_small.png',
+    image: 'img/logo.png',
     navbar: {
       title: 'Klearlink',
       style: 'primary',
       logo: {
         alt: 'logo',
-        src: 'img/logo.png',
+        src: 'img/logo_smallest.png',
       },
       items: [
         {

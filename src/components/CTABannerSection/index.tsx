@@ -4,7 +4,7 @@ import React from 'react';
 import Link from '@docusaurus/Link';
 import useBaseUrl from '@docusaurus/useBaseUrl';
 import CtaBanner from '@site/src/core/CtaBanner/CtaBanner';
-import config from '../../../klearlink.config';
+import config from '@site/klearlink.config';
 
 const CTABannerSection: React.FC = () => (
   <CtaBanner

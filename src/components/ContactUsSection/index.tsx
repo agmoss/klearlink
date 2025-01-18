@@ -1,7 +1,7 @@
 // src/components/ContactUsSection.tsx
 
 import React from 'react';
-import Image from '../../core/Image';
+import Image from '@site/src/core/Image';
 
 import Card, { CardBody, CardHeader } from '@site/src/core/Card';
 import { FaEnvelope } from 'react-icons/fa';

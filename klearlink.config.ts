@@ -64,6 +64,7 @@ type UseCasesSection = TitleWithSubTitle & {
 type CtaSection = TitleWithSubTitle;
 
 export type AboutUsSection = {
+  hero: HeroSection;
   companyOverview: {
     headline: string;
     content: string;
@@ -80,7 +81,8 @@ export type AboutUsSection = {
 };
 
 export type DocsSection = {
-  heroSection: HeroSection;
+  hero: HeroSection;
+  ready: TitleWithSubTitle;
   whyChoose: BasicItem[];
   howItWorks: BasicItem[];
 };
@@ -303,6 +305,11 @@ const config: Config = {
     subTitle: 'We’d Love to Hear from You.',
   },
   aboutUsSection: {
+    hero: {
+      title: 'About Us',
+      subTitle:
+        'In 2024, Klearlink was born by a group of fintech entrepreneurs to answer one question: access to credit is instant for consumers, so why isn’t access to credit data instant?',
+    },
     companyOverview: {
       headline:
         'Klearlink exists to enable financial inclusion by helping consumers build an alternative credit profile.',
@@ -328,10 +335,15 @@ const config: Config = {
     },
   },
   docsSection: {
-    heroSection: {
+    hero: {
       title: 'Seamless. Real-time. Alternative Credit Data. One Simple API.',
       subTitle:
         'Dive into the Klearlink developer-first API—engineered for speed, scalability, and seamless integration—so you can launch in days, not months.',
+    },
+    ready: {
+      title: 'Ready to Get Started?',
+      subTitle:
+        'Click below to request your API documentation and someone will get in touch shortly.',
     },
     whyChoose: [
       {

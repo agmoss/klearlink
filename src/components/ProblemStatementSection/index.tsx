@@ -1,5 +1,5 @@
 import React from 'react';
-import config, { Title } from '../../../klearlink.config';
+import config, { Title } from '@site/klearlink.config';
 import Card, { CardBody, CardHeader } from '@site/src/core/Card';
 import CreditRadarChart from '@site/src/core/Chart';
 import clsx from 'clsx';

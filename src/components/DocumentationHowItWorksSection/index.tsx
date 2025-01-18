@@ -1,5 +1,5 @@
 import React from 'react';
-import config, { BasicItem } from '../../../klearlink.config';
+import config, { BasicItem } from '@site/klearlink.config';
 import Card, { CardBody, CardHeader } from '@site/src/core/Card';
 import clsx from 'clsx';
 

@@ -4,7 +4,7 @@ import React from 'react';
 import Link from '@docusaurus/Link';
 import useBaseUrl from '@docusaurus/useBaseUrl';
 import Card, { CardBody, CardFooter, CardHeader } from '@site/src/core/Card';
-import config, { LinkItem } from '../../../klearlink.config';
+import config, { LinkItem } from '@site/klearlink.config';
 
 const ProductCard: React.FC<LinkItem> = ({ title, description, link }) => (
   <Card alt>

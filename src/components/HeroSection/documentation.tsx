@@ -4,19 +4,16 @@ import React from 'react';
 import styles from './styles.module.css';
 import Link from '@docusaurus/Link';
 import useBaseUrl from '@docusaurus/useBaseUrl';
+import config from '@site/klearlink.config';
 
 const HeroSection = () => (
   <header className="hero hero--primary">
     <div className="container">
       <div className={styles.heroContent}>
         <h1 className="hero__title text--bold text--secondary">
-          Seamless. Real-time. Alternative Credit Data. One Simple API.
+          {config.docsSection.hero.title}
         </h1>
-        <p className="hero__subtitle">
-          Dive into the Klearlink developer-first API—engineered for speed,
-          scalability, and seamless integration—so you can launch in days, not
-          months.
-        </p>
+        <p className="hero__subtitle">{config.docsSection.hero.subTitle}</p>
         <div className={styles.buttonGroup}>
           <Link
             className="button button--primary button--lg main"

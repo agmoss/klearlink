@@ -1,4 +1,3 @@
-import classNames from 'classnames';
 import React from 'react';
 import clsx from 'clsx';
 
@@ -28,7 +27,7 @@ export const CardHeader: React.FC<CardComponentProps> = ({
   className,
   id,
 }) => {
-  const containerClasses = classNames('card__header', className);
+  const containerClasses = clsx('card__header', className);
 
   return (
     <div className={containerClasses} id={id}>
@@ -42,7 +41,7 @@ export const CardBody: React.FC<CardComponentProps> = ({
   className,
   id,
 }) => {
-  const containerClasses = classNames('card__body', className);
+  const containerClasses = clsx('card__body', className);
 
   return (
     <div className={containerClasses} id={id}>
@@ -56,7 +55,7 @@ export const CardFooter: React.FC<CardComponentProps> = ({
   className,
   id,
 }) => {
-  const containerClasses = classNames('card__footer', className);
+  const containerClasses = clsx('card__footer', className);
 
   return (
     <div className={containerClasses} id={id}>
