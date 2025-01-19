@@ -29,6 +29,15 @@
   overflow-x: hidden;
 }
 
+/* =================== Navbar =================== */
+.navbar__link--active {
+  color: #ffd944;
+}
+
+.navbar__link:hover {
+  color: #ffd944;
+}
+
 /* =================== Blog =================== */
 .yearGroupHeading_rMGB {
   display: none;

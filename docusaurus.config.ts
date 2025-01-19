@@ -2,6 +2,9 @@ import { themes as prismThemes } from 'prism-react-renderer';
 import type { Config } from '@docusaurus/types';
 import type * as Preset from '@docusaurus/preset-classic';
 
+// eslint-disable-next-line @typescript-eslint/no-require-imports
+require('dotenv').config();
+
 const config: Config = {
   title: 'Klearlink',
   tagline: 'Know Your Borrowers. Instantly.',
@@ -73,9 +76,10 @@ const config: Config = {
       },
       items: [
         {
-          to: '/#solutions',
+          href: '/#solutions',
           label: 'Solutions',
           position: 'left',
+          activeBaseRegex: '(^/products.*$)',
         },
         {
           to: '/use-cases',
@@ -123,6 +127,11 @@ const config: Config = {
     prism: {
       theme: prismThemes.oneDark,
       darkTheme: prismThemes.oneDark,
+    },
+    customFields: {
+      PUBLIC_KEY: process.env.PUBLIC_KEY,
+      SERVICE_ID: process.env.SERVICE_ID,
+      TEMPLATE_ID: process.env.TEMPLATE_ID,
     },
   } satisfies Preset.ThemeConfig,
 };
