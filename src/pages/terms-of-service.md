@@ -1,6 +1,6 @@
 # Terms of Service for klearlink.io
 
-**Effective Date**: [Insert Effective Date]
+**Effective Date**: January 21, 2025
 
 ## 1. Acceptance of Terms
 
@@ -55,8 +55,7 @@ We reserve the right to terminate or suspend your access to the website at any t
 
 If you have any questions about these Terms, please contact us at:
 
-- **Email**: [Insert Company Email]
-- **Phone**: [Insert Company Phone Number]
+- **Email**: contact@klearlink.io
 
 ---
 
