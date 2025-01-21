@@ -5,7 +5,7 @@ type DataPoint = {
   insight: string;
   'Credit Bureau': number;
   'Account Aggregation': number;
-  Klearlink: number;
+  KlearLink: number;
 };
 
 const data: DataPoint[] = [
@@ -13,55 +13,55 @@ const data: DataPoint[] = [
     insight: 'Active Accounts',
     'Credit Bureau': 80,
     'Account Aggregation': 100,
-    Klearlink: 120,
+    KlearLink: 120,
   },
   {
     insight: 'Debt/Income',
     'Credit Bureau': 80,
     'Account Aggregation': 100,
-    Klearlink: 120,
+    KlearLink: 120,
   },
   {
     insight: 'Thin File Credit',
     'Credit Bureau': 80,
     'Account Aggregation': 100,
-    Klearlink: 120,
+    KlearLink: 120,
   },
   {
     insight: 'Short Term Credit',
     'Credit Bureau': 30,
     'Account Aggregation': 50,
-    Klearlink: 120,
+    KlearLink: 120,
   },
   {
     insight: 'Loan Stacking',
     'Credit Bureau': 60,
     'Account Aggregation': 80,
-    Klearlink: 120,
+    KlearLink: 120,
   },
   {
     insight: 'BNPL Credit',
     'Credit Bureau': 50,
     'Account Aggregation': 80,
-    Klearlink: 120,
+    KlearLink: 120,
   },
   {
     insight: 'PDL Credit',
     'Credit Bureau': 50,
     'Account Aggregation': 80,
-    Klearlink: 120,
+    KlearLink: 120,
   },
   {
     insight: 'Card Credit',
     'Credit Bureau': 120,
     'Account Aggregation': 80,
-    Klearlink: 50,
+    KlearLink: 50,
   },
   {
     insight: 'Asset-Backed Credit',
     'Credit Bureau': 120,
     'Account Aggregation': 100,
-    Klearlink: 80,
+    KlearLink: 80,
   },
 ];
 
@@ -69,7 +69,7 @@ const CustomSliceTooltip: React.FC<RadarSliceTooltipProps> = ({
   data,
   index,
 }) => {
-  const fixedOrder = ['Klearlink', 'Credit Bureau', 'Account Aggregation'];
+  const fixedOrder = ['KlearLink', 'Credit Bureau', 'Account Aggregation'];
 
   const sortedValues = [...data].sort((a, b) => b.value - a.value);
   const valueToLabel: Record<number, string> = {};
@@ -184,7 +184,7 @@ const CreditRadarChart: React.FC = () => (
       }}
       maxValue={150}
       data={data as unknown as Record<string, unknown>[]}
-      keys={['Credit Bureau', 'Account Aggregation', 'Klearlink']}
+      keys={['Credit Bureau', 'Account Aggregation', 'KlearLink']}
       indexBy="insight"
       margin={{ top: 80, right: 150, bottom: 0, left: 150 }}
       borderColor={{ from: 'color' }}

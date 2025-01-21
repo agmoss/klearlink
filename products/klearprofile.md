@@ -7,11 +7,11 @@ import API from '/img/klearsync_api.png';
 
 # Klearprofile
 
-## Abstract
+## Overview
 
-The Klearlink product—Klearprofile—is an API product for the controlled dissemination of cross-party lending statuses to lending organizations. Integration with the API allows your lending organization to understand your applicants' prior payment performance on loans applied for and originated with other lenders.
+The KlearLink product—Klearprofile—is an API product for the controlled dissemination of cross-party lending statuses to lending organizations. Integration with the API allows your lending organization to understand your applicants' prior payment performance on loans applied for and originated with other lenders.
 
-With Klearlink, your lending organization inputs two components relating to each loan application:
+With KlearLink, your lending organization inputs two components relating to each loan application:
 
 1. **Consumer Facts**
 2. **Credit Facts**
@@ -38,7 +38,7 @@ Consumer Fact fields are:
 - **FUTURE RELEASE:** Bank Account Rating - indicates the number of unique bank accounts utilized in the last 60 days. B1 = 1 account utilized….B2 = 2 accounts utilized, etc.
 
 :::info
-Klearlink will only ever return the exact Consumer Facts you submit to the system, **and the Consumer Facts you submit are not accessible to other lenders.** The system allows for the determination of inter-organizational consumer matches. It does not allow for any possibility of inter-organizational data dissemination, viewership, or enrichment. Further, Consumer Matches do not contain any identifiable information about the lending organization.
+KlearLink will only ever return the exact Consumer Facts you submit to the system, **and the Consumer Facts you submit are not accessible to other lenders.** The system allows for the determination of inter-organizational consumer matches. It does not allow for any possibility of inter-organizational data dissemination, viewership, or enrichment. Further, Consumer Matches do not contain any identifiable information about the lending organization.
 
 :::
 
@@ -68,8 +68,8 @@ An application/loan has the following lifecycle. As time progresses, your instit
 
 - **application** - The consumer has applied for credit at your organization
 - **originated** - Your organization has extended credit to the consumer
-  - **compliant** - all credit reported to Klearlink has been paid as agreed in the last 60 days
-  - **non-compliant** - all, or some, credit reported to Klearlink is past due in the last 60 days. Note that this state is dynamic based on the most recent data received. For example, a customer on day 50 may be non-compliant due to one loan that is past due; however, following fulfillment of all obligations on day 51, the credit state would flip to compliant on any successful matches on day 51 or later. **\[NTD: consider static data that hold any status in the last 60 days? - this would likely be more beneficial to lenders\]**
+  - **compliant** - all credit reported to KlearLink has been paid as agreed in the last 60 days
+  - **non-compliant** - all, or some, credit reported to KlearLink is past due in the last 60 days. Note that this state is dynamic based on the most recent data received. For example, a customer on day 50 may be non-compliant due to one loan that is past due; however, following fulfillment of all obligations on day 51, the credit state would flip to compliant on any successful matches on day 51 or later. **\[NTD: consider static data that hold any status in the last 60 days? - this would likely be more beneficial to lenders\]**
 - **declined** - Your institution has declined to extend credit to the consumer
 - **bankrupt/insolvent** - based on information captured from a credit state/loan fact, the consumer is flagged as bankrupt or insolvent
 
@@ -84,7 +84,7 @@ The change in credit state is tied to the change in other credit facts. For exam
 
 ### Consumer Match Record
 
-A Consumer Match is the result of the Klearlink process. Klearlink will return the matching **_Consumer Facts_** and their associated **_Credit Facts_** from other lending organizations to your institution. The data returned in a successful Consumer Match will allow your organization to utilize the returned data for credit decisioning. This data will assist in areas such as:
+A Consumer Match is the result of the KlearLink process. KlearLink will return the matching **_Consumer Facts_** and their associated **_Credit Facts_** from other lending organizations to your institution. The data returned in a successful Consumer Match will allow your organization to utilize the returned data for credit decisioning. This data will assist in areas such as:
 
 - **Credit performance in the last 60 days**—this allows the lender to see all compliant consumers and any outstanding issues of non-compliance by the consumer.
 - **Added debt-to-income calculation enhancements** - This data allows lenders to calculate the consumer's borrowing ratio of debt to income if credit is still outstanding.
@@ -98,7 +98,7 @@ When decisioning on a consumer match, your organization will rely on the match's
 - **application** - The consumer has applied for credit at the matched institution
 - **originated** - The matched organization has extended credit to the consumer
   - **compliant** - The consumer has paid their credit as agreed in the last 60 days
-  - **non-compliant** - all, or some, credit reported to Klearlink is past due in the last 60 days.
+  - **non-compliant** - all, or some, credit reported to KlearLink is past due in the last 60 days.
 - **declined** - The matched organization has declined to extend credit to the consumer
 - **bankrupt/insolvent** - The matched organization has flagged the institution as bankrupt/insolvent
 
@@ -118,7 +118,7 @@ Information on the matched organization is not and never will be present in Cons
 
 ### Updates
 
-The Credit State of your Consumer Credit records remains dynamic and evolving post-initial interaction with Klearlink. Changes in Credit State are reflected within Klearlink via the use of the API or Data ETL. As other lenders update their Consume Credit records, your Consumer Match records may change. You can know these changes via either webhooks or the API.
+The Credit State of your Consumer Credit records remains dynamic and evolving post-initial interaction with KlearLink. Changes in Credit State are reflected within KlearLink via the use of the API or Data ETL. As other lenders update their Consume Credit records, your Consumer Match records may change. You can know these changes via either webhooks or the API.
 
 :::info
 Klearprofile requires participating organizations to update the credit state of their consumer credit records as they change. This allows for matches to be made and insight to be driven off the matches.
@@ -129,7 +129,7 @@ Klearprofile requires participating organizations to update the credit state of 
 
 ### API Integration
 
-The Klearlink system operates as illustrated
+The KlearLink system operates as illustrated
 
 <p align="center">
     <img src={API} alt="API" style={{maxWidth: 600, width: '100%', height:'auto'}} />
@@ -138,9 +138,9 @@ The Klearlink system operates as illustrated
 ---
 
 :::info
-For more detailed information on the API, Klearsync, and Klearwatch, check out the following links:
+For more detailed information on the API, KlearSync, and KlearWatch, check out the following links:
 
-- [Klearsync](./klearsync.md)
-- [Klearwatch](./klearwatch.md)
+- [KlearSync](./klearsync.md)
+- [KlearWatch](./klearwatch.md)
 
 :::

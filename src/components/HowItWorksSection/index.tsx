@@ -3,7 +3,7 @@
 import React from 'react';
 import Link from '@docusaurus/Link';
 import useBaseUrl from '@docusaurus/useBaseUrl';
-import Card, { CardHeader } from '@site/src/core/Card';
+import Card, { CardBody, CardHeader } from '@site/src/core/Card';
 import Code from '@site/src/core/Code';
 import config, { BasicItem } from '@site/klearlink.config';
 
@@ -95,7 +95,7 @@ const Feature: React.FC<BasicItem & { idx: number }> = ({
   const ToRender = CodeExamples[idx];
   return (
     <div className="row padding--md">
-      <div className="col col--6">
+      <div className="col col--8 col--offset-2">
         <Card>
           <CardHeader>
             <h3 className="section__subtitle alt text--bold text--secondary">
@@ -103,10 +103,12 @@ const Feature: React.FC<BasicItem & { idx: number }> = ({
             </h3>
             <p>{description}</p>
           </CardHeader>
+          <CardBody>
+            <div className="dont-render-small">
+              <ToRender />
+            </div>
+          </CardBody>
         </Card>
-      </div>
-      <div className="col col--6 dont-render-small">
-        <ToRender />
       </div>
     </div>
   );

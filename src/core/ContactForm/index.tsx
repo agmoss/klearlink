@@ -118,7 +118,7 @@ const ContactForm: React.FC<ContactForm> = ({ side }) => {
                     className="form-check-input"
                   />
                   <label htmlFor="optIn" className="form-check-label">
-                    I agree to receive communications from Klearlink Data
+                    I agree to receive communications from KlearLink Data
                     Technologies Inc.
                   </label>
                 </div>

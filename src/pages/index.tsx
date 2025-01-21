@@ -16,7 +16,7 @@ import DifferenceSection from '../components/DifferenceSection';
 const Home: React.FC = () => {
   return (
     <Layout
-      title="Klearlink.io"
+      title="klearlink.io"
       description="Instant Credit Profiling for Smarter Lending Decisions"
     >
       <AccentImage position={{ top: '-40%', left: '35%' }} src="/img/3.svg" />

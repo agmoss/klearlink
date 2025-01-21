@@ -22,8 +22,15 @@ const OutlineCard: React.FC<IconItem> = ({ title, description, Icon }) => (
 const OutlineSection: React.FC = () => (
   <div id="outline">
     <div className="row">
-      <div className="col col--12 text--center">
-        <h2 className="section__title">{config.outlineSection.title}</h2>
+      <div className="col col--8 col--offset-2 text--center">
+        <Card>
+          <CardHeader>
+            <h2 className="section__title">{config.outlineSection.title}</h2>
+            <h3 className="section__subtitle">
+              {config.outlineSection.subTitle}
+            </h3>
+          </CardHeader>
+        </Card>
       </div>
     </div>
     <div className="row">

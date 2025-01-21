@@ -19,7 +19,7 @@ const TeamSection: React.FC = () => (
         <div className="row">
           {config.aboutUsSection.teamSection.members.map((member, index) => (
             <div className="col col--6" key={index}>
-              <div className="text--center">
+              <div>
                 <Card>
                   <div className="card__image">
                     <div className="about-img-container">

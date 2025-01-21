@@ -16,7 +16,7 @@ const DocumentationWhyChooseSection: React.FC = () => (
       <div className="col col-12">
         <Card>
           <CardHeader>
-            <h2 className="section__title">Why Choose Klearlink?</h2>
+            <h2 className="section__title">Why Choose KlearLink?</h2>
           </CardHeader>
           <CardBody className="section__content">
             <ul className={clsx('list--unstyled insightsList')}>

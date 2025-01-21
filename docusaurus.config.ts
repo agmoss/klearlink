@@ -6,13 +6,13 @@ import type * as Preset from '@docusaurus/preset-classic';
 require('dotenv').config();
 
 const config: Config = {
-  title: 'Klearlink',
+  title: 'KlearLink',
   tagline: 'Know Your Borrowers. Instantly.',
   favicon: 'img/logo_smallest.png',
   url: 'https://klearlink.io',
   baseUrl: '/',
-  organizationName: 'klearlink',
-  projectName: 'klearlink',
+  organizationName: 'klearLink',
+  projectName: 'KlearLink',
   onBrokenLinks: 'throw',
   onBrokenMarkdownLinks: 'warn',
   i18n: {
@@ -29,7 +29,7 @@ const config: Config = {
           routeBasePath: 'use-cases',
           showReadingTime: false,
           blogTitle: 'Use Cases',
-          blogDescription: 'Klearlink Use Cases',
+          blogDescription: 'KlearLink Use Cases',
           sortPosts: 'descending',
           showLastUpdateTime: false,
           showLastUpdateAuthor: false,
@@ -68,7 +68,7 @@ const config: Config = {
     },
     image: 'img/logo.png',
     navbar: {
-      title: 'Klearlink',
+      title: 'KlearLink',
       style: 'primary',
       logo: {
         alt: 'logo',
@@ -122,7 +122,7 @@ const config: Config = {
           ],
         },
       ],
-      copyright: `Copyright © ${new Date().getFullYear()} Klearlink Data Technologies, Inc.`,
+      copyright: `Copyright © ${new Date().getFullYear()} KlearLink Data Technologies, Inc.`,
     },
     prism: {
       theme: prismThemes.oneDark,

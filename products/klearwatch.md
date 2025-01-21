@@ -4,16 +4,16 @@ sidebar_position: 3
 
 import Klearwatch from '/img/klearwatch.png';
 
-# Klearwatch
+# KlearWatch
 
 :::info
 Prior Reading: [Klearprofile](./klearprofile.md)
 
 :::
 
-## Abstract
+## Overview
 
-Integration with the Klearwatch webhook interface allows for real-time notifications when another organization submits a consumer credit record that either matches one of your consumer credit records (creating a consumer match) or causes the update or removal of a previous consumer match.
+Integration with the KlearWatch webhook interface allows for real-time notifications when another organization submits a consumer credit record that either matches one of your consumer credit records (creating a consumer match) or causes the update or removal of a previous consumer match.
 
 <p align="center">
     <img src={Klearwatch} alt="API" style={{maxWidth: 600, width: '100%', height:'auto'}} />
@@ -25,11 +25,11 @@ Integration with the Klearwatch webhook interface allows for real-time notificat
 
 1. **You submit a consumer credit record, but you don't get a match.**
 
-When providing a consumer credit record with Klearsync and you don't receive a consumer match record, your applicant does not have any other loans with Klearlink affiliates, this is good! However, you may want to know if that changes. This may change your collections strategy or your decision to re-lend to the consumer.
+When providing a consumer credit record with KlearSync and you don't receive a consumer match record, your applicant does not have any other loans with KlearLink affiliates, this is good! However, you may want to know if that changes. This may change your collections strategy or your decision to re-lend to the consumer.
 
 2. **Your match grows**
 
-Let's say you submit a consumer credit record with Klearsync, and you get a consumer match. Imagine this match has one entry in the consumer matches array. This means they have only one record with Klearlink affiliates. If this consumer applies or obtains a loan from another affiliate after your original consumer credit record submission, you may want to know this information. This may change your collections strategy, underwriting strategy, or your decision to re-lend to the consumer.
+Let's say you submit a consumer credit record with KlearSync, and you get a consumer match. Imagine this match has one entry in the consumer matches array. This means they have only one record with KlearLink affiliates. If this consumer applies or obtains a loan from another affiliate after your original consumer credit record submission, you may want to know this information. This may change your collections strategy, underwriting strategy, or your decision to re-lend to the consumer.
 
 3. **Your match changes credit state**
 
@@ -40,7 +40,7 @@ Let's say you submit a consumer credit record with Klearsync, and you get a cons
 
 ### 1. Creation/update of a consumer match
 
-**Endpoint**: `yourwebsite.com Klearlink-webhook-callback`
+**Endpoint**: `yourwebsite.com klearlink-webhook-callback`
 
 **Method**: `POST`
 
@@ -58,6 +58,6 @@ Let's say you submit a consumer credit record with Klearsync, and you get a cons
 ```
 
 :::info
-The Klearlink API server will send your server POST requests with the aforementioned request body. From there, you can re-call the Klearprofile API to see what has been created or updated.
+The KlearLink API server will send your server POST requests with the aforementioned request body. From there, you can re-call the KlearProfile API to see what has been created or updated.
 
 :::

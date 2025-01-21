@@ -8,8 +8,8 @@ import TeamSection from '../components/TeamSection';
 
 const AboutUs: React.FC = () => {
   return (
-    <Layout title="About Us" description="Learn more about us at Klearlink.io">
-      <AccentImage position={{ top: '-40%', left: '35%' }} src="/img/5.svg" />
+    <Layout title="About Us" description="Learn more about us at klearlink.io">
+      <AccentImage position={{ top: '-20%', left: '30%' }} src="/img/5.svg" />
       <main>
         <HeroSection />
         <Container className="padding-vert--xl">

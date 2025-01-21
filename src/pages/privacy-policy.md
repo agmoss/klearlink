@@ -2,11 +2,11 @@
 
 Last Updated: November 1st, 2024
 
-At Klearlink.io, protecting your privacy is our priority. This Privacy Policy describes how we collect, use, and share your personal information when you engage with our website and services. Klearlink Data Technologies Inc. (“Klearlink) is committed to complying with applicable privacy laws in the United States and Canada, including PIPEDA and the CCPA.
+At klearlink.io, protecting your privacy is our priority. This Privacy Policy describes how we collect, use, and share your personal information when you engage with our website and services. KlearLink Data Technologies Inc. ("KlearLink") is committed to complying with applicable privacy laws in the United States and Canada, including PIPEDA and the CCPA.
 
 **1. Our Commitment to Privacy**
 
-Klearlink.io values your trust and implements responsible practices to manage your personal information carefully and respectfully. This policy provides transparency on our data collection practices and your rights concerning your personal information.
+klearlink.io values your trust and implements responsible practices to manage your personal information carefully and respectfully. This policy provides transparency on our data collection practices and your rights concerning your personal information.
 
 **2. Information We Collect**
 
@@ -41,7 +41,7 @@ We may use your information for:
 
 **5. Information Sharing**
 
-With your consent obtained when required, Klearlink may share your information with trusted third parties in specific situations:
+With your consent obtained when required, KlearLink may share your information with trusted third parties in specific situations:
 
 **Service Providers:** For secure payment processing, data analytics, and customer service.
 
@@ -53,7 +53,7 @@ With your consent obtained when required, Klearlink may share your information w
 
 **6. International Data Transfers**
 
-Klearlink operates in the U.S. and Canada, and your data may be transferred across borders. We ensure that these transfers meet regulatory standards, including the use of legally accepted safeguards. In Canada, we maintain compliance with the Personal Information Protection and Electronic Documents Act (PIPEDA) and applicable provincial laws. In the United States, we adher to federal and state privacy laws, including the California Consumer Privacy Act (CCPA).
+KlearLink operates in the U.S. and Canada, and your data may be transferred across borders. We ensure that these transfers meet regulatory standards, including the use of legally accepted safeguards. In Canada, we maintain compliance with the Personal Information Protection and Electronic Documents Act (PIPEDA) and applicable provincial laws. In the United States, we adhere to federal and state privacy laws, including the California Consumer Privacy Act (CCPA).
 
 **7. Your Rights**
 
@@ -67,7 +67,7 @@ Depending on your location, you may have the following rights:
 
 **Opt-Out:** California residents can opt out of the sale of their personal information under the CCPA.
 
-To exercise any of these rights, please contact us at rights@Klearlink.io.
+To exercise any of these rights, please contact us at rights@klearlink.io.
 
 **8. Data Security**
 
@@ -88,8 +88,8 @@ We may update this Privacy Policy to reflect changes in our practices or regulat
 
 For questions or requests regarding this Privacy Policy or your personal information, please contact us at:
 
-Klearlink.io
+klearlink.io
 
-Email: contact@Klearlink.io
+Email: contact@klearlink.io
 
 For further information on data protection in Canada, you may contact the Office of the Privacy Commissioner of Canada, and for California residents, the California Attorney General’s Office.

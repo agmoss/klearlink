@@ -67,7 +67,7 @@ export type AboutUsSection = {
   hero: HeroSection;
   companyOverview: {
     headline: string;
-    content: string;
+    content: string[];
   };
   teamSection: {
     headline: string;
@@ -104,13 +104,14 @@ export type Config = {
 
 const config: Config = {
   heroSection: {
-    title: 'Instant Alternative Credit Profiling Data for Smarter Decisioning',
+    title: 'Instant Alternative Credit Data for Smarter Decisioning',
     subTitle:
       'Know your borrowers in real-time with alternative credit data and insights, so you can lend with confidence.',
   },
   problemStatementSection: {
     title: 'What You Don’t See is Costing You.',
-    subTitle: 'Don’t Be Left in the Dark Issuing Credit.',
+    subTitle:
+      'Start decisioning with complete, up to date credit data on your customer.',
     items: [
       {
         title:
@@ -122,30 +123,31 @@ const config: Config = {
       },
       {
         title:
-          'Klearlink delivers encrypted alternative credit data, empowering lenders with fresh insights into a borrower’s real-time credit activity.',
+          'KlearLink delivers encrypted alternative credit data, empowering lenders with fresh insights into a borrower’s real-time credit activity.',
       },
     ],
   },
   outlineSection: {
     title: 'All Short-Term Credit in One Solution',
     subTitle:
-      'Klearlink compiles multiples types of short-term credit accessed by your customer, enabling you to gain real-time credit performance and insights to optimize your portfolio.',
+      'KlearLink compiles multiple types of short-term credit accessed by your customer, enabling you to gain real-time credit performance and insights to optimize your portfolio.',
     items: [
       {
         title: 'Buy-Now-Pay-Later',
-        description: 'Access your customer’s buy-now-pay-later credit data.',
+        description:
+          "Access your customer's buy-now-pay-later credit data and gain visibility into your customer's performance and upcoming obligations.",
         Icon: FaShoppingCart,
       },
       {
         title: 'Short-Term High Cost Credit',
         description:
-          'Access payday loan credit data to understand 30-60 day obligations.',
+          'Access payday loan credit data to confirm 1-60 day total obligations and past performance on your customer.',
         Icon: FaMoneyCheck,
       },
     ],
   },
   differenceSection: {
-    title: 'The Klearlink Difference',
+    title: 'The KlearLink Difference',
     items: [
       {
         title: 'Real-Time Data Access',
@@ -157,7 +159,7 @@ const config: Config = {
         title: 'Built for Today’s Fintech Products',
         Icon: FaMobileScreen,
         description:
-          'Klearsync uses a format to accurately capture the details today’s fintech products, including BNPL that feature early payments and payment adjustments.',
+          'KlearSync uses a format to accurately capture the details today’s fintech products, including BNPL that feature early payments and payment adjustments.',
       },
       {
         title: 'Developer-friendly integration',
@@ -220,7 +222,7 @@ const config: Config = {
       {
         title: 'Connect',
         description:
-          'Link your masked, securely connected data sources to Klearlink with our developer-friendly API integration.',
+          'Link your masked, securely connected data sources to KlearLink with our developer-friendly API integration.',
       },
       {
         title: 'Collect Instant Profiles',
@@ -230,7 +232,7 @@ const config: Config = {
       {
         title: 'Augment Decisioning',
         description:
-          'Use Klearlink data to inform your decisioning rules and modelling, improving risk-profiling and responsible approvals on your customers.',
+          'Use KlearLink data to inform your decisioning rules and modelling, improving risk-profiling and responsible approvals on your customers.',
       },
       {
         title: 'Optimize Performance',
@@ -240,18 +242,18 @@ const config: Config = {
     ],
   },
   productSuiteSection: {
-    title: 'Klearlink Product Suite',
+    title: 'KlearLink Product Suite',
     items: [
       {
         title: 'KlearSync',
         description:
-          'A low-overhead, encrypted, no-code ETL solution that integrates Klearlink into your existing credit data effortlessly.',
+          'Choose between a developer friendly API, or a low-overhead, encrypted, no-code ETL solution that integrates KlearLink into your existing credit data effortlessly.',
         link: '/products/klearsync',
       },
       {
         title: 'KlearProfile',
         description:
-          'Profile applicants with ease—see loan status, loan stacking, and institution visibility.',
+          'Profile applicants accurately and with ease - see real-time status of each credit including amounts, sectors of credit types, and performance history and other customer indicators.',
         link: '/products/klearprofile',
       },
       {
@@ -263,7 +265,7 @@ const config: Config = {
     ],
   },
   keyInsightsSection: {
-    title: 'Key Insights Provided by Klearlink',
+    title: 'Key Insights Provided by klearLink',
     subTitle: 'Discover essential data and insights for smarter decisioning.',
     items: [
       { title: 'Application Date & Time' },
@@ -308,13 +310,16 @@ const config: Config = {
     hero: {
       title: 'About Us',
       subTitle:
-        'In 2024, Klearlink was born by a group of fintech entrepreneurs to answer one question: access to credit is instant for consumers, so why isn’t access to credit data instant?',
+        'In 2024, KlearLink was created by a group of fintech entrepreneurs to solve one problem: to provide real-time access to alternative credit data.  Because we believe that in a world of instant access to credit, access to credit data should be instant too.',
     },
     companyOverview: {
       headline:
-        'Klearlink exists to enable financial inclusion by helping consumers build an alternative credit profile.',
-      content:
-        "So we created an instant method of assembling short-term and alternative credit data to empower businesses with the tools to make smarter, faster, and more informed decisions. In a world where instant credit access is the norm, understanding customers' credit behavior should be just as seamless. Our platform provides real-time credit insights designed to drive innovation, reduce fraud, and promote responsible borrowing across industries. By leveraging advanced analytics and cutting-edge technology, we help you make accurate decisions that fuel growth while minimizing risk. Klearlink is your partner in building trust, transparency, and efficiency in credit management—because better decisions today lead to a stronger, more sustainable tomorrow.",
+        'Our mission is to bridge the credit gap by helping consumers turn alternative credit data into real-world credit opportunities.',
+      content: [
+        "So we created an instant method of assembling short-term and alternative credit data to empower businesses with the tools to make smarter, faster, and more informed decisions. In a world where instant credit access is the norm, understanding customers' credit behavior should be just as seamless.",
+        'Our platform provides real-time credit insights designed to drive innovation, reduce fraud, and promote responsible borrowing across industries. By leveraging advanced analytics and cutting-edge technology, we help you make accurate decisions that fuel growth while minimizing risk. ',
+        'KlearLink is your partner in building trust, transparency, and efficiency in credit management—because better decisions today lead to a stronger, more sustainable tomorrow.',
+      ],
     },
     teamSection: {
       headline: 'Meet the Team',
@@ -322,7 +327,7 @@ const config: Config = {
         {
           name: 'Michael Wendland',
           role: 'Co-Founder & CEO',
-          image: 'https://placehold.co/300x300',
+          image: '/img/michael.jpg',
           bio: 'A business leader and entrepreneur with over 18+ years of experience in the financial services industry, including consumer finance, mortgage lending, and credit cards. Michael founded Refresh Financial in 2010, servicing over 125,000 Canadians and recognized as one of the fastest-growing technology companies in North America until its sale in 2021.',
         },
         {
@@ -338,7 +343,7 @@ const config: Config = {
     hero: {
       title: 'Seamless. Real-time. Alternative Credit Data. One Simple API.',
       subTitle:
-        'Dive into the Klearlink developer-first API—engineered for speed, scalability, and seamless integration—so you can launch in days, not months.',
+        'Dive into the KlearLink developer-first API—engineered for speed, scalability, and seamless integration—so you can launch in days, not months.',
     },
     ready: {
       title: 'Ready to Get Started?',

@@ -10,7 +10,7 @@ import ContactForm from '../core/ContactForm';
 
 const Documentation: React.FC = () => {
   return (
-    <Layout title="Documentation" description="Klearlink.io Documentation">
+    <Layout title="Documentation" description="klearlink.io Documentation">
       <AccentImage position={{ top: '-40%', left: '30%' }} src="/img/4.svg" />
       <main>
         <HeroSection />

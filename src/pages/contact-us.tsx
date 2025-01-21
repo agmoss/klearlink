@@ -7,7 +7,7 @@ import AccentImage from '../core/AccentImage';
 const ContactUs: React.FC = () => {
   return (
     <Layout
-      title="Klearlink.io"
+      title="klearlink.io"
       description="Instant Credit Profiling for Smarter Lending Decisions"
     >
       <AccentImage position={{ top: '-40%', left: '40%' }} src="/img/3.svg" />

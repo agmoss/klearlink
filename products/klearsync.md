@@ -5,16 +5,16 @@ sidebar_position: 2
 import ETL from '/img/klearsync_etl.png';
 import API from '/img/klearsync_api.png';
 
-# Klearsync
+# KlearSync
 
 :::info
 Prior Reading: [Klearprofile](./klearprofile.md)
 
 :::
 
-## Abstract
+## Overview
 
-Obtaining Consumer Matches from Klearlink requires your lending organization to submit your consumer credit records. This process is called Klearsync, and it is done with the integration methods below:
+Obtaining Consumer Matches from KlearLink requires your lending organization to submit your consumer credit records. This process is called KlearSync, and it is done with the integration methods below:
 
 1. API
 2. Data ETL
@@ -38,15 +38,15 @@ The API is detailed in the API Docs
 
 ## Data ETL
 
-Integration with the Data ETL interface is an alternative to using APIs to provide consumer credit records. Data ETL offers a convenient and low-overhead solution to supply Klearlink with your organization's data, so you can benefit from getting the consumer matches without having to set up code and systems to supply the consumer credit records.
+Integration with the Data ETL interface is an alternative to using APIs to provide consumer credit records. Data ETL offers a convenient and low-overhead solution to supply KlearLink with your organization's data, so you can benefit from getting the consumer matches without having to set up code and systems to supply the consumer credit records.
 
 <p align="center">
     <img src={ETL} alt="ETL" style={{maxWidth: 600, width: '100%', height:'auto'}} />
 </p>
 
-With Data ETL, Klearlink sets up an ETL pipeline connected to the source of your consumer data. The pipeline extracts and transforms your data into the required consumer credit record and populates it into the Klearlink database. From there, you can use API Steps 3 and 4 and/or Klearwatch to get your consumer matches.
+With Data ETL, KlearLink sets up an ETL pipeline connected to the source of your consumer data. The pipeline extracts and transforms your data into the required consumer credit record and populates it into the KlearLink database. From there, you can use API Steps 3 and 4 and/or KlearWatch to get your consumer matches.
 
 :::info
-Klearlink will pull new data from your database every 30 minutes when you use the Klearsync integration.
+KlearLink will pull new data from your database every 30 minutes when you use the KlearSync integration.
 
 :::

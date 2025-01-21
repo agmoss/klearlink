@@ -16,7 +16,11 @@ const CompanyOverviewSection: React.FC = () => (
             </h2>
           </CardHeader>
           <CardBody>
-            <p>{config.aboutUsSection.companyOverview.content}</p>
+            {config.aboutUsSection.companyOverview.content.map(
+              (insight, idx) => (
+                <p key={idx}>{insight}</p>
+              ),
+            )}
           </CardBody>
         </Card>
       </div>
