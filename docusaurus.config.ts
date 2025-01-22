@@ -11,7 +11,7 @@ const config: Config = {
   favicon: 'img/logo_smallest.png',
   url: 'https://klearlink.io',
   baseUrl: '/',
-  organizationName: 'klearLink',
+  organizationName: 'KlearLink',
   projectName: 'KlearLink',
   onBrokenLinks: 'throw',
   onBrokenMarkdownLinks: 'warn',

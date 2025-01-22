@@ -265,7 +265,7 @@ const config: Config = {
     ],
   },
   keyInsightsSection: {
-    title: 'Key Insights Provided by klearLink',
+    title: 'Key Insights Provided by KlearLink',
     subTitle: 'Discover essential data and insights for smarter decisioning.',
     items: [
       { title: 'Application Date & Time' },
