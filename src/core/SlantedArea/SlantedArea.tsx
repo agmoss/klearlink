@@ -3,14 +3,13 @@ import React from 'react';
 import clsx from 'clsx';
 import styles from './styles.module.css';
 
-interface SlantedAreaProps {
+type SlantedAreaProps = {
   children: React.ReactNode;
   className?: string;
   id?: string;
   title: string;
-
   wrapper?: boolean;
-}
+};
 
 const SlantedArea: React.FC<SlantedAreaProps> = ({
   children,

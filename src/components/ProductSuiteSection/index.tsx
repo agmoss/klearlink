@@ -3,38 +3,40 @@
 import React from 'react';
 import Link from '@docusaurus/Link';
 import useBaseUrl from '@docusaurus/useBaseUrl';
-import styles from './styles.module.css';
-import { clsx } from 'clsx';
-import config, { ProductItem } from '../../../klearlink.config';
+import Card, { CardBody, CardFooter, CardHeader } from '@site/src/core/Card';
+import config, { LinkItem } from '@site/klearlink.config';
 
-const ProductCard: React.FC<ProductItem> = ({ title, description, link }) => (
-  <div className="col col--4">
-    <div className={clsx('card', styles.largerCardPadding)}>
-      <div className="card__header">
-        <h3 className={clsx('section__subtitle', styles.largerSectionSubtitle)}>
-          {title}
-        </h3>
-      </div>
-      <div className="card__body">
-        <p>{description}</p>
-      </div>
-      <div className="card__footer">
-        <Link
-          className="button button--secondary button--block mainButton"
-          to={useBaseUrl(link)}
-        >
-          See Details
-        </Link>
-      </div>
-    </div>
-  </div>
+const ProductCard: React.FC<LinkItem> = ({ title, description, link }) => (
+  <Card alt>
+    <CardHeader>
+      <h3 className="section__subtitle larger">{title}</h3>
+    </CardHeader>
+    <CardBody>
+      <p>{description}</p>
+    </CardBody>
+    <CardFooter>
+      <Link
+        className="button button--secondary button--block main"
+        to={useBaseUrl(link)}
+      >
+        See Details
+      </Link>
+    </CardFooter>
+  </Card>
 );
 
 const ProductSuiteSection: React.FC = () => (
-  <div>
+  <div id="product-suite">
     <div className="row">
-      {config.productSuite.items.map((product, idx) => (
-        <ProductCard key={idx} {...product} />
+      <div className="col col--12 text--center">
+        <h2 className="section__title">{config.productSuiteSection.title}</h2>
+      </div>
+    </div>
+    <div className="row">
+      {config.productSuiteSection.items.map((product, idx) => (
+        <div key={idx} className="col col--4 padding--md">
+          <ProductCard {...product} />
+        </div>
       ))}
     </div>
   </div>

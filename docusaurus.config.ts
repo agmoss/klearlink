@@ -2,14 +2,17 @@ import { themes as prismThemes } from 'prism-react-renderer';
 import type { Config } from '@docusaurus/types';
 import type * as Preset from '@docusaurus/preset-classic';
 
+// eslint-disable-next-line @typescript-eslint/no-require-imports
+require('dotenv').config();
+
 const config: Config = {
-  title: 'Klearlink',
+  title: 'KlearLink',
   tagline: 'Know Your Borrowers. Instantly.',
-  favicon: 'img/favicon.svg',
+  favicon: 'img/logo_smallest.png',
   url: 'https://klearlink.io',
   baseUrl: '/',
-  organizationName: 'klearlink',
-  projectName: 'klearlink',
+  organizationName: 'KlearLink',
+  projectName: 'KlearLink',
   onBrokenLinks: 'throw',
   onBrokenMarkdownLinks: 'warn',
   i18n: {
@@ -20,18 +23,17 @@ const config: Config = {
     [
       'classic',
       {
-        docs: {
-          sidebarPath: './sidebars.ts',
-        },
         blog: {
-          showReadingTime: true,
-          feedOptions: {
-            type: ['rss', 'atom'],
-            xslt: true,
-          },
-          onInlineTags: 'warn',
-          onInlineAuthors: 'warn',
-          onUntruncatedBlogPosts: 'warn',
+          id: 'use-cases',
+          path: './use-cases',
+          routeBasePath: 'use-cases',
+          showReadingTime: false,
+          blogTitle: 'Use Cases',
+          blogDescription: 'KlearLink Use Cases',
+          sortPosts: 'descending',
+          showLastUpdateTime: false,
+          showLastUpdateAuthor: false,
+          onUntruncatedBlogPosts: 'ignore',
         },
         theme: {
           customCss: './src/css/custom.css',
@@ -39,27 +41,65 @@ const config: Config = {
       } satisfies Preset.Options,
     ],
   ],
-
+  plugins: [
+    [
+      '@docusaurus/plugin-content-docs',
+      {
+        id: 'products',
+        path: './products',
+        routeBasePath: 'products',
+        sidebarPath: './sidebars.ts',
+      },
+    ],
+    [
+      '@docusaurus/plugin-content-docs',
+      {
+        id: 'api',
+        path: './api',
+        routeBasePath: '23d3cq2w349',
+      },
+    ],
+  ],
   themeConfig: {
     colorMode: {
-      defaultMode: 'dark',
+      defaultMode: 'light',
       disableSwitch: true,
       respectPrefersColorScheme: false,
     },
-    image: 'img/logo_small.png',
+    image: 'img/logo.png',
     navbar: {
-      title: 'Klearlink',
+      title: 'KlearLink',
       style: 'primary',
       logo: {
         alt: 'logo',
-        src: 'img/logo.png',
+        src: 'img/logo_smallest.png',
       },
       items: [
         {
-          type: 'docSidebar',
-          sidebarId: 'tutorialSidebar',
+          href: '/#solutions',
+          label: 'Solutions',
+          position: 'left',
+          activeBaseRegex: '(^/products.*$)',
+        },
+        {
+          to: '/use-cases',
+          label: 'Use Cases',
+          position: 'left',
+        },
+        {
+          to: '/about-us',
+          label: 'About Us',
+          position: 'left',
+        },
+        {
+          to: '/contact-us',
+          label: 'Contact Us',
+          position: 'left',
+        },
+        {
+          to: '/documentation',
+          label: 'Documentation',
           position: 'right',
-          label: 'Docs',
         },
       ],
     },
@@ -68,8 +108,8 @@ const config: Config = {
         {
           items: [
             {
-              label: 'Docs',
-              to: '/docs',
+              label: 'Terms of Service',
+              to: '/terms-of-service',
             },
           ],
         },
@@ -81,20 +121,17 @@ const config: Config = {
             },
           ],
         },
-        {
-          items: [
-            {
-              label: 'Contact',
-              href: '/contact-us',
-            },
-          ],
-        },
       ],
-      copyright: `Copyright © ${new Date().getFullYear()} Klearlink Data Technologies, Inc.`,
+      copyright: `Copyright © ${new Date().getFullYear()} KlearLink Data Technologies, Inc.`,
     },
     prism: {
       theme: prismThemes.oneDark,
       darkTheme: prismThemes.oneDark,
+    },
+    customFields: {
+      PUBLIC_KEY: process.env.PUBLIC_KEY,
+      SERVICE_ID: process.env.SERVICE_ID,
+      TEMPLATE_ID: process.env.TEMPLATE_ID,
     },
   } satisfies Preset.ThemeConfig,
 };

@@ -1,38 +1,38 @@
 // src/components/KeyBenefitsSection.tsx
 
 import React from 'react';
-import styles from './styles.module.css';
 
-import config, { BenefitItem } from '../../../klearlink.config';
+import Card, { CardBody, CardHeader } from '@site/src/core/Card';
+import config, { IconItem } from '@site/klearlink.config';
 
-const Benefit: React.FC<BenefitItem> = ({
-  title,
-  description: subTitle,
-  Icon,
-}) => (
-  <div className="col col--3">
-    <div className="blank-card">
+const BenefitCard: React.FC<IconItem> = ({ title, description, Icon }) => (
+  <Card>
+    <CardHeader>
       <div className="text--center">
-        <Icon className={styles.icon} />
+        <Icon className="icon" />
       </div>
+    </CardHeader>
+    <CardBody>
       <div className="padding-horiz--md">
         <h3 className="section__subtitle">{title}</h3>
-        <p className="section__description_center">{subTitle}</p>
+        <p className="section__description">{description}</p>
       </div>
-    </div>
-  </div>
+    </CardBody>
+  </Card>
 );
 
 const KeyBenefitsSection: React.FC = () => (
-  <div>
+  <div id="key-benefits">
     <div className="row">
       <div className="col col--12 text--center">
-        <h2 className="section__title">{config.keyBenefits.title}</h2>
+        <h2 className="section__title">{config.keyBenefitsSection.title}</h2>
       </div>
     </div>
     <div className="row">
-      {config.keyBenefits.items.map((feature, idx) => (
-        <Benefit key={idx} {...feature} />
+      {config.keyBenefitsSection.items.map((feature, idx) => (
+        <div key={idx} className="col col--4 padding--md">
+          <BenefitCard {...feature} />
+        </div>
       ))}
     </div>
   </div>
