@@ -69,7 +69,6 @@ const config: Config = {
     image: 'img/logo.png',
     navbar: {
       title: 'KlearLink',
-      style: 'primary',
       logo: {
         alt: 'logo',
         src: 'img/logo_smallest.png',

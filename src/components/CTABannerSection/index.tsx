@@ -11,7 +11,7 @@ const CTABannerSection: React.FC = () => (
     className={clsx(styles.background, 'padding-vert--xl', 'text--center')}
   >
     <div className="row">
-      <div className="col col--12r">
+      <div className="col col--12">
         <h4 className=" section__title alt">{config.ctaSection.title}</h4>
         <h4 className="text--secondary section__title alt">
           {config.ctaSection.subTitle}

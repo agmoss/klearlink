@@ -6,7 +6,7 @@ import Button from '@site/src/core/Button';
 import { Container } from '@site/src/core/Container';
 
 const HeroSection = () => (
-  <header className="hero hero--primary">
+  <header className="hero">
     <Container>
       <div className={styles.heroContent}>
         <h1 className="text--secondary hero__title">

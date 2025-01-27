@@ -8,7 +8,7 @@ import API from '/img/klearsync_api.png';
 # KlearSync
 
 :::info
-Prior Reading: [Klearprofile](./klearprofile.md)
+Prior Reading: [KlearProfile](./klearprofile.md)
 
 :::
 

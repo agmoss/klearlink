@@ -7,7 +7,7 @@ import Klearwatch from '/img/klearwatch.png';
 # KlearWatch
 
 :::info
-Prior Reading: [Klearprofile](./klearprofile.md)
+Prior Reading: [KlearProfile](./klearprofile.md)
 
 :::
 

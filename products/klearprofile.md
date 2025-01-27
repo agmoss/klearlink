@@ -5,11 +5,11 @@ sidebar_position: 1
 import Klearprofile from '/img/klearprofile.png';
 import API from '/img/klearsync_api.png';
 
-# Klearprofile
+# KlearProfile
 
 ## Overview
 
-The KlearLink product—Klearprofile—is an API product for the controlled dissemination of cross-party lending statuses to lending organizations. Integration with the API allows your lending organization to understand your applicants' prior payment performance on loans applied for and originated with other lenders.
+The KlearLink product—KlearProfile—is an API product for the controlled dissemination of cross-party lending statuses to lending organizations. Integration with the API allows your lending organization to understand your applicants' prior payment performance on loans applied for and originated with other lenders.
 
 With KlearLink, your lending organization inputs two components relating to each loan application:
 
@@ -121,7 +121,7 @@ Information on the matched organization is not and never will be present in Cons
 The Credit State of your Consumer Credit records remains dynamic and evolving post-initial interaction with KlearLink. Changes in Credit State are reflected within KlearLink via the use of the API or Data ETL. As other lenders update their Consume Credit records, your Consumer Match records may change. You can know these changes via either webhooks or the API.
 
 :::info
-Klearprofile requires participating organizations to update the credit state of their consumer credit records as they change. This allows for matches to be made and insight to be driven off the matches.
+KlearProfile requires participating organizations to update the credit state of their consumer credit records as they change. This allows for matches to be made and insight to be driven off the matches.
 
 :::
 

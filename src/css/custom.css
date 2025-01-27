@@ -2,56 +2,49 @@
 
 /* =================== Base Styles =================== */
 :root {
-  --ifm-alert-background-color: #ffd944;
-  --ifm-background-color: #000 !important;
-  --ifm-breadcrumb-color-active: #ffd944;
-  --ifm-card-background-color: #000;
-  --ifm-code-background: #ffd944;
-  --ifm-color-primary: #000;
-  --ifm-color-secondary: #ffd944;
-  --ifm-footer-background-color: #000;
-  --ifm-footer-link-color: #fff;
-  --ifm-footer-link-hover-color: #ffd944;
-  --ifm-font-color-base: #fff;
-  --ifm-font-color-base-inverse: #fff;
-  --ifm-font-color-secondary: #ffd944;
+  /* Consolidate colors into reusable variables */
+  --color-primary: #ffd944;
+  --color-background: #000;
+  --color-text: #fff;
+
+  /* Docusaurus variables using our custom colors */
+  --ifm-background-color: var(--color-background) !important;
+  --ifm-color-primary: var(--color-primary);
+  --ifm-color-secondary: var(--color-primary);
+  --ifm-font-color-base: var(--color-text);
+  --ifm-font-color-base-inverse: var(--color-text);
+  --ifm-font-color-secondary: var(--color-primary);
+  --ifm-link-color: var(--color-primary);
+  --ifm-link-hover-color: var(--color-primary);
+  --ifm-menu-color: var(--color-text);
+  --ifm-menu-color-active: var(--color-primary);
+  --ifm-hero-background-color: var(--color-background);
+  --ifm-navbar-background-color: var(--color-background);
+
+  --ifm-alert-background-color: var(--color-primary);
+  --ifm-breadcrumb-color-active: var(--color-primary);
+  --ifm-card-background-color: var(--color-background);
+  --ifm-code-background: var(--color-primary);
+  --ifm-footer-background-color: var(--color-background);
+  --ifm-footer-link-color: var(--color-text);
+  --ifm-footer-link-hover-color: var(--color-primary);
+  --ifm-hero-text-color: var(--color-text);
+  --ifm-hover-overlay: rgb(131, 131, 131);
+  --ifm-pagination-nav-color-hover: var(--color-primary);
+  --ifm-tabs-color-active-border: var(--color-primary);
+
+  /* Typography */
   --ifm-font-family-base: 'Inter', sans-serif;
   --ifm-font-family-monospace: 'Fira Code', monospace;
-  --ifm-hero-text-color: #000;
-  --ifm-hover-overlay: rgb(131, 131, 131);
-  --ifm-link-color: #ffd944;
-  --ifm-link-hover-color: #ffd944;
-  --ifm-menu-color: #fff;
-  --ifm-menu-color-active: #ffd944;
-  --ifm-pagination-nav-color-hover: #ffd944;
-  --ifm-tabs-color-active-border: #ffd944;
   --ifm-code-font-size: 95%;
   --ifm-h1-font-size: 3rem;
+
   overflow-x: hidden;
 }
 
-/* =================== Navbar =================== */
-.navbar__link--active {
-  color: #ffd944;
-}
-
-.navbar__link:hover {
-  color: #ffd944;
-}
-
-/* =================== Blog =================== */
-.yearGroupHeading_rMGB {
-  display: none;
-}
-
-.sidebarItemTitle_pO2u {
-  display: none;
-}
-
-.container_mt6G > time {
-  display: none;
-}
-
+.yearGroupHeading_rMGB,
+.sidebarItemTitle_pO2u,
+.container_mt6G > time,
 ul.sidebarItemList_Yudw li:first-child {
   display: none;
 }
@@ -64,57 +57,25 @@ article > header > h2 > a {
   font-size: 0.5em;
 }
 
-a.sidebarItemLink_mo7H.sidebarItemLinkActive_I1ZP {
-  color: #ffd944 !important;
-}
-
 .tabs__item {
-  color: #fff;
-}
-
-.tabs__item--active {
-  color: #ffd944;
-}
-
-.admonitionIcon_Rf37 svg {
-  fill: #000 !important;
-}
-
-/* =================== Docs =================== */
-
-.table-of-contents__link:hover,
-.table-of-contents__link:hover code,
-.table-of-contents__link--active,
-.table-of-contents__link--active code {
-  color: #ffd944;
-  text-decoration: none;
-}
-
-/* =================== General Elements =================== */
-body {
-  line-height: 1.7;
+  color: var(--color-text);
 }
 
 code {
-  color: #ffd944;
-  background-color: #000;
+  color: var(--color-primary);
+  background-color: var(--color-background);
 }
 
 /* =================== Layout =================== */
 
 .padding-vert--xl {
-  padding-top: 10rem !important;
-  padding-bottom: 10rem !important;
+  padding: 10rem 0 !important;
 }
-
 .padding-vert--lg {
-  padding-top: 5rem !important;
-  padding-bottom: 5rem !important;
+  padding: 5rem 0 !important;
 }
-
 .padding-vert--md {
-  padding-top: 1rem !important;
-  padding-bottom: 1rem !important;
+  padding: 1rem 0 !important;
 }
 
 .row.alt {
@@ -135,7 +96,7 @@ code {
   font-weight: 600;
   margin-bottom: 2rem;
   text-align: center;
-  color: #ffd944;
+  color: var(--color-primary);
 }
 
 .section__title.alt {
@@ -192,15 +153,16 @@ code {
 }
 
 /* =================== Icons =================== */
+.icon,
+.icon__small {
+  color: var(--color-primary);
+}
 .icon {
   font-size: 2rem;
-  color: #ffd944;
   margin-bottom: 0.75rem;
 }
-
 .icon__small {
   font-size: 1.2rem;
-  color: #ffd944;
   margin-right: 0.75rem;
 }
 
