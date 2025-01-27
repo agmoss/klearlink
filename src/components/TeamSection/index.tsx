@@ -1,5 +1,3 @@
-// src/components/TeamSection.tsx
-
 import React from 'react';
 import config from '@site/klearlink.config';
 
@@ -9,7 +7,7 @@ const TeamSection: React.FC = () => (
   <div id="team-section">
     <div className="row">
       <div className="col col--12">
-        <h2 className="text--center text--bold text--secondary">
+        <h2 className="section__title">
           {config.aboutUsSection.teamSection.headline}
         </h2>
       </div>
@@ -22,12 +20,12 @@ const TeamSection: React.FC = () => (
               <div>
                 <Card>
                   <div className="card__image">
-                    <div className="about-img-container">
+                    <div className="about__img__container">
                       <img
                         src={member.image}
-                        alt="Image alt text"
-                        className="about-img"
-                        title="Logo Title Text 1"
+                        alt={member.name}
+                        className="about__img"
+                        title={member.name}
                       />
                     </div>
                   </div>

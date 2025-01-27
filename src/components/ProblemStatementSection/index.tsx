@@ -2,11 +2,10 @@ import React from 'react';
 import config, { Title } from '@site/klearlink.config';
 import Card, { CardBody, CardHeader } from '@site/src/core/Card';
 import CreditRadarChart from '@site/src/core/Chart';
-import clsx from 'clsx';
 import { FaArrowRight } from 'react-icons/fa';
 
 const Insight: React.FC<Title> = ({ title }) => (
-  <li className="section__list-item insightItem">
+  <li>
     <FaArrowRight className="icon__small" />
     {title}
   </li>
@@ -25,8 +24,8 @@ const ProblemStatementSection: React.FC = () => (
               {config.problemStatementSection.subTitle}
             </h3>
           </CardHeader>
-          <CardBody className="section__content">
-            <ul className={clsx('list--unstyled insightsList')}>
+          <CardBody>
+            <ul className="list--unstyled list__ul">
               {config.problemStatementSection.items.map((insight, idx) => (
                 <div key={idx} className="padding--md">
                   <Insight {...insight} />
@@ -37,7 +36,7 @@ const ProblemStatementSection: React.FC = () => (
         </Card>
       </div>
       <div className="col col--6">
-        <Card className="dont-render-small">
+        <Card className="dont__render__small">
           <CreditRadarChart />
         </Card>
       </div>

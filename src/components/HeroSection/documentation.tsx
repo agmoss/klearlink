@@ -1,29 +1,25 @@
-// src/components/HeroSection/documentation.tsx
-
 import React from 'react';
 import styles from './styles.module.css';
-import Link from '@docusaurus/Link';
 import useBaseUrl from '@docusaurus/useBaseUrl';
 import config from '@site/klearlink.config';
+import Button from '@site/src/core/Button';
+import { Container } from '@site/src/core/Container';
 
 const HeroSection = () => (
   <header className="hero hero--primary">
-    <div className="container">
+    <Container>
       <div className={styles.heroContent}>
-        <h1 className="hero__title text--bold text--secondary">
+        <h1 className="text--secondary hero__title">
           {config.docsSection.hero.title}
         </h1>
         <p className="hero__subtitle">{config.docsSection.hero.subTitle}</p>
         <div className={styles.buttonGroup}>
-          <Link
-            className="button button--primary button--lg main"
-            to={useBaseUrl('/documentation/#docsform')}
-          >
+          <Button type="primary" to={useBaseUrl('/documentation/#docsform')}>
             Request Documentation
-          </Link>
+          </Button>
         </div>
       </div>
-    </div>
+    </Container>
   </header>
 );
 

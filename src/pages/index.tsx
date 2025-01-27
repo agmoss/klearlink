@@ -8,7 +8,7 @@ import HowItWorksSection from '../components/HowItWorksSection';
 import ProductSuiteSection from '../components/ProductSuiteSection';
 import KeyInsightsSection from '../components/KeyInsightsSection';
 import CTABannerSection from '../components/CTABannerSection';
-import Container from '../core/Container';
+import { Section } from '../core/Container';
 import { motion } from 'framer-motion';
 import AccentImage from '../core/AccentImage'; // Create a reusable component for accent images
 import DifferenceSection from '../components/DifferenceSection';
@@ -33,27 +33,28 @@ const Home: React.FC = () => {
       >
         <HeroSection />
         <div>
-          <Container className="padding-vert--xl">
+          <Section className="padding-vert--xl">
             <ProblemStatementSection />
-          </Container>
-          <Container className="padding-vert--xl">
+          </Section>
+          <Section className="padding-vert--xl">
             <OutlineSection />
-          </Container>
-          <Container className="padding-vert--xl">
+          </Section>
+          <Section className="padding-vert--xl">
             <DifferenceSection />
-          </Container>
-          <Container className="padding-vert--xl">
+          </Section>
+          <Section className="padding-vert--xl">
             <KeyBenefitsSection />
-          </Container>
-          <Container className="padding-vert--xl">
+          </Section>
+          <Section className="padding-vert--xl">
             <HowItWorksSection />
-          </Container>
-          <Container className="padding-vert--xl">
+          </Section>
+          <Section className="padding-vert--xl">
             <ProductSuiteSection />
-          </Container>
-          <Container className="padding-vert--xl">
+          </Section>
+          <Section className="padding-vert--xl">
             <KeyInsightsSection />
-          </Container>
+          </Section>
+
           <CTABannerSection />
         </div>
       </motion.div>

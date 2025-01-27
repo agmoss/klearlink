@@ -1,11 +1,9 @@
-// src/components/HowItWorksSection.tsx
-
 import React from 'react';
-import Link from '@docusaurus/Link';
 import useBaseUrl from '@docusaurus/useBaseUrl';
 import Card, { CardBody, CardHeader } from '@site/src/core/Card';
 import Code from '@site/src/core/Code';
 import config, { BasicItem } from '@site/klearlink.config';
+import Button from '@site/src/core/Button';
 
 const ExampleOne: React.FC = () => (
   <Code>
@@ -98,13 +96,11 @@ const Feature: React.FC<BasicItem & { idx: number }> = ({
       <div className="col col--8 col--offset-2">
         <Card>
           <CardHeader>
-            <h3 className="section__subtitle alt text--bold text--secondary">
-              {title}
-            </h3>
+            <h3 className="text--secondary">{title}</h3>
             <p>{description}</p>
           </CardHeader>
           <CardBody>
-            <div className="dont-render-small">
+            <div className="dont__render__small">
               <ToRender />
             </div>
           </CardBody>
@@ -118,7 +114,7 @@ const HowItWorksSection: React.FC = () => (
   <div id="how-it-works">
     <div className="row">
       <div className="col col--12 text--center">
-        <h2 className="section__title h2">{config.howItWorksSection.title}</h2>
+        <h2 className="section__title">{config.howItWorksSection.title}</h2>
       </div>
       <div className="row">
         <div className="col col--12">
@@ -130,12 +126,9 @@ const HowItWorksSection: React.FC = () => (
           id="solutions"
           className="col col--12 text--center padding-vert--md"
         >
-          <Link
-            className="button button--primary button--lg main"
-            to={useBaseUrl('/products')}
-          >
+          <Button type="primary" to={useBaseUrl('/products')}>
             Learn More
-          </Link>
+          </Button>
         </div>
       </div>
     </div>

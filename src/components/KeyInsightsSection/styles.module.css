@@ -1,17 +1,4 @@
-/* styles.module.css */
-
-.insightsList {
-  list-style-type: none;
-  padding: 0;
-  display: flex;
-  flex-direction: column;
-  align-items: center;
-  gap: 1.5rem;
-}
-
 .insightItem {
-  font-size: 1.1rem;
-  margin-bottom: 0.75rem;
   display: flex;
   align-items: center;
   max-width: 500px;

@@ -1,0 +1,14 @@
+.card,
+.cardalt {
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+  height: 100%;
+  border-radius: 12px;
+  transition: transform 0.3s ease;
+  gap: 30px;
+}
+
+.cardAlt {
+  border: 1px solid rgba(255, 217, 68, 0.4);
+}

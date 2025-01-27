@@ -1,5 +1,3 @@
-// src/core/AccentImage.tsx
-
 import React from 'react';
 import styles from './styles.module.css'; // Create this CSS module
 import clsx from 'clsx';
@@ -11,7 +9,7 @@ type AccentImageProps = {
 
 const AccentImage: React.FC<AccentImageProps> = ({ position, src }) => (
   <img
-    className={clsx(styles.accentImage, 'dont-render-small')}
+    className={clsx(styles.accentImage, 'dont__render__small')}
     style={position}
     src={src}
     alt="Accent"

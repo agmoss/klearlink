@@ -1,5 +1,3 @@
-// src/components/KeyBenefitsSection.tsx
-
 import React from 'react';
 
 import Card, { CardBody, CardHeader } from '@site/src/core/Card';
@@ -15,7 +13,7 @@ const BenefitCard: React.FC<IconItem> = ({ title, description, Icon }) => (
     <CardBody>
       <div className="padding-horiz--md">
         <h3 className="section__subtitle">{title}</h3>
-        <p className="section__description">{description}</p>
+        <p>{description}</p>
       </div>
     </CardBody>
   </Card>

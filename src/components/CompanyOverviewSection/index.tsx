@@ -1,5 +1,3 @@
-// src/components/CompanyOverviewSection.tsx
-
 import React from 'react';
 import config from '@site/klearlink.config';
 
@@ -11,9 +9,9 @@ const CompanyOverviewSection: React.FC = () => (
       <div className="col col--8 col--offset-2">
         <Card>
           <CardHeader>
-            <h2 className="text--center text--bold text--secondary">
+            <h3 className="text--secondary">
               {config.aboutUsSection.companyOverview.headline}
-            </h2>
+            </h3>
           </CardHeader>
           <CardBody>
             {config.aboutUsSection.companyOverview.content.map(

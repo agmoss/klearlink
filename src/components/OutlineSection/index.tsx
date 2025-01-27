@@ -1,5 +1,3 @@
-// src/components/OutlineSection.tsx
-
 import React from 'react';
 
 import config, { IconItem } from '@site/klearlink.config';
@@ -14,7 +12,7 @@ const OutlineCard: React.FC<IconItem> = ({ title, description, Icon }) => (
     </CardHeader>
     <CardBody>
       <h3 className="section__subtitle">{title}</h3>
-      <p className="section__description">{description}</p>
+      <p>{description}</p>
     </CardBody>
   </Card>
 );

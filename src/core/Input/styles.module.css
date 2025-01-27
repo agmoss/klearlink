@@ -1,0 +1,29 @@
+.inputMaterial {
+  background-color: #fff;
+  border: 1px solid #ccc;
+  border-radius: 4px;
+  padding: 12px 15px;
+  width: 100%;
+  font-size: 16px;
+  margin-bottom: 20px;
+  transition: all 0.3s ease;
+}
+
+.inputMaterial:focus {
+  border-color: #ffd944;
+  outline: none;
+  box-shadow: 0 0 5px rgba(179, 181, 63, 0.5);
+}
+
+.inputMaterial::placeholder {
+  color: #aaa;
+}
+
+.formLabel {
+  margin-bottom: 8px;
+  font-weight: bold;
+}
+
+.formCheckLabel {
+  font-size: 14px;
+}

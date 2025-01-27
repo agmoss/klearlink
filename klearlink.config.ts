@@ -83,8 +83,14 @@ export type AboutUsSection = {
 export type DocsSection = {
   hero: HeroSection;
   ready: TitleWithSubTitle;
-  whyChoose: BasicItem[];
-  howItWorks: BasicItem[];
+  whyChoose: {
+    title: Title;
+    items: BasicItem[];
+  };
+  howItWorks: {
+    title: Title;
+    items: BasicItem[];
+  };
 };
 
 export type Config = {
@@ -100,9 +106,11 @@ export type Config = {
   ctaSection: CtaSection;
   aboutUsSection: AboutUsSection;
   docsSection: DocsSection;
+  contactUsSection: Title;
 };
 
 const config: Config = {
+  contactUsSection: { title: 'Contact Us' },
   heroSection: {
     title: 'Instant Alternative Credit Data for Smarter Decisioning',
     subTitle:
@@ -350,39 +358,45 @@ const config: Config = {
       subTitle:
         'Click below to request your API documentation and someone will get in touch shortly.',
     },
-    whyChoose: [
-      {
-        title: 'Real-Time Insights',
-        description:
-          'Harness current alternative credit data to make smarter decisions instantly.',
-      },
-      {
-        title: 'Effortless Integration',
-        description:
-          'Our API is designed with developers in mind, making onboarding intuitive and straightforward.',
-      },
-      {
-        title: 'Built to Scale',
-        description:
-          'Whether you’re a startup or an enterprise, our infrastructure grows with you.',
-      },
-    ],
-    howItWorks: [
-      {
-        title: 'Request Access',
-        description: 'Fill out a quick form to get your API key.',
-      },
-      {
-        title: 'Explore Our Docs',
-        description:
-          'Access detailed documentation, sample code, and integration guides.',
-      },
-      {
-        title: 'Start Building',
-        description:
-          'Connect to our API and begin leveraging real-time credit insights.',
-      },
-    ],
+    whyChoose: {
+      title: { title: 'Why Choose KlearLink?' },
+      items: [
+        {
+          title: 'Real-Time Insights',
+          description:
+            'Harness current alternative credit data to make smarter decisions instantly.',
+        },
+        {
+          title: 'Effortless Integration',
+          description:
+            'Our API is designed with developers in mind, making onboarding intuitive and straightforward.',
+        },
+        {
+          title: 'Built to Scale',
+          description:
+            'Whether you’re a startup or an enterprise, our infrastructure grows with you.',
+        },
+      ],
+    },
+    howItWorks: {
+      title: { title: 'How It Works' },
+      items: [
+        {
+          title: 'Request Access',
+          description: 'Fill out a quick form to get your API key.',
+        },
+        {
+          title: 'Explore Our Docs',
+          description:
+            'Access detailed documentation, sample code, and integration guides.',
+        },
+        {
+          title: 'Start Building',
+          description:
+            'Connect to our API and begin leveraging real-time credit insights.',
+        },
+      ],
+    },
   },
 };
 

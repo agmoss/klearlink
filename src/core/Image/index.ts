@@ -1,5 +1,3 @@
-// src/core/Image.tsx
-
 import React from 'react';
 
 type Image = {

@@ -1,5 +1,6 @@
 import React from 'react';
 import clsx from 'clsx';
+import styles from './styles.module.css';
 
 type CardProps = {
   children: React.ReactNode;
@@ -11,8 +12,8 @@ type CardProps = {
 type CardComponentProps = Pick<CardProps, 'children' | 'className' | 'id'>;
 
 const Card: React.FC<CardProps> = ({ children, className, id, alt }) => {
-  const containerClasses = clsx('card', className, {
-    alt,
+  const containerClasses = clsx('card', styles.card, className, {
+    [styles.cardAlt]: alt,
   });
 
   return (

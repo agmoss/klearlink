@@ -1,18 +1,24 @@
-// src/core/Container.tsx
-
+import clsx from 'clsx';
 import React from 'react';
+import styles from './styles.module.css';
 
-type ContainerProps = {
+type SectionProps = {
   children: React.ReactNode;
   className?: string;
 };
 
-const Container: React.FC<ContainerProps> = ({ children, className }) => {
+export const Section: React.FC<SectionProps> = ({ children, className }) => {
   return (
     <section className={className}>
-      <div className={'container'}>{children}</div>
+      <Container>{children}</Container>
     </section>
   );
 };
 
-export default Container;
+export const Container: React.FC<SectionProps> = ({ children, className }) => {
+  return (
+    <div className={clsx('container', styles.container, className)}>
+      {children}
+    </div>
+  );
+};

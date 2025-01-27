@@ -1,5 +1,3 @@
-// src/components/DifferenceSection.tsx
-
 import React from 'react';
 import config from '@site/klearlink.config';
 
@@ -11,7 +9,7 @@ const DifferenceSection: React.FC = () => (
   <div id="difference">
     <div className="row alt">
       <div className="col col--12 text--center">
-        <h2 className="section__title h2">{config.differenceSection.title}</h2>
+        <h2 className="section__title">{config.differenceSection.title}</h2>
       </div>
       <div className="row alt">
         <div className="col col--8">

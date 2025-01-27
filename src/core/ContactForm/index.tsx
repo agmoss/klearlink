@@ -1,8 +1,10 @@
 import React, { useEffect, useState } from 'react';
-import { Formik, Form, Field } from 'formik';
+import { Formik, Form } from 'formik';
 import * as Yup from 'yup';
 import emailjs from '@emailjs/browser';
 import siteConfig from '@generated/docusaurus.config';
+import LabelField, { CheckBoxField } from '../Input';
+import { SubmitButton } from '../Button';
 
 type FormValues = {
   firstName: string;
@@ -72,56 +74,62 @@ const ContactForm: React.FC<ContactForm> = ({ side }) => {
           <Form>
             <div className="row">
               <div className="col col--6">
-                <label htmlFor="firstName" className="form-label">
-                  First Name
-                </label>
-                <Field
-                  type="text"
-                  id="firstName"
-                  name="firstName"
-                  className="form-control input-material"
-                  label="First Name"
+                <LabelField
+                  labelProps={{
+                    htmlFor: 'firstName',
+                    children: 'First Name',
+                  }}
+                  fieldProps={{
+                    type: 'text',
+                    id: 'firstName',
+                    name: 'firstName',
+                  }}
                 />
               </div>
               <div className="col col--6">
-                <label htmlFor="lastName" className="form-label">
-                  Last Name
-                </label>
-                <Field
-                  type="text"
-                  id="lastName"
-                  name="lastName"
-                  className="form-control input-material"
+                <LabelField
+                  labelProps={{
+                    htmlFor: 'lastName',
+                    children: 'Last Name',
+                  }}
+                  fieldProps={{
+                    type: 'text',
+                    id: 'lastName',
+                    name: 'lastName',
+                  }}
                 />
               </div>
             </div>
             <div className="row">
               <div className="col">
-                <label htmlFor="email" className="form-label">
-                  Work Email
-                </label>
-                <Field
-                  type="email"
-                  id="email"
-                  name="email"
-                  className="form-control input-material"
+                <LabelField
+                  labelProps={{
+                    htmlFor: 'email',
+                    children: 'Work Email',
+                  }}
+                  fieldProps={{
+                    type: 'text',
+                    id: 'email',
+                    name: 'email',
+                  }}
                 />
               </div>
             </div>
+
             <div className="row">
               <div className="col">
-                <div className="form-check">
-                  <Field
-                    type="checkbox"
-                    id="optIn"
-                    name="optIn"
-                    className="form-check-input"
-                  />
-                  <label htmlFor="optIn" className="form-check-label">
-                    I agree to receive communications from KlearLink Data
-                    Technologies Inc.
-                  </label>
-                </div>
+                <CheckBoxField
+                  labelProps={{
+                    htmlFor: 'optIn',
+                    children:
+                      'I agree to receive communications from KlearLink Data Technologies Inc.',
+                  }}
+                  fieldProps={{
+                    type: 'checkbox',
+                    id: 'optIn',
+                    name: 'optIn',
+                  }}
+                />
               </div>
             </div>
             {Object.keys(errors).length > 0 && (
@@ -157,13 +165,9 @@ const ContactForm: React.FC<ContactForm> = ({ side }) => {
             )}
             <div id="docsform" style={{ marginTop: '1rem' }} className="row">
               <div className="col text-center">
-                <button
-                  type="submit"
-                  className="button button--primary button--lg main"
-                  disabled={isSubmitting}
-                >
+                <SubmitButton type="primary" disabled={isSubmitting}>
                   Submit
-                </button>
+                </SubmitButton>
               </div>
             </div>
           </Form>

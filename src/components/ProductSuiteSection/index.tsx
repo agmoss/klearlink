@@ -1,26 +1,21 @@
-// src/components/ProductSuiteSection.tsx
-
 import React from 'react';
-import Link from '@docusaurus/Link';
 import useBaseUrl from '@docusaurus/useBaseUrl';
 import Card, { CardBody, CardFooter, CardHeader } from '@site/src/core/Card';
 import config, { LinkItem } from '@site/klearlink.config';
+import Button from '@site/src/core/Button';
 
 const ProductCard: React.FC<LinkItem> = ({ title, description, link }) => (
   <Card alt>
     <CardHeader>
-      <h3 className="section__subtitle larger">{title}</h3>
+      <h3 className="section__subtitle">{title}</h3>
     </CardHeader>
     <CardBody>
       <p>{description}</p>
     </CardBody>
     <CardFooter>
-      <Link
-        className="button button--secondary button--block main"
-        to={useBaseUrl(link)}
-      >
+      <Button type="primary" className="button--block" to={useBaseUrl(link)}>
         See Details
-      </Link>
+      </Button>
     </CardFooter>
   </Card>
 );
