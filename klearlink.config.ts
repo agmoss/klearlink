@@ -161,13 +161,13 @@ const config: Config = {
         title: 'Real-Time Data Access',
         Icon: FaDatabase,
         description:
-          'Our API architecture enables creditors and collectors to report, update and amend accounts every 30 minutes, allowing us to maintain the most accurate view of your customer’s short-term credit obligations and performance',
+          'Our API architecture enables creditors and collectors to report, update and amend accounts every 30 minutes, allowing us to maintain the most accurate view of your customer’s short-term credit obligations and performance.',
       },
       {
         title: 'Built for Today’s Fintech Products',
         Icon: FaMobileScreen,
         description:
-          'KlearSync uses a format to accurately capture the details today’s fintech products, including BNPL that feature early payments and payment adjustments.',
+          'KlearSync uses a format to accurately capture the details of today’s fintech products, including BNPL that feature early payments and payment adjustments.',
       },
       {
         title: 'Developer-friendly integration',
