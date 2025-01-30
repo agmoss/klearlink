@@ -2,6 +2,8 @@
 sidebar_position: 1
 ---
 
+I want you to make the following API using rust, rocket, and diesel. The API should be able to submit, update, and view consumer credit records. Dont store the matches in the database, instead, calculate them on the fly in the `/consumer-credit/{id}/consumer-match` endpoint. Make some simple tests for the API.
+
 # API
 
 ## Authentication

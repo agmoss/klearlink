@@ -2,7 +2,6 @@ import React, { useEffect, useState } from 'react';
 import { Formik, Form } from 'formik';
 import * as Yup from 'yup';
 import emailjs from '@emailjs/browser';
-import siteConfig from '@generated/docusaurus.config';
 import LabelField, { CheckBoxField } from '../Input';
 import { SubmitButton } from '../Button';
 

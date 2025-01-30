@@ -55,7 +55,7 @@ const config: Config = {
       '@docusaurus/plugin-content-docs',
       {
         id: 'api',
-        path: './api',
+        path: './23d3cq2w349',
         routeBasePath: '23d3cq2w349',
       },
     ],
