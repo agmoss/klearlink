@@ -36,7 +36,6 @@ Consumer Fact fields are:
 - **Phone Number**: Consumer phone number
 - **Institution Names**: The names of unique institutions utilized in the last 60 days either via linked data or pre-authorized debit data.
 - **SIN** (optional)
-- **FUTURE RELEASE:** Bank Account Rating - indicates the number of unique bank accounts utilized in the last 60 days. B1 = 1 account utilized….B2 = 2 accounts utilized, etc.
 
 :::info
 KlearLink will only ever return the exact Consumer Facts you submit to the system, **and the Consumer Facts you submit are not accessible to other lenders.** The system allows for the determination of inter-organizational consumer matches. It does not allow for any possibility of inter-organizational data dissemination, viewership, or enrichment. Further, Consumer Matches do not contain any identifiable information about the lending organization.
@@ -70,7 +69,7 @@ An application/loan has the following lifecycle. As time progresses, your instit
 - **application** - The consumer has applied for credit at your organization
 - **originated** - Your organization has extended credit to the consumer
   - **compliant** - all credit reported to KlearLink has been paid as agreed in the last 60 days
-  - **non-compliant** - all, or some, credit reported to KlearLink is past due in the last 60 days. Note that this state is dynamic based on the most recent data received. For example, a customer on day 50 may be non-compliant due to one loan that is past due; however, following fulfillment of all obligations on day 51, the credit state would flip to compliant on any successful matches on day 51 or later. **\[NTD: consider static data that hold any status in the last 60 days? - this would likely be more beneficial to lenders\]**
+  - **non-compliant** - all, or some, credit reported to KlearLink is past due in the last 60 days. Note that this state is dynamic based on the most recent data received. For example, a customer on day 50 may be non-compliant due to one loan that is past due; however, following fulfillment of all obligations on day 51, the credit state would flip to compliant on any successful matches on day 51 or later.
 - **declined** - Your institution has declined to extend credit to the consumer
 - **bankrupt/insolvent** - based on information captured from a credit state/loan fact, the consumer is flagged as bankrupt or insolvent
 

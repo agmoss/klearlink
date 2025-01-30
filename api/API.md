@@ -80,7 +80,7 @@ You can obtain your API credentials from the KlearLink dashboard under Settings 
 
 **Credit States**:
 
-- `"applied"`
+- `"application"`
 - `"originated"`
 - `"declined"`
 - `"non-compliant"`
