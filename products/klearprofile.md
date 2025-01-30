@@ -28,12 +28,13 @@ Consumer facts are the details of your loan applicant.
 
 Consumer Fact fields are:
 
+- **First Name**: Consumer first name
+- **Last Name**: Consumer last name
 - **Address**: Consumers address
 - **Date of Birth**: Consumer date of birth
 - **Email**: Consumer email address
 - **Phone Number**: Consumer phone number
 - **Institution Names**: The names of unique institutions utilized in the last 60 days either via linked data or pre-authorized debit data.
-- **Bankrupt/ Insolvent:** Is the consumer insolvent/CP?
 - **SIN** (optional)
 - **FUTURE RELEASE:** Bank Account Rating - indicates the number of unique bank accounts utilized in the last 60 days. B1 = 1 account utilized….B2 = 2 accounts utilized, etc.
 
@@ -51,7 +52,7 @@ Credit Facts are information on the consumer's credit and the state of that cred
 Credit Fact fields are:
 
 - **Amount**: Credit Limit extended
-- **Credit Type**: The loan type (for the purposes of the pilot will default to payday)
+- **Credit Type**: The loan type (for the purposes of the pilot will default to PDL)
 - **Application DateTime**: The date/time the consumer last applied for the credit
 - **Originated DateTime**: Date/time the credit was approved and funds advanced
 - **Payment Due Date**: The date on which the loan is due
