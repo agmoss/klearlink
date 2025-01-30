@@ -38,9 +38,9 @@ type ContactForm = {
 };
 
 const ContactForm: React.FC<ContactForm> = ({ side }) => {
-  const PUBLIC_KEY = siteConfig.customFields.PUBLIC_KEY as string;
-  const SERVICE_ID = siteConfig.customFields.SERVICE_ID as string;
-  const TEMPLATE_ID = siteConfig.customFields.TEMPLATE_ID as string;
+  const PUBLIC_KEY = 'user_EhcGuuTTlPVyvTXyrF9L4';
+  const SERVICE_ID = 'klearlink';
+  const TEMPLATE_ID = 'template_uwuyvjq';
 
   useEffect(() => emailjs.init(PUBLIC_KEY), []);
 
