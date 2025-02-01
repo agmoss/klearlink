@@ -66,7 +66,6 @@ You can obtain your API credentials from the KlearLink dashboard under Settings 
 | address           | string            | CAN/CSA-Z109.1-01 or USPS Publication 28 address format of the consumer |
 | phone_number      | string            | E.164 international format phone number of the consumer                 |
 | SIN/SSN           | string (optional) | SIN(`NNN-NNN-NNN`) or SSN(`NNN-NN-NNNN`) of the consumer                |
-| consumer_state    | string            | State of the consumer                                                   |
 | institution_names | array             | List of associated institutions                                         |
 
 #### credit_facts
@@ -98,7 +97,6 @@ You can obtain your API credentials from the KlearLink dashboard under Settings 
     "date_of_birth": "2010-10-10",
     "address": "101 1ST. S.W. Calgary AB T2P 2V6",
     "phone_number": "+11234567890",
-    "consumer_state": "applied",
     "institution_names": ["TD", "RBC"]
   },
   "credit_facts": {
@@ -159,7 +157,6 @@ Same schema as Submit endpoint, with additional optional fields in credit_facts:
     "date_of_birth": "2010-10-10",
     "address": "101 1ST. S.W. Calgary AB T2P 2V6",
     "phone_number": "+11234567890",
-    "consumer_state": "applied",
     "institution_names": ["TD", "RBC"]
   },
   "credit_facts": {
@@ -223,7 +220,6 @@ Includes all fields from consumer_facts and credit_facts, plus:
     "date_of_birth": "2010-10-10",
     "address": "101 1ST. S.W. Calgary AB T2P 2V6",
     "phone_number": "+11234567890",
-    "consumer_state": "applied",
     "institution_names": ["TD", "RBC"]
   },
   "credit_facts": {
@@ -291,7 +287,6 @@ Includes consumer_facts and credit_facts from original record, plus:
     "date_of_birth": "2010-10-10",
     "address": "101 1ST. S.W. Calgary AB T2P 2V6",
     "phone_number": "+11234567890",
-    "consumer_state": "applied",
     "institution_names": ["TD", "RBC"]
   },
   "credit_facts": {
