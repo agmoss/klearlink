@@ -12,3 +12,14 @@
 .cardAlt {
   border: 1px solid rgba(255, 217, 68, 0.4);
 }
+
+.cardHeader {
+  flex-shrink: 0;
+}
+
+.cardBody {
+  flex-grow: 1;
+  display: flex;
+  flex-direction: column;
+  justify-content: flex-start;
+}

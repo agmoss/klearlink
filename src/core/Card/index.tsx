@@ -28,7 +28,7 @@ export const CardHeader: React.FC<CardComponentProps> = ({
   className,
   id,
 }) => {
-  const containerClasses = clsx('card__header', className);
+  const containerClasses = clsx('card__header', styles.cardHeader, className);
 
   return (
     <div className={containerClasses} id={id}>
@@ -42,7 +42,7 @@ export const CardBody: React.FC<CardComponentProps> = ({
   className,
   id,
 }) => {
-  const containerClasses = clsx('card__body', className);
+  const containerClasses = clsx('card__body', styles.cardBody, className);
 
   return (
     <div className={containerClasses} id={id}>

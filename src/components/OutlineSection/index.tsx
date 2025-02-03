@@ -33,7 +33,7 @@ const OutlineSection: React.FC = () => (
     </div>
     <div className="row">
       <div className="col col--8 col--offset-2">
-        <div className="row">
+        <div className="row" style={{ alignItems: 'stretch' }}>
           {config.outlineSection.items.map((feature, idx) => (
             <div key={idx} className="col col--6 padding--md">
               <OutlineCard {...feature} />
