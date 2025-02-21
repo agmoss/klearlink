@@ -10,10 +10,10 @@ All API requests must include authentication credentials in the request headers.
 
 **Headers**:
 
-| Header       | Value  | Description              |
-| ------------ | ------ | ------------------------ |
-| `X-API-Key`  | string | Your unique API key      |
-| `X-Username` | string | Your registered username |
+| Header       | Value  | Description                  |
+| ------------ | ------ | ---------------------------- |
+| `X-API-Key`  | string | Your unique API key (UUIDV4) |
+| `X-Username` | string | Your registered username     |
 
 **Example**:
 
@@ -24,10 +24,6 @@ X-Username: your_username
 
 :::warning
 Keep your API key secure and never share it. If you believe your API key has been compromised, contact support immediately for a replacement.
-:::
-
-:::info
-You can obtain your API credentials from the KlearLink dashboard under Settings → API Access.
 :::
 
 > Endpoints
@@ -366,10 +362,132 @@ For real-time updates on consumer matches, use the KlearWatch interface.
 | SIN              | CRA Standard        | `NNN-NNN-NNN`                         | Canadian Social Insurance Number format                  |
 | SSN              | SSA Standard        | `NNN-NN-NNNN`                         | US Social Security Number format                         |
 
-:::info
-All data sent to klearlink must be valid json.
+:::warn
+The klearlink API has very strict data validation! All data sent to klearlink must be valid json and the aforementioned key fields MUST adhere to the specified format.
 :::
 
 :::info
 All monetary values in this API are expressed in the local currency (CAD for Canadian transactions, USD for US transactions) and should be provided as decimal numbers with up to 2 decimal places.
 :::
+
+#### 1. E.164 Phone Number Validation
+
+##### **Regex Pattern:**
+
+```regex
+^\+?[1-9]\d{1,14}$
+```
+
+##### **Description:**
+
+This regex validates phone numbers following the **E.164 international standard**, ensuring they are globally unique and properly formatted.
+
+##### **Rules:**
+
+- The number may start with an optional `+`.
+- The country code must be between 1 and 3 digits and cannot start with 0.
+- The total length (including country code) must be between 2 and 15 digits.
+- Only numeric digits are allowed (no spaces, dashes, or special characters apart from `+`).
+
+##### **Examples:**
+
+✅ Valid:
+
+- `+12025550123`
+- `+442071838750`
+- `+919876543210`
+- `+8613800138000`
+
+❌ Invalid:
+
+- `12025550123` (missing `+` but may be valid in certain systems)
+- `+0123456789` (country code cannot start with 0)
+- `+9999999999999999` (exceeds 15 digits)
+- `+44 207 183 8750` (contains spaces)
+- `+1-202-555-0123` (contains dashes)
+
+---
+
+#### 2. CAN/CSA-Z109.1-01 Canadian Address Validation
+
+##### **Regex Pattern:**
+
+```regex
+^\d+\s[A-Za-z0-9\s.,'-]+,\s[A-Za-z\s-]+,\s(?:AB|BC|MB|NB|NL|NS|NT|NU|ON|PE|QC|SK|YT),\s[A-Za-z]\d[A-Za-z]\s?\d[A-Za-z]\d(?:,\sCanada)?$
+```
+
+##### **Description:**
+
+This regex validates addresses formatted according to the **CAN/CSA-Z109.1-01** standard, which is commonly used in Canada.
+
+##### **Rules:**
+
+- The address must start with a **street number**.
+- The **street name** must contain letters, numbers, spaces, and optional characters (`.,'-`).
+- The **city name** must contain only letters and spaces.
+- The **province/territory code** must be one of the valid two-letter abbreviations: `AB, BC, MB, NB, NL, NS, NT, NU, ON, PE, QC, SK, YT`.
+- The **postal code** must follow the format `A1A 1A1` (where `A` is a letter and `1` is a digit) with an optional space.
+- The **country name "Canada"** is optional.
+
+##### **Examples:**
+
+✅ Valid:
+
+- `123 Main St, Toronto, ON, M5V 3L9`
+- `4567 Elm Ave, Vancouver, BC, V6B 1H2, Canada`
+- `77-101 King St W, Hamilton, ON, L8P 1A1`
+
+❌ Invalid:
+
+- `123 Main St Toronto ON M5V 3L9` (missing commas)
+- `4567 Elm Ave, Vancouver, BC, 12345` (invalid postal code format)
+- `Main St, Toronto, ON, M5V 3L9` (missing street number)
+- `123 Fake St, Springfield, XX, M1M 1M1` (invalid province code)
+
+---
+
+#### Usage
+
+These regex patterns can be used in:
+
+- **Web forms** to validate user input for phone numbers and addresses.
+- **Data processing** scripts to ensure consistent formatting.
+- **Database validation** to maintain structured and clean records.
+- **APIs** to enforce valid input data before storing or processing it.
+
+#### 3. RFC 5322/822 Email Address Validation
+
+##### **Regex Pattern:**
+
+```regex
+^[^\s@]+@[^\s@]+\.[^\s@]+$
+```
+
+### **Description:**
+
+This regex validates email addresses according to the **RFC 5322/822** standard, ensuring that they conform to typical email formatting rules.
+
+### **Rules:**
+
+- The local part may contain alphanumeric characters, dots, and special characters (`!#$%&'*+/=?^_`{|}~-`).
+- The local part may be enclosed in quotes (`"..."`) if special characters are used.
+- The domain must contain alphanumeric characters and hyphens, but not start or end with a hyphen.
+- The domain must end with a valid top-level domain (2-63 characters in length).
+
+### **Examples:**
+
+✅ Valid:
+
+- `example@email.com`
+- `user.name+tag@example.co.uk`
+- `"quoted@text"@example.com`
+
+❌ Invalid:
+
+- `plainaddress` (missing `@` and domain)
+- `@missinglocal.com` (missing local part)
+- `user@.com` (invalid domain format)
+- `user@com` (top-level domain too short)
+- `user@-example.com` (hyphen at the start of domain)
+
+---
