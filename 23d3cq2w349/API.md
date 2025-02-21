@@ -446,15 +446,6 @@ This regex validates addresses formatted according to the **CAN/CSA-Z109.1-01** 
 
 ---
 
-#### Usage
-
-These regex patterns can be used in:
-
-- **Web forms** to validate user input for phone numbers and addresses.
-- **Data processing** scripts to ensure consistent formatting.
-- **Database validation** to maintain structured and clean records.
-- **APIs** to enforce valid input data before storing or processing it.
-
 #### 3. RFC 5322/822 Email Address Validation
 
 ##### **Regex Pattern:**
@@ -489,5 +480,27 @@ This regex validates email addresses according to the **RFC 5322/822** standard,
 - `user@.com` (invalid domain format)
 - `user@com` (top-level domain too short)
 - `user@-example.com` (hyphen at the start of domain)
+
+---
+
+#### 4. SIN Validation
+
+### **Description:**
+
+This validator ensures compliance with CRA standards for SIN numbers
+
+### **Rules:**
+
+- If None → Accept it (SIN is optional).
+- If provided:
+  - Must be 9 digits long.
+  - Must start with 1-9 (no leading zero).
+  - Must pass Luhn checksum validation.
+
+### Error Messages
+
+- "Invalid SIN: XXX. Must be exactly 9 digits."
+- "Invalid SIN: XXX. Cannot start with 0."
+- "Invalid SIN: XXX. Failed Luhn checksum validation."
 
 ---
