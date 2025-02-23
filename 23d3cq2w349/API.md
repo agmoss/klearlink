@@ -84,7 +84,7 @@ The API uses standard HTTP status codes to indicate the success or failure of an
 | SIN/SSN           | string (optional) | SIN(`NNN-NNN-NNN`) or SSN(`NNN-NN-NNNN`) of the consumer                        |
 | institution_names | array             | List of associated institutions. Each name must be between 2 and 50 characters. |
 
-#### credit_facts
+#### credit_facts (required)
 
 | Field                | Type   | Description                              |
 | -------------------- | ------ | ---------------------------------------- |
@@ -155,6 +155,8 @@ The KlearSync Data ETL interface automatically populates new consumer credit rec
 **Request Body**:
 
 Same schema as Submit endpoint, with additional optional fields in credit_facts:
+
+credit_facts (optional - only present on credit states of 'originated', 'compliant', 'non-compliant')
 
 | Field               | Type   | Description                           |
 | ------------------- | ------ | ------------------------------------- |
@@ -382,7 +384,7 @@ For real-time updates on consumer matches, use the KlearWatch interface.
 | SIN              | CRA Standard        | `NNN-NNN-NNN`                         | Canadian Social Insurance Number format. Must be exactly 9 digits. Optional.         |
 | SSN              | SSA Standard        | `NNN-NN-NNNN`                         | US Social Security Number format. Must be exactly 9 digits. Optional.                |
 
-:::warn
+:::warning
 The klearlink API has very strict data validation! All data sent to klearlink must be valid json and the aforementioned key fields MUST adhere to the specified format.
 :::
 
@@ -480,7 +482,7 @@ This regex validates email addresses according to the **RFC 5322/822** standard,
 
 ### **Rules:**
 
-- The local part may contain alphanumeric characters, dots, and special characters (`!#$%&'*+/=?^_`{|}~-`).
+- The local part may contain alphanumeric characters, dots, and special characters `(!#$%&'*+/=?^_{|}~-)`.
 - The local part may be enclosed in quotes (`"..."`) if special characters are used.
 - The domain must contain alphanumeric characters and hyphens, but not start or end with a hyphen.
 - The domain must end with a valid top-level domain (2-63 characters in length).
