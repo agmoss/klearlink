@@ -35,7 +35,8 @@ Consumer Fact fields are:
 - **Email**: Consumer email address
 - **Phone Number**: Consumer phone number
 - **Institution Names**: The names of unique institutions utilized in the last 60 days either via linked data or pre-authorized debit data.
-- **SIN** (optional)
+- **SIN** (optional): SIN(`NNN-NNN-NNN`) or SSN(`NNN-NN-NNNN`) of the consumer
+- **consumer_information_indicator** (optional): Used to report a special condition of the account. See [B. Consumer Information Indicator](#b-consumer-information-indicator)
 
 :::info
 KlearLink will only ever return the exact Consumer Facts you submit to the system, **and the Consumer Facts you submit are not accessible to other lenders.** The system allows for the determination of inter-organizational consumer matches. It does not allow for any possibility of inter-organizational data dissemination, viewership, or enrichment. Further, Consumer Matches do not contain any identifiable information about the lending organization.
@@ -71,7 +72,6 @@ An application/loan has the following lifecycle. As time progresses, your instit
   - **compliant** - all credit reported to KlearLink has been paid as agreed in the last 60 days
   - **non-compliant** - all, or some, credit reported to KlearLink is past due in the last 60 days. Note that this state is dynamic based on the most recent data received. For example, a customer on day 50 may be non-compliant due to one loan that is past due; however, following fulfillment of all obligations on day 51, the credit state would flip to compliant on any successful matches on day 51 or later.
 - **declined** - Your institution has declined to extend credit to the consumer
-- **bankrupt/insolvent** - based on information captured from a credit state/loan fact, the consumer is flagged as bankrupt or insolvent
 
 :::info
 The change in credit state is tied to the change in other credit facts. For example, as the Credit State moves from application → origination, the Originated Date and Originated Time move from Null → Date.

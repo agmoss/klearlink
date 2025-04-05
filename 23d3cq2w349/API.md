@@ -1,6 +1,7 @@
 ---
 sidebar_position: 1
 ---
+
 # API
 
 - [API](#api)
@@ -20,6 +21,7 @@ sidebar_position: 1
     - [Compliance and Protection](#compliance-and-protection)
   - [Appendix](#appendix)
     - [A. Definitions](#a-definitions)
+    - [B. Consumer Information Indicator](#b-consumer-information-indicator)
     - [B. Data Standards](#b-data-standards)
       - [1. E.164 Phone Number Validation](#1-e164-phone-number-validation)
         - [**Regex Pattern:**](#regex-pattern)
@@ -133,25 +135,26 @@ or
 
 > **consumer_facts**
 
-| Field             | Type              | Description                                                                     |
-| ----------------- | ----------------- | ------------------------------------------------------------------------------- |
-| first_name        | string            | First name of the consumer. Must be at least 2 characters.                      |
-| last_name         | string            | Last name of the consumer. Must be at least 2 characters.                       |
-| email             | string            | RFC 5322 and RFC 822 format email address of the consumer                       |
-| date_of_birth     | string            | ISO 8601 date format of the consumer's date of birth                            |
-| address           | string            | CAN/CSA-Z109.1-01 or USPS Publication 28 address format of the consumer         |
-| phone_number      | string            | E.164 international format phone number of the consumer                         |
-| SIN/SSN           | string (optional) | SIN(`NNN-NNN-NNN`) or SSN(`NNN-NN-NNNN`) of the consumer                        |
-| institution_names | array             | List of associated institutions. Each name must be between 2 and 50 characters. |
+| Field                          | Type              | Description                                                                                                                   |
+| ------------------------------ | ----------------- | ----------------------------------------------------------------------------------------------------------------------------- |
+| first_name                     | string            | First name of the consumer. Must be at least 2 characters.                                                                    |
+| last_name                      | string            | Last name of the consumer. Must be at least 2 characters.                                                                     |
+| email                          | string            | RFC 5322 and RFC 822 format email address of the consumer                                                                     |
+| date_of_birth                  | string            | ISO 8601 date format of the consumer's date of birth                                                                          |
+| address                        | string            | CAN/CSA-Z109.1-01 or USPS Publication 28 address format of the consumer                                                       |
+| phone_number                   | string            | E.164 international format phone number of the consumer                                                                       |
+| SIN/SSN                        | string (optional) | SIN(`NNN-NNN-NNN`) or SSN(`NNN-NN-NNNN`) of the consumer                                                                      |
+| institution_names              | array             | List of associated institutions. Each name must be between 2 and 50 characters.                                               |
+| consumer_information_indicator | string (optional) | Used to report a special condition of the account. See [B. Consumer Information Indicator](#b-consumer-information-indicator) |
 
 > **credit_facts**
 
-| Field                | Type   | Description                              |
-| -------------------- | ------ | ---------------------------------------- |
-| amount               | number | Amount requested by borrower, in dollars |
-| credit_type          | string | Type of credit (`"PDL"` or `"BNPL"`)     |
-| application_datetime | string | ISO 8601 datetime of application         |
-| credit_state         | string | State of credit (see values below)       |
+| Field                | Type   | Description                                    |
+| -------------------- | ------ | ---------------------------------------------- |
+| amount               | float  | Amount requested by borrower, in dollars/cents |
+| credit_type          | string | Type of credit (`"PDL"` or `"BNPL"`)           |
+| application_datetime | string | ISO 8601 datetime of application               |
+| credit_state         | string | State of credit (see values below)             |
 
 > **Credit States**:
 
@@ -160,7 +163,6 @@ or
 - `"declined"`
 - `"non-compliant"`
 - `"compliant"`
-- `"bankrupt/insolvent"`
 
 **Example**:
 
@@ -176,7 +178,7 @@ or
     "institution_names": ["TD", "RBC"]
   },
   "credit_facts": {
-    "amount": 1000,
+    "amount": 1000.0,
     "credit_type": "PDL",
     "application_datetime": "2024-09-23 21:47:12.023476",
     "credit_state": "applied"
@@ -218,11 +220,11 @@ Same schema as Submit endpoint (all fields optional), with additional optional f
 
 credit_facts (optional - only present on credit states of 'originated', 'compliant', 'non-compliant')
 
-| Field               | Type   | Description                           |
-| ------------------- | ------ | ------------------------------------- |
-| originated_datetime | string | ISO 8601 datetime of origination      |
-| payment_due_date    | string | ISO 8601 datetime of payment due date |
-| payment_amount_due  | number | Amount due for payment, in dollars    |
+| Field               | Type   | Description                              |
+| ------------------- | ------ | ---------------------------------------- |
+| originated_datetime | string | ISO 8601 datetime of origination         |
+| payment_due_date    | string | ISO 8601 datetime of payment due date    |
+| payment_amount_due  | float  | Amount due for payment, in dollars/cents |
 
 :::info
 `originated_datetime`, `payment_due_date`, and `payment_amount_due` are all required if one is provided. Further, these fields can only be set when the credit state is not `application` or `declined`
@@ -242,12 +244,12 @@ credit_facts (optional - only present on credit states of 'originated', 'complia
     "institution_names": ["TD", "RBC"]
   },
   "credit_facts": {
-    "amount": 1000,
+    "amount": 1000.0,
     "credit_type": "PDL",
     "application_datetime": "2024-09-23 21:47:12.023476",
     "originated_datetime": "2024-09-24 15:43:12.023476",
     "payment_due_date": "2024-09-30 15:43:12.023476",
-    "payment_amount_due": 1000,
+    "payment_amount_due": 1000.0,
     "credit_state": "originated"
   }
 }
@@ -305,12 +307,12 @@ Includes all fields from consumer_facts and credit_facts, plus:
     "institution_names": ["TD", "RBC"]
   },
   "credit_facts": {
-    "amount": 1000,
+    "amount": 1000.0,
     "credit_type": "PDL",
     "application_datetime": "2024-09-23 21:47:12.023476",
     "originated_datetime": "2024-09-24 15:43:12.023476",
     "payment_due_date": "2024-09-30 15:43:12.023476",
-    "payment_amount_due": 1000,
+    "payment_amount_due": 1000.0,
     "credit_state": "originated"
   },
   "created_at": "datetime",
@@ -372,12 +374,12 @@ Includes consumer_facts and credit_facts from original record, plus:
     "institution_names": ["TD", "RBC"]
   },
   "credit_facts": {
-    "amount": 1000,
+    "amount": 1000.0,
     "credit_type": "PDL",
     "application_datetime": "2024-09-23 21:47:12.023476",
     "originated_datetime": "2024-09-24 15:43:12.023476",
     "payment_due_date": "2024-09-30 15:43:12.023476",
-    "payment_amount_due": 1000,
+    "payment_amount_due": 1000.0,
     "credit_state": "originated"
   },
   "created_at": "datetime",
@@ -395,12 +397,12 @@ Includes consumer_facts and credit_facts from original record, plus:
         "institution_names": ["CIBC"]
       },
       "credit_facts": {
-        "amount": 1200,
+        "amount": 1200.0,
         "credit_type": "PDL",
         "application_datetime": "2024-09-23 11:47:12.023476",
         "originated_datetime": "2024-09-24 12:43:12.023476",
         "payment_due_date": "2024-09-30 07:43:12.023476",
-        "payment_amount_due": 1200,
+        "payment_amount_due": 1200.0,
         "credit_state": "non-compliant"
       }
     }
@@ -451,6 +453,32 @@ The KlearLink API is designed with robust security features to ensure the protec
 | Institution Names | Financial institutions or lenders that have a relationship with the consumer                                                         |
 | Consumer State    | The current status of a consumer in relation to their credit products                                                                |
 | Credit State      | The current status of a specific credit product                                                                                      |
+
+### B. Consumer Information Indicator
+
+The consumer information indicator of the consumer facts can be the following:
+
+| Value | Description                                |
+| ----- | ------------------------------------------ |
+| A     | Chapter 7 - Bankruptcy in Canada           |
+| B     | Chapter 11 - Proposal in Canada            |
+| C     | Chapter 12 (OPD in Canada)                 |
+| D     | Chapter 13 - Credit Counselling in Canada  |
+| E     | Discharged through Bankruptcy Chapter 7    |
+| F     | Discharged Proposal                        |
+| G     | Discharged through Bankruptcy Chapter 12   |
+| T     | Credit Grantor Cannot Locate Consumer      |
+| Z     | Chapter 7 - Bankruptcy in Canada           |
+| ZA    | Chapter 7 - Bankruptcy in Canada           |
+| ZB    | Chapter 11 - Discharged Proposal in Canada |
+| ZC    | Bankruptcy Dismissed                       |
+| ZD    | Bankruptcy Withdrawn                       |
+| Q     | Removes previously reported Bankruptcy     |
+
+:::info
+These are standard definitions from TU reporting guidelines.
+
+:::
 
 ### B. Data Standards
 
