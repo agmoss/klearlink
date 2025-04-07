@@ -639,3 +639,4 @@ This validator ensures compliance with CRA standards for SIN numbers
 :::info
 Data validation errors are expressed in the following [format](https://docs.rs/serde_valid/latest/serde_valid/#validation-errors-format)
 :::
+
