@@ -69,8 +69,8 @@ An application/loan has the following lifecycle. As time progresses, your instit
 
 - **application** - The consumer has applied for credit at your organization
 - **originated** - Your organization has extended credit to the consumer
-  - **compliant** - all credit reported to KlearLink has been paid as agreed in the last 60 days
-  - **non-compliant** - all, or some, credit reported to KlearLink is past due in the last 60 days. Note that this state is dynamic based on the most recent data received. For example, a customer on day 50 may be non-compliant due to one loan that is past due; however, following fulfillment of all obligations on day 51, the credit state would flip to compliant on any successful matches on day 51 or later.
+  - **compliant** - all credit reported to KlearLink has been paid as agreed
+  - **non-compliant** - all, or part, of the credit reported to KlearLink is past due. Note that this state is dynamic based on the most recent data received. For example, a customer on day 50 may be non-compliant due to one loan that is past due; however, following fulfillment of all obligations on day 51, the credit state would flip to compliant on any successful matches on day 51 or later.
 - **declined** - Your institution has declined to extend credit to the consumer
 
 :::info
@@ -100,7 +100,6 @@ When decisioning on a consumer match, your organization will rely on the match's
   - **compliant** - The consumer has paid their credit as agreed in the last 60 days
   - **non-compliant** - all, or some, credit reported to KlearLink is past due in the last 60 days.
 - **declined** - The matched organization has declined to extend credit to the consumer
-- **bankrupt/insolvent** - The matched organization has flagged the institution as bankrupt/insolvent
 
 **_If your match's credit state is non-compliant, you now know that your applicant is out of payment compliance with a loan originated from another lending organization._**
 

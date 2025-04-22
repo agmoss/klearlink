@@ -1,10 +1,6 @@
----
-sidebar_position: 1
----
+# KlearLink API
 
-# API
-
-- [API](#api)
+- [KlearLink API](#klearlink-api)
   - [**Authentication Guide**](#authentication-guide)
     - [**Authentication Format**](#authentication-format)
     - [**Error Responses**](#error-responses)
@@ -14,7 +10,7 @@ sidebar_position: 1
   - [2. Update a consumer credit record](#2-update-a-consumer-credit-record)
   - [3. View a submitted consumer credit record](#3-view-a-submitted-consumer-credit-record)
   - [4. View Consumer Match](#4-view-consumer-match)
-    - [matched\_on](#matched_on)
+    - [Statistics](#statistics)
   - [Security](#security)
     - [Authentication](#authentication)
     - [Monitoring and Logging](#monitoring-and-logging)
@@ -28,20 +24,30 @@ sidebar_position: 1
         - [**Description:**](#description)
         - [**Rules:**](#rules)
         - [**Examples:**](#examples)
-      - [2. CAN/CSA-Z109.1-01 Canadian Address Validation](#2-cancsa-z1091-01-canadian-address-validation)
-        - [**Regex Pattern:**](#regex-pattern-1)
-        - [**Description:**](#description-1)
-        - [**Rules:**](#rules-1)
-        - [**Examples:**](#examples-1)
+      - [2. Address Validation](#2-address-validation)
+        - [CAN/CSA-Z109.1-01](#cancsa-z1091-01)
+          - [**Regex Pattern:**](#regex-pattern-1)
+          - [**Description:**](#description-1)
+          - [**Rules:**](#rules-1)
+          - [**Examples:**](#examples-1)
+        - [USPS Publication 28](#usps-publication-28)
+          - [**Rules:**](#rules-2)
+          - [**Address Components**](#address-components)
+          - [**Examples**](#examples-2)
       - [3. RFC 5322/822 Email Address Validation](#3-rfc-5322822-email-address-validation)
         - [**Regex Pattern:**](#regex-pattern-2)
         - [**Description:**](#description-2)
-        - [**Rules:**](#rules-2)
-        - [**Examples:**](#examples-2)
-      - [4. SIN Validation](#4-sin-validation)
-        - [**Description:**](#description-3)
         - [**Rules:**](#rules-3)
-        - [Error Messages](#error-messages)
+        - [**Examples:**](#examples-3)
+      - [4. SIN/SSN Validation](#4-sinssn-validation)
+        - [SIN](#sin)
+          - [**Description:**](#description-3)
+          - [**Rules:**](#rules-4)
+          - [**Examples:**](#examples-4)
+        - [SSN](#ssn)
+          - [**Format:**](#format)
+          - [**Rules**](#rules-5)
+          - [**Examples:**](#examples-5)
 
 ---
 
@@ -156,13 +162,19 @@ or
 | application_datetime | string | ISO 8601 datetime of application               |
 | credit_state         | string | State of credit (see values below)             |
 
-> **Credit States**:
+> **Credit States**
 
-- `"application"`
-- `"originated"`
-- `"declined"`
-- `"non-compliant"`
-- `"compliant"`
+| State         | Description                              |
+| ------------- | ---------------------------------------- |
+| application   | The consumer has applied for credit      |
+| originated    | Credit has been extended to the consumer |
+| declined      | The credit application has been declined |
+| non-compliant | All, or part, of the credit is past due  |
+| compliant     | The credit has been paid                 |
+
+:::info
+The movement of the credit state to and from non-compliant operates similarly to the concept of "Date of First Delinquency". If account is not compliant, then move the credit state from originated to non-compliant on the date of the first non-compliance that led to the account status of being non-compliant. If the account becomes compliant, then the credit state should move to compliant on the day the account regained compliance.
+:::
 
 **Example**:
 
@@ -346,19 +358,7 @@ Includes all fields from consumer_facts and credit_facts, plus:
 
 **Response Body**:
 
-Includes consumer_facts and credit_facts from original record, plus:
-
-### matched_on
-
-| Field             | Type    | Description                              |
-| ----------------- | ------- | ---------------------------------------- |
-| first_name        | boolean | Whether first name matched               |
-| last_name         | boolean | Whether last name matched                |
-| email             | boolean | Whether email matched                    |
-| date_of_birth     | boolean | Whether date of birth matched            |
-| address           | boolean | Whether address matched                  |
-| phone_number      | boolean | Whether phone number matched             |
-| institution_names | array   | List of institutions from matched record |
+Includes consumer_facts and credit_facts from original record, plus a `consumer_match` node with the credit_facts, a minimal set of consumer_facts of all matched records, and statistics.
 
 **Example**:
 
@@ -387,15 +387,6 @@ Includes consumer_facts and credit_facts from original record, plus:
   "processed": true,
   "consumer_match": [
     {
-      "matched_on": {
-        "first_name": true,
-        "last_name": true,
-        "email": true,
-        "date_of_birth": true,
-        "address": true,
-        "phone_number": false,
-        "institution_names": ["CIBC"]
-      },
       "credit_facts": {
         "amount": 1200.0,
         "credit_type": "PDL",
@@ -404,9 +395,32 @@ Includes consumer_facts and credit_facts from original record, plus:
         "payment_due_date": "2024-09-30 07:43:12.023476",
         "payment_amount_due": 1200.0,
         "credit_state": "non-compliant"
+      },
+      "consumer_facts":{
+          "consumer_information_indicator": null,
+          "institution_names":["TD"]
       }
     }
-  ]
+  ],
+  "statistics": {
+    "days_since_last_application": 1,
+    "days_since_last_origination": 1,
+    "average_credit_age": 1.0,
+    "number_of_active_loans": 1,
+    "application_frequency_last_12_months": 1,
+    "origination_frequency_last_12_months": 1,
+    "credit_stacking_indicator": 1,
+    "missed_payment_count": 1,
+    "days_in_non_compliance": 1,
+    "percentage_of_non_compliant_payments": 25.0,
+    "current_delinquency_status": true,
+    "historical_delinquency_rate": 0.25,
+    "multi_account_phone_usage": 1,
+    "multi_account_email_usage": 1,
+    "insolvency_status_indicator": true,
+    "repeated_insolvency_flag": false,
+    "high_frequency_applicant": false
+  }
 }
 ```
 
@@ -414,8 +428,28 @@ Includes consumer_facts and credit_facts from original record, plus:
 Here, we see an inter-organizational match indicating that your applicant is non-compliant on a loan originated by another organization.
 
 You do not see what organization the non-compliant loan originated from, nor do you obtain any additional information on the organization, nor do you see any consumer_facts or credit_facts that you do not already have.
-
 :::
+
+### Statistics
+
+The statistics field provides aggregated information about the matched records:
+- `days_since_last_application`: Number of days since the most recent application
+- `days_since_last_origination`: Number of days since the most recent origination (if any)
+- `average_credit_age`: Average age in days of active credit lines
+- `number_of_active_loans`: Count of currently outstanding credit lines (originated, compliant, or non-compliant)
+- `application_frequency_last_12_months`: Number of credit applications made in the past 12 months
+- `origination_frequency_last_12_months`: Number of credit approvals in the past 12 months
+- `credit_stacking_indicator`: Number of active loans originated within the last 30 days
+- `missed_payment_count`: Total number of non-compliant loans
+- `days_in_non_compliance`: Total number of days the borrower has been in a non-compliant state
+- `percentage_of_non_compliant_payments`: Percentage of payments that are non-compliant (non-compliant payments / total payments) * 100
+- `current_delinquency_status`: Boolean indicating if the borrower is currently in a non-compliant state
+- `historical_delinquency_rate`: Ratio of non-compliant periods to total periods (non-compliant periods / total periods)
+- `multi_account_phone_usage`: Number of matched records with a different phone number than the first record
+- `multi_account_email_usage`: Number of matched records with a different email address than the first record
+- `insolvency_status_indicator`: Boolean indicating if the borrower is currently insolvent (has any insolvency-related consumer information indicator)
+- `repeated_insolvency_flag`: Boolean indicating if the borrower has been insolvent multiple times (has multiple insolvency-related consumer information indicators)
+- `high_frequency_applicant`: Boolean indicating if the borrower has made multiple applications within a 24-hour period
 
 :::info
 For real-time updates on consumer matches, use the KlearWatch interface.
@@ -493,7 +527,7 @@ These are standard definitions from TU reporting guidelines.
 | SIN              | CRA Standard        | `NNN-NNN-NNN`                         | Canadian Social Insurance Number format. Must be exactly 9 digits. Optional.         |
 | SSN              | SSA Standard        | `NNN-NN-NNNN`                         | US Social Security Number format. Must be exactly 9 digits. Optional.                |
 
-:::warn
+:::warning
 The klearlink API has very strict data validation! All data sent to klearlink must be valid json and the aforementioned key fields MUST adhere to the specified format.
 :::
 
@@ -539,19 +573,21 @@ This regex validates phone numbers following the **E.164 international standard*
 
 ---
 
-#### 2. CAN/CSA-Z109.1-01 Canadian Address Validation
+#### 2. Address Validation
 
-##### **Regex Pattern:**
+##### CAN/CSA-Z109.1-01
+
+###### **Regex Pattern:**
 
 ```regex
 ^\d+\s[A-Za-z0-9\s.,'-]+,\s[A-Za-z\s-]+,\s(?:AB|BC|MB|NB|NL|NS|NT|NU|ON|PE|QC|SK|YT),\s[A-Za-z]\d[A-Za-z]\s?\d[A-Za-z]\d(?:,\sCanada)?$
 ```
 
-##### **Description:**
+###### **Description:**
 
 This regex validates addresses formatted according to the **CAN/CSA-Z109.1-01** standard, which is commonly used in Canada.
 
-##### **Rules:**
+###### **Rules:**
 
 - The address must start with a **street number**.
 - The **street name** must contain letters, numbers, spaces, and optional characters (`.,'-`).
@@ -560,7 +596,7 @@ This regex validates addresses formatted according to the **CAN/CSA-Z109.1-01** 
 - The **postal code** must follow the format `A1A 1A1` (where `A` is a letter and `1` is a digit) with an optional space.
 - The **country name "Canada"** is optional.
 
-##### **Examples:**
+###### **Examples:**
 
 ✅ Valid:
 
@@ -574,6 +610,44 @@ This regex validates addresses formatted according to the **CAN/CSA-Z109.1-01** 
 - `4567 Elm Ave, Vancouver, BC, 12345` (invalid postal code format)
 - `Main St, Toronto, ON, M5V 3L9` (missing street number)
 - `123 Fake St, Springfield, XX, M1M 1M1` (invalid province code)
+
+##### USPS Publication 28
+
+###### **Rules:**
+
+- **ALL CAPS** – Use uppercase for everything
+- **NO punctuation** – No commas or periods
+- **Standard abbreviations** – Use USPS-approved short forms (e.g. ST, AVE, N, APT)
+- Use official **2-letter state codes** (e.g. NY, CA, TX)
+- Delivery Address Must Be on One Line
+
+###### **Address Components**
+
+```
+Recipient Name
+[Optional Organization Name]
+Delivery Address (Street address, PO Box, etc.)
+Secondary Address Unit (Apt, Suite, etc.)
+City, State ZIP+4
+```
+
+###### **Examples**
+
+✅ Valid:
+
+- `JOHN DOE 123 MAIN ST APT 4B SPRINGFIELD NY 12345-6789`
+- `ACME INC 500 MARKET ST STE 210 SAN FRANCISCO CA 94105`
+- `JANE SMITH 42 BROADWAY FL 10 NEW YORK NY 10004`
+
+❌ Invalid:
+
+| Address Example                                        | Reason                                |
+| ------------------------------------------------------ | ------------------------------------- |
+| `John Doe, 123 Main St, Apt 4B, Springfield, NY 12345` | Contains punctuation and lowercase    |
+| `123 Main Street Apartment 4B`                         | Does not use USPS abbreviations       |
+| `500 Market St., Suite 210`                            | Contains punctuation                  |
+| `42 Broadway, Floor 10`                                | Uses unstandardized unit abbreviation |
+| `JANE SMITH 42 BROADWAY FL 10 NY 10004`                | Missing city name                     |
 
 ---
 
@@ -614,13 +688,15 @@ This regex validates email addresses according to the **RFC 5322/822** standard,
 
 ---
 
-#### 4. SIN Validation
+#### 4. SIN/SSN Validation
 
-##### **Description:**
+##### SIN
+
+###### **Description:**
 
 This validator ensures compliance with CRA standards for SIN numbers
 
-##### **Rules:**
+###### **Rules:**
 
 - If None → Accept it (SIN is optional).
 - If provided:
@@ -628,15 +704,77 @@ This validator ensures compliance with CRA standards for SIN numbers
   - Must start with 1-9 (no leading zero).
   - Must pass Luhn checksum validation.
 
-##### Error Messages
+###### **Examples:**
 
-- "Invalid SIN: XXX. Must be exactly 9 digits."
-- "Invalid SIN: XXX. Cannot start with 0."
-- "Invalid SIN: XXX. Failed Luhn checksum validation."
+✅ Valid:
+
+- `123456782` – Valid format and passes Luhn check
+- `987654321` – Valid format and passes Luhn check
+
+❌ Invalid:
+
+| SIN          | Reason                        |
+| ------------ | ----------------------------- |
+| `012345678`  | Starts with `0`               |
+| `123456789`  | Fails Luhn checksum           |
+| `12345`      | Too short                     |
+| `1234567890` | Too long                      |
+| `abc123456`  | Contains non-digit characters |
+
+##### SSN
+
+###### **Format:**
+
+```
+AAA-GG-SSSS
+```
+
+- **AAA**: Area Number (first 3 digits)
+- **GG**: Group Number (middle 2 digits)
+- **SSSS**: Serial Number (last 4 digits)
+
+###### **Rules**
+
+**General Rules**
+
+- Must be **9 digits** total
+- Must follow the pattern: `XXX-XX-XXXX`
+- Can’t contain any **letters or symbols**
+
+**Area Number (AAA)**
+
+- Cannot be `000`
+- Cannot be `666`
+- Must not start with `9` (reserved for ITINs and other non-SSN uses)
+- As of 2011, numbers are **randomized**, but the above still holds
+
+**Group Number (GG)**
+
+- Cannot be `00`
+
+**Serial Number (SSSS)**
+
+- Cannot be `0000`
+
+###### **Examples:**
+
+✅ Valid:
+
+- `123-45-6789`
+
+❌ Invalid:
+
+| SSN           | Reason                                 |
+| ------------- | -------------------------------------- |
+| `000-12-3456` | Area is `000`                          |
+| `666-45-6789` | Area is `666`                          |
+| `900-12-3456` | Area starts with `9`                   |
+| `123-00-6789` | Group is `00`                          |
+| `123-45-0000` | Serial is `0000`                       |
+| `123456789`   | No dashes; may still be invalid format |
 
 ---
 
 :::info
 Data validation errors are expressed in the following [format](https://docs.rs/serde_valid/latest/serde_valid/#validation-errors-format)
 :::
-
